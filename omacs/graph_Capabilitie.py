@@ -14,7 +14,7 @@ class graph_Capabilitie(graphEntity):
 
     def __init__(self, x, y, semObject = None):
         self.semanticObject = semObject
-        self.sizeX, self.sizeY = 70, 56
+        self.sizeX, self.sizeY = 70, 40.0
         graphEntity.__init__(self, x, y)
         self.ChangesAtRunTime = 0
         self.constraintList = []
@@ -26,21 +26,21 @@ class graph_Capabilitie(graphEntity):
     def DrawObject(self, drawing, showGG = 0):
         self.dc = drawing
         if showGG and self.semanticObject: self.drawGGLabel(drawing)
-        self.image_gf4 = PhotoImage(format='gif',data=self.imageDict['c.gif' ])
-        h = drawing.create_image(self.translate([35.0, 28.0]), tags = self.tag, image = self.image_gf4)
-        self.gf4 = GraphicalForm(drawing, h, 'gf4', 'c.gif')
-        self.graphForms.append(self.gf4)
+        self.image_gf15 = PhotoImage(format='gif',data=self.imageDict['cc.gif' ])
+        h = drawing.create_image(self.translate([31.0, 23.0]), tags = self.tag, image = self.image_gf15)
+        self.gf15 = GraphicalForm(drawing, h, 'gf15', 'cc.gif')
+        self.graphForms.append(self.gf15)
 
-        h = drawing.create_oval(self.translate([35.0, 56.0, 35.0, 56.0]), tags = (self.tag, 'connector'), outline = '', fill = '' )
+        h = drawing.create_oval(self.translate([31.0, 43.0, 31.0, 43.0]), tags = (self.tag, 'connector'), outline = '', fill = '' )
         self.connectors.append( h )
 
-        h = drawing.create_oval(self.translate([33.0, 0.0, 33.0, 0.0]), tags = (self.tag, 'connector'), outline = '', fill = '' )
+        h = drawing.create_oval(self.translate([31.0, 3.0, 31.0, 3.0]), tags = (self.tag, 'connector'), outline = '', fill = '' )
         self.connectors.append( h )
 
         if self.semanticObject: drawText = self.semanticObject.name.toString()
         else: drawText = "<name>"
         font = tkFont.Font( family='Helvetica', size=12, weight='bold', slant='roman', underline=0)
-        h = drawing.create_text(self.translate([35.0, 30.0, 35.0, 4.0])[:2], tags = self.tag, font=font, fill = 'cyan', anchor = 'center', text = drawText, width = '0', justify= 'left', stipple='' )
+        h = drawing.create_text(self.translate([31.0, 27.0, 31.0, 5.0])[:2], tags = self.tag, font=font, fill = 'black', anchor = 'center', text = drawText, width = '0', justify= 'left', stipple='' )
         self.attr_display["name"] = h
         self.gf5 = GraphicalForm(drawing, h, 'gf5', fontObject=font)
         self.graphForms.append(self.gf5)
@@ -88,6 +88,30 @@ class graph_Capabilitie(graphEntity):
 '9HujOjT80WGvRX3TcTeAUtaCLR42VQ1An/3kau8rdlvXl7JZVDTLPRUCgSG0Me9rV5X/1G8r1Pnid5H4'+\
 'LK8hcNuZ+P7HEYT5zmsMjJ0BBTK2ACywJhPESQYD6LEIavB/64tgCG/kQY1skCQnLCHwblYR0V1EhR8s'+\
 'IAwDAgA7'        
+
+        imageDict[ 'cc.gif' ] = ''+\
+'R0lGODlhKgAnAPYAAAFFrQVIrglLrgBGsAVLtAlNswZOuQhPug9QswpRvRNTtBhWtB1athJVuxZZvRtb'+\
+'vCFdtiFfvCRhuytlvC5ovTJpvThuvwxVww5Yxw9ZyBZawh1fwxFczBNf0R9hxhlhzBVi1Rlk1Bdl2Rhm'+\
+'2xpo3iNjxClmwixpxSVozipryzJswzFuyjtywzVxzDx1yiBo1Clv1y5x1y1x2DR01Dl41xxs4x9v6B9w'+\
+'6SFy7CN28iV59id7+Sh9/EJ2xEd6xk19xUJ3yEN5ykp+zFB/xkp/0EN80UyAzlSEzlmHy1yIykyD1UyF'+\
+'21OF0laI1FuL1FSK2luO2l+R22WPzmGO0mWR1GuU02+Y1WOT22mW2m2Z3HCX0XKZ1XKc3Hif2neg3Xuh'+\
+'2VWM4FyR4HOf4HSg4Huk4YGk2oSp4oqu5I+z6JKy4gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
+'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAGoALAAAAAAqACcAAAf+gGqC'+\
+'g4SFhVeGiYqKFRULEhALEAULBAUFCgEClwoCCwKTEAxAi4kBAKipAASsra6rqKcAAaWFFbOprqwFBr0G'+\
+'lqwBwqk/tYMQSUkMAAOsvQfQGkQGCS4qQC4SDw+3s8ZqPlJGExM9Qg4rQiklTC4lZkwlK0FNLk5fJioP'+\
+'PxNJxgxaFBBIEOSLEi5XuKSAwqUIGihQnChxQoWKFRdIqkiR8sCYhCoNDDigkmYKlhRZnnA580QMCi9X'+\
+'nkC50kTJCZJaqlCopaAAkilBmGCB6QWKGDFhyIBBE+VKFJlXnGBxQYVLEBUFWJR6QKDBkXhKoLQYg4WG'+\
+'jDBLZIAJA2OGjBj+M1AoabHOiYoDKhZRYHUgwYULGTh8WPIChGERIkAkNsyhQ4cMGTBcSJDAQIFFLAj0'+\
+'/XuBQ+MQh0WMGI24NIjHkTkfKEDKEJQNBKj9Dcwh9OgauEnoNg0CcuoDBk4k2tIA2l/PHQ7fxs089wjE'+\
+'hh9LBu4gUQkDBzgjVzyCBHMbN27YsIG7O/TAGf5WzltIAvbZjbl7rxH+Bg4c4ceXXwz5Aob1hiSwWWfx'+\
+'jeYdeDjkoKCC+JFHQmIdeCYZZQYU4kMBm2GAQW0g3AbeDTnooMMODIpXw4MQpkZZAUIQ0oBmfm3IYXc1'+\
+'IBjiDjzsoEMO+OW2GAeRCWiAAoNs4cBAMXr+ZhiN4CmIY4473mfDbqd5pp5IUggyASuU+adkhyPgBuKN'+\
+'OEbp4HNVBlkZAR2pwUIzshG45IFjirgjjzg4SEJ0HEg2GSvsCcCXX4DNGGaN9i3IIHkn7gmCZ+mtSYAA'+\
+'amixSmyEyrgkk/bdlx+jaEbIgXoHsAKAEWMwAGeGgRnW4YE15EmefjVA92ifV7LCQg+CLCAQNX7Rppxu'+\
+'8zW3249ATpYAAQ4sUEgEBSAJH4dgdkcsiotFmJqyCbBXSBUPxIlBYMmFJtpoIyjGZ3/KSlBGKSo0QKiX'+\
+'1LqqrquQpvcfQd+c8ECm435ZbpW3QqZhAht8M0gXGnTpH22eRRzxtglXaCCcwoQ00TBn/mmooZXJqqcE'+\
+'xoY0cYLDnPnJMWUaVEGyIucAO6+ykzlgxMu1lEDZzgL2XALO3+jTSqkGSHAx0MZQAcGLBCjQgAtIk4zE'+\
+'JlpFjTMiQAcCADs='        
 
         imageDict[ 'c.gif' ] = ''+\
 'R0lGODlhPAA4APcAAAFFrARIrwpLrgVLtAxOsQdOuQhPug1QtQpRvRNTsxlWthtZtRJVuxZZvhxbuyFd'+\

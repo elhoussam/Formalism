@@ -14,7 +14,7 @@ class graph_Goal(graphEntity):
 
     def __init__(self, x, y, semObject = None):
         self.semanticObject = semObject
-        self.sizeX, self.sizeY = 71, 70
+        self.sizeX, self.sizeY = 68, 50.0
         graphEntity.__init__(self, x, y)
         self.ChangesAtRunTime = 0
         self.constraintList = []
@@ -26,12 +26,12 @@ class graph_Goal(graphEntity):
     def DrawObject(self, drawing, showGG = 0):
         self.dc = drawing
         if showGG and self.semanticObject: self.drawGGLabel(drawing)
-        self.image_gf12 = PhotoImage(format='gif',data=self.imageDict['Goal.gif' ])
-        h = drawing.create_image(self.translate([36.0, 35.0]), tags = self.tag, image = self.image_gf12)
-        self.gf12 = GraphicalForm(drawing, h, 'gf12', 'Goal.gif')
-        self.graphForms.append(self.gf12)
+        self.image_gf23 = PhotoImage(format='gif',data=self.imageDict['gg.gif' ])
+        h = drawing.create_image(self.translate([34.0, 24.0]), tags = self.tag, image = self.image_gf23)
+        self.gf23 = GraphicalForm(drawing, h, 'gf23', 'gg.gif')
+        self.graphForms.append(self.gf23)
 
-        h = drawing.create_oval(self.translate([34.0, 70.0, 34.0, 70.0]), tags = (self.tag, 'connector'), outline = '', fill = '' )
+        h = drawing.create_oval(self.translate([34.0, 50.0, 34.0, 50.0]), tags = (self.tag, 'connector'), outline = '', fill = '' )
         self.connectors.append( h )
 
         h = drawing.create_oval(self.translate([33.0, 1.0, 33.0, 1.0]), tags = (self.tag, 'connector'), outline = '', fill = '' )
@@ -40,7 +40,7 @@ class graph_Goal(graphEntity):
         if self.semanticObject: drawText = self.semanticObject.name.toString()
         else: drawText = "<name>"
         font = tkFont.Font( family='Helvetica', size=12, weight='normal', slant='roman', underline=0)
-        h = drawing.create_text(self.translate([34.0, 38.0, 34.0, 7.0])[:2], tags = self.tag, font=font, fill = 'black', anchor = 'center', text = drawText, width = '0', justify= 'left', stipple='' )
+        h = drawing.create_text(self.translate([35.0, 29.0, 35.0, 3.0])[:2], tags = self.tag, font=font, fill = 'black', anchor = 'center', text = drawText, width = '0', justify= 'left', stipple='' )
         self.attr_display["name"] = h
         self.gf13 = GraphicalForm(drawing, h, 'gf13', fontObject=font)
         self.graphForms.append(self.gf13)
@@ -55,6 +55,30 @@ class graph_Goal(graphEntity):
 
     def getImageDict( self ):
         imageDict = dict()
+
+        imageDict[ 'gg.gif' ] = ''+\
+'R0lGODlhMQAxAPcAAOZ9AOd9AOd+AOd/AOeAAOeAAeeBAeeAAueBAueAA+eBA+eCA+eBBOeBBeeCBOeC'+\
+'BeeDBeeCBueDBuiAAOiDBeiDBuiDB+iDCOiECOiECeiECuiFCuiFC+iGC+iGDeiHDeiHDumIEOmJEumJ'+\
+'E+mKFemMGOmNGuqOG+qOHOqOHeqPHuqQH+qQIOqQIeuSJOuTJ+uUKOuXLuyYL+yYMOyYMeyZMeyZM+ya'+\
+'M+yaNeybN+ydOuyePO2ePO2fPe2fPu2fP+2gQO2hQu6kSO6kSu6lSu6lS+6mS+6mTO6mTu6nTu+pU++q'+\
+'VO+qVe+rVfCtWvCtW/CuXfCvXfCvXvCvX/CwYPCxYvCxY/G0avG1a/G2bPG2bfG3bvK5c/K6dPK6dfK7'+\
+'dvK+e/O+ffO/fvO/f/PAgfPBgvPChPTFjPTGjPTHjvTIkfXJkvXJk/XLlvXLl/XMmPXMmfXNmvbNm/bQ'+\
+'oPbRovfRo/fTpvfTp/fUqffVq/fWrffXrvfYsfjZsvjZs/jatfjbt/nfwPrhxPrlyvvp0wAAAAAAAAAA'+\
+'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
+'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
+'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
+'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
+'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
+'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
+'ACH5BAEAAIUALAAAAAAxADEAAAj+AAsJHEiwoEGCBA4qXMjwYMKGECMqfCixokWEBDJq1DihEMWLETeK'+\
+'HKkRJESSKEcO7GjSY8qXIlsOfDmg5sgBKFeGFJjygo8rV3JorKnBR4ucF1Ni6PImyhY+TTLWPDJozEab'+\
+'GWeelEqAwgSpQPiwwNnkj4qaKuiQedOg5gAVQDTg/KiQpcYST9JQoUBgABU7FzKG4HNkwIUxXVTgOVtz'+\
+'DJkGJUP2feGmCw0SfQc04RMiI4Y9TQYkIXQlyB4fNXP8oRGT58KMFMp0aTviiY4BLAApyZiDTwzFZLaQ'+\
+'ETRlgIY2XUg21KjBzpABH7rYwTNWSZ4uW+RYIXCkC4YG0cnyDFCyp4Ty1xopsLHaoMUI5DVnRImSA/IF'+\
+'DFJzWFGxh8pclRMN5YNukNHwRmGZuYVVRg1osAIdZ+igwXkODUVBE3u0kUYbR7R11X9XEQDCEWxs8QGA'+\
+'FQ5FwAtDBGEeTCiN8AJkKGIkkoIw5ghgQg/p6GOOKf4oZI0zDWnkRlrxdOSSQS4pZJNO+ghllEDq5BKV'+\
+'PyZ5JZY6BshllUl+CSZdYsKIXpkpMYQmUgbZtSaKdBX5ZlaSvallQRTNaeVyaFbE0pZY3jmRjVQiBFKh'+\
+'LZF5JJ4yydllo4biudFXrTEK6WuF/HnpcibFualEnn5akF2XBgQAOw=='        
 
         imageDict[ 'Agent.gif' ] = ''+\
 'R0lGODlhRgBGAPekAJ2uK52vK56uKp6uK56vK5+vK52vLJ+uLJ6vLJ2wK56wKp+wKp6wK5+wK5+wLJ+w'+\

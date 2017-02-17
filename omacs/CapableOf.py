@@ -3,7 +3,7 @@ __CapableOf.py_____________________________________________________
 
 Automatically generated AToM3 syntactic object (DO NOT MODIFY DIRECTLY)
 Author: sam
-Modified: Sat Feb  4 20:01:29 2017
+Modified: Wed Feb 15 12:18:20 2017
 ___________________________________________________________________
 """
 from ASGNode import *

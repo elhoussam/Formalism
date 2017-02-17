@@ -3,13 +3,14 @@ __operatingUnit.py_____________________________________________________
 
 Automatically generated AToM3 syntactic object (DO NOT MODIFY DIRECTLY)
 Author: sam
-Modified: Sun Jan 29 10:08:12 2017
+Modified: Wed Feb 15 08:06:30 2017
 _______________________________________________________________________
 """
 from ASGNode import *
 
 from ATOM3Type import *
 
+from ATOM3String import *
 from graph_operatingUnit import *
 class operatingUnit(ASGNode, ATOM3Type):
 
@@ -23,9 +24,10 @@ class operatingUnit(ASGNode, ATOM3Type):
       if(hasattr(self, '_setHierarchicalNode')):
         self._setHierarchicalNode(False)
       self.parent = parent
-      self.generatedAttributes = {      }
-      self.realOrder = []
-      self.directEditing = []
+      self.name=ATOM3String('', 20)
+      self.generatedAttributes = {'name': ('ATOM3String', )      }
+      self.realOrder = ['name']
+      self.directEditing = [1]
    def clone(self):
       cloneObject = operatingUnit( self.parent )
       for atr in self.realOrder:

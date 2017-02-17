@@ -3,7 +3,7 @@ __pns2_MM.py______________________________________________________
 
 Automatically generated AToM3 MetaModel (DO NOT MODIFY DIRECTLY)
 Author: sam
-Modified: Sun Jan 29 10:08:12 2017
+Modified: Wed Feb 15 08:06:30 2017
 __________________________________________________________________
 """
 from ASG_pns2 import *

@@ -14,7 +14,7 @@ class graph_operatingUnit(graphEntity):
 
     def __init__(self, x, y, semObject = None):
         self.semanticObject = semObject
-        self.sizeX, self.sizeY = 107, 19
+        self.sizeX, self.sizeY = 130, 21
         graphEntity.__init__(self, x, y)
         self.ChangesAtRunTime = 0
         self.constraintList = []
@@ -26,21 +26,29 @@ class graph_operatingUnit(graphEntity):
     def DrawObject(self, drawing, showGG = 0):
         self.dc = drawing
         if showGG and self.semanticObject: self.drawGGLabel(drawing)
-        h = drawing.create_rectangle(self.translate([0.0, 0.0, 107.00000000000004, 19.0]), tags = self.tag, stipple = '', width = 4, outline = '', fill = 'black')
+        h = drawing.create_oval(self.translate([15.186915887850482, 15.5263157894737, 15.186915887850482, 15.5263157894737]), tags = (self.tag, 'connector'), outline = '', fill = '' )
+        self.connectors.append( h )
+
+        h = drawing.create_oval(self.translate([44.794392523364515, 16.0, 44.794392523364515, 16.0]), tags = (self.tag, 'connector'), outline = '', fill = '' )
+        self.connectors.append( h )
+
+        h = drawing.create_oval(self.translate([14.570093457943932, 8.421052631578945, 14.570093457943932, 8.421052631578945]), tags = (self.tag, 'connector'), outline = '', fill = '' )
+        self.connectors.append( h )
+
+        h = drawing.create_oval(self.translate([42.327102803738335, 7.473684210526287, 42.327102803738335, 7.473684210526287]), tags = (self.tag, 'connector'), outline = '', fill = '' )
+        self.connectors.append( h )
+
+        h = drawing.create_rectangle(self.translate([1.0, 7.0, 67.00000000000006, 16.0]), tags = self.tag, stipple = '', width = 4, outline = '', fill = 'black')
         self.gf3 = GraphicalForm(drawing, h, "gf3")
         self.graphForms.append(self.gf3)
 
-        h = drawing.create_oval(self.translate([23.0, 18.0, 23.0, 18.0]), tags = (self.tag, 'connector'), outline = '', fill = '' )
-        self.connectors.append( h )
-
-        h = drawing.create_oval(self.translate([71.0, 19.0, 71.0, 19.0]), tags = (self.tag, 'connector'), outline = '', fill = '' )
-        self.connectors.append( h )
-
-        h = drawing.create_oval(self.translate([22.0, 3.0, 22.0, 3.0]), tags = (self.tag, 'connector'), outline = '', fill = '' )
-        self.connectors.append( h )
-
-        h = drawing.create_oval(self.translate([67.0, 1.0, 67.0, 1.0]), tags = (self.tag, 'connector'), outline = '', fill = '' )
-        self.connectors.append( h )
+        if self.semanticObject: drawText = self.semanticObject.name.toString()
+        else: drawText = "<name>"
+        font = tkFont.Font( family='Helvetica', size=12, weight='normal', slant='roman', underline=0)
+        h = drawing.create_text(self.translate([97.0, 10.0, 97.0, -22.0])[:2], tags = self.tag, font=font, fill = 'black', anchor = 'center', text = drawText, width = '0', justify= 'left', stipple='' )
+        self.attr_display["name"] = h
+        self.gf8 = GraphicalForm(drawing, h, 'gf8', fontObject=font)
+        self.graphForms.append(self.gf8)
 
 
 

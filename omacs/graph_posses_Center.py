@@ -1,8 +1,8 @@
 """
-__graph_require_Center.py___________________________________________________________
+__graph_posses_Center.py___________________________________________________________
 
 Automatically generated graphical appearance ---> MODIFY DIRECTLY WITH CAUTION
-____________________________________________________________________________________
+___________________________________________________________________________________
 """
 import tkFont
 
@@ -10,11 +10,11 @@ from graphEntity     import *
 from GraphicalForm   import *
 from ATOM3Constraint import *
 
-class graph_require_Center(graphEntity):
+class graph_posses_Center(graphEntity):
 
     def __init__(self, x, y, semObject = None):
         self.semanticObject = semObject
-        self.sizeX, self.sizeY = 57, 21
+        self.sizeX, self.sizeY = 55, 21
         graphEntity.__init__(self, x, y)
         self.ChangesAtRunTime = 0
         self.constraintList = []
@@ -28,11 +28,11 @@ class graph_require_Center(graphEntity):
         if showGG and self.semanticObject: self.drawGGLabel(drawing)
         if self.semanticObject: drawText = self.semanticObject.rate.toString()
         else: drawText = "<rate>"
-        font = tkFont.Font( family='Helvetica', size=12, weight='bold', slant='roman', underline=0)
-        h = drawing.create_text(self.translate([28.0, 10.0, 28.0, -72.0])[:2], tags = self.tag, font=font, fill = 'orange', anchor = 'center', text = drawText, width = '0', justify= 'left', stipple='' )
+        font = tkFont.Font( family='Helvetica', size=12, weight='normal', slant='roman', underline=0)
+        h = drawing.create_text(self.translate([29.0, 19.0, 29.0, 12.0])[:2], tags = self.tag, font=font, fill = 'blue4', anchor = 'center', text = drawText, width = '0', justify= 'left', stipple='' )
         self.attr_display["rate"] = h
-        self.gf17 = GraphicalForm(drawing, h, 'gf17', fontObject=font)
-        self.graphForms.append(self.gf17)
+        self.gf16 = GraphicalForm(drawing, h, 'gf16', fontObject=font)
+        self.graphForms.append(self.gf16)
 
 
 
@@ -78,60 +78,29 @@ class graph_require_Center(graphEntity):
 'LK8hcNuZ+P7HEYT5zmsMjJ0BBTK2ACywJhPESQYD6LEIavB/64tgCG/kQY1skCQnLCHwblYR0V1EhR8s'+\
 'IAwDAgA7'        
 
-        imageDict[ 'Role.gif' ] = ''+\
-'R0lGODlhRgBGAPeTAMsAAMsAAcsAAswAAc0AAcwAAs0AAswBAswCA80DBM0EBc0HCM4ICc4JCs4KC84L'+\
-'DM4MDc8NDs8PEM8QEdASE9ATFNAUFdEYGdEbHNIeH9IfINIgIdMhItMiI9MjJNQnKNQoKdUrLNUsLdUt'+\
-'LtUvMNYxMtYyM9YzNNc1Ntc3ONc4Odg7PNg8PdlCQ9pERdpFRtpISdtJSttLTNtNTtxPUNxRUtxSU91T'+\
-'VN1VVt1WV95aW99dXt9eX99hYuBiY+BjZOBlZuFnaOFoaeFpauFqa+JsbeJtbuJwceNyc+R2d+R3eOR4'+\
-'eeR6e+V9fuaBgeaDg+aEhOeGhueJieiKiuiLi+iOjumQkOmSkuqUlOqVleqYmOuZmeuamuubm+yfn+yg'+\
-'oOyhoeyiou2lpe6pqe6srO+uru+vr/Czs/C2tvG3t/G5ufG7u/K8vPLAwPPCwvPFxfTGxvTHx/TJyfXM'+\
-'zPXNzfXPz/bS0vbU1PfW1vjb2/jc3Pje3vnf3/ng4Pnh4fnj4/rl5frm5vrn5/ro6Pvs7Pvt7fzu7vzv'+\
-'7/zx8fzy8v3z8/309P339/74+P76+v77+/78/P/9/f/+/v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
-'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
-'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
-'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
-'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
-'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
-'ACH5BAEAAJQALAAAAABGAEYAAAj+ACkJHEiwoMGDAwcQVIiwocOHEBEyFDiR0sQBFSNq3IhQAEeKGT+K'+\
-'XBhypMmTEjGqXLmyIUaUEUOynElTJcyRHhPW3EnzYIGbD3kKrVlwwE+gFkkOXcrSANKGAphKnWnw6M2l'+\
-'J3rgmDBzyBymC61yHJDTotAPdQCt0XMIB8sqaaRe1ckTwp8uCzBKcYRiJZorNUeIoAp0KRBCDlbCQbNy'+\
-'j5GabiJ90cAyrEimW+Ku9BEJAkYHjl7QnPGohRZEVCiodEpRrMucUrd8XUki0gmMIiJRZlkADxeMIMjc'+\
-'KWDz40WWIMwACpNYpRFEzTF6iFQCo41FNDkPWcm15ciZPwz+PQEyyMzKDpF6rOSxyPMAJnVmOviD5s+b'+\
-'FTsJlnU4M4ug6gPYEEleKmGBSF8DgAAIFCqFsccRMnSgUhKFTLAAEoaMQVRC+y1El0pDOILfADLw4R5G'+\
-'CoQRCRxuMCKFAiq90IQYcyDiSAYUGIKEShHEkB9EDNX0BSAXlAAII5GwYcNKH+hAQwU8XaAAE5EsCZZG'+\
-'NTlQxx2IDFGAB1UsgocKU2FUwA+AsJHCUlju1IEhYaxkAQ8wlvmZEoaYEd2PlAiAQEo7yRBJDnbyRMF2'+\
-'Q7kkEHFCOYHIYIVG+lJQQxWQBhWSStqhQUydmGmhBLlm1qek8jQQcUWVquqGJIG06qvUxQEKK6wuzQrr'+\
-'fmLZOqtOSumqaqqu+lpqrcIOK2uxmRKLrKSifrgsqKcyuuizkrbaK7VTUYptmdpuy9SmlBRwFKPespnQ'+\
-'uMeVm+i5B6lr7kPkuttTm/LO6xK69VbGa0G55utdQkD6W1LA+RrnbLm5gjtQVNd6y6/Cym6LVLkoidtw'+\
-'sfwOnFKqy1al8UbINvuUsE95yPGqzRoF05/tlipyyQ0hwCzM/Gkcr1Avm0VzuBoJUAACUeW8M5Alf0yz'+\
-'0QYPTbRxLCvd874UQS200w6VNenQAQEAOw=='        
-
-        imageDict[ 'Goal.gif' ] = ''+\
-'R0lGODlhRgBGAPeNAOaAAOeAAOeAAeeBAueBA+eCBOeCBeiAAOiDB+iECOiFCuiFC+iGDOiHD+mIEOmJ'+\
-'EumKFOmKFemLFumLF+mMGeqNG+qPHuqPH+qQIeqRI+qSJeuTJuuUKOuUKeuVKuuVK+uWLOuWLeuXL+yY'+\
-'MOyZMuyZM+yaNeycOOycOeydOu2ePe2fPu2gQO2hQu2hQ+2iRO6jRu6kSO6kSe6lS++oUe+pUu+rVu+s'+\
-'WPCtW/CvXvCvX/CxYvGyZfG1avG2bPG2bfK5cvK5c/K6dfK7d/K8ePK8efO9e/O+fPO+ffO/fvO/f/PA'+\
-'gPPBgvTGjPTGjfXIkPXKlPXLl/XMmPXMmfXNmvbNm/bOnPbPnvbQofbSpPfSpffTpvfTp/fUqPfVq/fX'+\
-'rvjYsPjYsfjZsvjbt/jcuPjcufnevPnevfnfv/ngwfnhwvnhw/nixPrjxvrjx/rkyPrkyfrlyvrly/rm'+\
-'zfrnz/vp0/vs2fzu3fzv3vzw4Pzw4fzx4vzx4/316v316/327P327f337v337/758v758/769f779/78'+\
-'+P78+f/9+v/9+//+/f/+/v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
-'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
-'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
-'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
-'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
-'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
-'ACH5BAEAAI4ALAAAAABGAEYAAAj+AB0JHEiwoMGDAwMQVIiwocOHEBEyFDjR0cQAFSNq3CiRI8WMHkMu'+\
-'BCmypEmEBwKkxMiy5YGGKk9GBNmypk2bMkVWvMmzJ0mSOUf6HIpz4cugFoUSXVoTKUymUIsuRBq1qlSL'+\
-'Rz1iTGi1K8asJi8uRRHFjRonFniCYAKCKNWlTAo9oZHjjSAUNg3QQURl6ciQTGEsYsHSgJo8C2oi4bPk'+\
-'DVOuMxlC5VKnZolFOFqCSDSjBSIDNr/oaOoxa80FPNQIMlLTDRibfKQUfqMlAIRFJGrWWLTiKseaKPSY'+\
-'qXGBQs0xbmy++cLSyJ8JGPnsaIlADxeeUyHW/DCoSE8miSD+1LwTBSOHQonmYBlSp3zzQmlv/j0olqWW'+\
-'1y1vhAEd4AIiJy2tsMgLARjAhhkVwBCEFXckh1EFhSDhU0RH2WSHhOapcUchS7DUwyJQfLDBD364F0Qh'+\
-'G7RkQyH8aYHYUBspxxxGFxiBwA+JlMCSDGYIIogZN7DUQAbbLfJBACcsYoNbkdU0hJE2wRFGVwb8AIIB'+\
-'b6Tx2EcS2bRAHnU40FILg/TmlW1lCIJEA0zS99FNJQgyBwsNmFBFHzGc2dIJaTIhZk/a9bSBGIssIogV'+\
-'8em5ZxlV+AQWfUMlQAF/inaVnVKVZirVVphq6imn830qKksOjWrqU6Z+eqlFqarKJVeyrWpaEKexeopq'+\
-'rYreiuuZuu5q1aOd+hrVSCm9KaxV88F67LClLlvVQ84+a1CxrEbrF2SsKmstoAkBW+223EILbriBjuub'+\
-'QTF9ay6o2RYE1rotzVquuTqtq5W21iYLabDHugtUr8K+texJ1Bq766z/7svvqQjndLBT6LYKcUIRi6pw'+\
-'WF1mOvFvem78FMATfrxxwsQeULDHOkFM8sQr/4byTIC1/PJAWZ0sFsUzl2SazCUFBAA7'        
+        imageDict[ 'cc.gif' ] = ''+\
+'R0lGODlhKgAnAPYAAAFFrQVIrglLrgBGsAVLtAlNswZOuQhPug9QswpRvRNTtBhWtB1athJVuxZZvRtb'+\
+'vCFdtiFfvCRhuytlvC5ovTJpvThuvwxVww5Yxw9ZyBZawh1fwxFczBNf0R9hxhlhzBVi1Rlk1Bdl2Rhm'+\
+'2xpo3iNjxClmwixpxSVozipryzJswzFuyjtywzVxzDx1yiBo1Clv1y5x1y1x2DR01Dl41xxs4x9v6B9w'+\
+'6SFy7CN28iV59id7+Sh9/EJ2xEd6xk19xUJ3yEN5ykp+zFB/xkp/0EN80UyAzlSEzlmHy1yIykyD1UyF'+\
+'21OF0laI1FuL1FSK2luO2l+R22WPzmGO0mWR1GuU02+Y1WOT22mW2m2Z3HCX0XKZ1XKc3Hif2neg3Xuh'+\
+'2VWM4FyR4HOf4HSg4Huk4YGk2oSp4oqu5I+z6JKy4gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'+\
+'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAGoALAAAAAAqACcAAAf+gGqC'+\
+'g4SFhVeGiYqKFRULEhALEAULBAUFCgEClwoCCwKTEAxAi4kBAKipAASsra6rqKcAAaWFFbOprqwFBr0G'+\
+'lqwBwqk/tYMQSUkMAAOsvQfQGkQGCS4qQC4SDw+3s8ZqPlJGExM9Qg4rQiklTC4lZkwlK0FNLk5fJioP'+\
+'PxNJxgxaFBBIEOSLEi5XuKSAwqUIGihQnChxQoWKFRdIqkiR8sCYhCoNDDigkmYKlhRZnnA580QMCi9X'+\
+'nkC50kTJCZJaqlCopaAAkilBmGCB6QWKGDFhyIBBE+VKFJlXnGBxQYVLEBUFWJR6QKDBkXhKoLQYg4WG'+\
+'jDBLZIAJA2OGjBj+M1AoabHOiYoDKhZRYHUgwYULGTh8WPIChGERIkAkNsyhQ4cMGTBcSJDAQIFFLAj0'+\
+'/XuBQ+MQh0WMGI24NIjHkTkfKEDKEJQNBKj9Dcwh9OgauEnoNg0CcuoDBk4k2tIA2l/PHQ7fxs089wjE'+\
+'hh9LBu4gUQkDBzgjVzyCBHMbN27YsIG7O/TAGf5WzltIAvbZjbl7rxH+Bg4c4ceXXwz5Aob1hiSwWWfx'+\
+'jeYdeDjkoKCC+JFHQmIdeCYZZQYU4kMBm2GAQW0g3AbeDTnooMMODIpXw4MQpkZZAUIQ0oBmfm3IYXc1'+\
+'IBjiDjzsoEMO+OW2GAeRCWiAAoNs4cBAMXr+ZhiN4CmIY4473mfDbqd5pp5IUggyASuU+adkhyPgBuKN'+\
+'OEbp4HNVBlkZAR2pwUIzshG45IFjirgjjzg4SEJ0HEg2GSvsCcCXX4DNGGaN9i3IIHkn7gmCZ+mtSYAA'+\
+'amixSmyEyrgkk/bdlx+jaEbIgXoHsAKAEWMwAGeGgRnW4YE15EmefjVA92ifV7LCQg+CLCAQNX7Rppxu'+\
+'8zW3249ATpYAAQ4sUEgEBSAJH4dgdkcsiotFmJqyCbBXSBUPxIlBYMmFJtpoIyjGZ3/KSlBGKSo0QKiX'+\
+'1LqqrquQpvcfQd+c8ECm435ZbpW3QqZhAht8M0gXGnTpH22eRRzxtglXaCCcwoQ00TBn/mmooZXJqqcE'+\
+'xoY0cYLDnPnJMWUaVEGyIucAO6+ykzlgxMu1lEDZzgL2XALO3+jTSqkGSHAx0MZQAcGLBCjQgAtIk4zE'+\
+'JlpFjTMiQAcCADs='        
 
         imageDict[ 'c.gif' ] = ''+\
 'R0lGODlhPAA4APcAAAFFrARIrwpLrgVLtAxOsQdOuQhPug1QtQpRvRNTsxlWthtZtRJVuxZZvhxbuyFd'+\
@@ -176,4 +145,4 @@ class graph_require_Center(graphEntity):
 
         return imageDict
 
-new_class = graph_require_Center
+new_class = graph_posses_Center

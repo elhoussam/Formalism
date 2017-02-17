@@ -1,35 +1,33 @@
 """
-__require.py_____________________________________________________
+__requir.py_____________________________________________________
 
 Automatically generated AToM3 syntactic object (DO NOT MODIFY DIRECTLY)
 Author: sam
-Modified: Sat Feb  4 20:01:29 2017
-_________________________________________________________________
+Modified: Wed Feb 15 12:18:20 2017
+________________________________________________________________
 """
 from ASGNode import *
 
 from ATOM3Type import *
 
-from ATOM3Float import *
-from graph_require import *
-class require(ASGNode, ATOM3Type):
+from graph_requir import *
+class requir(ASGNode, ATOM3Type):
 
    def __init__(self, parent = None):
       ASGNode.__init__(self)
       ATOM3Type.__init__(self)
-      self.graphClass_ = graph_require
+      self.graphClass_ = graph_requir
       self.isGraphObjectVisual = True
       if(hasattr(self, '_setHierarchicalLink')):
         self._setHierarchicalLink(False)
       if(hasattr(self, '_setHierarchicalNode')):
         self._setHierarchicalNode(False)
       self.parent = parent
-      self.rate=ATOM3Float(0.0)
-      self.generatedAttributes = {'rate': ('ATOM3Float', )      }
-      self.realOrder = ['rate']
-      self.directEditing = [1]
+      self.generatedAttributes = {      }
+      self.realOrder = []
+      self.directEditing = []
    def clone(self):
-      cloneObject = require( self.parent )
+      cloneObject = requir( self.parent )
       for atr in self.realOrder:
          cloneObject.setAttrValue(atr, self.getAttrValue(atr).clone() )
       ASGNode.cloneActions(self, cloneObject)

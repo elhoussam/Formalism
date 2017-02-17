@@ -3,7 +3,7 @@ __omacs_MM.py______________________________________________________
 
 Automatically generated AToM3 MetaModel (DO NOT MODIFY DIRECTLY)
 Author: sam
-Modified: Sat Feb  4 20:01:29 2017
+Modified: Wed Feb 15 10:51:28 2017
 ___________________________________________________________________
 """
 from ASG_omacs import *

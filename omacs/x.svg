@@ -1,0 +1,229 @@
+<?xml version="1.0"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  id="top_" xml:lang="en" version="1.1" baseProfile="full">
+
+<desc>AToM3 model exported to SVG by Denis' AToM3Selection2SVG.py</desc>
+
+<defs>
+  <marker id="TriangleArrowhead"
+    viewBox="0 0 10 10" refX="10" refY="5" 
+    markerUnits="strokeWidth"
+    markerWidth="6" markerHeight="6"
+    orient="auto">
+    <path d="M 0 0 L 10 5 L 0 10 z" />
+  </marker>
+</defs>
+
+<g id="Obj0">
+  <rect id="Obj0.gf1" fill="#ffff00" stroke="#000000" stroke-width="1.0"
+  x="1.0" y="21.1803278689" width="190.0" height="21.6885245902" />
+
+  <rect id="Obj0.gf3" fill="#f8f8f8" stroke="#000000" stroke-width="1.0"
+  x="1.0" y="42.868852459" width="190.0" height="130.131147541" />
+
+  <g id="Obj0.gf4"
+    style="font-size:12pt;font-family:Helvetica;fill:#0000ff;text-anchor:start"  >
+    <text x="1" y="62">Attributes:</text>
+    <text x="9" y="83">  - name :: String</text>
+    <text x="9" y="104">  - price :: Integer</text>
+    <text x="1" y="125">Multiplicities:</text>
+    <text x="9" y="146">  - To posses: 0 to N</text>
+    <text x="9" y="167">  - To CapableOf: 0 to N</text>    </g>
+  <text id="Obj0.gf46"
+    style="font-size:9pt;font-family:Helvetica;fill:none;text-anchor:start"
+    x="116.0" y="37.5180327869">
+    &lt;&lt;Abstract&gt;&gt;  </text>
+  <text id="Obj0.gf63"
+    style="font-size:12pt;font-family:Helvetica;fill:#000000;font-weight:bold;text-anchor:start"
+    x="5.0" y="38.2647540984">
+    Agent  </text>
+</g>
+<g id="Obj1">
+  <rect id="Obj1.gf1" fill="#ffff00" stroke="#000000" stroke-width="1.0"
+  x="541.0" y="21.0" width="190.0" height="20.0" />
+
+  <rect id="Obj1.gf3" fill="#f8f8f8" stroke="#000000" stroke-width="1.0"
+  x="541.0" y="41.0" width="190.0" height="120.0" />
+
+  <g id="Obj1.gf4"
+    style="font-size:12pt;font-family:Helvetica;fill:#0000ff;text-anchor:start"  >
+    <text x="541" y="60">Attributes:</text>
+    <text x="549" y="81">  - name :: String</text>
+    <text x="541" y="102">Multiplicities:</text>
+    <text x="549" y="123">  - From posses: 0 to N</text>
+    <text x="549" y="144">  - From requir: 0 to N</text>    </g>
+  <text id="Obj1.gf46"
+    style="font-size:9pt;font-family:Helvetica;fill:none;text-anchor:start"
+    x="656.0" y="37.0">
+    &lt;&lt;Abstract&gt;&gt;  </text>
+  <text id="Obj1.gf63"
+    style="font-size:12pt;font-family:Helvetica;fill:#000000;font-weight:bold;text-anchor:start"
+    x="545.0" y="38.0">
+    Capabilitie  </text>
+</g>
+<g id="Obj2">
+  <rect id="Obj2.gf1" fill="#ffff00" stroke="#000000" stroke-width="1.0"
+  x="20.58984375" y="401.180327869" width="192.2265625" height="21.6885245902" />
+
+  <rect id="Obj2.gf3" fill="#f8f8f8" stroke="#000000" stroke-width="1.0"
+  x="20.58984375" y="422.868852459" width="192.2265625" height="130.131147541" />
+
+  <g id="Obj2.gf4"
+    style="font-size:12pt;font-family:Helvetica;fill:#0000ff;text-anchor:start"  >
+    <text x="21" y="442">Attributes:</text>
+    <text x="29" y="463">  - name :: String</text>
+    <text x="21" y="484">Multiplicities:</text>
+    <text x="29" y="505">  - From CapableOf: 0 to N</text>
+    <text x="29" y="526">  - To achieve: 0 to N</text>
+    <text x="29" y="547">  - To requir: 0 to N</text>    </g>
+  <text id="Obj2.gf46"
+    style="font-size:9pt;font-family:Helvetica;fill:none;text-anchor:start"
+    x="137.78125" y="417.518032787">
+    &lt;&lt;Abstract&gt;&gt;  </text>
+  <text id="Obj2.gf63"
+    style="font-size:12pt;font-family:Helvetica;fill:#000000;font-weight:bold;text-anchor:start"
+    x="24.63671875" y="418.264754098">
+    Role  </text>
+</g>
+<g id="Obj3">
+  <rect id="Obj3.gf1" fill="#ffff00" stroke="#000000" stroke-width="1.0"
+  x="521.0" y="401.0" width="190.0" height="20.0" />
+
+  <rect id="Obj3.gf3" fill="#f8f8f8" stroke="#000000" stroke-width="1.0"
+  x="521.0" y="421.0" width="190.0" height="120.0" />
+
+  <g id="Obj3.gf4"
+    style="font-size:12pt;font-family:Helvetica;fill:#0000ff;text-anchor:start"  >
+    <text x="521" y="440">Attributes:</text>
+    <text x="529" y="461">  - name :: String</text>
+    <text x="521" y="482">Multiplicities:</text>
+    <text x="529" y="503">  - From achieve: 0 to N</text>    </g>
+  <text id="Obj3.gf46"
+    style="font-size:9pt;font-family:Helvetica;fill:none;text-anchor:start"
+    x="636.0" y="417.0">
+    &lt;&lt;Abstract&gt;&gt;  </text>
+  <text id="Obj3.gf63"
+    style="font-size:12pt;font-family:Helvetica;fill:#000000;font-weight:bold;text-anchor:start"
+    x="525.0" y="418.0">
+    Goal  </text>
+</g>
+<g id="Obj4">
+  <path id="Obj41stSeg0" fill="none" stroke="#000000" stroke-width="2.0"
+  d="M191.0,94.9213114754 L385.0,89.0" />
+
+  <path id="Obj42ndSeg0" fill="none" stroke="#000000" stroke-width="2.0" marker-end="url(#TriangleArrowhead)"
+  d="M385.0,89.0 L541.0,89.0" />
+
+<g id="Obj4_Center">
+  <rect id="Obj4_Center.gf12" fill="#000000" stroke="#000000" stroke-width="1.0"
+  x="299.001" y="47.7661290323" width="173.012" height="107.879032258" />
+
+  <rect id="Obj4_Center.gf10" fill="#ffffff" stroke="#000000" stroke-width="1.0"
+  x="297.832" y="41.8387096774" width="175.35" height="113.806451613" />
+
+  <polygon id="Obj4_Center.gf9" fill="#ffff00" stroke="#000000" stroke-width="1.0"
+  points="297.832,29.0947580645 297.832,41.5423387097 385.507,47.7661290323 473.182,41.5423387097 473.182,29.0947580645 385.507,22.8709677419" />
+
+  <text id="Obj4_Center.gf3"
+    style="font-size:12pt;font-family:times;fill:#000000;font-weight:bold;text-anchor:start"
+    x="364.507" y="40.7258064516">
+    posses  </text>
+  <g id="Obj4_Center.gf11"
+    style="font-size:12pt;font-family:Helvetica;fill:#0000ff;text-anchor:start"  >
+    <text x="298" y="55">Attributes:</text>
+    <text x="306" y="76">  - rate :: Float</text>
+    <text x="298" y="97">Multiplicities:</text>
+    <text x="306" y="118">  - To Capabilitie: 0 to N</text>
+    <text x="306" y="139">  - From Agent: 0 to N</text>    </g>
+</g>
+</g>
+<g id="Obj6">
+  <path id="Obj61stSeg0" fill="none" stroke="#000000" stroke-width="2.0"
+  d="M116.0,173.0 L100.78125,285.0" />
+
+  <path id="Obj62ndSeg0" fill="none" stroke="#000000" stroke-width="2.0" marker-end="url(#TriangleArrowhead)"
+  d="M100.78125,285.0 L96.46875,413.0" />
+
+<g id="Obj6_Center">
+  <rect id="Obj6_Center.gf12" fill="#000000" stroke="#000000" stroke-width="1.0"
+  x="23.23125" y="251.0" width="155.4" height="91.0" />
+
+  <rect id="Obj6_Center.gf10" fill="#ffffff" stroke="#000000" stroke-width="1.0"
+  x="22.18125" y="246.0" width="157.5" height="96.0" />
+
+  <polygon id="Obj6_Center.gf9" fill="#ffff00" stroke="#000000" stroke-width="1.0"
+  points="22.18125,235.25 22.18125,245.75 100.93125,251.0 179.68125,245.75 179.68125,235.25 100.93125,230.0" />
+
+  <text id="Obj6_Center.gf3"
+    style="font-size:12pt;font-family:times;fill:#000000;font-weight:bold;text-anchor:start"
+    x="63.93125" y="246.0">
+    CapableOf  </text>
+  <g id="Obj6_Center.gf11"
+    style="font-size:12pt;font-family:Helvetica;fill:#0000ff;text-anchor:start"  >
+    <text x="22" y="271">Multiplicities:</text>
+    <text x="30" y="292">  - To Role: 0 to N</text>
+    <text x="30" y="313">  - From Agent: 0 to N</text>    </g>
+</g>
+</g>
+<g id="Obj8">
+  <path id="Obj81stSeg0" fill="none" stroke="#000000" stroke-width="2.0"
+  d="M212.81640625,474.921311475 L386.080078125,476.0" />
+
+  <path id="Obj82ndSeg0" fill="none" stroke="#000000" stroke-width="2.0" marker-end="url(#TriangleArrowhead)"
+  d="M386.080078125,476.0 L521.0,469.0" />
+
+<g id="Obj8_Center">
+  <rect id="Obj8_Center.gf12" fill="#000000" stroke="#000000" stroke-width="1.0"
+  x="312.080078125" y="434.766129032" width="148.0" height="107.879032258" />
+
+  <rect id="Obj8_Center.gf10" fill="#ffffff" stroke="#000000" stroke-width="1.0"
+  x="311.080078125" y="428.838709677" width="150.0" height="113.806451613" />
+
+  <polygon id="Obj8_Center.gf9" fill="#ffff00" stroke="#000000" stroke-width="1.0"
+  points="311.080078125,416.094758065 311.080078125,428.54233871 386.080078125,434.766129032 461.080078125,428.54233871 461.080078125,416.094758065 386.080078125,409.870967742" />
+
+  <text id="Obj8_Center.gf3"
+    style="font-size:12pt;font-family:times;fill:#000000;font-weight:bold;text-anchor:start"
+    x="361.080078125" y="427.725806452">
+    achieve  </text>
+  <g id="Obj8_Center.gf11"
+    style="font-size:12pt;font-family:Helvetica;fill:#0000ff;text-anchor:start"  >
+    <text x="311" y="442">Attributes:</text>
+    <text x="319" y="463">  - rate :: Float</text>
+    <text x="311" y="484">Multiplicities:</text>
+    <text x="319" y="505">  - To Goal: 0 to N</text>
+    <text x="319" y="526">  - From Role: 0 to N</text>    </g>
+</g>
+</g>
+<g id="Obj10">
+  <path id="Obj101stSeg0" fill="none" stroke="#000000" stroke-width="2.0"
+  d="M177.40625,413.0 L265.0,275.0 294.5,295.5 381.25,300.25" />
+
+  <path id="Obj102ndSeg0" fill="none" stroke="#000000" stroke-width="2.0" marker-end="url(#TriangleArrowhead)"
+  d="M381.25,300.25 L468.0,305.0 612.0,294.0 616.0,161.0" />
+
+<g id="Obj10_Center">
+  <rect id="Obj10_Center.gf12" fill="#000000" stroke="#000000" stroke-width="1.0"
+  x="295.251" y="266.25" width="173.012" height="91.0" />
+
+  <rect id="Obj10_Center.gf10" fill="#ffffff" stroke="#000000" stroke-width="1.0"
+  x="294.082" y="261.25" width="175.35" height="96.0" />
+
+  <polygon id="Obj10_Center.gf9" fill="#ffff00" stroke="#000000" stroke-width="1.0"
+  points="294.082,250.5 294.082,261.0 381.757,266.25 469.432,261.0 469.432,250.5 381.757,245.25" />
+
+  <text id="Obj10_Center.gf3"
+    style="font-size:12pt;font-family:times;fill:#000000;font-weight:bold;text-anchor:start"
+    x="360.257" y="261.25">
+    requir  </text>
+  <g id="Obj10_Center.gf11"
+    style="font-size:12pt;font-family:Helvetica;fill:#0000ff;text-anchor:start"  >
+    <text x="294" y="286">Multiplicities:</text>
+    <text x="302" y="307">  - To Capabilitie: 0 to N</text>
+    <text x="302" y="328">  - From Role: 0 to N</text>    </g>
+</g>
+</g>
+
+</svg>
