@@ -3,7 +3,7 @@ __ASG_omacs.py_____________________________________________________
 
 Automatically generated AToM3 ASGroot node (DO NOT MODIFY DIRECTLY)
 Author: sam
-Modified: Wed Feb 15 10:51:28 2017
+Modified: Fri Mar 31 17:02:51 2017
 ___________________________________________________________________
 """
 from ASG import *
@@ -13,7 +13,7 @@ from ATOM3Text import *
 class ASG_omacs(ASG, ATOM3Type):
 
    def __init__(self, parent= None, ASGroot = None):
-      ASG.__init__(self, 'omacs', ASGroot, ['ASG_omacs' ,'Agent' ,'Capabilitie' ,'Role' ,'Goal' ,'posses' ,'CapableOf' ,'require' ,'achieve'])
+      ASG.__init__(self, 'omacs', ASGroot, ['ASG_omacs' ,'Agent' ,'Capabilitie' ,'Role' ,'Goal' ,'posses' ,'CapableOf' ,'achieve' ,'require'])
 
       ATOM3Type.__init__(self)
       self.parent = parent

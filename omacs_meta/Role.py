@@ -1,9 +1,9 @@
 """
-__Goal.py_____________________________________________________
+__Role.py_____________________________________________________
 
 Automatically generated AToM3 syntactic object (DO NOT MODIFY DIRECTLY)
 Author: sam
-Modified: Wed Feb 15 12:18:20 2017
+Modified: Fri Mar 31 17:02:51 2017
 ______________________________________________________________
 """
 from ASGNode import *
@@ -11,13 +11,13 @@ from ASGNode import *
 from ATOM3Type import *
 
 from ATOM3String import *
-from graph_Goal import *
-class Goal(ASGNode, ATOM3Type):
+from graph_Role import *
+class Role(ASGNode, ATOM3Type):
 
    def __init__(self, parent = None):
       ASGNode.__init__(self)
       ATOM3Type.__init__(self)
-      self.graphClass_ = graph_Goal
+      self.graphClass_ = graph_Role
       self.isGraphObjectVisual = True
       if(hasattr(self, '_setHierarchicalLink')):
         self._setHierarchicalLink(False)
@@ -29,7 +29,7 @@ class Goal(ASGNode, ATOM3Type):
       self.realOrder = ['name']
       self.directEditing = [1]
    def clone(self):
-      cloneObject = Goal( self.parent )
+      cloneObject = Role( self.parent )
       for atr in self.realOrder:
          cloneObject.setAttrValue(atr, self.getAttrValue(atr).clone() )
       ASGNode.cloneActions(self, cloneObject)

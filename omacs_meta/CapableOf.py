@@ -3,13 +3,14 @@ __CapableOf.py_____________________________________________________
 
 Automatically generated AToM3 syntactic object (DO NOT MODIFY DIRECTLY)
 Author: sam
-Modified: Wed Feb 15 12:18:20 2017
+Modified: Fri Mar 31 17:02:51 2017
 ___________________________________________________________________
 """
 from ASGNode import *
 
 from ATOM3Type import *
 
+from ATOM3Float import *
 from graph_CapableOf import *
 class CapableOf(ASGNode, ATOM3Type):
 
@@ -23,9 +24,10 @@ class CapableOf(ASGNode, ATOM3Type):
       if(hasattr(self, '_setHierarchicalNode')):
         self._setHierarchicalNode(False)
       self.parent = parent
-      self.generatedAttributes = {      }
-      self.realOrder = []
-      self.directEditing = []
+      self.rate=ATOM3Float(0.0)
+      self.generatedAttributes = {'rate': ('ATOM3Float', )      }
+      self.realOrder = ['rate']
+      self.directEditing = [1]
    def clone(self):
       cloneObject = CapableOf( self.parent )
       for atr in self.realOrder:

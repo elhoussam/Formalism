@@ -1,33 +1,38 @@
 """
-__requir.py_____________________________________________________
+__Agent.py_____________________________________________________
 
 Automatically generated AToM3 syntactic object (DO NOT MODIFY DIRECTLY)
 Author: sam
-Modified: Wed Feb 15 12:18:20 2017
-________________________________________________________________
+Modified: Fri Mar 31 17:02:51 2017
+_______________________________________________________________
 """
 from ASGNode import *
 
 from ATOM3Type import *
 
-from graph_requir import *
-class requir(ASGNode, ATOM3Type):
+from ATOM3String import *
+from ATOM3Integer import *
+from graph_Agent import *
+class Agent(ASGNode, ATOM3Type):
 
    def __init__(self, parent = None):
       ASGNode.__init__(self)
       ATOM3Type.__init__(self)
-      self.graphClass_ = graph_requir
+      self.graphClass_ = graph_Agent
       self.isGraphObjectVisual = True
       if(hasattr(self, '_setHierarchicalLink')):
         self._setHierarchicalLink(False)
       if(hasattr(self, '_setHierarchicalNode')):
         self._setHierarchicalNode(False)
       self.parent = parent
-      self.generatedAttributes = {      }
-      self.realOrder = []
-      self.directEditing = []
+      self.name=ATOM3String('', 20)
+      self.price=ATOM3Integer(0)
+      self.generatedAttributes = {'name': ('ATOM3String', ),
+                                  'price': ('ATOM3Integer', )      }
+      self.realOrder = ['name','price']
+      self.directEditing = [1,1]
    def clone(self):
-      cloneObject = requir( self.parent )
+      cloneObject = Agent( self.parent )
       for atr in self.realOrder:
          cloneObject.setAttrValue(atr, self.getAttrValue(atr).clone() )
       ASGNode.cloneActions(self, cloneObject)
@@ -61,27 +66,18 @@ class requir(ASGNode, ATOM3Type):
       NOTE: DO NOT select a POST/PRE action trigger
       Constraints will be added/removed in a logical manner by other mechanisms.
       """
-      return # <--- Remove this if you want to use QOCA
+      return # <---- Remove this to use QOCA
       
-      # Get the high level constraint helper and solver
+      """ Get the high level constraint helper and solver """
       from Qoca.atom3constraints.OffsetConstraints import OffsetConstraints
       oc = OffsetConstraints(self.parent.qocaSolver)  
-      
-      # Constraint only makes sense if there exists 2 objects connected to this link
-      if(not (self.in_connections_ and self.out_connections_)): return
-      
-      # Get the graphical objects (subclass of graphEntity/graphLink) 
-      graphicalObjectLink = self.graphObject_
-      graphicalObjectSource = self.in_connections_[0].graphObject_
-      graphicalObjectTarget = self.out_connections_[0].graphObject_
-      objTuple = (graphicalObjectSource, graphicalObjectTarget, graphicalObjectLink)
       
       """
       Example constraint, see Kernel/QOCA/atom3constraints/OffsetConstraints.py
       For more types of constraints
       """
-      oc.LeftExactDistance(objTuple, 20)
-      oc.resolve() # Resolve immediately after creating entity & constraint 
+      oc.fixedWidth(self.graphObject_, self.graphObject_.sizeX)
+      oc.fixedHeight(self.graphObject_, self.graphObject_.sizeY)
       
       
 

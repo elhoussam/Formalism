@@ -1,12 +1,12 @@
 """
-__omacs_MM.py______________________________________________________
+__OMACS_MM.py______________________________________________________
 
 Automatically generated AToM3 MetaModel (DO NOT MODIFY DIRECTLY)
 Author: sam
-Modified: Wed Feb 15 10:51:28 2017
+Modified: Sat Mar 11 18:39:13 2017
 ___________________________________________________________________
 """
-from ASG_omacs import *
+from ASG_OMACS import *
 from graph_ASG_ERmetaMetaModel import *
 from Tkinter         import *
 from ATOM3TypeInfo   import *
@@ -20,10 +20,10 @@ from Role       import *
 from Goal       import *
 from posses       import *
 from CapableOf       import *
-from require       import *
 from achieve       import *
+from requir       import *
 def createNewASGroot(self):
-   return ASG_omacs(self, None)
+   return ASG_OMACS(self, None)
 
 def createModelMenu(self, modelMenu):
     "Creates a customized Model Menu for the actual formalism"
@@ -33,80 +33,80 @@ def createModelMenu(self, modelMenu):
     modelMenu.add_command(label="New Goal", command=lambda x=self: x.createNewGoal(x, 100, 100) )
     modelMenu.add_command(label="New posses", command=lambda x=self: x.createNewposses(x, 100, 100) )
     modelMenu.add_command(label="New CapableOf", command=lambda x=self: x.createNewCapableOf(x, 100, 100) )
-    modelMenu.add_command(label="New require", command=lambda x=self: x.createNewrequire(x, 100, 100) )
     modelMenu.add_command(label="New achieve", command=lambda x=self: x.createNewachieve(x, 100, 100) )
+    modelMenu.add_command(label="New requir", command=lambda x=self: x.createNewrequir(x, 100, 100) )
 def setConnectivity(self):
     self.ConnectivityMap['CapableOf']={
            'CapableOf': []
           ,'Goal': []
-          ,'require': [( 'Role', self.createNewRole)]
           ,'Agent': []
           ,'Capabilitie': []
           ,'Role': []
           ,'achieve': [( 'Role', self.createNewRole)]
+          ,'requir': [( 'Role', self.createNewRole)]
           ,'posses': [] }
     self.ConnectivityMap['Goal']={
            'CapableOf': []
           ,'Goal': []
-          ,'require': []
           ,'Agent': []
           ,'Capabilitie': []
           ,'Role': []
           ,'achieve': []
-          ,'posses': [] }
-    self.ConnectivityMap['require']={
-           'CapableOf': []
-          ,'Goal': []
-          ,'require': []
-          ,'Agent': []
-          ,'Capabilitie': []
-          ,'Role': []
-          ,'achieve': []
+          ,'requir': []
           ,'posses': [] }
     self.ConnectivityMap['Agent']={
            'CapableOf': []
           ,'Goal': []
-          ,'require': []
           ,'Agent': []
           ,'Capabilitie': [( 'posses', self.createNewposses)]
           ,'Role': [( 'CapableOf', self.createNewCapableOf)]
           ,'achieve': []
+          ,'requir': []
           ,'posses': [] }
     self.ConnectivityMap['Capabilitie']={
            'CapableOf': []
           ,'Goal': []
-          ,'require': []
           ,'Agent': []
           ,'Capabilitie': []
           ,'Role': []
           ,'achieve': []
+          ,'requir': []
           ,'posses': [] }
     self.ConnectivityMap['Role']={
            'CapableOf': []
           ,'Goal': [( 'achieve', self.createNewachieve)]
-          ,'require': []
           ,'Agent': []
-          ,'Capabilitie': [( 'require', self.createNewrequire)]
+          ,'Capabilitie': [( 'requir', self.createNewrequir)]
           ,'Role': []
           ,'achieve': []
+          ,'requir': []
+          ,'posses': [] }
+    self.ConnectivityMap['requir']={
+           'CapableOf': []
+          ,'Goal': []
+          ,'Agent': []
+          ,'Capabilitie': []
+          ,'Role': []
+          ,'achieve': []
+          ,'requir': []
           ,'posses': [] }
     self.ConnectivityMap['achieve']={
            'CapableOf': []
           ,'Goal': []
-          ,'require': []
           ,'Agent': []
           ,'Capabilitie': []
           ,'Role': []
           ,'achieve': []
+          ,'requir': []
           ,'posses': [] }
     self.ConnectivityMap['posses']={
            'CapableOf': []
           ,'Goal': []
-          ,'require': []
           ,'Agent': []
           ,'Capabilitie': []
           ,'Role': []
           ,'achieve': []
+          ,'requir': []
           ,'posses': [] }
     
     self.CardinalityTable['Agent']={
@@ -114,10 +114,10 @@ def setConnectivity(self):
           ,'Capabilitie': []
           ,'Role': []
           ,'Goal': []
-          ,'posses': [('0', 'N', 'Source')]
-          ,'CapableOf': [('0', 'N', 'Source')]
-          ,'require': []
-          ,'achieve': [] }
+          ,'posses': [('1', 'N', 'Source')]
+          ,'CapableOf': [('1', 'N', 'Source')]
+          ,'achieve': []
+          ,'requir': [] }
     self.CardinalityTable['Capabilitie']={
           'Agent': []
           ,'Capabilitie': []
@@ -125,8 +125,8 @@ def setConnectivity(self):
           ,'Goal': []
           ,'posses': [('0', 'N', 'Destination')]
           ,'CapableOf': []
-          ,'require': [('0', 'N', 'Destination')]
-          ,'achieve': [] }
+          ,'achieve': []
+          ,'requir': [('1', 'N', 'Destination')] }
     self.CardinalityTable['Role']={
           'Agent': []
           ,'Capabilitie': []
@@ -134,8 +134,8 @@ def setConnectivity(self):
           ,'Goal': []
           ,'posses': []
           ,'CapableOf': [('0', 'N', 'Destination')]
-          ,'require': [('0', 'N', 'Source')]
-          ,'achieve': [('0', 'N', 'Source')] }
+          ,'achieve': [('1', 'N', 'Source')]
+          ,'requir': [('1', 'N', 'Source')] }
     self.CardinalityTable['Goal']={
           'Agent': []
           ,'Capabilitie': []
@@ -143,8 +143,8 @@ def setConnectivity(self):
           ,'Goal': []
           ,'posses': []
           ,'CapableOf': []
-          ,'require': []
-          ,'achieve': [('0', 'N', 'Destination')] }
+          ,'achieve': [('1', 'N', 'Destination')]
+          ,'requir': [] }
     self.CardinalityTable['posses']={
           'Agent': [('0', 'N', 'Destination')]
           ,'Capabilitie': [('0', 'N', 'Source')]
@@ -152,8 +152,8 @@ def setConnectivity(self):
           ,'Goal': []
           ,'posses': []
           ,'CapableOf': []
-          ,'require': []
-          ,'achieve': [] }
+          ,'achieve': []
+          ,'requir': [] }
     self.CardinalityTable['CapableOf']={
           'Agent': [('0', 'N', 'Destination')]
           ,'Capabilitie': []
@@ -161,17 +161,8 @@ def setConnectivity(self):
           ,'Goal': []
           ,'posses': []
           ,'CapableOf': []
-          ,'require': []
-          ,'achieve': [] }
-    self.CardinalityTable['require']={
-          'Agent': []
-          ,'Capabilitie': [('0', 'N', 'Source')]
-          ,'Role': [('0', 'N', 'Destination')]
-          ,'Goal': []
-          ,'posses': []
-          ,'CapableOf': []
-          ,'require': []
-          ,'achieve': [] }
+          ,'achieve': []
+          ,'requir': [] }
     self.CardinalityTable['achieve']={
           'Agent': []
           ,'Capabilitie': []
@@ -179,10 +170,19 @@ def setConnectivity(self):
           ,'Goal': [('0', 'N', 'Source')]
           ,'posses': []
           ,'CapableOf': []
-          ,'require': []
-          ,'achieve': [] }
+          ,'achieve': []
+          ,'requir': [] }
+    self.CardinalityTable['requir']={
+          'Agent': []
+          ,'Capabilitie': [('0', 'N', 'Source')]
+          ,'Role': [('0', 'N', 'Destination')]
+          ,'Goal': []
+          ,'posses': []
+          ,'CapableOf': []
+          ,'achieve': []
+          ,'requir': [] }
     
-    self.entitiesInMetaModel['omacs']=["Agent", "Capabilitie", "Role", "Goal", "posses", "CapableOf", "require", "achieve"]
+    self.entitiesInMetaModel['OMACS']=["Agent", "Capabilitie", "Role", "Goal", "posses", "CapableOf", "achieve", "requir"]
 
     
 def createNewAgent(self, wherex, wherey, screenCoordinates = 1):
@@ -455,51 +455,6 @@ def createNewCapableOf(self, wherex, wherey, screenCoordinates = 1):
    else:
       self.statusbar.event(StatusBar.MODEL, StatusBar.CREATE)
    return new_semantic_obj
-def createNewrequire(self, wherex, wherey, screenCoordinates = 1):
-   self.fromClass = None
-   self.toClass = None
-   # try the global constraints...
-   res = self.ASGroot.preCondition(ASG.CREATE)
-   if res:
-      self.constraintViolation(res)
-      self.mode=self.IDLEMODE
-      return
-
-   new_semantic_obj = require(self)
-   res = new_semantic_obj.preCondition ( ASGNode.CREATE )
-   if res: return self.constraintViolation(res)
-   new_semantic_obj.preAction ( ASGNode.CREATE ) 
-
-   ne = len(self.ASGroot.listNodes["require"])
-   if new_semantic_obj.keyword_:
-      new_semantic_obj.keyword_.setValue(new_semantic_obj.keyword_.toString()+str(ne))
-   if screenCoordinates:
-      new_obj = graph_require(self.UMLmodel.canvasx(wherex), self.UMLmodel.canvasy(wherey), new_semantic_obj)
-   else: # already in canvas coordinates
-      new_obj = graph_require(wherex, wherey, new_semantic_obj)
-   new_obj.DrawObject(self.UMLmodel, self.editGGLabel)
-   self.UMLmodel.addtag_withtag("require", new_obj.tag)
-   new_semantic_obj.graphObject_ = new_obj
-   self.ASGroot.addNode(new_semantic_obj)
-   res = self.ASGroot.postCondition(ASG.CREATE)
-   if res:
-      self.constraintViolation(res)
-      self.mode=self.IDLEMODE
-      return
-
-   res = new_semantic_obj.postCondition(ASGNode.CREATE)
-   if res:
-      self.constraintViolation(res)
-      self.mode=self.IDLEMODE
-      return
-   new_semantic_obj.postAction(ASGNode.CREATE)
-
-   self.mode=self.IDLEMODE
-   if self.editGGLabel :
-      self.statusbar.event(StatusBar.TRANSFORMATION, StatusBar.CREATE)
-   else:
-      self.statusbar.event(StatusBar.MODEL, StatusBar.CREATE)
-   return new_semantic_obj
 def createNewachieve(self, wherex, wherey, screenCoordinates = 1):
    self.fromClass = None
    self.toClass = None
@@ -545,11 +500,56 @@ def createNewachieve(self, wherex, wherey, screenCoordinates = 1):
    else:
       self.statusbar.event(StatusBar.MODEL, StatusBar.CREATE)
    return new_semantic_obj
+def createNewrequir(self, wherex, wherey, screenCoordinates = 1):
+   self.fromClass = None
+   self.toClass = None
+   # try the global constraints...
+   res = self.ASGroot.preCondition(ASG.CREATE)
+   if res:
+      self.constraintViolation(res)
+      self.mode=self.IDLEMODE
+      return
+
+   new_semantic_obj = requir(self)
+   res = new_semantic_obj.preCondition ( ASGNode.CREATE )
+   if res: return self.constraintViolation(res)
+   new_semantic_obj.preAction ( ASGNode.CREATE ) 
+
+   ne = len(self.ASGroot.listNodes["requir"])
+   if new_semantic_obj.keyword_:
+      new_semantic_obj.keyword_.setValue(new_semantic_obj.keyword_.toString()+str(ne))
+   if screenCoordinates:
+      new_obj = graph_requir(self.UMLmodel.canvasx(wherex), self.UMLmodel.canvasy(wherey), new_semantic_obj)
+   else: # already in canvas coordinates
+      new_obj = graph_requir(wherex, wherey, new_semantic_obj)
+   new_obj.DrawObject(self.UMLmodel, self.editGGLabel)
+   self.UMLmodel.addtag_withtag("requir", new_obj.tag)
+   new_semantic_obj.graphObject_ = new_obj
+   self.ASGroot.addNode(new_semantic_obj)
+   res = self.ASGroot.postCondition(ASG.CREATE)
+   if res:
+      self.constraintViolation(res)
+      self.mode=self.IDLEMODE
+      return
+
+   res = new_semantic_obj.postCondition(ASGNode.CREATE)
+   if res:
+      self.constraintViolation(res)
+      self.mode=self.IDLEMODE
+      return
+   new_semantic_obj.postAction(ASGNode.CREATE)
+
+   self.mode=self.IDLEMODE
+   if self.editGGLabel :
+      self.statusbar.event(StatusBar.TRANSFORMATION, StatusBar.CREATE)
+   else:
+      self.statusbar.event(StatusBar.MODEL, StatusBar.CREATE)
+   return new_semantic_obj
 def createNew_Model(self, wherex, wherey, screenCoordinates = 1):
    self.toClass = None
    self.fromClass = None
-   new_semantic_obj = ASG_omacs(self)
-   ne = len(self.ASGroot.listNodes["ASG_omacs"])
+   new_semantic_obj = ASG_OMACS(self)
+   ne = len(self.ASGroot.listNodes["ASG_OMACS"])
    if new_semantic_obj.keyword_:
       new_semantic_obj.keyword_.setValue(new_semantic_obj.keyword_.toString()+str(ne))
    if screenCoordinates:
@@ -557,7 +557,7 @@ def createNew_Model(self, wherex, wherey, screenCoordinates = 1):
    else: # already in canvas coordinates
       new_obj = graph_ASG_ERmetaMetaModel(wherex, wherey, new_semantic_obj)
    new_obj.DrawObject(self.UMLmodel, self.editGGLabel)
-   self.UMLmodel.addtag_withtag("ASG_omacs", new_obj.tag)
+   self.UMLmodel.addtag_withtag("ASG_OMACS", new_obj.tag)
    new_semantic_obj.graphObject_ = new_obj
    self.ASGroot.addNode(new_semantic_obj)
    self.mode=self.IDLEMODE

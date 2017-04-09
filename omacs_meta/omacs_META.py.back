@@ -1,0 +1,146 @@
+"""
+__omacs_META.py_____________________________________________________
+
+Automatically generated AToM3 button model (DO NOT MODIFY DIRECTLY)
+Author: sam
+Modified: Fri Mar 31 15:39:14 2017
+____________________________________________________________________
+"""
+from ASG_Buttons import *
+from ButtonConfig import *
+from ATOM3Enum import *
+from ATOM3List import *
+from ATOM3Float import *
+from ATOM3Integer import *
+from ATOM3Attribute import *
+from ATOM3Constraint import *
+from ATOM3Action import *
+from ATOM3String import *
+from ATOM3BottomType import *
+from ATOM3Boolean import *
+from ATOM3Appearance import *
+from ATOM3Link import *
+def omacs_META(self, rootNode, ButtonsRootNode):
+   ButtonsRootNode.Formalism_Name.setValue('omacs_META')
+   ButtonsRootNode.RowSize.setValue(4)
+   ButtonsRootNode.Formalism_File.setValue( 'omacs_MM.py' )
+
+
+   self.globalPrecondition(rootNode)
+
+   self.objEdit=ButtonConfig(self)
+   self.objEdit.Contents.Text.setValue('Edit')
+   self.objEdit.Contents.Image.setValue('')
+   self.objEdit.Contents.lastSelected= 'Text'
+   self.objEdit.Drawing_Mode.setValue(0)
+   self.objEdit.Action.setValue(('ActionButton1', (['Python', 'OCL'], 1), (['PREcondition', 'POSTcondition'], 1),(['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE OBJECT'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# This method has as parameters:\n#   - wherex : X Position in window coordinates where the user clicked.\n#   - wherey : Y Position in window coordinates where the user clicked.\nself.modelAttributes(self.ASGroot.getASGbyName("omacs_META")) ') )
+   self.objEdit.graphClass_= graph_ButtonConfig
+   if self.genGraphics:
+      from graph_ButtonConfig import *
+      new_obj = graph_ButtonConfig(10, 10,self.objEdit)
+      new_obj.DrawObject(self.UMLmodel)
+      self.UMLmodel.addtag_withtag('ButtonConfig', new_obj.tag)
+   else: new_obj = None
+   self.objEdit.graphObject_ = new_obj
+   rootNode.addNode(self.objEdit)
+   self.globalAndLocalPostcondition(self.objEdit, rootNode)
+
+
+
+   self.globalPrecondition(rootNode)
+
+   self.objHelp=ButtonConfig(self)
+   self.objHelp.Contents.Text.setValue('Help')
+   self.objHelp.Contents.Image.setValue('')
+   self.objHelp.Contents.lastSelected= 'Text'
+   self.objHelp.Drawing_Mode.setValue(0)
+   self.objHelp.Action.setValue(('ActionButton1', (['Python', 'OCL'], 1), (['PREcondition', 'POSTcondition'], 1),(['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE OBJECT'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# This method has as parameters:\n#   - wherex : X Position in window coordinates where the user clicked.\n#   - wherey : Y Position in window coordinates where the user clicked.\nfrom HelpDialog import HelpDialog\nHelpDialog(["omacs_METAHelp.txt"])\n ') )
+   self.objHelp.graphClass_= graph_ButtonConfig
+   if self.genGraphics:
+      from graph_ButtonConfig import *
+      new_obj = graph_ButtonConfig(135, 80,self.objHelp)
+      new_obj.DrawObject(self.UMLmodel)
+      self.UMLmodel.addtag_withtag('ButtonConfig', new_obj.tag)
+   else: new_obj = None
+   self.objHelp.graphObject_ = new_obj
+   rootNode.addNode(self.objHelp)
+   self.globalAndLocalPostcondition(self.objHelp, rootNode)
+
+   self.globalPrecondition(rootNode)
+
+   self.objAgent=ButtonConfig(self)
+   self.objAgent.Contents.Text.setValue('New Agent')
+   self.objAgent.Contents.Image.setValue('')
+   self.objAgent.Contents.lastSelected= 'Text'
+   self.objAgent.Drawing_Mode.setValue(1)
+   self.objAgent.Action.setValue(('ActionButton1', (['Python', 'OCL'], 1), (['PREcondition', 'POSTcondition'], 1),(['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE OBJECT'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# This method has as parameters:\n#   - wherex : X Position in window coordinates where the user clicked.\n#   - wherey : Y Position in window coordinates where the user clicked.\nnewPlace = self.createNewAgent (self, wherex, wherey)\n'))
+   self.objAgent.graphClass_= graph_ButtonConfig
+   if self.genGraphics:
+      from graph_ButtonConfig import *
+      new_obj = graph_ButtonConfig(260, 150,self.objAgent)
+      new_obj.DrawObject(self.UMLmodel)
+      self.UMLmodel.addtag_withtag('ButtonConfig', new_obj.tag)
+   else: new_obj = None
+   self.objAgent.graphObject_ = new_obj
+   rootNode.addNode(self.objAgent)
+   self.globalAndLocalPostcondition(self.objAgent, rootNode)
+   self.globalPrecondition(rootNode)
+
+   self.objCapabilitie=ButtonConfig(self)
+   self.objCapabilitie.Contents.Text.setValue('New Capabilitie')
+   self.objCapabilitie.Contents.Image.setValue('')
+   self.objCapabilitie.Contents.lastSelected= 'Text'
+   self.objCapabilitie.Drawing_Mode.setValue(1)
+   self.objCapabilitie.Action.setValue(('ActionButton1', (['Python', 'OCL'], 1), (['PREcondition', 'POSTcondition'], 1),(['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE OBJECT'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# This method has as parameters:\n#   - wherex : X Position in window coordinates where the user clicked.\n#   - wherey : Y Position in window coordinates where the user clicked.\nnewPlace = self.createNewCapabilitie (self, wherex, wherey)\n'))
+   self.objCapabilitie.graphClass_= graph_ButtonConfig
+   if self.genGraphics:
+      from graph_ButtonConfig import *
+      new_obj = graph_ButtonConfig(10, 10,self.objCapabilitie)
+      new_obj.DrawObject(self.UMLmodel)
+      self.UMLmodel.addtag_withtag('ButtonConfig', new_obj.tag)
+   else: new_obj = None
+   self.objCapabilitie.graphObject_ = new_obj
+   rootNode.addNode(self.objCapabilitie)
+   self.globalAndLocalPostcondition(self.objCapabilitie, rootNode)
+   self.globalPrecondition(rootNode)
+
+   self.objRole=ButtonConfig(self)
+   self.objRole.Contents.Text.setValue('New Role')
+   self.objRole.Contents.Image.setValue('')
+   self.objRole.Contents.lastSelected= 'Text'
+   self.objRole.Drawing_Mode.setValue(1)
+   self.objRole.Action.setValue(('ActionButton1', (['Python', 'OCL'], 1), (['PREcondition', 'POSTcondition'], 1),(['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE OBJECT'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# This method has as parameters:\n#   - wherex : X Position in window coordinates where the user clicked.\n#   - wherey : Y Position in window coordinates where the user clicked.\nnewPlace = self.createNewRole (self, wherex, wherey)\n'))
+   self.objRole.graphClass_= graph_ButtonConfig
+   if self.genGraphics:
+      from graph_ButtonConfig import *
+      new_obj = graph_ButtonConfig(135, 80,self.objRole)
+      new_obj.DrawObject(self.UMLmodel)
+      self.UMLmodel.addtag_withtag('ButtonConfig', new_obj.tag)
+   else: new_obj = None
+   self.objRole.graphObject_ = new_obj
+   rootNode.addNode(self.objRole)
+   self.globalAndLocalPostcondition(self.objRole, rootNode)
+   self.globalPrecondition(rootNode)
+
+   self.objGoal=ButtonConfig(self)
+   self.objGoal.Contents.Text.setValue('New Goal')
+   self.objGoal.Contents.Image.setValue('')
+   self.objGoal.Contents.lastSelected= 'Text'
+   self.objGoal.Drawing_Mode.setValue(1)
+   self.objGoal.Action.setValue(('ActionButton1', (['Python', 'OCL'], 1), (['PREcondition', 'POSTcondition'], 1),(['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE OBJECT'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# This method has as parameters:\n#   - wherex : X Position in window coordinates where the user clicked.\n#   - wherey : Y Position in window coordinates where the user clicked.\nnewPlace = self.createNewGoal (self, wherex, wherey)\n'))
+   self.objGoal.graphClass_= graph_ButtonConfig
+   if self.genGraphics:
+      from graph_ButtonConfig import *
+      new_obj = graph_ButtonConfig(260, 150,self.objGoal)
+      new_obj.DrawObject(self.UMLmodel)
+      self.UMLmodel.addtag_withtag('ButtonConfig', new_obj.tag)
+   else: new_obj = None
+   self.objGoal.graphObject_ = new_obj
+   rootNode.addNode(self.objGoal)
+   self.globalAndLocalPostcondition(self.objGoal, rootNode)
+
+newfunction = omacs_META
+
+loadedMMName = 'Buttons'
+
+atom3version = '0.3'
