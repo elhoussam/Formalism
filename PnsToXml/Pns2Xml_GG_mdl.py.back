@@ -1,0 +1,1570 @@
+from GraphGrammarEdit import *
+from GGruleEdit import *
+
+def savedTrans(self):
+   self.EditingGraphGrammar= GraphGrammarEdit(None, self)
+   self.EditingGraphGrammar.Name=ATOM3String('Pns2Xml', 20)
+   self.EditingGraphGrammar.Rules=ATOM3List([ 1, 1, 1, 0],GGruleEdit,None, self)
+   lcobj0=[]
+   cobj0= GGruleEdit(None, self)
+   cobj0.Name=ATOM3String('VisitRaw', 20)
+   cobj0.Order=ATOM3Integer(1)
+   cobj0.TimeDelay=ATOM3Integer(2)
+   cobj0.SubtypesMatching=ATOM3Boolean()
+   cobj0.SubtypesMatching.setValue((None, 0))
+   cobj0.SubtypesMatching.config = 0
+
+   from rawMaterial import *
+   from ASG_pns import *
+   from operatingUnit import *
+   from metarial import *
+   from product import *
+   from fromMaterial import *
+   from intoProduct import *
+   from fromRaw import *
+   from intoMaterial import *
+
+   cobj0.LHS = ASG_pns(self)
+
+   self.obj82=rawMaterial(self)
+   self.obj82.preAction( cobj0.LHS.CREATE )
+   self.obj82.isGraphObjectVisual = True
+
+   if(hasattr(self.obj82, '_setHierarchicalLink')):
+     self.obj82._setHierarchicalLink(False)
+
+   # MaxFlow
+   self.obj82.MaxFlow.setNone()
+
+   # price
+   self.obj82.price.setNone()
+
+   # Name
+   self.obj82.Name.setValue('')
+   self.obj82.Name.setNone()
+
+   # ReqFlow
+   self.obj82.ReqFlow.setNone()
+
+   self.obj82.GGLabel.setValue(1)
+   self.obj82.graphClass_= graph_rawMaterial
+   if self.genGraphics:
+      new_obj = graph_rawMaterial(160.0,40.0,self.obj82)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj82.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj82)
+   self.obj82.postAction( cobj0.LHS.CREATE )
+
+
+   cobj0.RHS = ASG_pns(self)
+
+   self.obj84=rawMaterial(self)
+   self.obj84.preAction( cobj0.RHS.CREATE )
+   self.obj84.isGraphObjectVisual = True
+
+   if(hasattr(self.obj84, '_setHierarchicalLink')):
+     self.obj84._setHierarchicalLink(False)
+
+   # MaxFlow
+   self.obj84.MaxFlow.setNone()
+
+   # price
+   self.obj84.price.setNone()
+
+   # Name
+   self.obj84.Name.setValue('')
+   self.obj84.Name.setNone()
+
+   # ReqFlow
+   self.obj84.ReqFlow.setNone()
+
+   self.obj84.GGLabel.setValue(1)
+   self.obj84.graphClass_= graph_rawMaterial
+   if self.genGraphics:
+      new_obj = graph_rawMaterial(160.0,40.0,self.obj84)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj84.graphObject_ = new_obj
+   self.obj840= AttrCalc()
+   self.obj840.Copy=ATOM3Boolean()
+   self.obj840.Copy.setValue(('Copy from LHS', 1))
+   self.obj840.Copy.config = 0
+   self.obj840.Specify=ATOM3Constraint()
+   self.obj840.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj84.GGset2Any['MaxFlow']= self.obj840
+   self.obj841= AttrCalc()
+   self.obj841.Copy=ATOM3Boolean()
+   self.obj841.Copy.setValue(('Copy from LHS', 1))
+   self.obj841.Copy.config = 0
+   self.obj841.Specify=ATOM3Constraint()
+   self.obj841.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj84.GGset2Any['price']= self.obj841
+   self.obj842= AttrCalc()
+   self.obj842.Copy=ATOM3Boolean()
+   self.obj842.Copy.setValue(('Copy from LHS', 1))
+   self.obj842.Copy.config = 0
+   self.obj842.Specify=ATOM3Constraint()
+   self.obj842.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj84.GGset2Any['Name']= self.obj842
+   self.obj843= AttrCalc()
+   self.obj843.Copy=ATOM3Boolean()
+   self.obj843.Copy.setValue(('Copy from LHS', 1))
+   self.obj843.Copy.config = 0
+   self.obj843.Specify=ATOM3Constraint()
+   self.obj843.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj84.GGset2Any['ReqFlow']= self.obj843
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj84)
+   self.obj84.postAction( cobj0.RHS.CREATE )
+
+
+   cobj0.Condition=ATOM3Constraint()
+   cobj0.Condition.setValue(('condition', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'node = self.getMatched(graphID, self.LHS.nodeWithLabel(1))\nreturn not hasattr(node, "ID")\n\n'))
+   cobj0.Action=ATOM3Constraint()
+   cobj0.Action.setValue(('action', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# code action of rule \n# Import Function && Variables\nfrom MyFunction import *\nimport Pns2Xml_GG_exec \nPns2Xml_GG_exec.iD = Pns2Xml_GG_exec.iD + 1 \nprint \'global iD : \'+str(Pns2Xml_GG_exec.iD)\n#Add Node \nnode = self.getMatched ( graphID , self.LHS.nodeWithLabel(1) )\nnode.ID =   Pns2Xml_GG_exec.iD\nnodeName = node.Name.getValue() # name of the node \'Agent\'\nx = int (node.graphObject_.x * 3)           \ny = int(node.graphObject_.y * 3)\n#newNode(  Pns2Xml_GG_exec.materials , nodeName , node.ID , 0 , x , y ,price=node.price.getValue()  )\nnewMaterial(  Pns2Xml_GG_exec.materials , nodeName , node.ID , 0 , x , y ,  node.price.getValue() , node.ReqFlow.getValue() ,node.MaxFlow.getValue()  )\n#,beginID = 0 , endID = 0, rate = 0 \nprint node.Name.getValue()+\' : \'+str(node.ID)\n\n'))
+   lcobj0.append(cobj0)
+   cobj0= GGruleEdit(None, self)
+   cobj0.Name=ATOM3String('VisitMat', 20)
+   cobj0.Order=ATOM3Integer(2)
+   cobj0.TimeDelay=ATOM3Integer(2)
+   cobj0.SubtypesMatching=ATOM3Boolean()
+   cobj0.SubtypesMatching.setValue((None, 0))
+   cobj0.SubtypesMatching.config = 0
+
+   from rawMaterial import *
+   from ASG_pns import *
+   from operatingUnit import *
+   from metarial import *
+   from product import *
+   from fromMaterial import *
+   from intoProduct import *
+   from fromRaw import *
+   from intoMaterial import *
+
+   cobj0.LHS = ASG_pns(self)
+
+   self.obj89=metarial(self)
+   self.obj89.preAction( cobj0.LHS.CREATE )
+   self.obj89.isGraphObjectVisual = True
+
+   if(hasattr(self.obj89, '_setHierarchicalLink')):
+     self.obj89._setHierarchicalLink(False)
+
+   # MaxFlow
+   self.obj89.MaxFlow.setNone()
+
+   # price
+   self.obj89.price.setNone()
+
+   # Name
+   self.obj89.Name.setValue('')
+   self.obj89.Name.setNone()
+
+   # ReqFlow
+   self.obj89.ReqFlow.setNone()
+
+   self.obj89.GGLabel.setValue(1)
+   self.obj89.graphClass_= graph_metarial
+   if self.genGraphics:
+      new_obj = graph_metarial(140.0,60.0,self.obj89)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj89.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj89)
+   self.obj89.postAction( cobj0.LHS.CREATE )
+
+
+   cobj0.RHS = ASG_pns(self)
+
+   self.obj91=metarial(self)
+   self.obj91.preAction( cobj0.RHS.CREATE )
+   self.obj91.isGraphObjectVisual = True
+
+   if(hasattr(self.obj91, '_setHierarchicalLink')):
+     self.obj91._setHierarchicalLink(False)
+
+   # MaxFlow
+   self.obj91.MaxFlow.setNone()
+
+   # price
+   self.obj91.price.setNone()
+
+   # Name
+   self.obj91.Name.setValue('')
+   self.obj91.Name.setNone()
+
+   # ReqFlow
+   self.obj91.ReqFlow.setNone()
+
+   self.obj91.GGLabel.setValue(1)
+   self.obj91.graphClass_= graph_metarial
+   if self.genGraphics:
+      new_obj = graph_metarial(140.0,60.0,self.obj91)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj91.graphObject_ = new_obj
+   self.obj910= AttrCalc()
+   self.obj910.Copy=ATOM3Boolean()
+   self.obj910.Copy.setValue(('Copy from LHS', 1))
+   self.obj910.Copy.config = 0
+   self.obj910.Specify=ATOM3Constraint()
+   self.obj910.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj91.GGset2Any['MaxFlow']= self.obj910
+   self.obj911= AttrCalc()
+   self.obj911.Copy=ATOM3Boolean()
+   self.obj911.Copy.setValue(('Copy from LHS', 1))
+   self.obj911.Copy.config = 0
+   self.obj911.Specify=ATOM3Constraint()
+   self.obj911.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj91.GGset2Any['price']= self.obj911
+   self.obj912= AttrCalc()
+   self.obj912.Copy=ATOM3Boolean()
+   self.obj912.Copy.setValue(('Copy from LHS', 1))
+   self.obj912.Copy.config = 0
+   self.obj912.Specify=ATOM3Constraint()
+   self.obj912.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj91.GGset2Any['Name']= self.obj912
+   self.obj913= AttrCalc()
+   self.obj913.Copy=ATOM3Boolean()
+   self.obj913.Copy.setValue(('Copy from LHS', 1))
+   self.obj913.Copy.config = 0
+   self.obj913.Specify=ATOM3Constraint()
+   self.obj913.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj91.GGset2Any['ReqFlow']= self.obj913
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj91)
+   self.obj91.postAction( cobj0.RHS.CREATE )
+
+
+   cobj0.Condition=ATOM3Constraint()
+   cobj0.Condition.setValue(('condition', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'node = self.getMatched(graphID, self.LHS.nodeWithLabel(1))\nreturn not hasattr(node, "ID")\n'))
+   cobj0.Action=ATOM3Constraint()
+   cobj0.Action.setValue(('action', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# code action of rule \n# Import Function && Variables\nfrom MyFunction import *\nimport Pns2Xml_GG_exec \nPns2Xml_GG_exec.iD = Pns2Xml_GG_exec.iD + 1 \nprint \'global iD : \'+str(Pns2Xml_GG_exec.iD)\n#Add Node \nnode = self.getMatched ( graphID , self.LHS.nodeWithLabel(1) )\nnode.ID =   Pns2Xml_GG_exec.iD\nnodeName = node.Name.getValue() # name of the node \'Agent\'\nx = int (node.graphObject_.x * 3)           \ny = int(node.graphObject_.y * 3)\n#newNode(  Pns2Xml_GG_exec.materials , nodeName , node.ID , 0 , x , y ,price=node.price.getValue()  )\nnewMaterial(  Pns2Xml_GG_exec.materials , nodeName , node.ID , 1 , x , y ,  node.price.getValue() , node.ReqFlow.getValue() ,node.MaxFlow.getValue()  )\n#,beginID = 0 , endID = 0, rate = 0 \nprint node.Name.getValue()+\' : \'+str(node.ID)\n\n'))
+   lcobj0.append(cobj0)
+   cobj0= GGruleEdit(None, self)
+   cobj0.Name=ATOM3String('VisitProduct', 20)
+   cobj0.Order=ATOM3Integer(3)
+   cobj0.TimeDelay=ATOM3Integer(2)
+   cobj0.SubtypesMatching=ATOM3Boolean()
+   cobj0.SubtypesMatching.setValue((None, 0))
+   cobj0.SubtypesMatching.config = 0
+
+   from rawMaterial import *
+   from ASG_pns import *
+   from operatingUnit import *
+   from metarial import *
+   from product import *
+   from fromMaterial import *
+   from intoProduct import *
+   from fromRaw import *
+   from intoMaterial import *
+
+   cobj0.LHS = ASG_pns(self)
+
+   self.obj96=product(self)
+   self.obj96.preAction( cobj0.LHS.CREATE )
+   self.obj96.isGraphObjectVisual = True
+
+   if(hasattr(self.obj96, '_setHierarchicalLink')):
+     self.obj96._setHierarchicalLink(False)
+
+   # MaxFlow
+   self.obj96.MaxFlow.setNone()
+
+   # price
+   self.obj96.price.setNone()
+
+   # Name
+   self.obj96.Name.setValue('')
+   self.obj96.Name.setNone()
+
+   # ReqFlow
+   self.obj96.ReqFlow.setNone()
+
+   self.obj96.GGLabel.setValue(1)
+   self.obj96.graphClass_= graph_product
+   if self.genGraphics:
+      new_obj = graph_product(200.0,60.0,self.obj96)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj96.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj96)
+   self.obj96.postAction( cobj0.LHS.CREATE )
+
+
+   cobj0.RHS = ASG_pns(self)
+
+   self.obj98=product(self)
+   self.obj98.preAction( cobj0.RHS.CREATE )
+   self.obj98.isGraphObjectVisual = True
+
+   if(hasattr(self.obj98, '_setHierarchicalLink')):
+     self.obj98._setHierarchicalLink(False)
+
+   # MaxFlow
+   self.obj98.MaxFlow.setNone()
+
+   # price
+   self.obj98.price.setNone()
+
+   # Name
+   self.obj98.Name.setValue('')
+   self.obj98.Name.setNone()
+
+   # ReqFlow
+   self.obj98.ReqFlow.setNone()
+
+   self.obj98.GGLabel.setValue(1)
+   self.obj98.graphClass_= graph_product
+   if self.genGraphics:
+      new_obj = graph_product(200.0,60.0,self.obj98)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj98.graphObject_ = new_obj
+   self.obj980= AttrCalc()
+   self.obj980.Copy=ATOM3Boolean()
+   self.obj980.Copy.setValue(('Copy from LHS', 1))
+   self.obj980.Copy.config = 0
+   self.obj980.Specify=ATOM3Constraint()
+   self.obj980.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj98.GGset2Any['MaxFlow']= self.obj980
+   self.obj981= AttrCalc()
+   self.obj981.Copy=ATOM3Boolean()
+   self.obj981.Copy.setValue(('Copy from LHS', 1))
+   self.obj981.Copy.config = 0
+   self.obj981.Specify=ATOM3Constraint()
+   self.obj981.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj98.GGset2Any['price']= self.obj981
+   self.obj982= AttrCalc()
+   self.obj982.Copy=ATOM3Boolean()
+   self.obj982.Copy.setValue(('Copy from LHS', 1))
+   self.obj982.Copy.config = 0
+   self.obj982.Specify=ATOM3Constraint()
+   self.obj982.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj98.GGset2Any['Name']= self.obj982
+   self.obj983= AttrCalc()
+   self.obj983.Copy=ATOM3Boolean()
+   self.obj983.Copy.setValue(('Copy from LHS', 1))
+   self.obj983.Copy.config = 0
+   self.obj983.Specify=ATOM3Constraint()
+   self.obj983.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj98.GGset2Any['ReqFlow']= self.obj983
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj98)
+   self.obj98.postAction( cobj0.RHS.CREATE )
+
+
+   cobj0.Condition=ATOM3Constraint()
+   cobj0.Condition.setValue(('condition', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'node = self.getMatched(graphID, self.LHS.nodeWithLabel(1))\nreturn not hasattr(node, "ID")\n'))
+   cobj0.Action=ATOM3Constraint()
+   cobj0.Action.setValue(('action', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# code action of rule \n# Import Function && Variables\nfrom MyFunction import *\nimport Pns2Xml_GG_exec \nPns2Xml_GG_exec.iD = Pns2Xml_GG_exec.iD + 1 \nprint \'global iD : \'+str(Pns2Xml_GG_exec.iD)\n#Add Node \nnode = self.getMatched ( graphID , self.LHS.nodeWithLabel(1) )\nnode.ID =   Pns2Xml_GG_exec.iD\nnodeName = node.Name.getValue() # name of the node \'Agent\'\nx = int (node.graphObject_.x * 3)           \ny = int(node.graphObject_.y * 3)\n#newNode(  Pns2Xml_GG_exec.materials , nodeName , node.ID , 0 , x , y ,price=node.price.getValue()  )\nnewMaterial(  Pns2Xml_GG_exec.materials , nodeName , node.ID , 2 , x , y ,  node.price.getValue() , node.ReqFlow.getValue() ,node.MaxFlow.getValue()  )\n#,beginID = 0 , endID = 0, rate = 0 \nprint node.Name.getValue()+\' : \'+str(node.ID)\n\n'))
+   lcobj0.append(cobj0)
+   cobj0= GGruleEdit(None, self)
+   cobj0.Name=ATOM3String('VisitOpUnit', 20)
+   cobj0.Order=ATOM3Integer(4)
+   cobj0.TimeDelay=ATOM3Integer(2)
+   cobj0.SubtypesMatching=ATOM3Boolean()
+   cobj0.SubtypesMatching.setValue((None, 0))
+   cobj0.SubtypesMatching.config = 0
+
+   from rawMaterial import *
+   from ASG_pns import *
+   from operatingUnit import *
+   from metarial import *
+   from product import *
+   from fromMaterial import *
+   from intoProduct import *
+   from fromRaw import *
+   from intoMaterial import *
+
+   cobj0.LHS = ASG_pns(self)
+
+   self.obj103=operatingUnit(self)
+   self.obj103.preAction( cobj0.LHS.CREATE )
+   self.obj103.isGraphObjectVisual = True
+
+   if(hasattr(self.obj103, '_setHierarchicalLink')):
+     self.obj103._setHierarchicalLink(False)
+
+   # OperCostProp
+   self.obj103.OperCostProp.setNone()
+
+   # name
+   self.obj103.name.setValue('')
+   self.obj103.name.setNone()
+
+   # OperCostFix
+   self.obj103.OperCostFix.setNone()
+
+   self.obj103.GGLabel.setValue(1)
+   self.obj103.graphClass_= graph_operatingUnit
+   if self.genGraphics:
+      new_obj = graph_operatingUnit(200.0,40.0,self.obj103)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj103.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj103)
+   self.obj103.postAction( cobj0.LHS.CREATE )
+
+
+   cobj0.RHS = ASG_pns(self)
+
+   self.obj105=operatingUnit(self)
+   self.obj105.preAction( cobj0.RHS.CREATE )
+   self.obj105.isGraphObjectVisual = True
+
+   if(hasattr(self.obj105, '_setHierarchicalLink')):
+     self.obj105._setHierarchicalLink(False)
+
+   # OperCostProp
+   self.obj105.OperCostProp.setNone()
+
+   # name
+   self.obj105.name.setValue('')
+   self.obj105.name.setNone()
+
+   # OperCostFix
+   self.obj105.OperCostFix.setNone()
+
+   self.obj105.GGLabel.setValue(1)
+   self.obj105.graphClass_= graph_operatingUnit
+   if self.genGraphics:
+      new_obj = graph_operatingUnit(200.0,60.0,self.obj105)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj105.graphObject_ = new_obj
+   self.obj1050= AttrCalc()
+   self.obj1050.Copy=ATOM3Boolean()
+   self.obj1050.Copy.setValue(('Copy from LHS', 1))
+   self.obj1050.Copy.config = 0
+   self.obj1050.Specify=ATOM3Constraint()
+   self.obj1050.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj105.GGset2Any['OperCostProp']= self.obj1050
+   self.obj1051= AttrCalc()
+   self.obj1051.Copy=ATOM3Boolean()
+   self.obj1051.Copy.setValue(('Copy from LHS', 1))
+   self.obj1051.Copy.config = 0
+   self.obj1051.Specify=ATOM3Constraint()
+   self.obj1051.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj105.GGset2Any['name']= self.obj1051
+   self.obj1052= AttrCalc()
+   self.obj1052.Copy=ATOM3Boolean()
+   self.obj1052.Copy.setValue(('Copy from LHS', 1))
+   self.obj1052.Copy.config = 0
+   self.obj1052.Specify=ATOM3Constraint()
+   self.obj1052.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj105.GGset2Any['OperCostFix']= self.obj1052
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj105)
+   self.obj105.postAction( cobj0.RHS.CREATE )
+
+
+   cobj0.Condition=ATOM3Constraint()
+   cobj0.Condition.setValue(('condition', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'node = self.getMatched(graphID, self.LHS.nodeWithLabel(1))\nreturn not hasattr(node, "ID")\n'))
+   cobj0.Action=ATOM3Constraint()
+   cobj0.Action.setValue(('action', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# code action of rule \n# Import Function && Variables\nfrom MyFunction import *\nimport Pns2Xml_GG_exec \nPns2Xml_GG_exec.iD = Pns2Xml_GG_exec.iD + 1 \nprint \'global iD : \'+str(Pns2Xml_GG_exec.iD)\n#Add Node \nnode = self.getMatched ( graphID , self.LHS.nodeWithLabel(1) )\nnode.ID =   Pns2Xml_GG_exec.iD\nnodeName = node.name.getValue() # name of the node \'Agent\'\nx = int (node.graphObject_.x * 3)           \ny = int(node.graphObject_.y * 3)\n#newNode(  Pns2Xml_GG_exec.materials , nodeName , node.ID , 0 , x , y ,price=node.price.getValue()  ) opunits\nnewOpUnit(  Pns2Xml_GG_exec.opunits , nodeName , node.ID  , x , y , node.OperCostProp.getValue() ,node.OperCostFix.getValue()  )\n#,beginID = 0 , endID = 0, rate = 0 \nprint nodeName+\' : \'+str(node.ID)\n\n'))
+   lcobj0.append(cobj0)
+   cobj0= GGruleEdit(None, self)
+   cobj0.Name=ATOM3String('Visit1EdgeRAW', 20)
+   cobj0.Order=ATOM3Integer(5)
+   cobj0.TimeDelay=ATOM3Integer(2)
+   cobj0.SubtypesMatching=ATOM3Boolean()
+   cobj0.SubtypesMatching.setValue((None, 0))
+   cobj0.SubtypesMatching.config = 0
+
+   from rawMaterial import *
+   from ASG_pns import *
+   from operatingUnit import *
+   from metarial import *
+   from product import *
+   from fromMaterial import *
+   from intoProduct import *
+   from fromRaw import *
+   from intoMaterial import *
+
+   cobj0.LHS = ASG_pns(self)
+
+   self.obj110=rawMaterial(self)
+   self.obj110.preAction( cobj0.LHS.CREATE )
+   self.obj110.isGraphObjectVisual = True
+
+   if(hasattr(self.obj110, '_setHierarchicalLink')):
+     self.obj110._setHierarchicalLink(False)
+
+   # MaxFlow
+   self.obj110.MaxFlow.setNone()
+
+   # price
+   self.obj110.price.setNone()
+
+   # Name
+   self.obj110.Name.setValue('')
+   self.obj110.Name.setNone()
+
+   # ReqFlow
+   self.obj110.ReqFlow.setNone()
+
+   self.obj110.GGLabel.setValue(1)
+   self.obj110.graphClass_= graph_rawMaterial
+   if self.genGraphics:
+      new_obj = graph_rawMaterial(200.0,20.0,self.obj110)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj110.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj110)
+   self.obj110.postAction( cobj0.LHS.CREATE )
+
+   self.obj111=operatingUnit(self)
+   self.obj111.preAction( cobj0.LHS.CREATE )
+   self.obj111.isGraphObjectVisual = True
+
+   if(hasattr(self.obj111, '_setHierarchicalLink')):
+     self.obj111._setHierarchicalLink(False)
+
+   # OperCostProp
+   self.obj111.OperCostProp.setNone()
+
+   # name
+   self.obj111.name.setValue('')
+   self.obj111.name.setNone()
+
+   # OperCostFix
+   self.obj111.OperCostFix.setNone()
+
+   self.obj111.GGLabel.setValue(2)
+   self.obj111.graphClass_= graph_operatingUnit
+   if self.genGraphics:
+      new_obj = graph_operatingUnit(200.0,160.0,self.obj111)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj111.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj111)
+   self.obj111.postAction( cobj0.LHS.CREATE )
+
+   self.obj112=fromRaw(self)
+   self.obj112.preAction( cobj0.LHS.CREATE )
+   self.obj112.isGraphObjectVisual = True
+
+   if(hasattr(self.obj112, '_setHierarchicalLink')):
+     self.obj112._setHierarchicalLink(False)
+
+   # rate
+   self.obj112.rate.setNone()
+
+   self.obj112.GGLabel.setValue(3)
+   self.obj112.graphClass_= graph_fromRaw
+   if self.genGraphics:
+      new_obj = graph_fromRaw(222.0,123.5,self.obj112)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj112.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj112)
+   self.obj112.postAction( cobj0.LHS.CREATE )
+
+   self.obj110.out_connections_.append(self.obj112)
+   self.obj112.in_connections_.append(self.obj110)
+   self.obj110.graphObject_.pendingConnections.append((self.obj110.graphObject_.tag, self.obj112.graphObject_.tag, [224.0, 76.0, 222.0, 123.5], 0, True))
+   self.obj112.out_connections_.append(self.obj111)
+   self.obj111.in_connections_.append(self.obj112)
+   self.obj112.graphObject_.pendingConnections.append((self.obj112.graphObject_.tag, self.obj111.graphObject_.tag, [220.0, 171.0, 222.0, 123.5], 0, True))
+
+   cobj0.RHS = ASG_pns(self)
+
+   self.obj114=rawMaterial(self)
+   self.obj114.preAction( cobj0.RHS.CREATE )
+   self.obj114.isGraphObjectVisual = True
+
+   if(hasattr(self.obj114, '_setHierarchicalLink')):
+     self.obj114._setHierarchicalLink(False)
+
+   # MaxFlow
+   self.obj114.MaxFlow.setNone()
+
+   # price
+   self.obj114.price.setNone()
+
+   # Name
+   self.obj114.Name.setValue('')
+   self.obj114.Name.setNone()
+
+   # ReqFlow
+   self.obj114.ReqFlow.setNone()
+
+   self.obj114.GGLabel.setValue(1)
+   self.obj114.graphClass_= graph_rawMaterial
+   if self.genGraphics:
+      new_obj = graph_rawMaterial(200.0,20.0,self.obj114)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj114.graphObject_ = new_obj
+   self.obj1140= AttrCalc()
+   self.obj1140.Copy=ATOM3Boolean()
+   self.obj1140.Copy.setValue(('Copy from LHS', 1))
+   self.obj1140.Copy.config = 0
+   self.obj1140.Specify=ATOM3Constraint()
+   self.obj1140.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj114.GGset2Any['MaxFlow']= self.obj1140
+   self.obj1141= AttrCalc()
+   self.obj1141.Copy=ATOM3Boolean()
+   self.obj1141.Copy.setValue(('Copy from LHS', 1))
+   self.obj1141.Copy.config = 0
+   self.obj1141.Specify=ATOM3Constraint()
+   self.obj1141.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj114.GGset2Any['price']= self.obj1141
+   self.obj1142= AttrCalc()
+   self.obj1142.Copy=ATOM3Boolean()
+   self.obj1142.Copy.setValue(('Copy from LHS', 1))
+   self.obj1142.Copy.config = 0
+   self.obj1142.Specify=ATOM3Constraint()
+   self.obj1142.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj114.GGset2Any['Name']= self.obj1142
+   self.obj1143= AttrCalc()
+   self.obj1143.Copy=ATOM3Boolean()
+   self.obj1143.Copy.setValue(('Copy from LHS', 1))
+   self.obj1143.Copy.config = 0
+   self.obj1143.Specify=ATOM3Constraint()
+   self.obj1143.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj114.GGset2Any['ReqFlow']= self.obj1143
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj114)
+   self.obj114.postAction( cobj0.RHS.CREATE )
+
+   self.obj115=operatingUnit(self)
+   self.obj115.preAction( cobj0.RHS.CREATE )
+   self.obj115.isGraphObjectVisual = True
+
+   if(hasattr(self.obj115, '_setHierarchicalLink')):
+     self.obj115._setHierarchicalLink(False)
+
+   # OperCostProp
+   self.obj115.OperCostProp.setNone()
+
+   # name
+   self.obj115.name.setValue('')
+   self.obj115.name.setNone()
+
+   # OperCostFix
+   self.obj115.OperCostFix.setNone()
+
+   self.obj115.GGLabel.setValue(2)
+   self.obj115.graphClass_= graph_operatingUnit
+   if self.genGraphics:
+      new_obj = graph_operatingUnit(200.0,160.0,self.obj115)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj115.graphObject_ = new_obj
+   self.obj1150= AttrCalc()
+   self.obj1150.Copy=ATOM3Boolean()
+   self.obj1150.Copy.setValue(('Copy from LHS', 1))
+   self.obj1150.Copy.config = 0
+   self.obj1150.Specify=ATOM3Constraint()
+   self.obj1150.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj115.GGset2Any['OperCostProp']= self.obj1150
+   self.obj1151= AttrCalc()
+   self.obj1151.Copy=ATOM3Boolean()
+   self.obj1151.Copy.setValue(('Copy from LHS', 1))
+   self.obj1151.Copy.config = 0
+   self.obj1151.Specify=ATOM3Constraint()
+   self.obj1151.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj115.GGset2Any['name']= self.obj1151
+   self.obj1152= AttrCalc()
+   self.obj1152.Copy=ATOM3Boolean()
+   self.obj1152.Copy.setValue(('Copy from LHS', 1))
+   self.obj1152.Copy.config = 0
+   self.obj1152.Specify=ATOM3Constraint()
+   self.obj1152.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj115.GGset2Any['OperCostFix']= self.obj1152
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj115)
+   self.obj115.postAction( cobj0.RHS.CREATE )
+
+   self.obj116=fromRaw(self)
+   self.obj116.preAction( cobj0.RHS.CREATE )
+   self.obj116.isGraphObjectVisual = True
+
+   if(hasattr(self.obj116, '_setHierarchicalLink')):
+     self.obj116._setHierarchicalLink(False)
+
+   # rate
+   self.obj116.rate.setNone()
+
+   self.obj116.GGLabel.setValue(3)
+   self.obj116.graphClass_= graph_fromRaw
+   if self.genGraphics:
+      new_obj = graph_fromRaw(222.0,123.5,self.obj116)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj116.graphObject_ = new_obj
+   self.obj1160= AttrCalc()
+   self.obj1160.Copy=ATOM3Boolean()
+   self.obj1160.Copy.setValue(('Copy from LHS', 1))
+   self.obj1160.Copy.config = 0
+   self.obj1160.Specify=ATOM3Constraint()
+   self.obj1160.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj116.GGset2Any['rate']= self.obj1160
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj116)
+   self.obj116.postAction( cobj0.RHS.CREATE )
+
+   self.obj114.out_connections_.append(self.obj116)
+   self.obj116.in_connections_.append(self.obj114)
+   self.obj114.graphObject_.pendingConnections.append((self.obj114.graphObject_.tag, self.obj116.graphObject_.tag, [224.0, 70.0, 222.0, 123.5], 2, 0))
+   self.obj116.out_connections_.append(self.obj115)
+   self.obj115.in_connections_.append(self.obj116)
+   self.obj116.graphObject_.pendingConnections.append((self.obj116.graphObject_.tag, self.obj115.graphObject_.tag, [250.0, 161.0, 222.0, 123.5], 2, 0))
+
+   cobj0.Condition=ATOM3Constraint()
+   cobj0.Condition.setValue(('condition', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'node = self.getMatched(graphID, self.LHS.nodeWithLabel(3))\nreturn not hasattr(node, "ID")\n\n'))
+   cobj0.Action=ATOM3Constraint()
+   cobj0.Action.setValue(('action', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# code action of rule \nfrom MyFunction import *\nimport Pns2Xml_GG_exec \nPns2Xml_GG_exec.iD = Pns2Xml_GG_exec.iD + 1 \nprint \'global iD : \'+str(Pns2Xml_GG_exec.iD)\n\nnode = self.getMatched ( graphID , self.LHS.nodeWithLabel(3) )\nnode.ID =   Pns2Xml_GG_exec.iD\n#nodeName = node.name.getValue() # name of the node \'Agent\'\nnodeRate = node.rate.getValue()\nx = int (node.graphObject_.x * 3)           \ny = int(node.graphObject_.y * 3)\n\nbID = self.getMatched ( graphID , self.LHS.nodeWithLabel(1) ).ID \neID = self.getMatched ( graphID , self.LHS.nodeWithLabel(2) ).ID \nnewEdges(  Pns2Xml_GG_exec.edges , nodeRate , node.ID  , x ,  y ,   bID , eID )\n#,beginID = 0 , endID = 0, rate = 0 \nprint str(node.rate.getValue())+\' : \'+str(node.ID)\n\n'))
+   lcobj0.append(cobj0)
+   cobj0= GGruleEdit(None, self)
+   cobj0.Name=ATOM3String('Visit2EdgeFINAL', 20)
+   cobj0.Order=ATOM3Integer(6)
+   cobj0.TimeDelay=ATOM3Integer(2)
+   cobj0.SubtypesMatching=ATOM3Boolean()
+   cobj0.SubtypesMatching.setValue((None, 0))
+   cobj0.SubtypesMatching.config = 0
+
+   from rawMaterial import *
+   from ASG_pns import *
+   from operatingUnit import *
+   from metarial import *
+   from product import *
+   from fromMaterial import *
+   from intoProduct import *
+   from fromRaw import *
+   from intoMaterial import *
+
+   cobj0.LHS = ASG_pns(self)
+
+   self.obj121=product(self)
+   self.obj121.preAction( cobj0.LHS.CREATE )
+   self.obj121.isGraphObjectVisual = True
+
+   if(hasattr(self.obj121, '_setHierarchicalLink')):
+     self.obj121._setHierarchicalLink(False)
+
+   # MaxFlow
+   self.obj121.MaxFlow.setNone()
+
+   # price
+   self.obj121.price.setNone()
+
+   # Name
+   self.obj121.Name.setValue('')
+   self.obj121.Name.setNone()
+
+   # ReqFlow
+   self.obj121.ReqFlow.setNone()
+
+   self.obj121.GGLabel.setValue(2)
+   self.obj121.graphClass_= graph_product
+   if self.genGraphics:
+      new_obj = graph_product(220.0,140.0,self.obj121)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj121.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj121)
+   self.obj121.postAction( cobj0.LHS.CREATE )
+
+   self.obj122=operatingUnit(self)
+   self.obj122.preAction( cobj0.LHS.CREATE )
+   self.obj122.isGraphObjectVisual = True
+
+   if(hasattr(self.obj122, '_setHierarchicalLink')):
+     self.obj122._setHierarchicalLink(False)
+
+   # OperCostProp
+   self.obj122.OperCostProp.setNone()
+
+   # name
+   self.obj122.name.setValue('')
+   self.obj122.name.setNone()
+
+   # OperCostFix
+   self.obj122.OperCostFix.setNone()
+
+   self.obj122.GGLabel.setValue(1)
+   self.obj122.graphClass_= graph_operatingUnit
+   if self.genGraphics:
+      new_obj = graph_operatingUnit(180.0,20.0,self.obj122)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj122.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj122)
+   self.obj122.postAction( cobj0.LHS.CREATE )
+
+   self.obj123=intoProduct(self)
+   self.obj123.preAction( cobj0.LHS.CREATE )
+   self.obj123.isGraphObjectVisual = True
+
+   if(hasattr(self.obj123, '_setHierarchicalLink')):
+     self.obj123._setHierarchicalLink(False)
+
+   # rate
+   self.obj123.rate.setNone()
+
+   self.obj123.GGLabel.setValue(3)
+   self.obj123.graphClass_= graph_intoProduct
+   if self.genGraphics:
+      new_obj = graph_intoProduct(239.0,89.0,self.obj123)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj123.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj123)
+   self.obj123.postAction( cobj0.LHS.CREATE )
+
+   self.obj122.out_connections_.append(self.obj123)
+   self.obj123.in_connections_.append(self.obj122)
+   self.obj122.graphObject_.pendingConnections.append((self.obj122.graphObject_.tag, self.obj123.graphObject_.tag, [233.0, 38.0, 239.0, 89.0], 0, True))
+   self.obj123.out_connections_.append(self.obj121)
+   self.obj121.in_connections_.append(self.obj123)
+   self.obj123.graphObject_.pendingConnections.append((self.obj123.graphObject_.tag, self.obj121.graphObject_.tag, [245.0, 140.0, 239.0, 89.0], 0, True))
+
+   cobj0.RHS = ASG_pns(self)
+
+   self.obj125=product(self)
+   self.obj125.preAction( cobj0.RHS.CREATE )
+   self.obj125.isGraphObjectVisual = True
+
+   if(hasattr(self.obj125, '_setHierarchicalLink')):
+     self.obj125._setHierarchicalLink(False)
+
+   # MaxFlow
+   self.obj125.MaxFlow.setNone()
+
+   # price
+   self.obj125.price.setNone()
+
+   # Name
+   self.obj125.Name.setValue('')
+   self.obj125.Name.setNone()
+
+   # ReqFlow
+   self.obj125.ReqFlow.setNone()
+
+   self.obj125.GGLabel.setValue(2)
+   self.obj125.graphClass_= graph_product
+   if self.genGraphics:
+      new_obj = graph_product(220.0,140.0,self.obj125)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj125.graphObject_ = new_obj
+   self.obj1250= AttrCalc()
+   self.obj1250.Copy=ATOM3Boolean()
+   self.obj1250.Copy.setValue(('Copy from LHS', 1))
+   self.obj1250.Copy.config = 0
+   self.obj1250.Specify=ATOM3Constraint()
+   self.obj1250.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj125.GGset2Any['MaxFlow']= self.obj1250
+   self.obj1251= AttrCalc()
+   self.obj1251.Copy=ATOM3Boolean()
+   self.obj1251.Copy.setValue(('Copy from LHS', 1))
+   self.obj1251.Copy.config = 0
+   self.obj1251.Specify=ATOM3Constraint()
+   self.obj1251.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj125.GGset2Any['price']= self.obj1251
+   self.obj1252= AttrCalc()
+   self.obj1252.Copy=ATOM3Boolean()
+   self.obj1252.Copy.setValue(('Copy from LHS', 1))
+   self.obj1252.Copy.config = 0
+   self.obj1252.Specify=ATOM3Constraint()
+   self.obj1252.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj125.GGset2Any['Name']= self.obj1252
+   self.obj1253= AttrCalc()
+   self.obj1253.Copy=ATOM3Boolean()
+   self.obj1253.Copy.setValue(('Copy from LHS', 1))
+   self.obj1253.Copy.config = 0
+   self.obj1253.Specify=ATOM3Constraint()
+   self.obj1253.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj125.GGset2Any['ReqFlow']= self.obj1253
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj125)
+   self.obj125.postAction( cobj0.RHS.CREATE )
+
+   self.obj126=operatingUnit(self)
+   self.obj126.preAction( cobj0.RHS.CREATE )
+   self.obj126.isGraphObjectVisual = True
+
+   if(hasattr(self.obj126, '_setHierarchicalLink')):
+     self.obj126._setHierarchicalLink(False)
+
+   # OperCostProp
+   self.obj126.OperCostProp.setNone()
+
+   # name
+   self.obj126.name.setValue('')
+   self.obj126.name.setNone()
+
+   # OperCostFix
+   self.obj126.OperCostFix.setNone()
+
+   self.obj126.GGLabel.setValue(1)
+   self.obj126.graphClass_= graph_operatingUnit
+   if self.genGraphics:
+      new_obj = graph_operatingUnit(180.0,20.0,self.obj126)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj126.graphObject_ = new_obj
+   self.obj1260= AttrCalc()
+   self.obj1260.Copy=ATOM3Boolean()
+   self.obj1260.Copy.setValue(('Copy from LHS', 1))
+   self.obj1260.Copy.config = 0
+   self.obj1260.Specify=ATOM3Constraint()
+   self.obj1260.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj126.GGset2Any['OperCostProp']= self.obj1260
+   self.obj1261= AttrCalc()
+   self.obj1261.Copy=ATOM3Boolean()
+   self.obj1261.Copy.setValue(('Copy from LHS', 1))
+   self.obj1261.Copy.config = 0
+   self.obj1261.Specify=ATOM3Constraint()
+   self.obj1261.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj126.GGset2Any['name']= self.obj1261
+   self.obj1262= AttrCalc()
+   self.obj1262.Copy=ATOM3Boolean()
+   self.obj1262.Copy.setValue(('Copy from LHS', 1))
+   self.obj1262.Copy.config = 0
+   self.obj1262.Specify=ATOM3Constraint()
+   self.obj1262.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj126.GGset2Any['OperCostFix']= self.obj1262
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj126)
+   self.obj126.postAction( cobj0.RHS.CREATE )
+
+   self.obj127=intoProduct(self)
+   self.obj127.preAction( cobj0.RHS.CREATE )
+   self.obj127.isGraphObjectVisual = True
+
+   if(hasattr(self.obj127, '_setHierarchicalLink')):
+     self.obj127._setHierarchicalLink(False)
+
+   # rate
+   self.obj127.rate.setNone()
+
+   self.obj127.GGLabel.setValue(3)
+   self.obj127.graphClass_= graph_intoProduct
+   if self.genGraphics:
+      new_obj = graph_intoProduct(239.0,89.0,self.obj127)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj127.graphObject_ = new_obj
+   self.obj1270= AttrCalc()
+   self.obj1270.Copy=ATOM3Boolean()
+   self.obj1270.Copy.setValue(('Copy from LHS', 1))
+   self.obj1270.Copy.config = 0
+   self.obj1270.Specify=ATOM3Constraint()
+   self.obj1270.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj127.GGset2Any['rate']= self.obj1270
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj127)
+   self.obj127.postAction( cobj0.RHS.CREATE )
+
+   self.obj126.out_connections_.append(self.obj127)
+   self.obj127.in_connections_.append(self.obj126)
+   self.obj126.graphObject_.pendingConnections.append((self.obj126.graphObject_.tag, self.obj127.graphObject_.tag, [233.0, 28.0, 239.0, 89.0], 2, 0))
+   self.obj127.out_connections_.append(self.obj125)
+   self.obj125.in_connections_.append(self.obj127)
+   self.obj127.graphObject_.pendingConnections.append((self.obj127.graphObject_.tag, self.obj125.graphObject_.tag, [245.0, 140.0, 239.0, 89.0], 2, 0))
+
+   cobj0.Condition=ATOM3Constraint()
+   cobj0.Condition.setValue(('condition', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'node = self.getMatched(graphID, self.LHS.nodeWithLabel(3))\nreturn not hasattr(node, "ID")\n\n'))
+   cobj0.Action=ATOM3Constraint()
+   cobj0.Action.setValue(('action', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# code action of rule \nfrom MyFunction import *\nimport Pns2Xml_GG_exec \nPns2Xml_GG_exec.iD = Pns2Xml_GG_exec.iD + 1 \nprint \'global iD : \'+str(Pns2Xml_GG_exec.iD)\n\nnode = self.getMatched ( graphID , self.LHS.nodeWithLabel(3) )\nnode.ID =   Pns2Xml_GG_exec.iD\n#nodeName = node.name.getValue() # name of the node \'Agent\'\nnodeRate = node.rate.getValue()\nx = int (node.graphObject_.x * 3)           \ny = int(node.graphObject_.y * 3)\n\nbID = self.getMatched ( graphID , self.LHS.nodeWithLabel(1) ).ID \neID = self.getMatched ( graphID , self.LHS.nodeWithLabel(2) ).ID \nnewEdges(Pns2Xml_GG_exec.edges , nodeRate , node.ID ,  x ,  y ,  bID ,  eID )\n#,beginID = 0 , endID = 0, rate = 0 \nprint str(node.rate.getValue())+\' : \'+str(node.ID)\n\n'))
+   lcobj0.append(cobj0)
+   cobj0= GGruleEdit(None, self)
+   cobj0.Name=ATOM3String('Visit3EdgeMat', 20)
+   cobj0.Order=ATOM3Integer(7)
+   cobj0.TimeDelay=ATOM3Integer(2)
+   cobj0.SubtypesMatching=ATOM3Boolean()
+   cobj0.SubtypesMatching.setValue((None, 0))
+   cobj0.SubtypesMatching.config = 0
+
+   from rawMaterial import *
+   from ASG_pns import *
+   from operatingUnit import *
+   from metarial import *
+   from product import *
+   from fromMaterial import *
+   from intoProduct import *
+   from fromRaw import *
+   from intoMaterial import *
+
+   cobj0.LHS = ASG_pns(self)
+
+   self.obj679=metarial(self)
+   self.obj679.preAction( cobj0.LHS.CREATE )
+   self.obj679.isGraphObjectVisual = True
+
+   if(hasattr(self.obj679, '_setHierarchicalLink')):
+     self.obj679._setHierarchicalLink(False)
+
+   # MaxFlow
+   self.obj679.MaxFlow.setNone()
+
+   # price
+   self.obj679.price.setNone()
+
+   # Name
+   self.obj679.Name.setValue('')
+   self.obj679.Name.setNone()
+
+   # ReqFlow
+   self.obj679.ReqFlow.setNone()
+
+   self.obj679.GGLabel.setValue(1)
+   self.obj679.graphClass_= graph_metarial
+   if self.genGraphics:
+      new_obj = graph_metarial(200.0,20.0,self.obj679)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj679.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj679)
+   self.obj679.postAction( cobj0.LHS.CREATE )
+
+   self.obj680=operatingUnit(self)
+   self.obj680.preAction( cobj0.LHS.CREATE )
+   self.obj680.isGraphObjectVisual = True
+
+   if(hasattr(self.obj680, '_setHierarchicalLink')):
+     self.obj680._setHierarchicalLink(False)
+
+   # OperCostProp
+   self.obj680.OperCostProp.setNone()
+
+   # name
+   self.obj680.name.setValue('')
+   self.obj680.name.setNone()
+
+   # OperCostFix
+   self.obj680.OperCostFix.setNone()
+
+   self.obj680.GGLabel.setValue(2)
+   self.obj680.graphClass_= graph_operatingUnit
+   if self.genGraphics:
+      new_obj = graph_operatingUnit(220.0,160.0,self.obj680)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj680.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj680)
+   self.obj680.postAction( cobj0.LHS.CREATE )
+
+   self.obj681=fromMaterial(self)
+   self.obj681.preAction( cobj0.LHS.CREATE )
+   self.obj681.isGraphObjectVisual = True
+
+   if(hasattr(self.obj681, '_setHierarchicalLink')):
+     self.obj681._setHierarchicalLink(False)
+
+   # rate
+   self.obj681.rate.setNone()
+
+   self.obj681.GGLabel.setValue(3)
+   self.obj681.graphClass_= graph_fromMaterial
+   if self.genGraphics:
+      new_obj = graph_fromMaterial(232.0,120.0,self.obj681)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj681.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj681)
+   self.obj681.postAction( cobj0.LHS.CREATE )
+
+   self.obj679.out_connections_.append(self.obj681)
+   self.obj681.in_connections_.append(self.obj679)
+   self.obj679.graphObject_.pendingConnections.append((self.obj679.graphObject_.tag, self.obj681.graphObject_.tag, [224.0, 69.0, 232.0, 120.0], 0, True))
+   self.obj681.out_connections_.append(self.obj680)
+   self.obj680.in_connections_.append(self.obj681)
+   self.obj681.graphObject_.pendingConnections.append((self.obj681.graphObject_.tag, self.obj680.graphObject_.tag, [240.0, 171.0, 232.0, 120.0], 0, True))
+
+   cobj0.RHS = ASG_pns(self)
+
+   self.obj679=metarial(self)
+   self.obj679.preAction( cobj0.RHS.CREATE )
+   self.obj679.isGraphObjectVisual = True
+
+   if(hasattr(self.obj679, '_setHierarchicalLink')):
+     self.obj679._setHierarchicalLink(False)
+
+   # MaxFlow
+   self.obj679.MaxFlow.setNone()
+
+   # price
+   self.obj679.price.setNone()
+
+   # Name
+   self.obj679.Name.setValue('')
+   self.obj679.Name.setNone()
+
+   # ReqFlow
+   self.obj679.ReqFlow.setNone()
+
+   self.obj679.GGLabel.setValue(1)
+   self.obj679.graphClass_= graph_metarial
+   if self.genGraphics:
+      new_obj = graph_metarial(200.0,20.0,self.obj679)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj679.graphObject_ = new_obj
+   self.obj6790= AttrCalc()
+   self.obj6790.Copy=ATOM3Boolean()
+   self.obj6790.Copy.setValue(('Copy from LHS', 1))
+   self.obj6790.Copy.config = 0
+   self.obj6790.Specify=ATOM3Constraint()
+   self.obj6790.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj679.GGset2Any['MaxFlow']= self.obj6790
+   self.obj6791= AttrCalc()
+   self.obj6791.Copy=ATOM3Boolean()
+   self.obj6791.Copy.setValue(('Copy from LHS', 1))
+   self.obj6791.Copy.config = 0
+   self.obj6791.Specify=ATOM3Constraint()
+   self.obj6791.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj679.GGset2Any['price']= self.obj6791
+   self.obj6792= AttrCalc()
+   self.obj6792.Copy=ATOM3Boolean()
+   self.obj6792.Copy.setValue(('Copy from LHS', 1))
+   self.obj6792.Copy.config = 0
+   self.obj6792.Specify=ATOM3Constraint()
+   self.obj6792.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj679.GGset2Any['Name']= self.obj6792
+   self.obj6793= AttrCalc()
+   self.obj6793.Copy=ATOM3Boolean()
+   self.obj6793.Copy.setValue(('Copy from LHS', 1))
+   self.obj6793.Copy.config = 0
+   self.obj6793.Specify=ATOM3Constraint()
+   self.obj6793.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj679.GGset2Any['ReqFlow']= self.obj6793
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj679)
+   self.obj679.postAction( cobj0.RHS.CREATE )
+
+   self.obj680=operatingUnit(self)
+   self.obj680.preAction( cobj0.RHS.CREATE )
+   self.obj680.isGraphObjectVisual = True
+
+   if(hasattr(self.obj680, '_setHierarchicalLink')):
+     self.obj680._setHierarchicalLink(False)
+
+   # OperCostProp
+   self.obj680.OperCostProp.setNone()
+
+   # name
+   self.obj680.name.setValue('')
+   self.obj680.name.setNone()
+
+   # OperCostFix
+   self.obj680.OperCostFix.setNone()
+
+   self.obj680.GGLabel.setValue(2)
+   self.obj680.graphClass_= graph_operatingUnit
+   if self.genGraphics:
+      new_obj = graph_operatingUnit(220.0,160.0,self.obj680)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj680.graphObject_ = new_obj
+   self.obj6800= AttrCalc()
+   self.obj6800.Copy=ATOM3Boolean()
+   self.obj6800.Copy.setValue(('Copy from LHS', 1))
+   self.obj6800.Copy.config = 0
+   self.obj6800.Specify=ATOM3Constraint()
+   self.obj6800.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj680.GGset2Any['OperCostProp']= self.obj6800
+   self.obj6801= AttrCalc()
+   self.obj6801.Copy=ATOM3Boolean()
+   self.obj6801.Copy.setValue(('Copy from LHS', 1))
+   self.obj6801.Copy.config = 0
+   self.obj6801.Specify=ATOM3Constraint()
+   self.obj6801.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj680.GGset2Any['name']= self.obj6801
+   self.obj6802= AttrCalc()
+   self.obj6802.Copy=ATOM3Boolean()
+   self.obj6802.Copy.setValue(('Copy from LHS', 1))
+   self.obj6802.Copy.config = 0
+   self.obj6802.Specify=ATOM3Constraint()
+   self.obj6802.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj680.GGset2Any['OperCostFix']= self.obj6802
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj680)
+   self.obj680.postAction( cobj0.RHS.CREATE )
+
+   self.obj681=fromMaterial(self)
+   self.obj681.preAction( cobj0.RHS.CREATE )
+   self.obj681.isGraphObjectVisual = True
+
+   if(hasattr(self.obj681, '_setHierarchicalLink')):
+     self.obj681._setHierarchicalLink(False)
+
+   # rate
+   self.obj681.rate.setNone()
+
+   self.obj681.GGLabel.setValue(3)
+   self.obj681.graphClass_= graph_fromMaterial
+   if self.genGraphics:
+      new_obj = graph_fromMaterial(232.0,120.0,self.obj681)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj681.graphObject_ = new_obj
+   self.obj6810= AttrCalc()
+   self.obj6810.Copy=ATOM3Boolean()
+   self.obj6810.Copy.setValue(('Copy from LHS', 1))
+   self.obj6810.Copy.config = 0
+   self.obj6810.Specify=ATOM3Constraint()
+   self.obj6810.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj681.GGset2Any['rate']= self.obj6810
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj681)
+   self.obj681.postAction( cobj0.RHS.CREATE )
+
+   self.obj679.out_connections_.append(self.obj681)
+   self.obj681.in_connections_.append(self.obj679)
+   self.obj679.graphObject_.pendingConnections.append((self.obj679.graphObject_.tag, self.obj681.graphObject_.tag, [224.0, 69.0, 232.0, 120.0], 2, 0))
+   self.obj681.out_connections_.append(self.obj680)
+   self.obj680.in_connections_.append(self.obj681)
+   self.obj681.graphObject_.pendingConnections.append((self.obj681.graphObject_.tag, self.obj680.graphObject_.tag, [270.0, 161.0, 232.0, 120.0], 2, 0))
+
+   cobj0.Condition=ATOM3Constraint()
+   cobj0.Condition.setValue(('condition', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'node = self.getMatched(graphID, self.LHS.nodeWithLabel(3))\nreturn not hasattr(node, "ID")\n'))
+   cobj0.Action=ATOM3Constraint()
+   cobj0.Action.setValue(('action', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '# code action of rule \nfrom MyFunction import *\nimport Pns2Xml_GG_exec \nPns2Xml_GG_exec.iD = Pns2Xml_GG_exec.iD + 1 \nprint \'global iD : \'+str(Pns2Xml_GG_exec.iD)\n\nnode = self.getMatched ( graphID , self.LHS.nodeWithLabel(3) )\nnode.ID =   Pns2Xml_GG_exec.iD\n#nodeName = node.name.getValue() # name of the node \'Agent\'\nnodeRate = node.rate.getValue()\nx = int (node.graphObject_.x * 3)           \ny = int(node.graphObject_.y * 3)\n\nbID = self.getMatched ( graphID , self.LHS.nodeWithLabel(1) ).ID \neID = self.getMatched ( graphID , self.LHS.nodeWithLabel(2) ).ID \nnewEdges(Pns2Xml_GG_exec.edges , nodeRate , node.ID ,  x ,  y ,  bID ,  eID )\n#,beginID = 0 , endID = 0, rate = 0 \nprint str(node.rate.getValue())+\' : \'+str(node.ID)\n'))
+   lcobj0.append(cobj0)
+   cobj0= GGruleEdit(None, self)
+   cobj0.Name=ATOM3String('Visit4EdgeMat', 20)
+   cobj0.Order=ATOM3Integer(8)
+   cobj0.TimeDelay=ATOM3Integer(2)
+   cobj0.SubtypesMatching=ATOM3Boolean()
+   cobj0.SubtypesMatching.setValue((None, 0))
+   cobj0.SubtypesMatching.config = 0
+
+   from rawMaterial import *
+   from ASG_pns import *
+   from operatingUnit import *
+   from metarial import *
+   from product import *
+   from fromMaterial import *
+   from intoProduct import *
+   from fromRaw import *
+   from intoMaterial import *
+
+   cobj0.LHS = ASG_pns(self)
+
+   self.obj787=metarial(self)
+   self.obj787.preAction( cobj0.LHS.CREATE )
+   self.obj787.isGraphObjectVisual = True
+
+   if(hasattr(self.obj787, '_setHierarchicalLink')):
+     self.obj787._setHierarchicalLink(False)
+
+   # MaxFlow
+   self.obj787.MaxFlow.setNone()
+
+   # price
+   self.obj787.price.setNone()
+
+   # Name
+   self.obj787.Name.setValue('')
+   self.obj787.Name.setNone()
+
+   # ReqFlow
+   self.obj787.ReqFlow.setNone()
+
+   self.obj787.GGLabel.setValue(2)
+   self.obj787.graphClass_= graph_metarial
+   if self.genGraphics:
+      new_obj = graph_metarial(240.0,140.0,self.obj787)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj787.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj787)
+   self.obj787.postAction( cobj0.LHS.CREATE )
+
+   self.obj786=operatingUnit(self)
+   self.obj786.preAction( cobj0.LHS.CREATE )
+   self.obj786.isGraphObjectVisual = True
+
+   if(hasattr(self.obj786, '_setHierarchicalLink')):
+     self.obj786._setHierarchicalLink(False)
+
+   # OperCostProp
+   self.obj786.OperCostProp.setNone()
+
+   # name
+   self.obj786.name.setValue('')
+   self.obj786.name.setNone()
+
+   # OperCostFix
+   self.obj786.OperCostFix.setNone()
+
+   self.obj786.GGLabel.setValue(1)
+   self.obj786.graphClass_= graph_operatingUnit
+   if self.genGraphics:
+      new_obj = graph_operatingUnit(220.0,20.0,self.obj786)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj786.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj786)
+   self.obj786.postAction( cobj0.LHS.CREATE )
+
+   self.obj788=intoMaterial(self)
+   self.obj788.preAction( cobj0.LHS.CREATE )
+   self.obj788.isGraphObjectVisual = True
+
+   if(hasattr(self.obj788, '_setHierarchicalLink')):
+     self.obj788._setHierarchicalLink(False)
+
+   # rate
+   self.obj788.rate.setNone()
+
+   self.obj788.GGLabel.setValue(3)
+   self.obj788.graphClass_= graph_intoMaterial
+   if self.genGraphics:
+      new_obj = graph_intoMaterial(269.5,88.0,self.obj788)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj788.graphObject_ = new_obj
+
+   # Add node to the root: cobj0.LHS
+   cobj0.LHS.addNode(self.obj788)
+   self.obj788.postAction( cobj0.LHS.CREATE )
+
+   self.obj786.out_connections_.append(self.obj788)
+   self.obj788.in_connections_.append(self.obj786)
+   self.obj786.graphObject_.pendingConnections.append((self.obj786.graphObject_.tag, self.obj788.graphObject_.tag, [273.0, 38.0, 269.5, 88.0], 0, True))
+   self.obj788.out_connections_.append(self.obj787)
+   self.obj787.in_connections_.append(self.obj788)
+   self.obj788.graphObject_.pendingConnections.append((self.obj788.graphObject_.tag, self.obj787.graphObject_.tag, [266.0, 138.0, 269.5, 88.0], 0, True))
+
+   cobj0.RHS = ASG_pns(self)
+
+   self.obj787=metarial(self)
+   self.obj787.preAction( cobj0.RHS.CREATE )
+   self.obj787.isGraphObjectVisual = True
+
+   if(hasattr(self.obj787, '_setHierarchicalLink')):
+     self.obj787._setHierarchicalLink(False)
+
+   # MaxFlow
+   self.obj787.MaxFlow.setNone()
+
+   # price
+   self.obj787.price.setNone()
+
+   # Name
+   self.obj787.Name.setValue('')
+   self.obj787.Name.setNone()
+
+   # ReqFlow
+   self.obj787.ReqFlow.setNone()
+
+   self.obj787.GGLabel.setValue(2)
+   self.obj787.graphClass_= graph_metarial
+   if self.genGraphics:
+      new_obj = graph_metarial(240.0,140.0,self.obj787)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj787.graphObject_ = new_obj
+   self.obj7870= AttrCalc()
+   self.obj7870.Copy=ATOM3Boolean()
+   self.obj7870.Copy.setValue(('Copy from LHS', 1))
+   self.obj7870.Copy.config = 0
+   self.obj7870.Specify=ATOM3Constraint()
+   self.obj7870.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj787.GGset2Any['MaxFlow']= self.obj7870
+   self.obj7871= AttrCalc()
+   self.obj7871.Copy=ATOM3Boolean()
+   self.obj7871.Copy.setValue(('Copy from LHS', 1))
+   self.obj7871.Copy.config = 0
+   self.obj7871.Specify=ATOM3Constraint()
+   self.obj7871.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj787.GGset2Any['price']= self.obj7871
+   self.obj7872= AttrCalc()
+   self.obj7872.Copy=ATOM3Boolean()
+   self.obj7872.Copy.setValue(('Copy from LHS', 1))
+   self.obj7872.Copy.config = 0
+   self.obj7872.Specify=ATOM3Constraint()
+   self.obj7872.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj787.GGset2Any['Name']= self.obj7872
+   self.obj7873= AttrCalc()
+   self.obj7873.Copy=ATOM3Boolean()
+   self.obj7873.Copy.setValue(('Copy from LHS', 1))
+   self.obj7873.Copy.config = 0
+   self.obj7873.Specify=ATOM3Constraint()
+   self.obj7873.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj787.GGset2Any['ReqFlow']= self.obj7873
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj787)
+   self.obj787.postAction( cobj0.RHS.CREATE )
+
+   self.obj786=operatingUnit(self)
+   self.obj786.preAction( cobj0.RHS.CREATE )
+   self.obj786.isGraphObjectVisual = True
+
+   if(hasattr(self.obj786, '_setHierarchicalLink')):
+     self.obj786._setHierarchicalLink(False)
+
+   # OperCostProp
+   self.obj786.OperCostProp.setNone()
+
+   # name
+   self.obj786.name.setValue('')
+   self.obj786.name.setNone()
+
+   # OperCostFix
+   self.obj786.OperCostFix.setNone()
+
+   self.obj786.GGLabel.setValue(1)
+   self.obj786.graphClass_= graph_operatingUnit
+   if self.genGraphics:
+      new_obj = graph_operatingUnit(220.0,20.0,self.obj786)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj786.graphObject_ = new_obj
+   self.obj7860= AttrCalc()
+   self.obj7860.Copy=ATOM3Boolean()
+   self.obj7860.Copy.setValue(('Copy from LHS', 1))
+   self.obj7860.Copy.config = 0
+   self.obj7860.Specify=ATOM3Constraint()
+   self.obj7860.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj786.GGset2Any['OperCostProp']= self.obj7860
+   self.obj7861= AttrCalc()
+   self.obj7861.Copy=ATOM3Boolean()
+   self.obj7861.Copy.setValue(('Copy from LHS', 1))
+   self.obj7861.Copy.config = 0
+   self.obj7861.Specify=ATOM3Constraint()
+   self.obj7861.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj786.GGset2Any['name']= self.obj7861
+   self.obj7862= AttrCalc()
+   self.obj7862.Copy=ATOM3Boolean()
+   self.obj7862.Copy.setValue(('Copy from LHS', 1))
+   self.obj7862.Copy.config = 0
+   self.obj7862.Specify=ATOM3Constraint()
+   self.obj7862.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj786.GGset2Any['OperCostFix']= self.obj7862
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj786)
+   self.obj786.postAction( cobj0.RHS.CREATE )
+
+   self.obj788=intoMaterial(self)
+   self.obj788.preAction( cobj0.RHS.CREATE )
+   self.obj788.isGraphObjectVisual = True
+
+   if(hasattr(self.obj788, '_setHierarchicalLink')):
+     self.obj788._setHierarchicalLink(False)
+
+   # rate
+   self.obj788.rate.setNone()
+
+   self.obj788.GGLabel.setValue(3)
+   self.obj788.graphClass_= graph_intoMaterial
+   if self.genGraphics:
+      new_obj = graph_intoMaterial(269.5,88.0,self.obj788)
+      new_obj.layConstraints = dict() # Graphical Layout Constraints 
+      new_obj.layConstraints['scale'] = [1.0, 1.0]
+   else: new_obj = None
+   self.obj788.graphObject_ = new_obj
+   self.obj7880= AttrCalc()
+   self.obj7880.Copy=ATOM3Boolean()
+   self.obj7880.Copy.setValue(('Copy from LHS', 1))
+   self.obj7880.Copy.config = 0
+   self.obj7880.Specify=ATOM3Constraint()
+   self.obj7880.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+   self.obj788.GGset2Any['rate']= self.obj7880
+
+   # Add node to the root: cobj0.RHS
+   cobj0.RHS.addNode(self.obj788)
+   self.obj788.postAction( cobj0.RHS.CREATE )
+
+   self.obj786.out_connections_.append(self.obj788)
+   self.obj788.in_connections_.append(self.obj786)
+   self.obj786.graphObject_.pendingConnections.append((self.obj786.graphObject_.tag, self.obj788.graphObject_.tag, [273.0, 28.0, 269.5, 88.0], 2, 0))
+   self.obj788.out_connections_.append(self.obj787)
+   self.obj787.in_connections_.append(self.obj788)
+   self.obj788.graphObject_.pendingConnections.append((self.obj788.graphObject_.tag, self.obj787.graphObject_.tag, [286.0, 150.0, 269.5, 88.0], 2, 0))
+
+   cobj0.Condition=ATOM3Constraint()
+   cobj0.Condition.setValue(('condition', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'node = self.getMatched(graphID, self.LHS.nodeWithLabel(3))\nreturn not hasattr(node, "ID")\n\n\n'))
+   cobj0.Action=ATOM3Constraint()
+   cobj0.Action.setValue(('action', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), '\n\n# code action of rule \nfrom MyFunction import *\nimport Pns2Xml_GG_exec \nPns2Xml_GG_exec.iD = Pns2Xml_GG_exec.iD + 1 \nprint \'global iD : \'+str(Pns2Xml_GG_exec.iD)\n\nnode = self.getMatched ( graphID , self.LHS.nodeWithLabel(3) )\nnode.ID =   Pns2Xml_GG_exec.iD\n#nodeName = node.name.getValue() # name of the node \'Agent\'\nnodeRate = node.rate.getValue()\nx = int (node.graphObject_.x * 3)           \ny = int(node.graphObject_.y * 3)\n\nbID = self.getMatched ( graphID , self.LHS.nodeWithLabel(1) ).ID \neID = self.getMatched ( graphID , self.LHS.nodeWithLabel(2) ).ID \nnewEdges(Pns2Xml_GG_exec.edges , nodeRate , node.ID ,  x ,  y ,  bID ,  eID )\n#,beginID = 0 , endID = 0, rate = 0 \nprint str(node.rate.getValue())+\' : \'+str(node.ID)\n\n'))
+   lcobj0.append(cobj0)
+   self.EditingGraphGrammar.Rules.setValue(lcobj0)
+   self.EditingGraphGrammar.InitialAction=ATOM3Constraint()
+   self.EditingGraphGrammar.InitialAction.setValue(('constraint', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'global iD\niD = 1\nglobal ET\nimport xml.etree.cElementTree as ET\n# main Nodes\nglobal pgraph \npgraph = ET.Element("PGraph")\nglobal materials\nmaterials = ET.SubElement(pgraph, "Materials")\nglobal edges\nedges = ET.SubElement(pgraph, "Edges")\nglobal opunits\nopunits = ET.SubElement(pgraph, "OperatingUnits") \n\n'))
+   self.EditingGraphGrammar.FinalAction=ATOM3Constraint()
+   self.EditingGraphGrammar.FinalAction.setValue(('constraint', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), 'import Pns2Xml_GG_exec\nimport time \nimport os\n\nprint \'Start Final Action \'\nname  = str(os.getcwd())+\'/pns\'+str(int(time.time()))+\'.pgsx\'\nprint name\ntree = Pns2Xml_GG_exec.ET.ElementTree( Pns2Xml_GG_exec.pgraph )\ntree.write(name,xml_declaration=True,encoding="utf-8",method ="xml")\n\nprint \'End Final Action \'\n\n'))
+
+
