@@ -1,0 +1,66 @@
+
+\chapter*{General Introduction}
+
+
+
+
+
+\textbf{}
+
+\addcontentsline{toc}{chapter}{\numberline{}{General Introduction}}
+
+Systems are becoming more complex, in part due to increased customer requirements and the
+expectation that applications should be seamlessly integrated with other existing, often distributed
+applications and systems. In addition, there is an increasing demand for these complex systems to
+exhibit some type of intelligence as well.
+
+No longer is it \quotedblbase good enough \textquotedblright to be able to access systems across the internet,
+but customers require that their systems know how to access data and
+systems, even in the face of unexpected events or failures.
+
+The goal of our research is to develop a framework for constructing complex, distributed systems
+that can autonomously adapt to their environment. Multiagent systems have become popular over
+the last few years for providing the basic notions that are applicable to this problem. A multiagent
+
+system uses groups of self-directed agents working together to achieve a common goal. Such
+multiagent systems are widely proposed as replacements for sophisticated, complex, and
+expensive stand-alone systems for similar applications. Multiagent systems tend to be more
+robust and, in many cases, more efficient (due to their ability to perform parallel actions) than
+single monolithic applications. In addition, the individual agents tend to be simpler to build, as
+they are built from a single agent?s perspective.
+
+However, unpredictable application environments make multiagent systems susceptible to
+individual failures that can significantly reduce the ability of the system to accomplish its goal.
+
+The problem is that multiagent systems are typically designed to work within a limited set of
+configurations. Even when the system possesses the resources and computational ability to
+accomplish its goal, it may be constrained by its own structure and knowledge of its member?s
+capabilities, which may change over time. 
+
+In most multiagent design methodologies  ,the system designer analyzes the possible organizational 
+structure - which determines which roles are required to accomplish which goals and sub-goals 
+and then designs one organization that will suffice for most anticipated scenarios. 
+
+Unfortunately, in dynamic applications where the environment as well as the agents 
+may undergo changes, a designer can rarely account for, or even consider, all possible situations.
+Attempts to overcome these problems include large-scale redundancy using homogenous 
+capabilities and centralized/distributed planning. 
+
+However,homogenous approaches negate many of the benefits of using a multiagent approach and are not
+applicable in complex applications where specific capabilities are often needed by only one or
+two agents. Centralized and distributed planning approaches tend to be brittle and
+computationally expensive due to their required level of detail (individual actions in most cases).
+
+To overcome these problems, we are developing a framework that allows a system to design its
+own organization at runtime. In essence, we propose to provide the system with organizational
+knowledge and let the system design its own organization based on the current goals and its
+current capabilities. 
+
+While the designer can provide guidance, supplying the system with key
+organizational information will allow it to redesign, or reorganize, itself to match its scenario.
+This paper presents a key component of our framework, a metamodel for multiagent
+organizations named the Organization Model for Adaptive Computational Systems (OMACS).
+
+OMACS defines the requisite knowledge of a system?s organizational structure and capabilities
+that will allow the system to reorganize at runtime and enable it to achieve its goals in the face of
+a changing environment and its agent?s capabilities.

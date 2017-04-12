@@ -1,0 +1,136 @@
+
+\documentclass[12pt,oneside,english]{book} 
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+ \usepackage{amsmath}
+\usepackage{wasysym}
+
+\usepackage{listings}
+\usepackage[a4paper]{geometry}
+\geometry{verbose,tmargin=2cm,bmargin=2cm,lmargin=3cm,rmargin=2cm,headheight=18pt}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\usepackage{babel}
+
+\usepackage[latin9]{inputenc}
+\usepackage{amsmath} 
+\makeatletter
+\addto\extrasfrench{%
+   \providecommand{\og}{\leavevmode\flqq~}%
+   \providecommand{\fg}{\ifdim\lastskip>\z@\unskip\fi~\frqq}%
+}
+
+\makeatother
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{pifont}
+\usepackage{float}
+\usepackage{textcomp}
+\usepackage{amstext}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage[unicode=true,
+ bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,
+ breaklinks=true,pdfborder={0 0 0},backref=false,colorlinks=false]
+ {hyperref}
+\hypersetup{pdftitle={Application of the P-graph Methodology for Organization-Based Multi Agent System Designs , A graph Transformation approach},
+ pdfauthor={Nouar Kherkhachi Houssam},
+ pdfkeywords={Framework OMACS PNS AToM3 Transformation GraphGrammer Rules Optimisation BranchAndBound}}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usepackage{cite}
+\usepackage{verbatim}
+
+\@ifundefined{showcaptionsetup}{}{%
+ \PassOptionsToPackage{caption=false}{subfig}}
+\usepackage{subfig}
+\AtBeginDocument{
+  \def\labelitemi{\ding{113}}
+  \def\labelitemii{\ding{229}}
+}
+
+\makeatother
+
+\begin{document}
+
+
+\pagestyle{empty}
+\pagenumbering{alph}
+
+
+
+%\include{header/dedicat}
+
+%\include{Header/Thank}
+
+\frontmatter
+\pagestyle{plain}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\numberline{}{\contentsname}} 
+
+\tableofcontents
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{\numberline{}{List of Figures }}
+
+\listoffigures
+
+
+\newpage
+\phantomsection
+\addcontentsline{toc}{chapter}{\numberline{}{List of Tables}}
+
+\listoftables
+
+
+\mainmatter
+
+ 
+\include{introduction}
+
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername~\thechapter}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+
+\include{chapiter1/chapiter1}
+
+%\include{chapiter2/chapiter2}
+
+%\include{chapiter1/chapiter1}
+ 
+%\include{conclusion}
+
+\backmatter
+\pagestyle{plain}
+
+\phantomsection
+\addcontentsline{toc}{chapter}{\numberline{}{Bibliographie}}
+
+\bibliographystyle{ieeetr}
+%\bibliography{biblo}
+
+
+
+
+\appendix
+
+\setcounter{figure}{0}
+
+%\include{anneX1} 	
+\end{document}
+
+
