@@ -30,3 +30,15 @@
 \contentsline {subsection}{\numberline {1.3.2} Reorganization }{16}{subsection.1.3.2}
 \contentsline {subsubsection}{\numberline {1.3.2.1} General Purpose Reorganization Examples }{16}{subsubsection.1.3.2.1}
 \contentsline {section}{\numberline {1.4}Conclusion}{17}{section.1.4}
+\contentsline {chapter}{\numberline {2}PGraph and PNS}{18}{chapter.2}
+\contentsline {section}{\numberline {2.1} PGraph }{18}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1} General Definition of P-Graph }{18}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2} Process Network Synthesis }{20}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1} Basic Notation }{20}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Mathematical definition }{21}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3} Algorithms MSG, SSG, and ABB }{22}{subsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3.1}Maximal-Structure Generation}{22}{subsubsection.2.2.3.1}
+\contentsline {subsubsection}{\numberline {2.2.3.2}Maximal-Structure Generation}{22}{subsubsection.2.2.3.2}
+\contentsline {subsubsection}{\numberline {2.2.3.3}Accelerated Branch and Bound}{23}{subsubsection.2.2.3.3}
+\contentsline {subsection}{\numberline {2.2.4} Comparaison PNS and PetriNet : }{23}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Conclusion}{23}{section.2.3}

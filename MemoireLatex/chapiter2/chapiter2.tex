@@ -3,25 +3,54 @@
 
  
 In a process system , raw materials are consumed through various transformation to yield desired products . 
-This is usually accompanied bu the generation of wastes .Vassels in which these transformations are carried out are termed operating units of the process , a given set of operating units with the plausible interconnections can be described bu a network The desired products can often be manufactured using some sub networks of this network , thus a given network may give rise to a variety of processes producing the desired products , and each of such process corresponds to sub network which can be considered  to be its structure
+This is usually accompanied bu the generation of wastes .
+
+Vassels in which these transformations are carried out are termed operating units of the process , 
+a given set of operating units with the plausible interconnections can be described bu a network 
+
+The desired products can often be manufactured using some sub networks of this network , 
+thus a given network may give rise to a variety of processes producing the desired products , 
+and each of such process corresponds to sub network which can be considered  to be its structure [0-OMACS]
 \section{ PGraph }
 
 
-The so called P graph (Process graph), which is a directed bigraph, has been used for modelling network structures for some time.
+The so called P graph (Process graph), which is a directed bigraph, 
+has been used for modelling network structures for some time.
+
 The vertices of the graph denote the operating units (O   operating units) and the materials (M   materials).
-The edges of the graph represent the material-flow between the materials and the operating units.
+The edges of the graph represent the material-flow between the materials and the operating units. [2-PNS]
+
 \subsection{ General Definition of P-Graph }
 
-The Pgraph is a bigraph, meaning that its vertices are in disjunctive sets and there are no edges between vertices in the same set.
-In case of P graphs the assignment of operating units and materials are strictly determined by the tasks given, i.e. an edge can point to an M material type vertex from an O operating unit type vertex, only if M is element of the output set of O, that is O produces M material namely, M $\in$ output O . 
+The Pgraph is a bigraph, meaning that its vertices are in disjunctive sets 
+and there are no edges between vertices in the same set.
+
+In case of P graphs the assignment of operating units and materials are strictly 
+determined by the tasks given, i.e. an edge can point to an M material type vertex 
+from an O operating unit type vertex, only if M is element of the output set of O, 
+that is O produces M material namely, M $\in$ output O . [2-PNS]
 
 
-An edge can point from an M material type vertex to an O operating unit type vertex, only if M is element of the input set of O, that is O processes M material, namely M  $\in$ input O. .
-Thus, the P-graph can be presented by the pairs of operating unit and the assigned material vertices set like the (M,O) P-graph.
+
+An edge can point from an M material type vertex to an O operating unit type vertex, 
+only if M is element of the input set of O, that is O processes M material, namely M  $\in$ input O . 
+
+Thus, the P-graph can be presented by the pairs of operating unit and the assigned material vertices set like the (M,O) P-graph.[2-PNS]
+
 The material type vertices can be put into several subsets. 
-There are various subsets like the raw-material type one, which contains the input elements of the whole process, the product-material type subset, which gathers the results of the entire process, the intermediate-material type one, the elements of which emerge or are used between the processing phases, and finally the by-product-material  type set, which contains the non desired results of the process. The applied operating unit and material element notations in the P-graph notation are presented in \ref{fig:example for P-graph}.
+There are various subsets like the raw-material type one, which contains 
+the input elements of the whole process, the product-material type subset,
+which gathers the results of the entire process, the intermediate-material type one, 
+the elements of which emerge or are used between the processing phases,  [2-PNS]
 
-As an example let us consider a process network with 7 operating units, in which the operating units are 1,2....7 and the materials are A,B, .... L. A,B,C and D are the materials available for the production of L The possible structure is given in  .
+And finally the by-product-material  type set, which contains the non desired results of the process. 
+
+The applied operating unit and material element notations 
+in the P-graph notation are presented in \ref{fig:example for P-graph}. 
+
+As an example let us consider a process network with 7 operating units,
+in which the operating units are 1,2....7 and the materials are A,B, .... L. A,B,C and D 
+are the materials available for the production of L The possible structure is given in  . [2-PNS]
 
 \begin{figure}[th]
 	\centering
@@ -40,7 +69,8 @@ As an example let us consider a process network with 7 operating units, in which
 
 In the Process Network Synthesis (PNS for short) problem a set of materials is given and also operating units 
 which are transforming some subset of materials into some other subset.
-The subsets assigned to the operating unit are called its  input and output materials. 
+The subsets assigned to the operating unit are called its  input and output materials. [3-PNS]
+
 In the problem two subsets of the materials are distinguished, 
 one is the set of the raw materials and the other is the set of the desired products.
 Our goal is to find a minimal cost network of the operating units which can produce all desired products starting from the raw material. These systems can be modeled in the P-graph framework which is based on bipartite graphs.
@@ -54,12 +84,15 @@ and from an operating unit to its output materials.
 Then the subgraphs satisfying some properties describe the feasible processes
 which produce the desired products from the raw materials.
 Thus our goal is to find the least expensive such subgraph. 
-In the structural model the amounts of the material flows are not taken into account thus the cost of an operating unit is a constant, and the cost of a subgraph is the sum of the costs of the operating units contained in it. 
+In the structural model the amounts of the material flows are not taken into account 
+thus the cost of an operating unit is a constant, and the cost of a subgraph 
+is the sum of the costs of the operating units contained in it. [3-PNS]
 \subsection{ Basic Notation }
 
 The structural PNS problem can be modeled in the PGraph framework.
 In the PGraph (Process Graph) we have the set of the materials denoted by M,
-which contain two special subsets, the set of raw materials and the set of desired products denoted by R and P respectively
+which contain two special subsets, the set of raw materials and the set of 
+desired products denoted by R and P respectively [3-PNS]
 
 The problem also contains a set of possible operating units which can transform some sets of materials. 
 
@@ -67,7 +100,7 @@ The set of operating units is denoted by O. An operating unit u is given by two 
 in(u) denotes the set of the input materials out(u) denotes the set of output materials of the operating unit
 
 This means that the operating unit can work in a solution structure if all of its input materials are produced and in this case it 
-produces all of its output materials. 
+produces all of its output materials. [3-PNS] 
 
 The PGraph  of the problem is defined by the sets M and O. It is a directed bipartite graph where the set of vertices is M $\cup$ O, and have the following two sets of edges:
 \begin{enumerate}
@@ -75,7 +108,7 @@ The PGraph  of the problem is defined by the sets M and O. It is a directed bipa
 \item Edges which connect the operating units to their output materials
 \end{enumerate}
 
-Then some of the subgraphs of this P-graph describe the feasible solutions which produce the required materials from the raw materials.  
+Then some of the subgraphs of this P-graph describe the feasible solutions which produce the required materials from the raw materials.   [3-PNS]
 where m and o are the subsets of M and O, represent a feasible solution if and only if the following properties called axioms are valid: 
 \begin{enumerate}
 
@@ -90,7 +123,7 @@ in set o
 \subsection{Mathematical definition }
 
 There is a finite set of material M (which contains the sets of P products and R raw-materials) 
-and the finite set of O operating units. 
+and the finite set of O operating units. [2-PNS] 
 Consequently, the set of P end-products and the set of R raw-materials must be subsets of M 
 and the set of M materials and the set of O operating units are disjunctive.
 The basic relations between M,P,R and O are as follows : 
@@ -146,24 +179,46 @@ Also,
 the algorithm SSG (Solution-Structure Generation) generates the set of feasible process structures from the maximal structure,
 
 which leads to the algorithm ABB (Accelerated Branch and Bound) for computing the n-best optimal solution structure
+[0-OMACS]
+
 \subsubsection{Maximal-Structure Generation}
-The maximal structure of the synthesis problem (P, R, O) contains all the combinatorially possible structures, which make the production of defined products possible from given raw-materials. Therefore, it certainly contains the optimal structure as well.
 
-The first phase is the input phase, in which the synthesis problem is defined (P, R, O) such a way, that the set of M all the plausible materials, the set of P end-products 
+The maximal structure of the synthesis problem (P, R, O) 
+contains all the combinatorially possible structures,
+which make the production of defined products possible 
+from given raw-materials. [2-PNS]
+ 
+Therefore, it certainly contains the optimal structure as well.
 
-The second phase is the elaboration of the input structure of the network, which is carried out by the linking of all the similar (same type) material type vertices.
+The first phase is the input phase, in which the synthesis problem 
+is defined (P, R, O) such a way, that the set of M all the plausible materials, 
+the set of P end-products 
 
-The third phase is the elimination phase, where those materials and operating units are eliminated, which, taking the  axioms into account, are not and cannot be linked to the maximal structure for sure
+The second phase is the elaboration of the input structure of the network, 
+which is carried out by the linking of all the similar (same type) material type vertices.
 
-During the fourth phase the vertices are linked again from level to level, starting from the highest, the end-product level.
+The third phase is the elimination phase, where those materials 
+and operating units are eliminated, which, taking the  axioms into account,
+are not and cannot be linked to the maximal structure for sure
 
-The maximal structure generated this way contains all the combinatorially possible structures and all of its elements fulfil the  axioms.
+During the fourth phase the vertices are linked again from level to level, 
+starting from the highest, the end-product level.
+
+The maximal structure generated this way contains all the combinatorially possible 
+structures and all of its elements fulfil the  axioms.[2-PNS]
+
 \subsubsection{Maximal-Structure Generation}
-The maximal structure generated by the MSG algorithm contains all such combinatorically possible network structures that are able to produce the end-product from the given raw-materials.
 
-Consequently, it contains the optimal network as well. In most cases the optimalisation means to find the most cost effective solution.
+The maximal structure generated by the MSG algorithm contains all such combinatorically 
+possible network structures that are able to produce the end-product from the given raw-materials.[2-PNS]
 
-The application of the SSG (Solution Structure Generation) algorithm enables the production of all the solution structures. The SSG is a new mathematical tool  which has been developed by Friedler et al.
+Consequently, it contains the optimal network as well. 
+In most cases the optimalisation means  to find the most cost effective solution.
+
+The application of the SSG (Solution Structure Generation) algorithm 
+enables the production of all the solution structures. 
+
+The SSG is a new mathematical tool  which has been developed by Friedler et al.[2-PNS]
 
 \subsubsection{Accelerated Branch and Bound}
 

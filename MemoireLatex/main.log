@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.4)  12 APR 2017 23:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.4)  13 APR 2017 00:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -526,7 +526,11 @@ Package caption Info: listings package is loaded.
 \sf@top=\skip61
 \sf@bottom=\skip62
 ) (./main.aux
-(./introduction.aux) (./chapiter1/chapiter1.aux))
+(./introduction.aux) (./chapiter1/chapiter1.aux) (./chapiter2/chapiter2.aux
+
+LaTeX Warning: Label `eq:second' multiply defined.
+
+))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
@@ -543,8 +547,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
 LaTeX Font Info:    ... okay on input line 64.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 64.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 64.
@@ -690,42 +693,42 @@ Chapter 1.
 
 
 
-] <chapiter1/img/omase.jpg, id=221, 343.2825pt x 222.8325pt>
+] <chapiter1/img/omase.jpg, id=287, 343.2825pt x 222.8325pt>
 File: chapiter1/img/omase.jpg Graphic file (type jpg)
 
 <use chapiter1/img/omase.jpg>
 Package pdftex.def Info: chapiter1/img/omase.jpg used on input line 51.
 (pdftex.def)             Requested size: 343.28165pt x 222.83195pt.
  [4 <./chapiter1/img/omase.jpg>]
-<chapiter1/img/omacs.jpg, id=237, 430.60875pt x 252.945pt>
+<chapiter1/img/omacs.jpg, id=303, 430.60875pt x 252.945pt>
 File: chapiter1/img/omacs.jpg Graphic file (type jpg)
 
 <use chapiter1/img/omacs.jpg>
 Package pdftex.def Info: chapiter1/img/omacs.jpg used on input line 105.
 (pdftex.def)             Requested size: 430.60768pt x 252.94438pt.
  [5] [6 <./chapiter1/img/omacs.jpg>]
-<chapiter1/img/Goal.png, id=254, 83.48431pt x 39.3193pt>
+<chapiter1/img/Goal.png, id=321, 83.48431pt x 39.3193pt>
 File: chapiter1/img/Goal.png Graphic file (type png)
 
 <use chapiter1/img/Goal.png>
 Package pdftex.def Info: chapiter1/img/Goal.png used on input line 210.
 (pdftex.def)             Requested size: 83.4841pt x 39.31918pt.
  [7 <./chapiter1/img/Goal.png>]
-<chapiter1/img/Role.png, id=274, 44.30345pt x 39.3193pt>
+<chapiter1/img/Role.png, id=341, 44.30345pt x 39.3193pt>
 File: chapiter1/img/Role.png Graphic file (type png)
 
 <use chapiter1/img/Role.png>
 Package pdftex.def Info: chapiter1/img/Role.png used on input line 243.
 (pdftex.def)             Requested size: 44.30333pt x 39.31918pt.
  [8 <./chapiter1/img/Role.png>]
-<chapiter1/img/Agent.png, id=281, 41.81139pt x 46.65707pt>
+<chapiter1/img/Agent.png, id=348, 41.81139pt x 46.65707pt>
 File: chapiter1/img/Agent.png Graphic file (type png)
 
 <use chapiter1/img/Agent.png>
 Package pdftex.def Info: chapiter1/img/Agent.png used on input line 272.
 (pdftex.def)             Requested size: 41.81128pt x 46.65695pt.
 
-<chapiter1/img/Cap.png, id=282, 51.9181pt x 31.2893pt>
+<chapiter1/img/Cap.png, id=349, 51.9181pt x 31.2893pt>
 File: chapiter1/img/Cap.png Graphic file (type png)
 
 <use chapiter1/img/Cap.png>
@@ -750,27 +753,27 @@ Overfull \hbox (35.3637pt too wide) in paragraph at lines 342--344
 as-so-ci-a-tions as well as generalization-
  []
 
-[10] <chapiter1/img/a.png, id=302, 240.3462pt x 89.16069pt>
+[10] <chapiter1/img/a.png, id=368, 240.3462pt x 89.16069pt>
 File: chapiter1/img/a.png Graphic file (type png)
 
 <use chapiter1/img/a.png>
 Package pdftex.def Info: chapiter1/img/a.png used on input line 370.
 (pdftex.def)             Requested size: 240.34561pt x 89.16046pt.
- <chapiter1/img/r.png, id=303, 226.91672pt x 80.3pt>
+ <chapiter1/img/r.png, id=369, 226.91672pt x 80.3pt>
 File: chapiter1/img/r.png Graphic file (type png)
 
 <use chapiter1/img/r.png>
 Package pdftex.def Info: chapiter1/img/r.png used on input line 391.
 (pdftex.def)             Requested size: 226.91615pt x 80.29979pt.
  [11 <./chapiter1/img/a.png> <./chapiter1/img/r.png>]
-<chapiter1/img/p.png, id=310, 219.85587pt x 78.63863pt>
+<chapiter1/img/p.png, id=376, 219.85587pt x 78.63863pt>
 File: chapiter1/img/p.png Graphic file (type png)
 
 <use chapiter1/img/p.png>
 Package pdftex.def Info: chapiter1/img/p.png used on input line 407.
 (pdftex.def)             Requested size: 219.85532pt x 78.63841pt.
 
-<chapiter1/img/c.png, id=311, 394.85448pt x 127.78777pt>
+<chapiter1/img/c.png, id=377, 394.85448pt x 127.78777pt>
 File: chapiter1/img/c.png Graphic file (type png)
 
 <use chapiter1/img/c.png>
@@ -778,21 +781,49 @@ Package pdftex.def Info: chapiter1/img/c.png used on input line 432.
 (pdftex.def)             Requested size: 394.8535pt x 127.78743pt.
  [12 <./chapiter1/img/p.png> <./chapiter1/img/c.png>]
 [13] [14] [15] [16]) [17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 134.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 134.
- (./main.aux (./introduction.aux)
-(./chapiter1/chapiter1.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 134.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 134.
+\openout2 = `chapiter2/chapiter2.aux'.
+
+ (./chapiter2/chapiter2.tex
+Chapter 2.
+[18
+
+
+
+] <chapiter2/img/notationP.png, id=421, 122.4575pt x 103.38625pt>
+File: chapiter2/img/notationP.png Graphic file (type png)
+
+<use chapiter2/img/notationP.png>
+Package pdftex.def Info: chapiter2/img/notationP.png used on input line 57.
+(pdftex.def)             Requested size: 122.45718pt x 103.38599pt.
+
+<chapiter2/img/examplePgraph.png, id=422, 230.8625pt x 281.05pt>
+File: chapiter2/img/examplePgraph.png Graphic file (type png)
+
+<use chapiter2/img/examplePgraph.png>
+Package pdftex.def Info: chapiter2/img/examplePgraph.png used on input line 64.
+
+(pdftex.def)             Requested size: 230.86192pt x 281.0493pt.
+ [19 <./chapiter2/img/notationP.png> <./chapiter2/img/examplePgraph.png>] [20] 
+[21] [22]) [23]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 130.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
+ (./main.aux
+(./introduction.aux) (./chapiter1/chapiter1.aux) (./chapiter2/chapiter2.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0DDDCC988D940F66AE8D4FA7ACB23AC0;6040.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 134.
+(rerunfilecheck)             Checksum: 496208DA7AB074EB88DF85F5A7C0B3CB;8635.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 130.
  ) 
 Here is how much of TeX's memory you used:
- 13924 strings out of 494953
- 197512 string characters out of 6180977
- 277399 words of memory out of 5000000
- 16904 multiletter control sequences out of 15000+600000
+ 13995 strings out of 494953
+ 198707 string characters out of 6180977
+ 278278 words of memory out of 5000000
+ 16933 multiletter control sequences out of 15000+600000
  23115 words of font info for 63 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  44i,11n,43p,476b,460s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -817,10 +848,10 @@ public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm
 ublic/cm-super/sfsl1200.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapf
 ding/uzdr.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/wasy2-ps/wasy10
 .pfb>
-Output written on main.pdf (21 pages, 1066918 bytes).
+Output written on main.pdf (27 pages, 1098173 bytes).
 PDF statistics:
- 445 PDF objects out of 1000 (max. 8388607)
- 378 compressed objects within 4 object streams
- 92 named destinations out of 1000 (max. 500000)
- 299 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 556 PDF objects out of 1000 (max. 8388607)
+ 480 compressed objects within 5 object streams
+ 123 named destinations out of 1000 (max. 500000)
+ 405 words of extra memory for PDF output out of 10000 (max. 10000000)
 
