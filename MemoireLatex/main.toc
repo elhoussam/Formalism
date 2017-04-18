@@ -1,44 +1,76 @@
 \select@language {english}
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }{Contents}}{i}{section*.1}
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }{List of Figures }}{iii}{section*.3}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }{List of Tables}}{iv}{section*.5}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }{General Introduction}}{1}{chapter*.7}
-\contentsline {chapter}{\numberline {1}Organization Multi-Agent System}{3}{chapter.1}
-\contentsline {section}{\numberline {1.1} Organization Multi-Agent System Engineering}{3}{section.1.1}
-\contentsline {subsection}{\numberline {1.1.1} Overview of O-MaSE }{3}{subsection.1.1.1}
-\contentsline {subsection}{\numberline {1.1.2} The Goal of O-MaSE }{4}{subsection.1.1.2}
-\contentsline {section}{\numberline {1.2} Organization Model for Adaptive Computational System }{5}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1} Overview of OMACS }{5}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Main Element of OMACS}{7}{subsection.1.2.2}
-\contentsline {subsubsection}{\numberline {1.2.2.1}Goals}{7}{subsubsection.1.2.2.1}
-\contentsline {subsubsection}{\numberline {1.2.2.2}Roles }{8}{subsubsection.1.2.2.2}
-\contentsline {subsubsection}{\numberline {1.2.2.3} Agents}{8}{subsubsection.1.2.2.3}
-\contentsline {subsubsection}{\numberline {1.2.2.4} Capabilities }{9}{subsubsection.1.2.2.4}
-\contentsline {subsubsection}{\numberline {1.2.2.5} The Tuple $\varphi $ }{9}{subsubsection.1.2.2.5}
-\contentsline {subsubsection}{\numberline {1.2.2.6} OAF }{10}{subsubsection.1.2.2.6}
-\contentsline {subsubsection}{\numberline {1.2.2.7} Domain Model }{10}{subsubsection.1.2.2.7}
-\contentsline {subsection}{\numberline {1.2.3} Function of OMACS }{10}{subsection.1.2.3}
-\contentsline {subsubsection}{\numberline {1.2.3.1}The Achieves}{10}{subsubsection.1.2.3.1}
-\contentsline {subsubsection}{\numberline {1.2.3.2}Requires}{11}{subsubsection.1.2.3.2}
-\contentsline {subsubsection}{\numberline {1.2.3.3}Possesses}{11}{subsubsection.1.2.3.3}
-\contentsline {subsubsection}{\numberline {1.2.3.4}Capable}{12}{subsubsection.1.2.3.4}
-\contentsline {subsubsection}{\numberline {1.2.3.5}Potential}{13}{subsubsection.1.2.3.5}
-\contentsline {section}{\numberline {1.3} Organization \& Reorganization Dynamic System}{13}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1} Organization and Reorganization }{13}{subsection.1.3.1}
-\contentsline {subsubsection}{\numberline {1.3.1.1} Goal Set Changes }{14}{subsubsection.1.3.1.1}
-\contentsline {subsubsection}{\numberline {1.3.1.2}Agent Changes }{15}{subsubsection.1.3.1.2}
-\contentsline {subsection}{\numberline {1.3.2} Reorganization }{16}{subsection.1.3.2}
-\contentsline {subsubsection}{\numberline {1.3.2.1} General Purpose Reorganization Examples }{16}{subsubsection.1.3.2.1}
-\contentsline {section}{\numberline {1.4}Conclusion}{17}{section.1.4}
-\contentsline {chapter}{\numberline {2}PGraph and PNS}{18}{chapter.2}
-\contentsline {section}{\numberline {2.1} PGraph }{18}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1} General Definition of P-Graph }{18}{subsection.2.1.1}
-\contentsline {section}{\numberline {2.2} Process Network Synthesis }{20}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1} Basic Notation }{20}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Mathematical definition }{21}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3} Algorithms MSG, SSG, and ABB }{22}{subsection.2.2.3}
-\contentsline {subsubsection}{\numberline {2.2.3.1}Maximal-Structure Generation}{22}{subsubsection.2.2.3.1}
-\contentsline {subsubsection}{\numberline {2.2.3.2}Maximal-Structure Generation}{22}{subsubsection.2.2.3.2}
-\contentsline {subsubsection}{\numberline {2.2.3.3}Accelerated Branch and Bound}{23}{subsubsection.2.2.3.3}
-\contentsline {subsection}{\numberline {2.2.4} Comparaison PNS and PetriNet : }{23}{subsection.2.2.4}
-\contentsline {section}{\numberline {2.3}Conclusion}{23}{section.2.3}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }{List of Tables}}{v}{section*.5}
+\contentsline {chapter}{\numberline {1}Organization Multi-Agent System}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1} Organization Multi-Agent System Engineering}{1}{section.1.1}
+\contentsline {subsection}{\numberline {1.1.1} Overview of O-MaSE }{1}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2} The Goal of O-MaSE }{2}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2} Organization Model for Adaptive Computational System }{3}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1} Overview of OMACS }{3}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Main Element of OMACS}{5}{subsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2.1}Goals}{5}{subsubsection.1.2.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2.2}Roles }{5}{subsubsection.1.2.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2.3} Agents}{6}{subsubsection.1.2.2.3}
+\contentsline {subsubsection}{\numberline {1.2.2.4} Capabilities }{7}{subsubsection.1.2.2.4}
+\contentsline {subsubsection}{\numberline {1.2.2.5} The Tuple $\varphi $ }{7}{subsubsection.1.2.2.5}
+\contentsline {subsubsection}{\numberline {1.2.2.6} OAF }{7}{subsubsection.1.2.2.6}
+\contentsline {subsubsection}{\numberline {1.2.2.7} Domain Model }{8}{subsubsection.1.2.2.7}
+\contentsline {subsection}{\numberline {1.2.3} Function of OMACS }{8}{subsection.1.2.3}
+\contentsline {subsubsection}{\numberline {1.2.3.1}The Achieves}{8}{subsubsection.1.2.3.1}
+\contentsline {subsubsection}{\numberline {1.2.3.2}Requires}{9}{subsubsection.1.2.3.2}
+\contentsline {subsubsection}{\numberline {1.2.3.3}Possesses}{9}{subsubsection.1.2.3.3}
+\contentsline {subsubsection}{\numberline {1.2.3.4}Capable}{9}{subsubsection.1.2.3.4}
+\contentsline {subsubsection}{\numberline {1.2.3.5}Potential}{10}{subsubsection.1.2.3.5}
+\contentsline {section}{\numberline {1.3} Organization \& Reorganization Dynamic System}{11}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1} Organization and Reorganization }{11}{subsection.1.3.1}
+\contentsline {subsubsection}{\numberline {1.3.1.1} Goal Set Changes }{12}{subsubsection.1.3.1.1}
+\contentsline {subsubsection}{\numberline {1.3.1.2}Agent Changes }{13}{subsubsection.1.3.1.2}
+\contentsline {subsection}{\numberline {1.3.2} Reorganization }{14}{subsection.1.3.2}
+\contentsline {subsubsection}{\numberline {1.3.2.1} General Purpose Reorganization Examples }{14}{subsubsection.1.3.2.1}
+\contentsline {section}{\numberline {1.4}Conclusion}{15}{section.1.4}
+\contentsline {chapter}{\numberline {2}PGraph and PNS}{16}{chapter.2}
+\contentsline {section}{\numberline {2.1} PGraph }{16}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1} General Definition of P-Graph }{16}{subsection.2.1.1}
+\contentsline {section}{\numberline {2.2} Process Network Synthesis }{18}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1} Basic Notation }{18}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Mathematical definition }{19}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3} Algorithms MSG, SSG, and ABB }{20}{subsection.2.2.3}
+\contentsline {subsubsection}{\numberline {2.2.3.1}Maximal-Structure Generation}{20}{subsubsection.2.2.3.1}
+\contentsline {subsubsection}{\numberline {2.2.3.2}Solution Structure Generation}{20}{subsubsection.2.2.3.2}
+\contentsline {subsubsection}{\numberline {2.2.3.3}Accelerated Branch and Bound}{21}{subsubsection.2.2.3.3}
+\contentsline {subsection}{\numberline {2.2.4} Comparaison PNS and PetriNet : }{21}{subsection.2.2.4}
+\contentsline {section}{\numberline {2.3}Conclusion}{21}{section.2.3}
+\contentsline {chapter}{\numberline {3}Graph Transformation Approach}{22}{chapter.3}
+\contentsline {section}{\numberline {3.1} Introduction }{22}{section.3.1}
+\contentsline {section}{\numberline {3.2}model and Meta-Model }{22}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Architercteur of Meta-Modeling}{23}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Transformation Model}{24}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Definition}{24}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Norme of Transformation }{24}{section.3.4}
+\contentsline {section}{\numberline {3.5}Graph Grammar}{25}{section.3.5}
+\contentsline {section}{\numberline {3.6} Transformation system }{26}{section.3.6}
+\contentsline {section}{\numberline {3.7}AToM $^{3}$}{27}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Classes in AToM$^{3}$ }{27}{subsection.3.7.1}
+\contentsline {subsubsection}{\numberline {3.7.1.1} Constraint }{28}{subsubsection.3.7.1.1}
+\contentsline {subsubsection}{\numberline {3.7.1.2} Action }{29}{subsubsection.3.7.1.2}
+\contentsline {section}{\numberline {3.8} Graph Grammer in AToM $^{3}$ }{29}{section.3.8}
+\contentsline {section}{\numberline {3.9}Implementation of the Transformation }{31}{section.3.9}
+\contentsline {subsection}{\numberline {3.9.1} Meta-Model of OMACS and PNS }{31}{subsection.3.9.1}
+\contentsline {subsection}{\numberline {3.9.2} Model in OMACS and PNS }{33}{subsection.3.9.2}
+\contentsline {subsection}{\numberline {3.9.3} Rule of Transformation }{34}{subsection.3.9.3}
+\contentsline {subsubsection}{\numberline {3.9.3.1} Graph Grammar }{34}{subsubsection.3.9.3.1}
+\contentsline {paragraph}{\emph {1)~Create the direct link between the Agent and the Role (order1) :} }{35}{section*.34}
+\contentsline {paragraph}{\emph {2)~Transform Agent to RawMaterial (order5) :} }{35}{section*.36}
+\contentsline {paragraph}{\emph {3)~Transform Link between Agent and Role into Operating Unit (order7) :} }{35}{section*.38}
+\contentsline {paragraph}{\emph {4)~Transform Goal to intermediate material (order9) :} }{36}{section*.40}
+\contentsline {paragraph}{\emph {5)~Create the Product node (order10) :} }{36}{section*.42}
+\contentsline {paragraph}{\emph {6)~Generate auxiliary part (order 13) :} }{37}{section*.44}
+\contentsline {paragraph}{\emph {7)~Create Operating unit between goal material and the product (order 15) :} }{37}{section*.46}
+\contentsline {paragraph}{\emph {8)~Create link between auxiliary part and goal material (order 19) :} }{37}{section*.48}
+\contentsline {paragraph}{\emph {9)~Create link to consume the raw material by operating unit (order 20) :} }{38}{section*.50}
+\contentsline {paragraph}{\emph {1)~for the rule \ref {fig:Create link between Agent and Role} } }{39}{section*.52}
+\contentsline {paragraph}{\emph {2)~Condition for rule \ref {fig:Create the final material} } }{39}{section*.54}
+\contentsline {paragraph}{\emph {3)~Condition for rule \ref {fig:link between auxiliary part and goal} } }{39}{section*.56}
+\contentsline {subsection}{\numberline {3.9.4} Examples }{40}{subsection.3.9.4}
+\contentsline {subsubsection}{\numberline {3.9.4.1} Simple multi Agent System }{40}{subsubsection.3.9.4.1}

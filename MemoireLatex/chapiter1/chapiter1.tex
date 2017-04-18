@@ -88,14 +88,12 @@ The APE plug-in is based on the Eclipse Process Framework and provides a process
 \subsection{ Overview of OMACS }
 The OMACS is Framework , this model grew from the MaSE metamodel , 
 which was based on the original AGR\footnote{Agent Group Roles}  model . [4-omacs]
-
-We realized that while we could define multiagent systems in terms of agent
-playing roles in order to achieve system goals, we did not have to limit the flexibility
-of agents by predefining the roles they could and could not play. [4-omacs]
-
+ 
 Noting that agents could be assigned to roles based on the capabilities 
 Required to play various roles and the capabilities possessed by the agents,
 we figured the agents could adapt their assignments based on the current 
+
+
 set of goals required to be achieved by the system.
 This basic idea led to the OMACS  model as defined in DeLoach,
 Oyenan, and Matson (2007) and shown in Figure \ref{fig:OMACS meta-models} . [4-omacs]
@@ -148,6 +146,7 @@ of capabilities required to play that role  defining the set of capabilities req
 \end{itemize}
 OMACS also includes two additional derived functions to help compute potential assignment values: 
 capable and potential.
+[0-OMACS]
 
 \begin{itemize}
 
@@ -196,7 +195,7 @@ The first eight elements in the organization tuple defined above G, R, A, C, $\v
 Artificial organizations are designed with a specific purpose, which defines the overall function
 of the organization. [2-omacs]
 
-Goals are defined as a desirable situation [37] or the objective of a
+Goals are defined as a desirable situation or the objective of a
 computational process .
 
 Within OMACS, each organization has a set of goals, G, that it seeks
@@ -260,6 +259,15 @@ Reactivity is an agents ability to perceive its environment and respond to chang
 pro-activeness ensures agents do not simply react to their environment, but that they are able to
 take the initiative in achieving their goals. 
 
+
+\begin{figure}[th]
+	\centering
+		\includegraphics{chapiter1/img/Agent}
+	\caption{\label{fig:Agent Node}Agent Node }
+\end{figure}
+
+
+
 Finally, social ability allows agents to interact with
 other agents, and possibly humans, either directly via communication or indirectly through the
 environment.
@@ -267,11 +275,6 @@ environment.
 Within the organization, agents must have the ability to communicate with each other, accept
 assignments to play roles that match their capabilities, and work to achieve their assigned goals. [2-OAMCS]
 
-\begin{figure}[th]
-	\centering
-		\includegraphics{chapiter1/img/Agent}
-	\caption{\label{fig:Agent Node}Agent Node }
-\end{figure}
 
 \subsubsection{ Capabilities } 
 
@@ -365,6 +368,8 @@ function (although somewhat confusingly named) actually defines how effective an
  
   Thus, by definition, a role that cannot be used to achieve a particular goal must have an achieves value of 0, while a role that can achieve a goal would have an achieves value greater than zero.[4-OMACS]
 
+Figure \ref{fig:The Achivement Relation} represent the Relation between Role and Goal 
+
 \begin{figure}[th]
 	\centering
 		\includegraphics{chapiter1/img/a}
@@ -386,10 +391,12 @@ Roles require a certain set of capabilities while agents
 possess a set of capabilities [2-OMACS]
 
 
+and this Figure \ref{fig:The Requirment Relation} represent the Relation between Role and Capabilities 
+
 \begin{figure}[th]
 	\centering
 		\includegraphics{chapiter1/img/r}
-	\caption{\label{fig:The Requirment Relation}The Requirment Relation }
+	\caption{\label{fig:The Requirment Relation}The Requirement Relation }
 \end{figure}
 
 
@@ -400,6 +407,7 @@ In order to determine if some agent has the appropriate set of capabilities to p
 The possesses relation is formally captured as a function over agents and capabilities that returns a value in the range of 0 to 1,
 
  possesses: A $\times$ C $\rightarrow$ [0..1]. The real value returned by the possesses function indicates the quality of each capability possessed by the agent; 0 indicates no capability while a 1 indicates a high quality capability. [4-OMACS]
+and this Relation represented in the next Figure \ref{fig:Possesses Relation}
 
 
 \begin{figure}[th]
@@ -427,13 +435,7 @@ To be capable of playing a given role in the current organization,
 
 
 
-\begin{figure}[th]
-	\centering
-		\includegraphics{chapiter1/img/c}
-	\caption{\label{fig:Capable Of playing Relation} Agent Capable of Playing Analysis Role}
-\end{figure}
 
-\pagebreak
 
 
 The main goal of OMACS is to provide a mechanism to assign goals to agents [2-OMACS]
@@ -442,8 +444,11 @@ in such a way that agents cooperate toward achieving some top-level goal.
 Intuitively, this mechanism should provide a way to assign the best agents 
 to play the best roles in order to achieve these goals. 
 
+
+
 Thus, OMACS has defined  a potential function that captures the ability of an agent 
 to play a role in order  to achieve a specific goal.   [2-OMACS]
+
 
 
 \subsubsection{Potential}
@@ -461,12 +466,18 @@ to achieve goal g is defined by combining the capable and achieves functions.[4-
 \forall a:A\textrm{ r:R g:G }potential(a,r,g)=achieves(r,g)*capable(a,r)\label{eq:potentialFunc}
 \end{equation}
 
+and we depend on the common capabilities between the Agent and the Role Entities to Create a relation in this \ref{fig:Capable Of playing Relation} 
 
 
 
 
+\begin{figure}[th]
+	\centering
+		\includegraphics{chapiter1/img/mag}
+	\caption{\label{fig:Capable Of playing Relation} MaS with Capable of Playing Relation}
+\end{figure}
 
-
+%\pagebreak
 
 
 
