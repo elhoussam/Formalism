@@ -2,8 +2,11 @@
 \documentclass[12pt,oneside,english]{book} 
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
- \usepackage{amsmath}
+\usepackage{amsmath}
+\usepackage{lscape}
+\usepackage{pdflscape}
 \usepackage{wasysym}
+
 
 \usepackage{listings}
 \usepackage[a4paper]{geometry}
@@ -50,6 +53,35 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
 \usepackage{cite}
 \usepackage{verbatim}
+
+
+\usepackage{color}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+ 
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+} 
+\lstset{style=mystyle}
+
+
 
 \@ifundefined{showcaptionsetup}{}{%
  \PassOptionsToPackage{caption=false}{subfig}}
@@ -106,11 +138,14 @@
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 
 
+%\include{testImage}
 %\include{chapiter1/chapiter1}
 
 %\include{chapiter2/chapiter2}
 
-\include{chapiter3/chapiter3}
+%\include{chapiter3/chapiter3}
+ 
+\include{Chapiter3/Chapiter3}
  
 %\include{conclusion}
 
@@ -128,5 +163,5 @@
 \setcounter{figure}{0}
  
 \end{document}
-
+% UPDATE 00:47
 
