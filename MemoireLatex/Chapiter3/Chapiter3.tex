@@ -857,8 +857,6 @@ The purpose of this example is to demonstrate the transformation of multi agent 
 Figure \ref{fig:Multi Agent System After transformation } shows the transformation result.
 It is clear that the resulting contain set of material and operating unit
  
-\vspace{1cm}
-
 \begin{itemize}
 \item the raw material A1 , A2 represent the agent from last model
 \item the operating unit A1 R1 represent the relation between an A1 and R1 
@@ -879,8 +877,7 @@ in Mas before the transformation its the same for other entities like this one
 	\centering
  	\includegraphics[scale=0.8]{Chapiter3/img/ex1pns}
 	\caption{\label{fig:Multi Agent System After transformation }Multi Agent System After transformation}
-\end{figure} 
- \vspace{1cm}
+\end{figure}  
 \subsubsection{ Complex multi Agent System }
 This example represents a complex system composed of  3 agent and 4 capabilities , 2 role and 4 goals  . Figure \ref{fig:Example 1 Multi Agent System } illustrates this example ,
  
@@ -900,8 +897,45 @@ This example represents a complex system composed of  3 agent and 4 capabilities
 	\item Agent A1 capable of playing all roles in this system , so he can achieve all goal in the system
 \end{itemize}
 
-after the Transformation of Multi agent system from OMACS frame into PNS framework we get this model :  
+after the Transformation of Multi agent system from OMACS frame into PNS framework we get this model in figure \ref{fig:Complex Multi Agent System After transforamtion} 
+and next table represent the value of this model 
 
+ % Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+\centering
+\begin{tabular}{@{}ccc@{}}
+\toprule
+\textbf{Operating Unit} & \textbf{Input Material} & \textbf{Output Material}                                                                              \\ \midrule
+G1OAF                   & G1(1)                   & OAF (1)                                                                                               \\
+G2OAF                   & G2(1)                   & OAF(1)                                                                                                \\
+G3OAF                   & G3(1)                   & OAF(1)                                                                                                \\
+G4OAF                   & G4(1)                   & OAF(1)                                                                                                \\ \midrule
+A1R1G1                  & A1R1G1(0.433)           & G1(0.2)                                                                                               \\
+A1R1G2                  & A1R1G2(0.433)           & G2(0.4)                                                                                               \\
+A1R1G3                  & A1R1G3(0.433)           & G3(0.6)                                                                                               \\
+A1R1G4                  & A1R1G4(0.433)           & G4(0.8)                                                                                               \\
+A1R2G1                  & A1R2G1(0.433)           & G1(1.0)                                                                                               \\
+A1R2G2                  & A1R2G2(0.433)           & G2(0.7)                                                                                               \\
+A1R2G3                  & A1R2G3(0.433)           & G3(0.4)                                                                                               \\
+A1R2G4                  & A1R2G4(0.433)           & G4(0.1)                                                                                               \\
+A2R2G1                  & A2R2G1(0.633)           & G1(1.0)                                                                                               \\
+A2R2G2                  & A2R2G2(0.633)           & G2(0.7)                                                                                               \\
+A2R2G3                  & A2R2G3(0.633)           & G3(0.4)                                                                                               \\
+A2R2G4                  & A2R2G4(0.633)           & G4(0.1)                                                                                               \\
+A3R2G1                  & A3R2G1(0.5)             & G1(1.0)                                                                                               \\
+A3R2G2                  & A3R2G2(0.5)             & G2(0.7)                                                                                               \\
+A3R2G3                  & A3R2G3(0.5)             & G3(0.4)                                                                                               \\
+A3R2G4                  & A3R2G4(0.5)             & G4(0.1)                                                                                               \\ \midrule
+A1R1                    & A1                      & \begin{tabular}[c]{@{}c@{}}A1R1G1(0.433) ,A1R1G2(0.433) \\ ,A1R1G3(0.433) ,A1R1G4(0.433)\end{tabular} \\ \midrule
+A1R2                    & A1                      & \begin{tabular}[c]{@{}c@{}}A1R2G1(0.433) ,A1R2G2(0.433) ,\\ A1R2G3(0.433) ,A1R2G4(0.433)\end{tabular} \\ \midrule
+A2R2                    & A2                      & \begin{tabular}[c]{@{}c@{}}A2R2G1(0.633) ,A2R2G2(0.633) ,\\ A2R2G3(0.633) ,A2R2G4(0.633)\end{tabular} \\ \midrule
+A3R2                    & A3                      & \begin{tabular}[c]{@{}c@{}}A3R2G1(0.5) ,A3R2G2(0.5) ,\\ A3R2G3(0.5) ,A3R2G4(0.5)\end{tabular}         \\ \bottomrule
+\end{tabular}
+
+\caption{Value of PNS Model}
+\label{Value of PNS Model}
+\end{table}
 
 
 % Add table HEre
@@ -1113,6 +1147,4 @@ def newEdges(  parent  , name  , ID    , xN  , yN    ,beginID   , endID    ):
 	return node 
 \end{lstlisting}
 
-
-
-% UPDATE 00:47
+% UPDATE 13.47
