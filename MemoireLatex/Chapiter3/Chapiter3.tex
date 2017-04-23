@@ -1148,3 +1148,119 @@ def newEdges(  parent  , name  , ID    , xN  , yN    ,beginID   , endID    ):
 \end{lstlisting}
 
 % UPDATE 13.47
+
+\pagebreak
+\section{ Optimisation Multi Agent System }
+
+To optimize the multi-agent system in  Process Process synthesis, we chose tool called the P-Graph Studio 
+to find the optimal structure, the figure \ref{fig:pgraphstudio)} represents the graphical interface of the tool
+
+\begin{figure}[th]
+	\centering  %[scale=1.2]
+ 	\includegraphics[scale=0.44]{Chapiter3/img/pgraph}
+	\caption{\label{fig:pgraphstudio)}P-Graph Studio Window }
+\end{figure}  
+
+
+figure \ref{fig:Multi Agent System in PGraph Studio} represent multi agent system , Previously mentioned in figure \ref{fig:Complex Multi Agent System After transforamtion} 
+\begin{figure}[th]
+	\centering
+		\includegraphics[scale=0.44]{Chapiter3/img/pgraphArt}
+	\caption{\label{fig:Multi Agent System in PGraph Studio}Multi Agent System in PGraph Studio}
+\end{figure} 
+\pagebreak
+After we use this tool to optimise , we got this figure \ref{fig:Multi Agent System in Optimum structure}
+
+\begin{figure}[th]
+	\centering
+		\includegraphics[scale=0.44]{Chapiter3/img/pgraphSol}
+	\caption{\label{fig:Multi Agent System in Optimum structure}Multi Agent System in Optimum structure}
+\end{figure} 
+
+PGraph Studio Generate 2 Files : 
+\begin{itemize}
+	\item Graph.in and contain :
+		\begin{enumerate}
+			\item information about Material , price , quanity
+			\item information about operating unit , income material and outcome material 
+ 	\end{enumerate}
+
+\end{itemize}
+
+\begin{lstlisting}[caption=Part from Graph.in]
+material_to_operating_unit_flow_rates:
+
+A1_R1: A1 => 0.433 A1_R1_G1 + 0.433 A1_R1_G4 +
+			 0.433 A1_R1_G3 + 0.433 A1_R1_G2
+A1_R2: A1 => 0.433 A1_R2_G4 + 0.433 A1_R2_G3 + 
+			 0.433 A1_R2_G2 + 0.433 A1_R2_G1
+A2_R2: A2 => 0.633 A2_R2_G4 + 0.633 A2_R2_G3 + 
+			 0.633 A2_R2_G2 + 0.633 A2_R2_G1
+A3_R2: A3 => 0.5 A3_R2_G4 + 0.5 A3_R2_G3 + 
+			 0.5 A3_R2_G2 + 0.5 A3_R2_G1
+			 
+G1_OAF: G1 => OAF
+G2_OAF: G2 => OAF
+G3_OAF: G3 => OAF
+G4_OAF: G4 => OAF
+
+\end{lstlisting}
+
+
+
+\begin{itemize}
+	\item Graph.out and contain :
+		\begin{enumerate}
+			\item All possible solution , starting with the optimum solution 
+			\item every solution presented by set of  operating unit , material and consumtion rate  
+ 	\end{enumerate}
+
+\end{itemize}
+
+
+
+\begin{lstlisting}[caption=Part from Graph.out]
+Feasible structure #2:
+Materials:
+
+A2 (64.6273 EUR/y): -0.718081 g/y
+A2_R2_G1: balanced
+A2_R2_G2: balanced
+A2_R2_G3: balanced
+A2_R2_G4: balanced
+G1: balanced
+G2: balanced
+G3: balanced
+G4: balanced
+OAF (-0 EUR/y): 1 g/y
+
+Operating units:
+
+0.718081*A2_R2 (0.454545 EUR/y): 
+		A2 (-0.718081 g/y) =>  A2_R2_G1 (0.454545 g/y) A2_R2_G2 (0.454545 g/y) 
+								A2_R2_G3 (0.454545 g/y) A2_R2_G4 (0.454545 g/y) 
+								
+0.454545*G1_OAF (2.45455 EUR/y): G1 (-0.454545 g/y) => OAF (0.454545 g/y) 
+0.318182*G2_OAF (2.31818 EUR/y): G2 (-0.318182 g/y) => OAF (0.318182 g/y) 
+0.181818*G3_OAF (2.18182 EUR/y): G3 (-0.181818 g/y) => OAF (0.181818 g/y) 
+0.045454*G4_OAF (2.04545 EUR/y): G4 (-0.045454 g/y) => OAF (0.045454 g/y) 
+
+0.454545*A2_R2_G3 (2.18182 EUR/y): 
+				A2_R2_G3 (-0.454545 g/y) =>   G3 (0.181818 g/y) 
+				
+0.454545*A2_R2_G2 (2.31818 EUR/y):
+				A2_R2_G2 (-0.454545 g/y) =>   G2 (0.318182 g/y) 
+				
+0.454545*A2_R2_G1 (2.45455 EUR/y): 
+				A2_R2_G1 (-0.454545 g/y) =>  G1 (0.454545 g/y) 
+				
+0.454545*A2_R2_G4 (2.04545 EUR/y): 
+				A2_R2_G4(-0.454545 g/y) => G4 (0.0454545 g/y) 
+Total annual cost= 83.0819 EUR/y
+
+
+\end{lstlisting}
+
+
+
+% UPDATE 21.00.50
