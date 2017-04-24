@@ -1,4 +1,3 @@
-
 \documentclass[12pt,oneside,english]{book} 
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
@@ -130,7 +129,7 @@
 \mainmatter
 
  
-%\include{introduction}
+\include{introduction}
 
 
 \pagestyle{fancy}
@@ -139,13 +138,13 @@
 
 
 %\include{testImage}
-%\include{chapiter1/chapiter1}
+\include{chapiter1/chapiter1}
 
-%\include{chapiter2/chapiter2}
+\include{chapiter2/chapiter2}
 
-%\include{chapiter3/chapiter3}
+%\include{chapiter3/chapiter3} % laST vERSION 
  
-\include{Chapiter3/Chapiter3}
+%\include{Chapiter3/Chapiter3}
  
 %\include{conclusion}
 
@@ -154,14 +153,16 @@
 
 \phantomsection
 \addcontentsline{toc}{chapter}{\numberline{}{Bibliographie}}
-
+%\addcontentsline{toc}{section}{References}
+ 
 \bibliographystyle{ieeetr}
-%\bibliography{lib}
-
+\bibliography{bibl}
+ 
+ 
 
  
 \setcounter{figure}{0}
  
 \end{document}
-% UPDATE 21.00.50
+% UPDATE 17.35
 
