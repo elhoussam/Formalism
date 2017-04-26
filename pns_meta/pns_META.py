@@ -2,8 +2,8 @@
 __pns_META.py_____________________________________________________
 
 Automatically generated AToM3 Model File (Do not modify directly)
-Author: sam
-Modified: Fri Mar 31 16:05:25 2017
+Author: USER
+Modified: Wed Apr 26 11:30:16 2017
 __________________________________________________________________
 """
 from stickylink import *
@@ -90,7 +90,7 @@ def pns_META(self, rootNode, ButtonsRootNode=None):
 
     # Contents
     self.obj30.Contents.Text.setValue('Help')
-    self.obj30.Contents.Image.setValue('pns_meta/icons/btn?.gif')
+    self.obj30.Contents.Image.setValue('pns_meta/icons/btnH.gif')
     self.obj30.Contents.lastSelected= "Image"
 
     self.obj30.graphClass_= graph_ButtonConfig
@@ -240,22 +240,22 @@ def pns_META(self, rootNode, ButtonsRootNode=None):
     self.globalAndLocalPostcondition(self.obj34, rootNode)
     self.obj34.postAction( rootNode.CREATE )
 
-    # Connections for obj29 (graphObject_: Obj0) of type ButtonConfig
+    # Connections for obj29 (graphObject_: Obj6) of type ButtonConfig
     self.drawConnections(
  )
-    # Connections for obj30 (graphObject_: Obj1) of type ButtonConfig
+    # Connections for obj30 (graphObject_: Obj7) of type ButtonConfig
     self.drawConnections(
  )
-    # Connections for obj31 (graphObject_: Obj2) of type ButtonConfig
+    # Connections for obj31 (graphObject_: Obj8) of type ButtonConfig
     self.drawConnections(
  )
-    # Connections for obj32 (graphObject_: Obj3) of type ButtonConfig
+    # Connections for obj32 (graphObject_: Obj9) of type ButtonConfig
     self.drawConnections(
  )
-    # Connections for obj33 (graphObject_: Obj4) of type ButtonConfig
+    # Connections for obj33 (graphObject_: Obj10) of type ButtonConfig
     self.drawConnections(
  )
-    # Connections for obj34 (graphObject_: Obj5) of type ButtonConfig
+    # Connections for obj34 (graphObject_: Obj11) of type ButtonConfig
     self.drawConnections(
  )
 
