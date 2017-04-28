@@ -1,1 +1,1 @@
-rm -rv *.toc *.out *.lot *.log *.aux *.lof *.gz *.pdf *.dvi
+rm -rv *.toc *.out *.lot *.log *.aux *.lof *.gz *.pdf *.dvi *.bbl *.blg
