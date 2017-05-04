@@ -14,53 +14,49 @@ expectation that applications should be seamlessly integrated with other existin
 applications and systems. In addition, there is an increasing demand for these complex systems to
 exhibit some type of intelligence as well.
 
-No longer is it \quotedblbase good enough \textquotedblright to be able to access systems across the internet,
-but customers require that their systems know how to access data and
-systems, even in the face of unexpected events or failures.
 
-The goal of our research is to develop a framework for constructing complex, distributed systems
-that can autonomously adapt to their environment. Multiagent systems have become popular over
-the last few years for providing the basic notions that are applicable to this problem. A multiagent
+Multi-agent systems tend to be more robust and, in many cases, more efficient (due to their ability to perform parallel actions) than single monolithic applications. In addition, the individual agents tend to be simpler to build, as they are built from a single agents perspective.
 
-system uses groups of self-directed agents working together to achieve a common goal. Such
-multiagent systems are widely proposed as replacements for sophisticated, complex, and
-expensive stand-alone systems for similar applications. Multiagent systems tend to be more
-robust and, in many cases, more efficient (due to their ability to perform parallel actions) than
-single monolithic applications. In addition, the individual agents tend to be simpler to build, as
-they are built from a single agent?s perspective.
 
-However, unpredictable application environments make multiagent systems susceptible to
-individual failures that can significantly reduce the ability of the system to accomplish its goal.
+Graphs represent a graphical and direct tool for visualizing the complex structure of a system. It is a practical and intuitive tool for modeling. And when we talk about modeling multi-agent system we have serval framawork to use OMACS , PNS  Are very practical examples of modeling graphs
 
-The problem is that multiagent systems are typically designed to work within a limited set of
-configurations. Even when the system possesses the resources and computational ability to
-accomplish its goal, it may be constrained by its own structure and knowledge of its member?s
-capabilities, which may change over time. 
 
-In most multiagent design methodologies  ,the system designer analyzes the possible organizational 
-structure - which determines which roles are required to accomplish which goals and sub-goals 
-and then designs one organization that will suffice for most anticipated scenarios. 
+OMACS  is  a framework to allow us  to define a graph represent a Multi-agent System with his component ( Agents , Roles , Capabilities , Goals ) and the relation between these components .
+ 
+ 	
+PNS is also an other framework  basically is developed for chemical reaction systems , each node in this framework represent a material and between two material there is a transition they called it operating unit , but we will use it  to represent a multi agent system . 
 
-Unfortunately, in dynamic applications where the environment as well as the agents 
-may undergo changes, a designer can rarely account for, or even consider, all possible situations.
-Attempts to overcome these problems include large-scale redundancy using homogenous 
-capabilities and centralized/distributed planning. 
 
-However,homogenous approaches negate many of the benefits of using a multiagent approach and are not
-applicable in complex applications where specific capabilities are often needed by only one or
-two agents. Centralized and distributed planning approaches tend to be brittle and
-computationally expensive due to their required level of detail (individual actions in most cases).
+And it have some algorithms we need in our research ,  the goal of our research is to optimize a multi agent system by applying one of these algorithms , because of that we need to propose a new approach allow to transform a OMACS graph to PNS graph  .
 
-To overcome these problems, we are developing a framework that allows a system to design its
-own organization at runtime. In essence, we propose to provide the system with organizational
-knowledge and let the system design its own organization based on the current goals and its
-current capabilities. 
 
-While the designer can provide guidance, supplying the system with key
-organizational information will allow it to redesign, or reorganize, itself to match its scenario.
-This paper presents a key component of our framework, a metamodel for multiagent
-organizations named the Organization Model for Adaptive Computational Systems (OMACS).
+Our approach is base on Graph Transformation in AToM3 Tools  , and this document will show you our work and the framework I used  in three chapiter : 
 
-OMACS defines the requisite knowledge of a system?s organizational structure and capabilities
-that will allow the system to reorganize at runtime and enable it to achieve its goals in the face of
-a changing environment and its agent?s capabilities.
+\begin{enumerate}
+\item Chapter 1 : First Framework OMACS
+ \begin{enumerate}
+ 	\item Introduction
+    \item Definition
+    \item Main Element 
+    \item Relation between Elements
+    \item Conclusion
+    
+  \end{enumerate}
+\item Chapter 2 : Second Framework PNS
+ \begin{enumerate}
+ 	\item Introduction
+    \item Definition of P-Graph
+    \item Definition of PNS 
+    \item Mathematical Definition
+    \item Algorithm  
+    \item Conclusion
+  \end{enumerate}
+
+\item Chapter 3 : Our Approach of transformation and the tool i will use for transformation $AToM^3$
+and the steps of transformation , some tips how to use this tool and finally we use other tools to apply the algorithm of optimization which called P-Graph Sudio.
+
+\end{enumerate}
+
+
+
+
