@@ -1,0 +1,71 @@
+print 'Version 1Hahaha '
+self.rewritingSystem.finalStat = 0
+self.rewritingSystem.Dictag = {}
+self.rewritingSystem.Dictro = {}
+AgentDict = {}
+AgentDict2 = {}
+RoleDict = {} 
+RoleDict2 = {} 
+Posses  = {}
+Achiev = {}
+atom3i = self.rewritingSystem.parent
+for nodeType in atom3i.ASGroot.listNodes.keys():
+   for node in atom3i.ASGroot.listNodes[nodeType]:
+       if node.__class__.__name__ == 'Agent' : 
+           nodeName = node.name.getValue()
+           AgentDict[nodeName]={} 
+           AgentDict2[nodeName]=[]
+           for link in node.out_connections_ : 
+               if hasattr(link,'rate') :
+                   for nodes in link.out_connections_ :
+
+                      AgentDict[nodeName][nodes.name.getValue()]=link.rate.getValue()
+                      AgentDict2[nodeName].append(nodes.name.getValue())
+           #AgentDict[nodeName]= AgentDict[nodeName]/ len(node.out_connections_)
+       elif node.__class__.__name__ == 'Role' :
+           nodeName = node.name.getValue()
+           RoleDict[nodeName]={} 
+           RoleDict2[nodeName]=[]
+           lisst = RoleDict[nodeName]
+           for link in node.out_connections_ : 
+               for nodes in link.out_connections_ :
+                   if hasattr(link,'rate'):        RoleDict[nodeName][nodes.name.getValue()]=link.rate.getValue()
+                   else :  RoleDict2[nodeName].append(nodes.name.getValue())
+
+                         #lisst.append( {nodes.name.getValue():link.rate.getValue()} ) 
+           #RoleDict[nodeName] = lisst  
+
+
+ # all these line new 
+for key , val in AgentDict2.items() :
+   val.sort()
+for key , val in RoleDict2.items() :
+   val.sort()
+for key , val in AgentDict2.items() :
+    for key2 , val2 in RoleDict2.items() :
+        v = ''.join(val)
+        v2 = ''.join(val2)
+        if  v2 in v : 
+           s = 0
+           #print str(key) +' Can Play '+str(key2)
+           for i in val2 : 
+               #if type(AgentDict[key]).__name__ != 'float':
+               #print '  '+str(i)   
+               s+=AgentDict[key][i] 
+           AgentDict[key][key2] = s/len(val2)
+           Posses[str(key)+' '+str(key2)]=s*len(val2) #Just Equation for the cost of OpUnit
+           print key + ' :'+key2+' Can Achiev '+str(RoleDict[key2])
+
+           #print 'AgentDict : '+str(AgentDict)	 
+for key , val in AgentDict2.items() :
+     print str(key) +' Rate '+str( AgentDict[key] )		
+
+print '####[DicAG]Agent Dict for his Value  : '+str(AgentDict)
+print 'Agent dict 2 '+str(AgentDict2)
+print '####Role Dict for his Value  : '+str(RoleDict)
+print 'Role Dict2 for his Value  : '+str(RoleDict2)
+
+print Posses
+self.rewritingSystem.Dictag = AgentDict
+self.rewritingSystem.Dictro = RoleDict
+##
