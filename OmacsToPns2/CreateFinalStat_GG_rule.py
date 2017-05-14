@@ -22,58 +22,58 @@ class CreateFinalStat_GG_rule (GGrule):
 
       self.RHS = ASG_pns(parent)
 
-      self.obj669=product(parent)
-      self.obj669.preAction( self.RHS.CREATE )
-      self.obj669.isGraphObjectVisual = True
+      self.obj1670=product(parent)
+      self.obj1670.preAction( self.RHS.CREATE )
+      self.obj1670.isGraphObjectVisual = True
 
-      if(hasattr(self.obj669, '_setHierarchicalLink')):
-        self.obj669._setHierarchicalLink(False)
+      if(hasattr(self.obj1670, '_setHierarchicalLink')):
+        self.obj1670._setHierarchicalLink(False)
 
       # MaxFlow
-      self.obj669.MaxFlow.setValue(999999)
+      self.obj1670.MaxFlow.setValue(999999)
 
       # price
-      self.obj669.price.setValue(0)
+      self.obj1670.price.setValue(0)
 
       # Name
-      self.obj669.Name.setValue('OAF')
+      self.obj1670.Name.setValue('OAF')
 
       # ReqFlow
-      self.obj669.ReqFlow.setValue(0)
+      self.obj1670.ReqFlow.setValue(0)
 
-      self.obj669.GGLabel.setValue(1)
-      self.obj669.graphClass_= graph_product
+      self.obj1670.GGLabel.setValue(1)
+      self.obj1670.graphClass_= graph_product
       if parent.genGraphics:
-         new_obj = graph_product(100.0,80.0,self.obj669)
+         new_obj = graph_product(100.0,80.0,self.obj1670)
          new_obj.layConstraints = dict() # Graphical Layout Constraints 
          new_obj.layConstraints['scale'] = [1.0, 1.0]
       else: new_obj = None
-      self.obj669.graphObject_ = new_obj
-      self.obj6690= AttrCalc()
-      self.obj6690.Copy=ATOM3Boolean()
-      self.obj6690.Copy.setValue(('Copy from LHS', 1))
-      self.obj6690.Copy.config = 0
-      self.obj6690.Specify=ATOM3Constraint()
-      self.obj6690.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
-      self.obj669.GGset2Any['MaxFlow']= self.obj6690
-      self.obj6691= AttrCalc()
-      self.obj6691.Copy=ATOM3Boolean()
-      self.obj6691.Copy.setValue(('Copy from LHS', 0))
-      self.obj6691.Copy.config = 0
-      self.obj6691.Specify=ATOM3Constraint()
-      self.obj6691.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
-      self.obj669.GGset2Any['Name']= self.obj6691
-      self.obj6692= AttrCalc()
-      self.obj6692.Copy=ATOM3Boolean()
-      self.obj6692.Copy.setValue(('Copy from LHS', 1))
-      self.obj6692.Copy.config = 0
-      self.obj6692.Specify=ATOM3Constraint()
-      self.obj6692.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
-      self.obj669.GGset2Any['ReqFlow']= self.obj6692
+      self.obj1670.graphObject_ = new_obj
+      self.obj16700= AttrCalc()
+      self.obj16700.Copy=ATOM3Boolean()
+      self.obj16700.Copy.setValue(('Copy from LHS', 1))
+      self.obj16700.Copy.config = 0
+      self.obj16700.Specify=ATOM3Constraint()
+      self.obj16700.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+      self.obj1670.GGset2Any['MaxFlow']= self.obj16700
+      self.obj16701= AttrCalc()
+      self.obj16701.Copy=ATOM3Boolean()
+      self.obj16701.Copy.setValue(('Copy from LHS', 0))
+      self.obj16701.Copy.config = 0
+      self.obj16701.Specify=ATOM3Constraint()
+      self.obj16701.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+      self.obj1670.GGset2Any['Name']= self.obj16701
+      self.obj16702= AttrCalc()
+      self.obj16702.Copy=ATOM3Boolean()
+      self.obj16702.Copy.setValue(('Copy from LHS', 1))
+      self.obj16702.Copy.config = 0
+      self.obj16702.Specify=ATOM3Constraint()
+      self.obj16702.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+      self.obj1670.GGset2Any['ReqFlow']= self.obj16702
 
       # Add node to the root: self.RHS
-      self.RHS.addNode(self.obj669)
-      self.obj669.postAction( self.RHS.CREATE )
+      self.RHS.addNode(self.obj1670)
+      self.obj1670.postAction( self.RHS.CREATE )
 
 
    def condition(self, graphID, isograph, atom3i):

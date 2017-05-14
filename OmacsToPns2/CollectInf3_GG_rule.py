@@ -19,184 +19,184 @@ class CollectInf3_GG_rule (GGrule):
       self.exactMatch = 1
       self.LHS = ASG_omacs(parent)
 
-      self.obj595=Role(parent)
-      self.obj595.preAction( self.LHS.CREATE )
-      self.obj595.isGraphObjectVisual = True
+      self.obj1596=Role(parent)
+      self.obj1596.preAction( self.LHS.CREATE )
+      self.obj1596.isGraphObjectVisual = True
 
-      if(hasattr(self.obj595, '_setHierarchicalLink')):
-        self.obj595._setHierarchicalLink(False)
+      if(hasattr(self.obj1596, '_setHierarchicalLink')):
+        self.obj1596._setHierarchicalLink(False)
 
       # name
-      self.obj595.name.setValue('')
-      self.obj595.name.setNone()
+      self.obj1596.name.setValue('')
+      self.obj1596.name.setNone()
 
-      self.obj595.GGLabel.setValue(2)
-      self.obj595.graphClass_= graph_Role
+      self.obj1596.GGLabel.setValue(2)
+      self.obj1596.graphClass_= graph_Role
       if parent.genGraphics:
-         new_obj = graph_Role(40.0,40.0,self.obj595)
+         new_obj = graph_Role(40.0,40.0,self.obj1596)
          new_obj.layConstraints = dict() # Graphical Layout Constraints 
          new_obj.layConstraints['scale'] = [1.0, 1.0]
       else: new_obj = None
-      self.obj595.graphObject_ = new_obj
+      self.obj1596.graphObject_ = new_obj
 
       # Add node to the root: self.LHS
-      self.LHS.addNode(self.obj595)
-      self.obj595.postAction( self.LHS.CREATE )
+      self.LHS.addNode(self.obj1596)
+      self.obj1596.postAction( self.LHS.CREATE )
 
-      self.obj596=Goal(parent)
-      self.obj596.preAction( self.LHS.CREATE )
-      self.obj596.isGraphObjectVisual = True
+      self.obj1597=Goal(parent)
+      self.obj1597.preAction( self.LHS.CREATE )
+      self.obj1597.isGraphObjectVisual = True
 
-      if(hasattr(self.obj596, '_setHierarchicalLink')):
-        self.obj596._setHierarchicalLink(False)
+      if(hasattr(self.obj1597, '_setHierarchicalLink')):
+        self.obj1597._setHierarchicalLink(False)
 
       # name
-      self.obj596.name.setValue('')
-      self.obj596.name.setNone()
+      self.obj1597.name.setValue('')
+      self.obj1597.name.setNone()
 
-      self.obj596.GGLabel.setValue(1)
-      self.obj596.graphClass_= graph_Goal
+      self.obj1597.GGLabel.setValue(1)
+      self.obj1597.graphClass_= graph_Goal
       if parent.genGraphics:
-         new_obj = graph_Goal(300.0,160.0,self.obj596)
+         new_obj = graph_Goal(300.0,160.0,self.obj1597)
          new_obj.layConstraints = dict() # Graphical Layout Constraints 
          new_obj.layConstraints['scale'] = [1.0, 1.0]
       else: new_obj = None
-      self.obj596.graphObject_ = new_obj
+      self.obj1597.graphObject_ = new_obj
 
       # Add node to the root: self.LHS
-      self.LHS.addNode(self.obj596)
-      self.obj596.postAction( self.LHS.CREATE )
+      self.LHS.addNode(self.obj1597)
+      self.obj1597.postAction( self.LHS.CREATE )
 
-      self.obj597=achieve(parent)
-      self.obj597.preAction( self.LHS.CREATE )
-      self.obj597.isGraphObjectVisual = True
+      self.obj1598=achieve(parent)
+      self.obj1598.preAction( self.LHS.CREATE )
+      self.obj1598.isGraphObjectVisual = True
 
-      if(hasattr(self.obj597, '_setHierarchicalLink')):
-        self.obj597._setHierarchicalLink(False)
+      if(hasattr(self.obj1598, '_setHierarchicalLink')):
+        self.obj1598._setHierarchicalLink(False)
 
       # rate
-      self.obj597.rate.setNone()
+      self.obj1598.rate.setNone()
 
-      self.obj597.GGLabel.setValue(3)
-      self.obj597.graphClass_= graph_achieve
+      self.obj1598.GGLabel.setValue(3)
+      self.obj1598.graphClass_= graph_achieve
       if parent.genGraphics:
-         new_obj = graph_achieve(171.25,141.25,self.obj597)
+         new_obj = graph_achieve(171.25,141.25,self.obj1598)
          new_obj.layConstraints = dict() # Graphical Layout Constraints 
          new_obj.layConstraints['scale'] = [1.0, 1.0]
       else: new_obj = None
-      self.obj597.graphObject_ = new_obj
+      self.obj1598.graphObject_ = new_obj
 
       # Add node to the root: self.LHS
-      self.LHS.addNode(self.obj597)
-      self.obj597.postAction( self.LHS.CREATE )
+      self.LHS.addNode(self.obj1598)
+      self.obj1598.postAction( self.LHS.CREATE )
 
-      self.obj595.out_connections_.append(self.obj597)
-      self.obj597.in_connections_.append(self.obj595)
-      self.obj595.graphObject_.pendingConnections.append((self.obj595.graphObject_.tag, self.obj597.graphObject_.tag, [64.0, 86.0, 106.5, 122.5, 171.25, 141.25], 2, True))
-      self.obj597.out_connections_.append(self.obj596)
-      self.obj596.in_connections_.append(self.obj597)
-      self.obj597.graphObject_.pendingConnections.append((self.obj597.graphObject_.tag, self.obj596.graphObject_.tag, [323.0, 161.0, 236.0, 160.0, 171.25, 141.25], 2, True))
+      self.obj1596.out_connections_.append(self.obj1598)
+      self.obj1598.in_connections_.append(self.obj1596)
+      self.obj1596.graphObject_.pendingConnections.append((self.obj1596.graphObject_.tag, self.obj1598.graphObject_.tag, [64.0, 86.0, 106.5, 122.5, 171.25, 141.25], 2, True))
+      self.obj1598.out_connections_.append(self.obj1597)
+      self.obj1597.in_connections_.append(self.obj1598)
+      self.obj1598.graphObject_.pendingConnections.append((self.obj1598.graphObject_.tag, self.obj1597.graphObject_.tag, [323.0, 161.0, 236.0, 160.0, 171.25, 141.25], 2, True))
 
       self.RHS = ASG_omacs(parent)
 
-      self.obj599=Role(parent)
-      self.obj599.preAction( self.RHS.CREATE )
-      self.obj599.isGraphObjectVisual = True
+      self.obj1600=Role(parent)
+      self.obj1600.preAction( self.RHS.CREATE )
+      self.obj1600.isGraphObjectVisual = True
 
-      if(hasattr(self.obj599, '_setHierarchicalLink')):
-        self.obj599._setHierarchicalLink(False)
+      if(hasattr(self.obj1600, '_setHierarchicalLink')):
+        self.obj1600._setHierarchicalLink(False)
 
       # name
-      self.obj599.name.setValue('')
-      self.obj599.name.setNone()
+      self.obj1600.name.setValue('')
+      self.obj1600.name.setNone()
 
-      self.obj599.GGLabel.setValue(2)
-      self.obj599.graphClass_= graph_Role
+      self.obj1600.GGLabel.setValue(2)
+      self.obj1600.graphClass_= graph_Role
       if parent.genGraphics:
-         new_obj = graph_Role(40.0,40.0,self.obj599)
+         new_obj = graph_Role(40.0,40.0,self.obj1600)
          new_obj.layConstraints = dict() # Graphical Layout Constraints 
          new_obj.layConstraints['scale'] = [1.0, 1.0]
       else: new_obj = None
-      self.obj599.graphObject_ = new_obj
-      self.obj5990= AttrCalc()
-      self.obj5990.Copy=ATOM3Boolean()
-      self.obj5990.Copy.setValue(('Copy from LHS', 1))
-      self.obj5990.Copy.config = 0
-      self.obj5990.Specify=ATOM3Constraint()
-      self.obj5990.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
-      self.obj599.GGset2Any['name']= self.obj5990
+      self.obj1600.graphObject_ = new_obj
+      self.obj16000= AttrCalc()
+      self.obj16000.Copy=ATOM3Boolean()
+      self.obj16000.Copy.setValue(('Copy from LHS', 1))
+      self.obj16000.Copy.config = 0
+      self.obj16000.Specify=ATOM3Constraint()
+      self.obj16000.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+      self.obj1600.GGset2Any['name']= self.obj16000
 
       # Add node to the root: self.RHS
-      self.RHS.addNode(self.obj599)
-      self.obj599.postAction( self.RHS.CREATE )
+      self.RHS.addNode(self.obj1600)
+      self.obj1600.postAction( self.RHS.CREATE )
 
-      self.obj600=Goal(parent)
-      self.obj600.preAction( self.RHS.CREATE )
-      self.obj600.isGraphObjectVisual = True
+      self.obj1601=Goal(parent)
+      self.obj1601.preAction( self.RHS.CREATE )
+      self.obj1601.isGraphObjectVisual = True
 
-      if(hasattr(self.obj600, '_setHierarchicalLink')):
-        self.obj600._setHierarchicalLink(False)
+      if(hasattr(self.obj1601, '_setHierarchicalLink')):
+        self.obj1601._setHierarchicalLink(False)
 
       # name
-      self.obj600.name.setValue('')
-      self.obj600.name.setNone()
+      self.obj1601.name.setValue('')
+      self.obj1601.name.setNone()
 
-      self.obj600.GGLabel.setValue(1)
-      self.obj600.graphClass_= graph_Goal
+      self.obj1601.GGLabel.setValue(1)
+      self.obj1601.graphClass_= graph_Goal
       if parent.genGraphics:
-         new_obj = graph_Goal(300.0,160.0,self.obj600)
+         new_obj = graph_Goal(300.0,160.0,self.obj1601)
          new_obj.layConstraints = dict() # Graphical Layout Constraints 
          new_obj.layConstraints['scale'] = [1.0, 1.0]
       else: new_obj = None
-      self.obj600.graphObject_ = new_obj
-      self.obj6000= AttrCalc()
-      self.obj6000.Copy=ATOM3Boolean()
-      self.obj6000.Copy.setValue(('Copy from LHS', 1))
-      self.obj6000.Copy.config = 0
-      self.obj6000.Specify=ATOM3Constraint()
-      self.obj6000.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
-      self.obj600.GGset2Any['name']= self.obj6000
+      self.obj1601.graphObject_ = new_obj
+      self.obj16010= AttrCalc()
+      self.obj16010.Copy=ATOM3Boolean()
+      self.obj16010.Copy.setValue(('Copy from LHS', 1))
+      self.obj16010.Copy.config = 0
+      self.obj16010.Specify=ATOM3Constraint()
+      self.obj16010.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+      self.obj1601.GGset2Any['name']= self.obj16010
 
       # Add node to the root: self.RHS
-      self.RHS.addNode(self.obj600)
-      self.obj600.postAction( self.RHS.CREATE )
+      self.RHS.addNode(self.obj1601)
+      self.obj1601.postAction( self.RHS.CREATE )
 
-      self.obj601=achieve(parent)
-      self.obj601.preAction( self.RHS.CREATE )
-      self.obj601.isGraphObjectVisual = True
+      self.obj1602=achieve(parent)
+      self.obj1602.preAction( self.RHS.CREATE )
+      self.obj1602.isGraphObjectVisual = True
 
-      if(hasattr(self.obj601, '_setHierarchicalLink')):
-        self.obj601._setHierarchicalLink(False)
+      if(hasattr(self.obj1602, '_setHierarchicalLink')):
+        self.obj1602._setHierarchicalLink(False)
 
       # rate
-      self.obj601.rate.setNone()
+      self.obj1602.rate.setNone()
 
-      self.obj601.GGLabel.setValue(3)
-      self.obj601.graphClass_= graph_achieve
+      self.obj1602.GGLabel.setValue(3)
+      self.obj1602.graphClass_= graph_achieve
       if parent.genGraphics:
-         new_obj = graph_achieve(171.25,141.25,self.obj601)
+         new_obj = graph_achieve(171.25,141.25,self.obj1602)
          new_obj.layConstraints = dict() # Graphical Layout Constraints 
          new_obj.layConstraints['scale'] = [1.0, 1.0]
       else: new_obj = None
-      self.obj601.graphObject_ = new_obj
-      self.obj6010= AttrCalc()
-      self.obj6010.Copy=ATOM3Boolean()
-      self.obj6010.Copy.setValue(('Copy from LHS', 1))
-      self.obj6010.Copy.config = 0
-      self.obj6010.Specify=ATOM3Constraint()
-      self.obj6010.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
-      self.obj601.GGset2Any['rate']= self.obj6010
+      self.obj1602.graphObject_ = new_obj
+      self.obj16020= AttrCalc()
+      self.obj16020.Copy=ATOM3Boolean()
+      self.obj16020.Copy.setValue(('Copy from LHS', 1))
+      self.obj16020.Copy.config = 0
+      self.obj16020.Specify=ATOM3Constraint()
+      self.obj16020.Specify.setValue(('AttrSpecify', (['Python', 'OCL'], 0), (['PREcondition', 'POSTcondition'], 1), (['EDIT', 'SAVE', 'CREATE', 'CONNECT', 'DELETE', 'DISCONNECT', 'TRANSFORM', 'SELECT', 'DRAG', 'DROP', 'MOVE'], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]), None))
+      self.obj1602.GGset2Any['rate']= self.obj16020
 
       # Add node to the root: self.RHS
-      self.RHS.addNode(self.obj601)
-      self.obj601.postAction( self.RHS.CREATE )
+      self.RHS.addNode(self.obj1602)
+      self.obj1602.postAction( self.RHS.CREATE )
 
-      self.obj599.out_connections_.append(self.obj601)
-      self.obj601.in_connections_.append(self.obj599)
-      self.obj599.graphObject_.pendingConnections.append((self.obj599.graphObject_.tag, self.obj601.graphObject_.tag, [71.0, 85.0, 171.25, 141.25], 2, 0))
-      self.obj601.out_connections_.append(self.obj600)
-      self.obj600.in_connections_.append(self.obj601)
-      self.obj601.graphObject_.pendingConnections.append((self.obj601.graphObject_.tag, self.obj600.graphObject_.tag, [333.0, 161.0, 171.25, 141.25], 2, 0))
+      self.obj1600.out_connections_.append(self.obj1602)
+      self.obj1602.in_connections_.append(self.obj1600)
+      self.obj1600.graphObject_.pendingConnections.append((self.obj1600.graphObject_.tag, self.obj1602.graphObject_.tag, [71.0, 85.0, 171.25, 141.25], 2, 0))
+      self.obj1602.out_connections_.append(self.obj1601)
+      self.obj1601.in_connections_.append(self.obj1602)
+      self.obj1602.graphObject_.pendingConnections.append((self.obj1602.graphObject_.tag, self.obj1601.graphObject_.tag, [333.0, 161.0, 171.25, 141.25], 2, 0))
 
    def condition(self, graphID, isograph, atom3i):
       

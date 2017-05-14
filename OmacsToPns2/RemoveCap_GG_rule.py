@@ -29,29 +29,29 @@ class RemoveCap_GG_rule (GGrule):
       self.LHS = ASG_pns(parent)
       self.LHS.merge(ASG_omacs(parent))
 
-      self.obj840=Capabilitie(parent)
-      self.obj840.preAction( self.LHS.CREATE )
-      self.obj840.isGraphObjectVisual = True
+      self.obj1841=Capabilitie(parent)
+      self.obj1841.preAction( self.LHS.CREATE )
+      self.obj1841.isGraphObjectVisual = True
 
-      if(hasattr(self.obj840, '_setHierarchicalLink')):
-        self.obj840._setHierarchicalLink(False)
+      if(hasattr(self.obj1841, '_setHierarchicalLink')):
+        self.obj1841._setHierarchicalLink(False)
 
       # name
-      self.obj840.name.setValue('')
-      self.obj840.name.setNone()
+      self.obj1841.name.setValue('')
+      self.obj1841.name.setNone()
 
-      self.obj840.GGLabel.setValue(1)
-      self.obj840.graphClass_= graph_Capabilitie
+      self.obj1841.GGLabel.setValue(1)
+      self.obj1841.graphClass_= graph_Capabilitie
       if parent.genGraphics:
-         new_obj = graph_Capabilitie(220.0,80.0,self.obj840)
+         new_obj = graph_Capabilitie(220.0,80.0,self.obj1841)
          new_obj.layConstraints = dict() # Graphical Layout Constraints 
          new_obj.layConstraints['scale'] = [1.0, 1.0]
       else: new_obj = None
-      self.obj840.graphObject_ = new_obj
+      self.obj1841.graphObject_ = new_obj
 
       # Add node to the root: self.LHS
-      self.LHS.addNode(self.obj840)
-      self.obj840.postAction( self.LHS.CREATE )
+      self.LHS.addNode(self.obj1841)
+      self.obj1841.postAction( self.LHS.CREATE )
 
 
       self.RHS = ASG_pns(parent)
