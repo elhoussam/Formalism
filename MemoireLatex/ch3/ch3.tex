@@ -80,33 +80,60 @@ the syntax and semantic of modilisation language, is devloped by OMG\cite{ch3-do
 \pagebreak
 
 \section{Model Transformation}
- 
-A transformation is the automatic generation of a target model from a
-Source model, according to a transformation definition. 
+Transformation is a fundamental theme in computer science and software engineering. After all, computation can be viewed as data transformation. Computing with basic data such as numeric values
+and with data structures such as lists and trees is at the heart of programming. Type systems in programming languages help ensure that operations are applied compatibly to the data. However, when the subject of a transformation approach is metadata, i.e., data representing software artifacts such as data schemas, programs, interfaces, and models, then we enter the realm of metaprogramming writing programs called metaprograms that write or manipulate other programs. One of the key challenges in this realm is that metaprograms have to respect the rich semantics of the metadata upon which they operate \cite{ch3model}.
+OLD_Ref \cite{ch3-toxo, ch3-bid}.
+\subsection{Transformation Languages and Tools }
 
-A definition of transformation Is a set of transformation rules 
-that describes how a source model
-Can be transformed into a target model\cite{ch3-toxo}.
+\subsubsection{ATL : }
+Transformation Language (Jouault et al., 2006) is a model transformation language and
+toolkit developed and maintained by OBEO and INRIA-AtlanMod (Czarnecki and Helsen, 2006)\cite{ch3lang}.
 
- the transformation of the model is
-For mapping models across domains to analyze or
-The automatic generation of code from themselves\cite{ch3-bid}.
+\subsubsection{JTL : }
+Janus Transformation Language (JTL) is a bidirectional model transformation language specifically designed to support non-bijective transformations and change propagation (Cicchetti et al., 2011)\cite{ch3lang}.
 
-\section{Norm of Transformation } 
- The process of graph transformation consists in the iterative application of
-Rule to a graph.
+\subsubsection{ETL : }
+Epsilon family (Kolovos et al., 2006) is a model management platform that provides transformation languages for model-to-model, model-to-text, update-in-place, migration and model merging transformations\cite{ch3lang}.
 
-Each rule application replaces a part of the graph, As defined in the rule. 
+\subsubsection{Kermeta : }  
+The Kermeta language was initiated by Franck Fleurey in 2005 , The Kermeta language borrows concepts from languages such as MOF, OCL and QVT\cite{ch3lang}.
 
-The mechanics of the graph transformation Works as follows: 
-\begin{enumerate}
-\item select an applicable rule from the set of rules;
-\item Apply this rule to the input graph;
+\subsubsection{QVT : } 
+The OMG has defined a standard for expressing M2M transformations, called MOF/QVT or in short QVT (Eclipse, 2008). Eclipse has two extension for QVT called QVTd (Declarative) and QVTo (Operational/Procedural)\cite{ch3lang}.
 
-\item Search for another applicable rule  
-\item do these steps until  no rule can be applied
+\subsubsection{MOFScript : } 
+The MOFScript includes tools and frameworks for supporting model to text transformations, e.g., to support generation of implementation code or documentation from models\cite{ch3lang}.
 
-\end{enumerate}
+
+
+
+\section{Norm of Graph Transformation} 
+The process of graph transformation consists in the iterative application of
+Rule to a graph. Each rule application replaces a part of the graph, As defined in the rule. 
+The mechanics of the graph transformation Works as follows : 
+
+\begin{algorithm}[H]
+\SetAlgoLined
+
+\textbf{G} : Graph Source , \textbf{GG} : Graph Grammar  ,
+\textbf{R} : one rule from GG , \textbf{subG} : sub Graph from G ,
+\textbf{i} : integer represent the priority of Rule \;
+\textbf{i} = 0 \; 
+ \While{( \textbf{R} = ChooseFrom(\textbf{GG},i) ) != null}{
+ 	\While{( (\textbf{subG} = selectFrom(\textbf{G})) != null}{
+ 		\eIf{condition}{
+			\textbf{R}.ApplyOn(\textbf{subG}) \;
+			\textbf{subG}.markAsDoneWith(\textbf{R}) \;
+			print "We Applied Rule R on the subGraph subG" \;
+		}{
+			print "This rule is applied before that on the same sub graph"\;
+		}
+ 	}
+ 	\textbf{i} = \textbf{i} + 1 \;
+ }
+  
+ \caption{Norm of graph transformation}
+\end{algorithm}
 
  
 This operation is based on a A set of rules respecting a particular 
@@ -289,7 +316,7 @@ They have the following properties :
  
 
 
-\section{ Graph Grammer in AToM $^{3}$ }
+\subsection{Graph Grammer in AToM $^{3}$ }
 In AToM3, grammar is a model characterized by
 \begin{itemize}
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
@@ -335,5 +362,23 @@ Constraints presented in Figure \ref{fig:Constraint Editor}
 \end{figure} 
  
 
+\section{PGraph Studio}   
+PGraph Studio is a software that implements algorithms MSG, SSG, and ABB, and therefore, it is primarily
+used as a solver for process synthesis problems. Furthermore, it is also capable of constructing process synthesis models.
+As a modeling tool, it uses a tree-view that provides a clear overview of the actual problem under consideration and makes
+it possible to edit the properties of multiple materials and operating units in parallel. The handling of measurement units
+is aided with automated conversions. \cite{ ch3-pgraph2, Sitepgraph}
 
+
+\begin{figure}[th]
+	\centering  %[scale=1.2]
+ 	\includegraphics[scale=0.44]{ch3/img/pgraph}
+	\caption{\label{fig:pgraphstudio)}P-Graph Studio Window }
+\end{figure}  
+
+As a solver, PNS Studio can generate the maximal structure, the combinatorial feasible structures, and the globally optimal
+and suboptimal solutions of the problem. In the latter case the objective can be either cost minimization or profit max-
+imization. PNS Studio provides a double pane view of solutions to compare alternatives.
+Models and initial structures created in PNS Drawn can be imported into PNS Studio where they can be further edited. It
+is also possible to export brief or more detailed reports from PNS Studio to Microsoft Excel \cite{ch3-pgraph}.
  
