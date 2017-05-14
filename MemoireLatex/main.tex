@@ -1,12 +1,17 @@
 \documentclass[12pt,oneside,english]{book} 
 \usepackage[T1]{fontenc}
-\usepackage[latin9]{inputenc}
-\usepackage{amsmath}
+
+% new Lib
+\usepackage[Sonny]{fncychap}
+\usepackage{float}
+\usepackage{wrapfig}  
+
+\usepackage[colorlinks,hyperindex,bookmarks,linkcolor=black,citecolor=blue,urlcolor=black]{hyperref}
+
 \usepackage{lscape}
 \usepackage{pdflscape}
 \usepackage{wasysym}
-\usepackage{booktabs}
-
+% end new lib
  
 
 \usepackage{listings}
@@ -41,7 +46,7 @@
  bookmarks=true,bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,
  breaklinks=true,pdfborder={0 0 0},backref=false,colorlinks=false]
  {hyperref}
-\hypersetup{pdftitle={Application of the P-graph Methodology for Organization-Based Multi Agent System Designs , A graph Transformation approach},
+\hypersetup{pdftitle={Application of the P-graph Methodology for Organization-Based Multi Agent System Designs, A graph Transformation approach},
  pdfauthor={Nouar Kherkhachi Houssam},
  pdfkeywords={Framework OMACS PNS AToM3 Transformation GraphGrammer Rules Optimisation BranchAndBound}}
 
@@ -95,8 +100,7 @@
 \makeatother
 
 \begin{document}
-
-
+ 
 \pagestyle{empty}
 \pagenumbering{alph}
 
@@ -116,7 +120,7 @@
 
 \newpage
 \phantomsection
-\addcontentsline{toc}{chapter}{\numberline{}{List of Figures }}
+\addcontentsline{toc}{chapter}{\numberline{}{List of Figures}}
 
 \listoffigures
 
@@ -138,14 +142,11 @@
 \renewcommand{\chaptermark}[1]{\markboth{\chaptername~\thechapter}{#1}}
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 
-
-%\include{testImage}
-\include{chapiter1/chapiter1} %Fix Images Done
-
-\include{chapiter2/chapiter2} % Fix Images Done 
- 
-\include{Chapiter3/Chapiter3}
- 
+%\include{test}
+\include{ch1/ch1} %Fix Images Done
+\include{ch2/ch2} % Fix Images Done 
+\include{ch3/ch3}
+\include{ch4/ch4}
 \include{conclusion}
 
 \backmatter

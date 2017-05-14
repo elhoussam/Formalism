@@ -1,0 +1,785 @@
+<?xml version='1.0' encoding='utf-8'?>
+<PGraph>
+  <Materials>
+    <Material ID="2" Name="A1" Type="0">
+      <Coords>
+        <X>2472</X>
+        <Y>0</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="price" Value="5" />
+        <Parameter Name="reqflow" Value="-1" />
+        <Parameter Name="maxflow" Value="-1" />
+      </ParameterList>
+      <Label Text="A1">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Material>
+    <Material ID="3" Name="A2" Type="0">
+      <Coords>
+        <X>618</X>
+        <Y>0</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="price" Value="5" />
+        <Parameter Name="reqflow" Value="-1" />
+        <Parameter Name="maxflow" Value="-1" />
+      </ParameterList>
+      <Label Text="A2">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Material>
+    <Material ID="4" Name="G1" Type="1">
+      <Coords>
+        <X>2472</X>
+        <Y>1050</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="price" Value="0" />
+        <Parameter Name="reqflow" Value="-1" />
+        <Parameter Name="maxflow" Value="-1" />
+      </ParameterList>
+      <Label Text="G1">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Material>
+    <Material ID="5" Name="G2" Type="1">
+      <Coords>
+        <X>1236</X>
+        <Y>1050</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="price" Value="0" />
+        <Parameter Name="reqflow" Value="-1" />
+        <Parameter Name="maxflow" Value="-1" />
+      </ParameterList>
+      <Label Text="G2">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Material>
+    <Material ID="6" Name="G3" Type="1">
+      <Coords>
+        <X>1854</X>
+        <Y>1050</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="price" Value="0" />
+        <Parameter Name="reqflow" Value="-1" />
+        <Parameter Name="maxflow" Value="-1" />
+      </ParameterList>
+      <Label Text="G3">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Material>
+    <Material ID="7" Name="A1 R1 G1" Type="1">
+      <Coords>
+        <X>2472</X>
+        <Y>537</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="price" Value="0" />
+        <Parameter Name="reqflow" Value="-1" />
+        <Parameter Name="maxflow" Value="-1" />
+      </ParameterList>
+      <Label Text="A1 R1 G1">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Material>
+    <Material ID="8" Name="A1 R1 G2" Type="1">
+      <Coords>
+        <X>1854</X>
+        <Y>537</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="price" Value="0" />
+        <Parameter Name="reqflow" Value="-1" />
+        <Parameter Name="maxflow" Value="-1" />
+      </ParameterList>
+      <Label Text="A1 R1 G2">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Material>
+    <Material ID="9" Name="A1 R2 G2" Type="1">
+      <Coords>
+        <X>1236</X>
+        <Y>537</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="price" Value="0" />
+        <Parameter Name="reqflow" Value="-1" />
+        <Parameter Name="maxflow" Value="-1" />
+      </ParameterList>
+      <Label Text="A1 R2 G2">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Material>
+    <Material ID="10" Name="A1 R3 G3" Type="1">
+      <Coords>
+        <X>3090</X>
+        <Y>537</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="price" Value="0" />
+        <Parameter Name="reqflow" Value="-1" />
+        <Parameter Name="maxflow" Value="-1" />
+      </ParameterList>
+      <Label Text="A1 R3 G3">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Material>
+    <Material ID="11" Name="A2 R2 G2" Type="1">
+      <Coords>
+        <X>0</X>
+        <Y>537</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="price" Value="0" />
+        <Parameter Name="reqflow" Value="-1" />
+        <Parameter Name="maxflow" Value="-1" />
+      </ParameterList>
+      <Label Text="A2 R2 G2">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Material>
+    <Material ID="12" Name="A2 R3 G3" Type="1">
+      <Coords>
+        <X>618</X>
+        <Y>537</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="price" Value="0" />
+        <Parameter Name="reqflow" Value="-1" />
+        <Parameter Name="maxflow" Value="-1" />
+      </ParameterList>
+      <Label Text="A2 R3 G3">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Material>
+    <Material ID="13" Name="OAF" Type="2">
+      <Coords>
+        <X>1854</X>
+        <Y>1563</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="price" Value="0" />
+        <Parameter Name="reqflow" Value="-1" />
+        <Parameter Name="maxflow" Value="-1" />
+      </ParameterList>
+      <Label Text="OAF">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Material>
+  </Materials>
+  <Edges>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="2" EndID="14" ID="28" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>2567</X>
+        <Y>265</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="2" EndID="15" ID="29" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>2289</X>
+        <Y>302</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="2" EndID="16" ID="30" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>2855</X>
+        <Y>235</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="3" EndID="17" ID="31" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>436</X>
+        <Y>300</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="3" EndID="18" ID="32" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>715</X>
+        <Y>264</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="19" EndID="13" ID="33" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>2235</X>
+        <Y>1513</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="20" EndID="13" ID="34" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>1671</X>
+        <Y>1454</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="21" EndID="13" ID="35" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>1949</X>
+        <Y>1479</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="4" EndID="19" ID="36" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>2567</X>
+        <Y>1292</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="5" EndID="20" ID="37" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>1333</X>
+        <Y>1291</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="6" EndID="21" ID="38" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>1949</X>
+        <Y>1291</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="7" EndID="22" ID="39" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>2626</X>
+        <Y>769</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="8" EndID="23" ID="40" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>2008</X>
+        <Y>768</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="9" EndID="24" ID="41" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>1391</X>
+        <Y>769</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="10" EndID="25" ID="42" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>3245</X>
+        <Y>768</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="11" EndID="26" ID="43" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>154</X>
+        <Y>768</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="12" EndID="27" ID="44" Rate="1.0" Title="1.0">
+      <Coords>
+        <X>727</X>
+        <Y>782</Y>
+      </Coords>
+      <Label Text="1.0">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="22" EndID="4" ID="45" Rate="0.11" Title="0.11">
+      <Coords>
+        <X>2569</X>
+        <Y>963</Y>
+      </Coords>
+      <Label Text="0.11">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="23" EndID="5" ID="46" Rate="0.12" Title="0.12">
+      <Coords>
+        <X>1653</X>
+        <Y>1013</Y>
+      </Coords>
+      <Label Text="0.12">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="24" EndID="5" ID="47" Rate="0.22" Title="0.22">
+      <Coords>
+        <X>1333</X>
+        <Y>963</Y>
+      </Coords>
+      <Label Text="0.22">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="26" EndID="5" ID="48" Rate="0.22" Title="0.22">
+      <Coords>
+        <X>717</X>
+        <Y>948</Y>
+      </Coords>
+      <Label Text="0.22">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="25" EndID="6" ID="49" Rate="0.44" Title="0.44">
+      <Coords>
+        <X>2574</X>
+        <Y>1015</Y>
+      </Coords>
+      <Label Text="0.44">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="27" EndID="6" ID="50" Rate="0.44" Title="0.44">
+      <Coords>
+        <X>1335</X>
+        <Y>948</Y>
+      </Coords>
+      <Label Text="0.44">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="14" EndID="7" ID="51" Rate="0.5" Title="0.5">
+      <Coords>
+        <X>2582</X>
+        <Y>445</Y>
+      </Coords>
+      <Label Text="0.5">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="14" EndID="8" ID="52" Rate="0.5" Title="0.5">
+      <Coords>
+        <X>2285</X>
+        <Y>500</Y>
+      </Coords>
+      <Label Text="0.5">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="15" EndID="9" ID="53" Rate="0.55" Title="0.55">
+      <Coords>
+        <X>1668</X>
+        <Y>501</Y>
+      </Coords>
+      <Label Text="0.55">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="16" EndID="10" ID="54" Rate="0.3" Title="0.3">
+      <Coords>
+        <X>3200</X>
+        <Y>444</Y>
+      </Coords>
+      <Label Text="0.3">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="17" EndID="11" ID="55" Rate="0.25" Title="0.25">
+      <Coords>
+        <X>111</X>
+        <Y>444</Y>
+      </Coords>
+      <Label Text="0.25">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+    <Edge ArrowOnCenter="true" ArrowPosition="50" BeginID="18" EndID="12" ID="56" Rate="0.3" Title="0.3">
+      <Coords>
+        <X>729</X>
+        <Y>444</Y>
+      </Coords>
+      <Label Text="0.3">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </Edge>
+  </Edges>
+  <OperatingUnits>
+    <OperatingUnit ID="14" Name="A1 R1">
+      <Coords>
+        <X>2472</X>
+        <Y>324</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="opercostfix" Value="0.0" />
+        <Parameter Name="opercostprop" Value="0.5" />
+      </ParameterList>
+      <Label Text="A1 R1">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </OperatingUnit>
+    <OperatingUnit ID="15" Name="A1 R2">
+      <Coords>
+        <X>1854</X>
+        <Y>324</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="opercostfix" Value="0.0" />
+        <Parameter Name="opercostprop" Value="0.5" />
+      </ParameterList>
+      <Label Text="A1 R2">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </OperatingUnit>
+    <OperatingUnit ID="16" Name="A1 R3">
+      <Coords>
+        <X>3090</X>
+        <Y>324</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="opercostfix" Value="0.0" />
+        <Parameter Name="opercostprop" Value="0.5" />
+      </ParameterList>
+      <Label Text="A1 R3">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </OperatingUnit>
+    <OperatingUnit ID="17" Name="A2 R2">
+      <Coords>
+        <X>0</X>
+        <Y>324</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="opercostfix" Value="0.0" />
+        <Parameter Name="opercostprop" Value="0.25" />
+      </ParameterList>
+      <Label Text="A2 R2">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </OperatingUnit>
+    <OperatingUnit ID="18" Name="A2 R3">
+      <Coords>
+        <X>618</X>
+        <Y>324</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="opercostfix" Value="0.0" />
+        <Parameter Name="opercostprop" Value="0.25" />
+      </ParameterList>
+      <Label Text="A2 R3">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </OperatingUnit>
+    <OperatingUnit ID="19" Name="G1 OAF">
+      <Coords>
+        <X>2472</X>
+        <Y>1350</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="opercostfix" Value="2.0" />
+        <Parameter Name="opercostprop" Value="1.0" />
+      </ParameterList>
+      <Label Text="G1 OAF">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </OperatingUnit>
+    <OperatingUnit ID="20" Name="G2 OAF">
+      <Coords>
+        <X>1236</X>
+        <Y>1350</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="opercostfix" Value="2.0" />
+        <Parameter Name="opercostprop" Value="1.0" />
+      </ParameterList>
+      <Label Text="G2 OAF">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </OperatingUnit>
+    <OperatingUnit ID="21" Name="G3 OAF">
+      <Coords>
+        <X>1854</X>
+        <Y>1350</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="opercostfix" Value="2.0" />
+        <Parameter Name="opercostprop" Value="1.0" />
+      </ParameterList>
+      <Label Text="G3 OAF">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </OperatingUnit>
+    <OperatingUnit ID="22" Name="A1 R1 G1">
+      <Coords>
+        <X>2472</X>
+        <Y>837</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="opercostfix" Value="2.0" />
+        <Parameter Name="opercostprop" Value="0.11" />
+      </ParameterList>
+      <Label Text="A1 R1 G1">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </OperatingUnit>
+    <OperatingUnit ID="23" Name="A1 R1 G2">
+      <Coords>
+        <X>1854</X>
+        <Y>837</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="opercostfix" Value="2.0" />
+        <Parameter Name="opercostprop" Value="0.12" />
+      </ParameterList>
+      <Label Text="A1 R1 G2">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </OperatingUnit>
+    <OperatingUnit ID="24" Name="A1 R2 G2">
+      <Coords>
+        <X>1236</X>
+        <Y>837</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="opercostfix" Value="2.0" />
+        <Parameter Name="opercostprop" Value="0.22" />
+      </ParameterList>
+      <Label Text="A1 R2 G2">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </OperatingUnit>
+    <OperatingUnit ID="25" Name="A1 R3 G3">
+      <Coords>
+        <X>3090</X>
+        <Y>837</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="opercostfix" Value="2.0" />
+        <Parameter Name="opercostprop" Value="0.44" />
+      </ParameterList>
+      <Label Text="A1 R3 G3">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </OperatingUnit>
+    <OperatingUnit ID="26" Name="A2 R2 G2">
+      <Coords>
+        <X>0</X>
+        <Y>837</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="opercostfix" Value="2.0" />
+        <Parameter Name="opercostprop" Value="0.22" />
+      </ParameterList>
+      <Label Text="A2 R2 G2">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </OperatingUnit>
+    <OperatingUnit ID="27" Name="A2 R3 G3">
+      <Coords>
+        <X>618</X>
+        <Y>837</Y>
+      </Coords>
+      <ParameterList>
+        <Parameter Name="opercostfix" Value="2.0" />
+        <Parameter Name="opercostprop" Value="0.44" />
+      </ParameterList>
+      <Label Text="A2 R3 G3">
+        <Offset>
+          <X>5</X>
+          <Y>0</Y>
+        </Offset>
+      </Label>
+    </OperatingUnit>
+  </OperatingUnits>
+</PGraph>
