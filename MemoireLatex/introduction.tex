@@ -1,41 +1,35 @@
-
 \chapter*{General Introduction}
-
-
-
-
 
 \textbf{}
 
 \addcontentsline{toc}{chapter}{\numberline{}{General Introduction}}
 
 
-Multiagent systems have become popular over the last few years for building complex, adaptive systems
-in a distributed, heterogeneous setting. The problem is that many multiagent systems are typically designed to work within 
-a limited set of configurations. Even when the system possesses the resources and
+Multiagent systems have become popular over the last few years for building complex, adaptive systems. 
+The problem is that many multiagent systems are typically designed to work within 
+a limited set of options. Even when the system possesses the resources and
 computational power to accomplish its goal, it may be constrained by its own structure and knowledge
-of its members capabilities. To overcome these problems, they have developed a framework that allows
-the system to design its own organization at runtime. The key component of there framework is the
-Organization Model for Adaptive Computational Systems (OMACS)\cite{omacs4}.
+of its members capabilities. To overcome these problems, The framework OMACS is developed to allows the system, design its own organization at runtime \cite{omacs4}.
 
 OMACS defines the knowledge needed about a systems structure and capabilities to allow it to reorganize at runtime in the face of a changing environment and its agents capabilities\cite{omacs4}\cite{omacs2}.
+
+OMACS is a framework, that allow us to define a Multi-agent System with his component (Agents, Roles, Capabilities, Goals) and the relation between these components, 
+by an oriented graph. Each component represent a node, and each relation represent an edge.
  
+PNS is also an other framework basically developed to design a chemical reaction systems, represented by biparte graph, each node in this Graph represent a material and between two material there is a transition they called it operating unit, in our work we will use it to represent a multi agent system. 
 
-OMACS  is  a framework to allow us  to define a graph represent a Multi-agent System with his component (Agents, Roles, Capabilities, Goals) and the relation between these components.
- 
- 	
-PNS is also an other framework basically is developed to design a chemical reaction systems, each node in this framework represent a material and between two material there is a transition they called it operating unit, but we will use it  to represent a multi agent system. 
+PNS come with 3 Algorithm to extract information from the PNS model. and we need these algorithm in our project, because of that we add this framework 
+to our work.
 
+The aim of our project is to find the best organization, optimum structure of a multi agent system by applying one of these algorithms, 
+because of that we need to propose a new approach of model-to-model transformation, lead us to PNS model from a OMACS model. Our approach is base on Graph Transformation in AToM3 Tool.
 
-And it have some algorithms we need in our project, the goal of our project is to optimize a multi agent system by applying one of these algorithms, because of that we need to propose a new approach allow to transform a OMACS graph to PNS graph.
+This document will show you our work and the framework I used in four chapiter : 
 
-
-Our approach is base on Graph Transformation in AToM3 Tools, and this document will show you our work and the framework I used  in four chapiter : 
-
-In the first chapter we presente some technologie, and framework used to  modilize multi-agent system. and the second chapter illustrate other frame work is diferent then the first, we use it also to modilize MaS.
-the third chapter cover some concept of transformation, after that we represent the tools start with  $AToM3$ we use to modilize the formalism of these frameworks and the second PGraph-Studio which have the algorithm to apply on pns models, the fourth chapter  explain our approach of transformation.
-
-finaly this document end with general conclusion which is a collection of the main idea in this document.
+The first and the second chapter we presente, illustrate the previous frameworks, and we use it to modeling multi-agent system. and there methodes, relations and algorithms.
+the third chapter cover some concept of model-to-model transformation, then we represente the tools AToM3, we use to modelize the formalism of these frameworks and the second PGraph-Studio which have the algorithm to apply on pns models. 
+The fourth chapter explain our approach of transformation. 
+Finaly this document end with general conclusion which is a collection of the main idea in this document.
 
  
 

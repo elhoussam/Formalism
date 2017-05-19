@@ -1,8 +1,7 @@
+\chapter{\label{cha: Graph Transformation}Model to Model Transformation}
 
-\chapter{\label{cha: Graph Transformation }Graph Transformation}
-
-\section{ Introduction }
-I will show you in this chapter some basic notation i used in my project (Level of modilisation, Model transfomation), and the tools i used to create our meta model.
+\section{Introduction}
+In this chapter, illustrate the Level of modilisation, and we cite the model-to-model transformation, specifically the definition of graph transfomation type, and finaly how to implement the graph transformation in the AToM3 tool.
 
 \section{Levels of Modilisation}
 
@@ -74,65 +73,75 @@ the syntax and semantic of modilisation language, is devloped by OMG\cite{ch3-do
 \begin{figure}[th]
 	\centering
 		\includegraphics[0.5]{ch3/img/Pyramid}
-	\caption{\label{fig:Pyramid of Meta-Level}Pyramid of Meta-Level\cite{ch3-doc} }
+	\caption{\label{fig:Pyramid of Meta-Level}Pyramid of Meta-Level\cite{ch3-doc}}
 \end{figure} 
 
 \pagebreak
 
 \section{Model Transformation}
 Transformation is a fundamental theme in computer science and software engineering. After all, computation can be viewed as data transformation. Computing with basic data such as numeric values
-and with data structures such as lists and trees is at the heart of programming. Type systems in programming languages help ensure that operations are applied compatibly to the data. However, when the subject of a transformation approach is metadata, i.e., data representing software artifacts such as data schemas, programs, interfaces, and models, then we enter the realm of metaprogramming writing programs called metaprograms that write or manipulate other programs. One of the key challenges in this realm is that metaprograms have to respect the rich semantics of the metadata upon which they operate \cite{ch3model}.
-OLD_Ref \cite{ch3-toxo, ch3-bid}.
-\subsection{Transformation Languages and Tools }
+and with data structures such as lists and trees is at the heart of programming. Type systems in programming languages help ensure that operations are applied compatibly to the data. However, when the subject of a transformation approach is metadata, i.e., data representing software artifacts such as data schemas, programs, interfaces, and models, then we enter the realm of metaprogramming writing programs called metaprograms that write or manipulate other programs. One of the key challenges in this realm is that metaprograms have to respect the rich semantics of the metadata upon which they operate \cite{ch3model}. 
 
-\subsubsection{ATL : }
+
+\subsection{Transformation Categories}
+In general, we can view transforming models to code as a special case of model-to- model transformations; we only need to provide a metamodel for the target programming language. However, for practical reasons of reusing existing compiler technology, code is often generated simply as text, which is then fed into a compiler. For this reason, we distinguish between model-to-code transformation (which would be better described as model-to-text since non-code artifacts such as XML may be generated) and model-to-model transformation. Several tools offer both model-to-model and model-to-code transformations \cite{ch3catego}.
+
+\subsubsection{Model To Code}
+In the model-to-code category, it is very basic code generation approach consists mechanism to traverse the internal representation of model and write code to a text stream, we distinguish between visitor-based and template-based approaches \cite{ch3catego}.
+\subsubsection{Model To Model}
+Model-to-model transformations translate between source and target models, which can be instances of the same or different metamodels, Most existing MDA tools provide only model-to-code transformations, we distinguish among direct-manipulation approaches, relational approaches, graph-transformation-based approaches \cite{ch3catego}.
+
+\subsection{Transformation Languages and Tools}
+
+\subsubsection{ATL :}
 Transformation Language (Jouault et al., 2006) is a model transformation language and
 toolkit developed and maintained by OBEO and INRIA-AtlanMod (Czarnecki and Helsen, 2006)\cite{ch3lang}.
 
-\subsubsection{JTL : }
+\subsubsection{JTL :}
 Janus Transformation Language (JTL) is a bidirectional model transformation language specifically designed to support non-bijective transformations and change propagation (Cicchetti et al., 2011)\cite{ch3lang}.
 
-\subsubsection{ETL : }
+\subsubsection{ETL :}
 Epsilon family (Kolovos et al., 2006) is a model management platform that provides transformation languages for model-to-model, model-to-text, update-in-place, migration and model merging transformations\cite{ch3lang}.
 
-\subsubsection{Kermeta : }  
+\subsubsection{Kermeta :}  
 The Kermeta language was initiated by Franck Fleurey in 2005 , The Kermeta language borrows concepts from languages such as MOF, OCL and QVT\cite{ch3lang}.
 
-\subsubsection{QVT : } 
+\subsubsection{QVT :} 
 The OMG has defined a standard for expressing M2M transformations, called MOF/QVT or in short QVT (Eclipse, 2008). Eclipse has two extension for QVT called QVTd (Declarative) and QVTo (Operational/Procedural)\cite{ch3lang}.
 
-\subsubsection{MOFScript : } 
+\subsubsection{MOFScript :} 
 The MOFScript includes tools and frameworks for supporting model to text transformations, e.g., to support generation of implementation code or documentation from models\cite{ch3lang}.
 
 
 
 
-\section{Norm of Graph Transformation} 
+\section{Concept of Graph Transformation} 
 The process of graph transformation consists in the iterative application of
 Rule to a graph. Each rule application replaces a part of the graph, As defined in the rule. 
-The mechanics of the graph transformation Works as follows : 
+The mechanics of the graph transformation works as follows : 
 
-\begin{algorithm}[H]
+\begin{algorithm}
 \SetAlgoLined
 
-\textbf{G} : Graph Source , \textbf{GG} : Graph Grammar  ,
-\textbf{R} : one rule from GG , \textbf{subG} : sub Graph from G ,
-\textbf{i} : integer represent the priority of Rule \;
-\textbf{i} = 0 \; 
+\KwData{G : Graph Source , GG : Graph Grammar , R : one rule from GG , subG : sub
+Graph from G , i : integer represent the priority of Rule ;
+ i=0;}
+\KwResult{G graph contain the graph target }
+
  \While{( \textbf{R} = ChooseFrom(\textbf{GG},i) ) != null}{
  	\While{( (\textbf{subG} = selectFrom(\textbf{G})) != null}{
- 		\eIf{condition}{
-			\textbf{R}.ApplyOn(\textbf{subG}) \;
-			\textbf{subG}.markAsDoneWith(\textbf{R}) \;
-			print "We Applied Rule R on the subGraph subG" \;
+ 		\eIf{ not \textbf{subG}.isDoneWith(\textbf{R}) }{
+			\textbf{R}.ApplyOn(\textbf{subG}) \linebreak
+			\textbf{subG}.markAsDoneWith(\textbf{R})\linebreak
+			print "We Applied Rule R on the subGraph subG"  
 		}{
-			print "This rule is applied before that on the same sub graph"\;
+			print "This rule is applied before that on the same sub graph" 
 		}
  	}
  	\textbf{i} = \textbf{i} + 1 \;
- }
+}
   
- \caption{Norm of graph transformation}
+ \caption{application of graph transformation}
 \end{algorithm}
 
  
@@ -143,13 +152,12 @@ its prepare the envirenement to apply these rules
 and ending with Final Action, it about cleaning the after these rules\cite{ch3-bid, ch3-spec}.
 \begin{figure}[th]
 	\centering
-		\includegraphics[scale=0.45]{ch3/img/transGrammar}
+		\includegraphics[scale=0.52]{ch3/img/transGrammar}
 	\caption{\label{fig:Cycle of Tranformation}Cycle of Transformation\cite{ch3-img}}
 \end{figure} 
-
- 
+\pagebreak
 \section{Graph Grammar} 
-Every Graph Grammer contain a set of rules  to use in graph transformation
+Every Graph Grammer contain a set of rules to use in graph transformation
 and its define by\cite{ch3-doc, ch3-spec} :
 R = (LHS, RHS, K, glue, emb, cond). 
 \begin{itemize}
@@ -194,7 +202,7 @@ And the vertex v2 provided that (v1, v2 ) belongs to emb.
 
 
  
-\section{ Transformation system } 
+\section{Transformation system} 
 
 We define a graph transformation system as a rewriting system
 Of graph that applies the rules of the graph grammar on its initial graph of
@@ -212,12 +220,10 @@ Finally the engine read source model and apply the transformation rules and writ
 		\includegraphics[scale=0.4]{ch3/img/systemTran}
 	\caption{\label{fig:Transformation System}Transformation System\cite{ch3-img}}
 \end{figure} 
- 
-\pagebreak
 
-\section{AToM $^{3}$}
+\section{AToM3}
 
-AToM$^{3}$ (A Tool for Multi-formalism and Meta-Modeling) is a tool for model-
+AToM3 (A Tool for Multi-formalism and Meta-Modeling) is a tool for model-
 Multi-paradigm model developed in the MSDL (Modeling, Simulation and
 Design Lab) of the Computer Science Institute at McGill University Montreal, Canada\cite{Siteatom, ch3-atom3}.
 
@@ -243,17 +249,18 @@ Grammar of graphs\cite{ch3-meta2}.
 \begin{figure}[th]
 	\centering
 		\includegraphics[scale=0.33]{ch3/img/atom3}
-	\caption{\label{fig:AToM3 Window}AToM $^{3}$ Window}
+	\caption{\label{fig:AToM3 Window}AToM3 Window}
 \end{figure} 
-\pagebreak
-\subsection{Classes in AToM$^{3}$ }
+\vspace{1cm}
+\subsection{Classes in AToM3}
 In this work we use ClassDiagramm Formalism to create  our Formalism 
 or Meta-Model is built in the tool so we can load it and use  it\cite{ch3-meta2}.
-In AToM$^{3}$ the meta-models can be constructed from Classes and
+In AToM3 the meta-models can be constructed from Classes and
 Relationships.
 
 The description of classes and association relations consists of
 
+\begin{minipage}{0.5\textwidth}
 \begin{itemize}
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
 \renewcommand{\labelitemi}{\localtextbulletone}
@@ -264,14 +271,18 @@ The description of classes and association relations consists of
 \item  Cardinalities
 \item  Appearance
 \end{itemize}
-
-\begin{figure}[th]
-	\centering
+\end{minipage} \hfill
+\begin{minipage}{0.45\textwidth}
+\begin{figure}[H]
+\centering
 		\includegraphics[scale=0.4]{ch3/img/class}
 	\caption{\label{fig:Class Editor}Class Editor}
-\end{figure} 
+\end{figure}
+\end{minipage}
 
-\subsubsection{ Constraint }
+\vspace{1cm}
+
+\subsubsection{Constraint}
 
 Constraints can be specified as OCL (Constraint Object Language) or Python
 They have the following properties: 
@@ -290,7 +301,8 @@ and launch this event before (pre-condition) or after (post-condition)
 	\includegraphics[scale=0.37]{ch3/img/const}
 	\caption{\label{fig:Constraint Editor}Constraint Editor}
 \end{figure} 
-\subsubsection{ Action }
+
+\subsubsection{Action}
 
 An action is similar to a constraint except that it has other effects and is a
 Code in Pyton only, its have the same windows \ref{fig:Constraint Editor} 
@@ -309,15 +321,18 @@ They have the following properties :
 \item The execution is either
 	\begin{enumerate}
 	\item Before the event (precondition)
-	\item  After (pots-condition) 
+	\item After (pots-condition) 
 	\end{enumerate}
 
 \end{itemize}
  
 
 
-\subsection{Graph Grammer in AToM $^{3}$ }
-In AToM3, grammar is a model characterized by
+\subsection{Graph Grammer in AToM3}
+In AToM3, grammar is characterized by
+
+\begin{minipage}{0.5\textwidth}
+
 \begin{itemize}
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
 \renewcommand{\labelitemi}{\localtextbulletone}
@@ -325,60 +340,28 @@ In AToM3, grammar is a model characterized by
 \item A final action.
 \item The set of rules. 
 \end{itemize}
-and this figure \ref{fig:Graph Grammar Window} Graph Grammar Editor
- 
-\begin{figure}[th]
+
+\end{minipage} \hfill
+\begin{minipage}{0.45\textwidth}
+\begin{figure}[H]
 	\centering 
 	\includegraphics[scale=0.5]{ch3/img/GraphGrammar}
 	\caption{\label{fig:Graph Grammar Window}Graph Grammar Window}
-\end{figure} 
- 
+\end{figure}
+\end{minipage}
 
- Each rule consists of: 
-\begin{itemize}
-\newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
-\renewcommand{\labelitemi}{\localtextbulletone}
-\item  A specific name for the rule.
-\item  A priority indicating the order in which the rule is applied.
-\item  A Left Hand Side (LHS) which is a graph.
-\item  A right hand side (RHS) that can be a graph.
-\item  A condition (Pyton code) that must be checked before the rule is
-Applied.
-\item An action (a Pyton code) that must be executed after the rule is
+Each rule consists of: 
+A specific name for the rule, and priority indicator the order in which the rule is applied, and LHS \footnote{LHS:Left Hand Side}:which is a graph, RHS\footnote{RHS:Right Hand Side}:that can be a graph and the condition  that must be checked before the rule is Applied, finally  An action (a Pyton code) that must be executed after the rule is
 Applied
-\end{itemize}
-
-
-The rule editor figure \ref{fig:Rule Editor} allows the editing of the different parts of the rule as well as
-The condition and action of each rule 
- 
-The condition editor and the action editor of a rule are similar to the editor of
-Constraints presented in Figure \ref{fig:Constraint Editor}
 
 \begin{figure}[th]
 	\centering
  	\includegraphics[scale=0.38]{ch3/img/ruleEditor}
 	\caption{\label{fig:Rule Editor}Rule Editor}
 \end{figure} 
- 
 
-\section{PGraph Studio}   
-PGraph Studio is a software that implements algorithms MSG, SSG, and ABB, and therefore, it is primarily
-used as a solver for process synthesis problems. Furthermore, it is also capable of constructing process synthesis models.
-As a modeling tool, it uses a tree-view that provides a clear overview of the actual problem under consideration and makes
-it possible to edit the properties of multiple materials and operating units in parallel. The handling of measurement units
-is aided with automated conversions. \cite{ ch3-pgraph2, Sitepgraph}
-
-
-\begin{figure}[th]
-	\centering  %[scale=1.2]
- 	\includegraphics[scale=0.44]{ch3/img/pgraph}
-	\caption{\label{fig:pgraphstudio)}P-Graph Studio Window }
-\end{figure}  
-
-As a solver, PNS Studio can generate the maximal structure, the combinatorial feasible structures, and the globally optimal
-and suboptimal solutions of the problem. In the latter case the objective can be either cost minimization or profit max-
-imization. PNS Studio provides a double pane view of solutions to compare alternatives.
-Models and initial structures created in PNS Drawn can be imported into PNS Studio where they can be further edited. It
-is also possible to export brief or more detailed reports from PNS Studio to Microsoft Excel \cite{ch3-pgraph}.
+\section{Conclusion}
+we present in this portions of our document, the diferente type of transformation approach 
+and we focus on graph transformation approach, then we cite the tool i will use in the next chapter to implement 
+our approach of transformation.
  

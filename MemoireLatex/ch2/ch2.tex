@@ -2,16 +2,14 @@
 \chapter{\label{cha:pgraph}PGraph and PNS}
 
  
-In a process system, raw materials are consumed through various transformation to yield desired products. 
-This is usually accompanied bu the generation of wastes .
+\section{Introduction}
 
-Vassels in which these transformations are carried out are termed operating units of the process, 
-a given set of operating units with the plausible interconnections can be described bu a network 
 
-The desired products can often be manufactured using some sub networks of this network, 
-thus a given network may give rise to a variety of processes producing the desired products, 
-and each of such process corresponds to sub network which can be considered  to be its structure \cite{omacs0}.
-\section{ PGraph }
+In a process system, raw materials are consumed through various transformation t oyield desired products. These transformations are carried out are termed operating units of the process, a given set of operating units with the plausible interconnection can be descrebed by a network.\cite{omacs0}
+
+This chapter introduces a framework for  designing  a prosses systems, it based on the transformation process between materials.
+
+\section{PGraph}
 
 
 The so called P graph (Process graph), which is a directed bigraph, 
@@ -20,7 +18,7 @@ has been used for modelling network structures for some time.
 The vertices of the graph denote the operating units (O operating units) and the materials (M materials).
 The edges of the graph represent the material-flow between the materials and the operating units\cite{pns2, pns4}. 
 
-\subsection{ General Definition of P-Graph }
+\subsection{Definition of P-Graph}
 
 The Pgraph is a bigraph, meaning that its vertices are in disjunctive sets 
 and there are no edges between vertices in the same set.In case of P graphs the assignment of operating units and materials are strictly determined by the tasks given, i.e. an edge can point to an M material type vertex 
@@ -32,41 +30,39 @@ only if M is element of the input set of O, that is O processes M material, name
 The material type vertices can be put into several subsets. There are various subsets like the raw-material type one, which contains  the input elements of the whole process, the product-material type subset, which gathers the results of the entire process, the intermediate-material type one, the elements of which emerge or are used between the processing phases\cite{pns2}, And finally the by-product-material  type set, which contains the non desired results of the process. The applied operating unit and material element notations, in the P-graph notation are presented in figure \ref{fig:example for P-graph}. As an example let us consider a process network with 7 operating units, 
 in which the operating units are 1,2....7 and the materials are A,B, .... L. A,B,C and D 
 are the materials available for the production of L The possible structure is given in \cite{pns2, pns4}. 
+ 
 
-\begin{figure}[th]
-	\centering
-		\includegraphics[scale=0.4]{ch2/img/notationP}
+
+\begin{minipage}{0.5\textwidth}
+	\begin{figure}[H]
+	\centering 
+	\includegraphics[scale=0.6]{ch2/img/notationP}
 	\caption{\label{fig:notation in pgraph}notation in pgraph\cite{pns2}}
-\end{figure}
-
-
-\begin{figure}[th]
-	\centering
-		\includegraphics[scale=0.4]{ch2/img/examplePgraph}
+	\end{figure}\end{minipage} \hfill
+\begin{minipage}{0.45\textwidth}
+	\begin{figure}[H]
+	\includegraphics[scale=0.4]{ch2/img/examplePgraph}
 	\caption{\label{fig:example for P-graph}example for P-graph\cite{pns2}}
-\end{figure}
-\pagebreak
-\section{ Process Network Synthesis }
+	\end{figure}
+\end{minipage}
 
-In the Process Network Synthesis (PNS for short) problem a set of materials is given and also operating units 
+ 
+
+
+
+
+\section{Process Network Synthesis}
+
+In the PNS problem a set of materials is given and also operating units 
 which are transforming some subset of materials into some other subset. 
 The subsets assigned to the operating unit are called its input and output materials\cite{pns3, pns1}.
 
-In the problem two subsets of the materials are distinguished, 
+The PNS problem, two subsets of the materials are distinguished, 
 one is the set of the raw materials and the other is the set of the desired products. 
-Our goal is to find a minimal cost network of the operating units which can produce all desired products starting from the raw material. These systems can be modeled in the P-graph framework which is based on bipartite graphs. 
+Our goal is to find a minimal cost network of the operating units which can produce all desired products starting from the raw material. 
+These systems can be modeled in the P-graph framework which is based on bipartite graphs \cite{pns6 ,pns3}. 
 
-In these P-graphs we have two sets of vertices, one of them contains the possible materials, 
-the other the operating units. The edges lead to an operating unit from its input materials 
-and from an operating unit to its output materials\cite{pns6 ,pns3}. 
-
-Then the subgraphs satisfying some properties describe the feasible processes
-which produce the desired products from the raw materials. 
-Thus our goal is to find the least expensive such subgraph. 
-In the structural model the amounts of the material flows are not taken into account 
-thus the cost of an operating unit is a constant, and the cost of a subgraph 
-is the sum of the costs of the operating units contained in it\cite{pns3 ,pns1}. 
-\subsection{ Basic Notation }
+\subsection{Basic Notation}
 
 The structural PNS problem can be modeled in the PGraph framework.
 In the PGraph (Process Graph) we have the set of the materials denoted by M,
@@ -99,7 +95,7 @@ in set o
  
 \end{enumerate}
 
-\subsection{Mathematical definition }
+\subsection{Mathematical definition}
 
 There is a finite set of material M (which contains the sets of P products and R raw-materials) 
 and the finite set of O operating units \cite{pns2}. 
@@ -144,7 +140,7 @@ V = m \cup o\label{eq:nex}
  
  
 
-\subsection{ Algorithms MSG, SSG, and ABB }
+\subsection{Algorithms MSG, SSG, and ABB}
 PNS representation of a process network and the set of  axioms for solution structures, i.e.,
 combinatorial feasible networks, render it possible to fashion the three mathematically rigorous algorithms:
 MSG, SSG, and ABB. \cite{omacs0}\cite{algo}
@@ -205,7 +201,8 @@ ensuring the optimality provided that a bounding algorithm exists, and being cap
 combinatorial algorithms\cite{algo}.
 it has been adopted for solving the routing and scheduling of evacuees, facing a life-threatening situation\cite{pns4}. 
 
-\subsection{ Comparaison PNS and PetriNet : }
+\subsection{PNS and PetriNet :} 
+The Table \ref{tab:Petri Net and PNS} represent the deference, and the common features, between these two mathematical tools,  because the Petri is widely use more then PNS.
 \begin {table}[H] 
 \begin{tabular}{cc}
 
@@ -224,9 +221,32 @@ Modeling Parallel System  & Basically use for Chemical Reaction \tabularnewline
 
 \end{tabular}
 \caption {Petri Net and PNS}
- 
+ \label{tab:Petri Net and PNS}
 \end {table}
 
+
+
+\section{PGraph Studio}   
+PGraph Studio is a software that implements algorithms MSG, SSG, and ABB, and therefore, it is primarily
+used as a solver for process synthesis problems. Furthermore, it is also capable of constructing process synthesis models.
+As a modeling tool, it uses a tree-view that provides a clear overview of the actual problem under consideration and makes
+it possible to edit the properties of multiple materials and operating units in parallel. The handling of measurement units
+is aided with automated conversions. \cite{ch3-pgraph2, Sitepgraph}
+
+
+\begin{figure}[th]
+	\centering  %[scale=1.2]
+ 	\includegraphics[scale=0.44]{ch3/img/pgraph}
+	\caption{\label{fig:pgraphstudio)}P-Graph Studio Window}
+\end{figure}  
+
+As a solver, PNS Studio can generate the maximal structure, the combinatorial feasible structures, and the globally optimal
+and suboptimal solutions of the problem. In the latter case the objective can be either cost minimization or profit max-
+imization. PNS Studio provides a double pane view of solutions to compare alternatives.
+Models and initial structures created in PNS Drawn can be imported into PNS Studio where they can be further edited. It
+is also possible to export brief or more detailed reports from PNS Studio to Microsoft Excel \cite{ch3-pgraph}.
+ 
+ 
 \section{Conclusion}
 We have seen in this chapter the definition of the second framework i use
 PGraph and the Process Network synthesis, with some Algorithme applicable on PNS.

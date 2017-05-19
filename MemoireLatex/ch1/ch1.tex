@@ -1,24 +1,152 @@
 
-\chapter{\label{cha:org}Organization Multi-Agent System}
+\chapter{\label{cha:org}Multi-Agent System Framework}
 
+
+\section{Introduction}
 Designing and implementing large, complex, and distributed systems by resorting to autonomous 
 or semi-autonomous agents that can reorganize themselves by  cooperating with one another 
-represent the future of software systems A set of  methodologies  a selection of design processes,
-and a collection of  frameworks are available in the literature to provide the basis for constructing 
-sophisticated autonomous multi-agent organizations\cite{omacs0}. 
- 
-Moreover, a set of metrics and methods have been suggested with the intention of providing useful information 
-about key properties (e.g., complexity, flexibility, self-organized, performance, scalability, and cost)
-of these multi-agent organizations\cite{omacs0}.
+represent the future of software systems\cite{omacs0}. 
 
-This chapter introduces a suite of technologies for building complex, adaptive systems. 
-It is based in the multi-agent systems paradigm and uses the Organization Model for Adaptive 
+This chapter introduces two framework for building complex, adaptive systems. 
+It is based on the multi-agent systems paradigm and uses the Organization Model for Adaptive 
 Computational Systems (OMACS). 
-And presents a suite of technologies including  the Organization-based Multiagent Systems Engineering 
+And presents a suite of Methodes including the Organization-based Multiagent Systems Engineering 
 (O-MaSE) methodology\cite{omacs4}.
 
-\section{ Organization Multi-Agent System Engineering}
-\subsection{ Overview of O-MaSE }
+
+\section{Motivations to MaS Organization}
+ 
+Basically, a MAS is formed by the collection of autonomous agents situated in a certain environment, respond
+to their environment dynamic changes, interact with other agents, and persist to achieve their own goals or the global
+system goals. There are two viewpoints of MAS engineering, the first one is the agent-centered MAS (ACMAS) in which
+the focus is given to individual agents. With this viewpoint, the designer concerns the local behaviors of agents and also
+their interactions without concerning the global structure of the system\cite{omacs3}.
+
+The global required function of the system is supposed to emerge as a result of the lower level individual
+agents interactions in a bottom-up way Picard et al.  stated that the agent-centered approach takes the agents as the engine  for the system organization\cite{omacs3}.
+
+and agent organizations implicitly exist as observable emergent phenomena, which states a unified bottom-up and
+objective global view of the pattern of cooperation between agents. Further, Picard gives the ant colony as an example, where there is no organizational behavior and constraints are explicitly and directly defined inside the ants. The main idea is that the organization is the result of the collective emergent
+behavior due to how agents act their individual behaviors and interact in a common shared and dynamic environment\cite{omacs3}.
+
+\subsection{Organization}
+Each organization has an implicitly defined organization transition function 
+that describes how the organization may transition from one organizational state 
+to another over the lifetime of the organization\cite{omacs2}.
+	
+Since agents in an organization as well as their individual capabilities may change over time, 
+this function cannot be predefined, but must be computed based on the current state, 
+the goal set, G, and the current policies. In our present research with purely autonomous systems, we have only considered reorganization that involves the state of the organization. 
+
+However, we have defined two distinct types of reorganization: state reorganization, which only allows the modification of the organization state, and structure reorganization, which allows modification  of the organization structure (and may require state reorganization to keep the organization consistent).
+
+We define the state of the organization as the set of agents, A, the possesses, capable, and potential functions, and the assignment set, $\varphi$. However, not all these components may actually be under the control of the organization. For our purposes, we assume that agents may enter or leave organizations or relationships, but that these actions are triggers that cause reorganizations and are not the result of reorganizations. 
+
+Likewise, possesses (and thus capable and potential as well) is an automatic calculation that determines the possible assignments of agents to roles and goals in the organization. The calculation of possesses is the only calculation totally controlled by the agent, the organization can only use this information in deciding how to make assignments. This leaves one element that can be modified via state reorganization $\varphi$ \cite{omacs2}.
+	
+\subsection{Reorganization}
+Reorganization is the process of changing the assignments of agents to roles to goals as specified
+in $\varphi$ \cite{omacs2}.
+
+The organizations oaf function is used to determine the best new $\varphi$  however, total
+reorganization may not be necessary or efficient.
+
+
+\subsubsection{Goal Set Changes}
+Any change in G may cause reorganization. There are three basic types 
+of events that can cause a change in G: 
+\begin{enumerate}
+\item   insertion of a new goal  
+\item   goal achievement 
+\item   goal failure
+\end{enumerate}
+
+The first situation deals with new goals being added to G. However, \cite{omacs2}
+we cannot say with certainty that reorganization will occur based on a new goal in G. 
+
+It is possible that the organization will choose to forego reorganization for a number of reasons, the most likely being that it has simply chosen not to pursue any new goals added to G at the present time.
+
+The second case deals with goal achievement. When a goal g is achieved, G is changed to reflect that event by 
+
+\begin{itemize}
+\newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
+\renewcommand{\labelitemi}{\localtextbulletone}
+\item  removing g from G
+\item  possibly adding new goals
+\end{itemize}	
+
+ which are enabled by the achievement of g, into G. Obviously, the agent assigned to achieve goal g is now free to pursue other goals. 
+
+The third instance involves goal failure, which really has two forms: agent-goal failure and goal failure.
+
+When a specific agent cannot achieve goal g but g might still be achievable by some other agent, 
+agent-goal failure occurs. 
+
+When agent-goal failure occurs, reorganization must occur to allow the organization to :
+
+\begin{itemize}
+\newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
+\renewcommand{\labelitemi}{\localtextbulletone}
+\item  choose another agent to achieve g
+\item  not pursue g at the current time
+\item  choose another goal to pursue instead of g
+\end{itemize}	
+ 
+In any of these situations, g is not removed from G since it has not been achieved. In the case where the organization or the environment has changed such that a goal g can never be achieved, then goal failure occurs. 
+
+In this case, g is removed from G and the organization must attempt to assess whether it can still achieve the overall system goals. Reorganization may occur to see if the agent assigned to achieve g can be used elsewhere. 
+
+In all cases, the selection of the appropriate strategy is left to the organization\cite{omacs2}.
+\subsubsection{Agent Changes}
+The second type of change that triggers reorganizations are changes to the set of agents, A, or their individual capabilities\cite{omacs2}.
+
+When an agent that is part of $\varphi$ is removed from the organization, a reorganization must occur, even if only to remove the agent and its assignment(s) in $\varphi$.
+
+In general, when changes occur in an agents capability, reorganization may or may not be necessary, based on the agents capable relation. 
+
+We have identified four specific types of changes in an agents capabilities that may indicate a need for reorganization: 
+
+\begin{enumerate}
+\item 
+	when an agent gains the ability to play a new role
+\item
+	when an agent loses the ability to play a role
+\item
+	when an agent increases its ability to play a specific role
+\item
+	when an agent decreases its ability to play a specific role.
+\end{enumerate}	
+ 
+While case 2 requires reorganization if the agent is currently assigned to play the role for which it no longer has the capability to play, whether or not to reorganize is left up to theorganization when the other three cases (along with 2 when the agent is not currently assigned that role) occur\cite{omacs2}.
+
+
+\subsubsection{Reorganization Triggers}
+
+There are a variety of events that may occur in the lifecycle of a multiagent team that may require it to reorganize. In
+general, reorganization is initiated when an event occurs such that the team\cite{omacs1}:
+\begin{itemize}
+\newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
+\renewcommand{\labelitemi}{\localtextbulletone}
+	\item has reached a goal or subgoal
+	\item is no longer capable of reaching its overall goal
+	\item realizes that it could reach its goal in a more efficient or effective manner
+\end{itemize}
+ 
+
+When the team is no longer capable of reaching its overall goal, 
+we call this a goal failure. We have currently identified three role-related goal failure
+scenarios \cite{omacs1}:
+
+\begin{enumerate}
+	\item When a required role has not been assigned
+	\item When an agent relinquishes some required role
+	\item When an agent suffers a failure that keeps it from accomplishing its role 
+\end{enumerate}
+\pagebreak
+
+\section{Organization Multi-Agent System Engineering}
+This section introduce the definition of O-MASE framework, and the goal of this framework.   
+\subsection{Overview of O-MaSE}
 The Organization-based Multiagent System Engineering (O-MaSE) is a framework that 
  allows designers to create custom agent-oriented development processes. 
  
@@ -46,9 +174,9 @@ and uses the OPF metamodel, as shown in Figure \ref{fig:O-MaSE Process Framework
 \begin{figure}[th]
 	\centering %[scale=0.7]
 		\includegraphics[scale=0.4]{ch1/img/omase}
-	\caption{\label{fig:O-MaSE Process Framework}O-MaSE Process Framework \cite{omacs4} }
+	\caption{\label{fig:O-MaSE Process Framework}O-MaSE Process Framework \cite{omacs4}}
 \end{figure}
-\subsection{ The Goal of O-MaSE }
+\subsection{The Goal of O-MaSE}
 
 The goal of the O-MaSE methodology framework is to allow method engineers to
 build custom agent-oriented methods using a set of method fragments, all of which are
@@ -81,8 +209,9 @@ The APE plug-in is based on the Eclipse Process Framework and provides a process
 	 verifying that they meet process guidelines
 \end{enumerate} 
  
-\section{  Organization Model for Adaptive Computational System }
-\subsection{ Overview of OMACS }
+\section{Organization Model for Adaptive Computational System}
+We represent in this section the OMACS Framwork, As an Adaptive computational System, Also we cite the main elements of this framework and the relation between these elements.
+\subsection{Overview of OMACS}
 The OMACS is Framework, this model grew from the MaSE metamodel, 
 which was based on the original AGR\footnote{Agent Group Roles}  model\cite{omacs4}.
  
@@ -156,7 +285,7 @@ defining how well an agent can play a role (computed based on requires and posse
 \begin{equation}
 \begin{cases}
 0 & \textrm{if}\prod_{c\subset require(r)}posseses(a,c)=0\\
-\frac{\sum_{_{c\subset require(r)}}posseses(a,c) }{|require(r)|} & \textrm{ else}
+\frac{\sum_{_{c\subset require(r)}}posseses(a,c) }{|require(r)|} & \textrm{else}
 \end{cases}\label{eq:capable equation}
 \end{equation}
 
@@ -206,7 +335,7 @@ individual agents and individual agents have the ability to achieve them indepen
 	\caption{\label{fig:Goal Node}Goal Node }
 \end{figure}
 \hspace{1cm}
-\subsubsection{Roles } 
+\subsubsection{Roles} 
 
 Within OMACS, each organization contains a set of roles (R) that it can use to achieve its goals.
 A role defines a position within an organization whose behavior is expected to achieve a
@@ -236,10 +365,10 @@ essentially taking the average of all the required possesses values (possesses(a
 \begin{figure}[th]
 	\centering
 		\includegraphics[scale=0.5]{ch1/img/roles}
-	\caption{\label{fig:Role Node}Role Node }
+	\caption{\label{fig:Role Node}Role Node}
 \end{figure}
 \hspace{1cm}
-\subsubsection{ Agents}
+\subsubsection{Agents}
 
 OMACS also includes a set of heterogeneous agents (A) in each organization. 
 As described by Russell and Norvig, an agent is an entity that perceives and can perform actions upon its
@@ -259,7 +388,7 @@ take the initiative in achieving their goals.
 \begin{figure}[th]
 	\centering
 		\includegraphics[scale=0.5]{ch1/img/agents}
-	\caption{\label{fig:Agent Node}Agent Node }
+	\caption{\label{fig:Agent Node}Agent Node}
 \end{figure}
 \hspace{1cm}
 
@@ -273,7 +402,7 @@ Within the organization, agents must have the ability to communicate with each o
 assignments to play roles that match their capabilities, and work to achieve their assigned goals \cite{omacs2}.
 
 
-\subsubsection{ Capabilities } 
+\subsubsection{Capabilities} 
 
 Capabilities are the key to determining exactly which agents can be assigned to which roles
 within the organization. Capabilities are atomic entities used to define a skill or capacity of
@@ -293,7 +422,7 @@ environment, and effectors, which allow the agent to act upon a real world envir
 \begin{figure}[th]
 	\centering
 		\includegraphics[scale=0.5]{ch1/img/capabilities}
-	\caption{\label{fig:Cap Node}Capabilities Node }
+	\caption{\label{fig:Cap Node}Capabilities Node}
 \end{figure}
 \hspace{0.5cm}
 
@@ -303,7 +432,7 @@ environment, and effectors, which allow the agent to act upon a real world envir
 \end{equation}
 
 
-\subsubsection{ The Tuple  $\varphi$ } 
+\subsubsection{The Tuple  $\varphi$} 
 An assignment set $\varphi$ is the set of agent-role-goal tuples  \textlangle{} a,r,g \textrangle{}, that indicate that agent a has been as-signed to play role r in order to achieve goal g \cite{omacs4}.
 
 $\varphi$ is a subset of all the potential assignments of agents to play roles to achieve goals. This set of potential assignments is captured by the potential function (see Equation \ref{eq:potential equation}), which maps each agent-role-goal tuple to a real value ranging from 0 to 1 representing the ability of an agent to play a role in order to achieve a specific goal.
@@ -325,7 +454,7 @@ The only inherent constraints on $\varphi$ is that it must contain only assignme
  		
  
 
-\subsubsection{ OAF }
+\subsubsection{OAF}
 In order to select the best set of assignments to maximize an organizations ability to achieve its goals, OMACS defines an organizational assignment function, or oaf, which is a function over the current assignment set, oaf: $\varphi$ $\rightarrow$ 0..$\infty$. As with the rcf, the selection of assignments may be application specific  \cite{omacs4}.
 	
 Thus, each organization has its own application specific organization assignment function, oaf, which computes the goodness of the organization based on $\varphi$. 
@@ -333,7 +462,7 @@ Thus, each organization has its own application specific organization assignment
 As with the rcf, we can define a default  oaf, which is simply the sum of the potential scores in the current assignment set $\varphi$.
                      
  
-\subsubsection{ Domain Model } 
+\subsubsection{Domain Model} 
 
 The domain model $\sum$, is used to define object types in the environment 
 and the relations between those types \cite{omacs2}.
@@ -347,7 +476,7 @@ Relations between object classes include general purpose associations
 Relations may also include multiplicities to constrain the number of object classes participating in
 any given relation \cite{omacs2}.
  
-\subsection{Function of OMACS }
+\subsection{Function of OMACS}
 
 There are three major relations/functions and two derived functions between the eight main elements that provide the power of the OAMCS model: achieves, requires, possesses, capable, and potential. 
 \subsubsection{The Achieves}
@@ -363,7 +492,7 @@ Figure \ref{fig:The Achivement Relation} represent the Relation between Role and
 \begin{figure}[th]
 	\centering
 		\includegraphics[scale=0.5]{ch1/img/RelAchieve}
-	\caption{\label{fig:The Achivement Relation}The Achivement Relation }
+	\caption{\label{fig:The Achivement Relation}The Achivement Relation}
 \end{figure} 
  
 
@@ -386,10 +515,8 @@ and this Figure \ref{fig:The Requirment Relation} represent the Relation between
 \begin{figure}[th]
 	\centering
 		\includegraphics[scale=0.5]{ch1/img/RelRequire}
-	\caption{\label{fig:The Requirment Relation}The Requirement Relation }
+	\caption{\label{fig:The Requirment Relation}The Requirement Relation}
 \end{figure}
-
-
 
 \subsubsection{Possesses}
 In order to determine if some agent has the appropriate set of capabilities to play a given role, OMACS defines a similar relation, the possesses relation, that captures the capabilities a specific agents actually possesses\cite{omacs4}.
@@ -403,7 +530,7 @@ and this Relation represented in the next Figure \ref{fig:Possesses Relation}
 \begin{figure}[th]
 	\centering
 		\includegraphics[scale=0.5]{ch1/img/RelPossess}
-	\caption{\label{fig:Possesses Relation}Possesses Relation }
+	\caption{\label{fig:Possesses Relation}Possesses Relation}
 \end{figure}
 
 
@@ -413,7 +540,7 @@ Using the capabilities required by a particular role and capabilities possessed 
 Since the capability of an agent, a, to play a specific role  r, application and role specific, OMACS provides the rcf defined in the previous section that controls how this value is computed. Thus, the capable score of an agent playing a particular role is defined via the designer defined rcf of each role.
 
 \begin{equation}
-\forall a:A\textrm{ r:R }capable(a,r)=r.rcf(a)\label{eq:Funccapable}
+\forall a:A\textrm{ r:R}capable(a,r)=r.rcf(a)\label{eq:Funccapable}
 \end{equation}
 While the rcf is user defined, it must conform to one OMACS constraint. 
 To be capable of playing a given role in the current organization,
@@ -423,21 +550,20 @@ To be capable of playing a given role in the current organization,
 \text{\ensuremath{\forall}}a:A,r:Rcapable(a,r)>0\text{\ensuremath{\Leftrightarrow}}requires(r)\text{\ensuremath{\subseteq}}{c|possesses(a,c)>0}\label{eq:FuncCapable2}
 \end{equation}
 
-
-
-
-
-
 The main goal of OMACS is to provide a mechanism to assign goals to agents\cite{omacs2}, 
 in such a way that agents cooperate toward achieving some top-level goal.
 Intuitively, this mechanism should provide a way to assign the best agents 
 to play the best roles in order to achieve these goals. 
 
-
-
 Thus, OMACS has defined  a potential function that captures the ability of an agent 
 to play a role in order  to achieve a specific goal\cite{omacs2}.
 
+\begin{figure}[th]
+	\centering
+		\includegraphics[scale=0.5]{ch1/img/mag}
+	\caption{\label{fig:Capable Of playing Relation} MaS with Capable of Playing Relation \cite{omacs0}}
+\end{figure}
+\pagebreak
 \subsubsection{Potential}
 The potential function maps each agent-role-goal tuple to a real value ranging from 0 to 1, 
 potential: A $\times$ R $\times$ G $\rightarrow$ [0..1]\cite{omacs4}.
@@ -450,173 +576,17 @@ The potential of agent a to play role r
 to achieve goal g is defined by combining the capable and achieves functions\cite{omacs4}.
 
 \begin{equation}
-\forall a:A\textrm{ r:R g:G }potential(a,r,g)=achieves(r,g)*capable(a,r)\label{eq:potentialFunc}
+\forall a:A\textrm{ r:R g:G}potential(a,r,g)=achieves(r,g)*capable(a,r)\label{eq:potentialFunc}
 \end{equation}
 
 and we depend on the common capabilities between the Agent and the Role Entities to Create a relation in this \ref{fig:Capable Of playing Relation} 
 
-\begin{figure}[th]
-	\centering
-		\includegraphics[scale=0.5]{ch1/img/mag}
-	\caption{\label{fig:Capable Of playing Relation} MaS with Capable of Playing Relation \cite{omacs0} }
-\end{figure}
+
   
 
-%this section should you read it more and reOrgnize 
-\section{ Motivations to MAS Organization }
- 
-Basically, a MAS is formed by the collection of  autonomous agents situated in a certain environment, respond
-to their environment dynamic changes, interact with other agents, and persist to achieve their own goals or the global
-system goals. There are two viewpoints of MAS engineering, the first one is the agent-centered MAS (ACMAS) in which
-the focus is given to individual agents. With this viewpoint, the designer concerns the local behaviors of agents and also
-their interactions without concerning the global structure of the system\cite{omacs3}.
-
-The global required function of the system is supposed to emerge as a result of the lower level individual
-agents interactions in a bottom-up way Picard et al.  stated that the agent-centered approach takes the agents as the engine  for the system organization\cite{omacs3}.
-
-and agent organizations implicitly exist as observable emergent phenomena, which states a unified bottom-up and
-objective global view of the pattern of cooperation between agents. Further, Picard gives the ant colony as an example, where there is no organizational behavior and constraints are explicitly and directly defined inside the ants. The main idea is that the organization is the result of the collective emergent
-behavior due to how agents act their individual behaviors and interact in a common shared and dynamic environment\cite{omacs3}.
-
-\subsection{ Organization }
-Each organization has an implicitly defined organization transition function 
-that describes how the organization may transition from one organizational state 
-to another over the lifetime of the organization\cite{omacs2}.
-	
-Since agents in an organization as well as their individual capabilities may change over time, 
-this function cannot be predefined, but must be computed based on the current state, 
-the goal set, G, and the current policies. In our present research with purely autonomous systems, we have only considered reorganization that involves the state of the organization. 
-
-However, we have defined two distinct types of reorganization: state reorganization, which only allows the modification of the organization state, and structure reorganization, which allows modification  of the organization structure (and may require state reorganization to keep the organization consistent).
-
-We define the state of the organization as the set of agents, A, the possesses, capable, and potential functions, and the assignment set, $\varphi$. However, not all these components may actually be under the control of the organization. For our purposes, we assume that agents may enter or leave organizations or relationships, but that these actions are triggers that cause reorganizations and are not the result of reorganizations. 
-
-Likewise, possesses (and thus capable and potential as well) is an automatic calculation that determines the possible assignments of agents to roles and goals in the organization. The calculation of possesses is the only calculation totally controlled by the agent, the organization can only use this information in deciding how to make assignments. This leaves one element that can be modified via state reorganization $\varphi$ \cite{omacs2}.
-	
-\subsubsection{Goal Set Changes }
-Any change in G may cause reorganization. There are three basic types 
-of events that can cause achange in G: 
-\begin{enumerate}
-\item   insertion of a new goal  
-\item   goal achievement 
-\item   goal failure
-\end{enumerate}
-
-is discussed below. 
-
-The first situation deals with new goals being added to G. However, \cite{omacs2}
-we cannot say with certainty that reorganization will occur based on a new goal in G. 
-
-It is possible that the organization will choose to forego reorganization for a number of reasons, the most likely being that it has simply chosen not to pursue any new goals added to G at the present time.
-
-The second case deals with goal achievement. When a goal g is achieved, G is changed to reflect that event by 
-
-\begin{itemize}
-\newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
-\renewcommand{\labelitemi}{\localtextbulletone}
-\item  removing g from G
-\item  possibly adding new goals
-\end{itemize}	
-
- which are enabled by the achievement of g, into G. Obviously, the agent assigned to achieve goal g is now free to pursue other goals. 
-
-The third instance involves goal failure, which really has two forms: agent-goal failure and goal failure.
-
-When a specific agent cannot achieve goal g but g might still be achievable by some other agent, 
-agent-goal failure occurs. 
-
-When agent-goal failure occurs, reorganization must occur to allow the organization to :
-
-\begin{itemize}
-\newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
-\renewcommand{\labelitemi}{\localtextbulletone}
-\item  choose another agent to achieve g
-\item  not pursue g at the current time
-\item  choose another goal to pursue instead of g
-\end{itemize}	
- 
-In any of these situations, g is not removed from G since it has not been achieved. In the case where the organization or the environment has changed such that a goal g can never be achieved, then goal failure occurs. 
-
-In this case, g is removed from G and the organization must attempt to assess whether it can still achieve the overall system goals. Reorganization may occur to see if the agent assigned to achieve g can be used elsewhere. 
-
-In all cases, the selection of the appropriate strategy is left to the organization\cite{omacs2}.
-\subsubsection{Agent Changes }
-The second type of change that triggers reorganizations are changes to the set of agents, A, or their individual capabilities\cite{omacs2}.
-
-When an agent that is part of $\varphi$ is removed from the organization, a reorganization must occur, even if only to remove the agent and its assignment(s) in $\varphi$. Likewise,when an agent that is part of $\varphi$ loses a capability that negates its ability to play a role that it is assigned, reorganization must occur as well. 
-
-In general, when changes occur in an agents capability, reorganization may or may not be necessary, based on the agents capable relation. 
-
-We have identified four specific types of changes in an agents capabilities that may indicate a need for reorganization: 
-
-\begin{enumerate}
-\item 
-	when an agent gains the ability to play a new role
-\item
-	when an agent loses the ability to play a role
-\item
-	when an agent increases its ability to play a specific role
-\item
-	when an agent decreases its ability to play a specific role.
-\end{enumerate}	
- 
-While case 2 requires reorganization if the agent is currently assigned to play the role for which it no longer has the capability to play, whether or not to reorganize is left up to theorganization when the other three cases (along with 2 when the agent is not currently assigned that role) occur\cite{omacs2}.
-
-\subsection{ Reorganization }
-Reorganization is the process of changing the assignments of agents to roles to goals as specified
-in $\varphi$ \cite{omacs2}.
-
-The organizations oaf function is used to determine the best new $\varphi$  however, total
-reorganization may not be necessary or efficient.
-
-
-\subsubsection{ Reorganization Triggers}
-
-There are a variety of events that may occur in the lifecycle of a multiagent team that may require it to reorganize. In
-general, reorganization is initiated when an event occurs such that the team\cite{omacs1}:
-\begin{itemize}
-\newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
-\renewcommand{\labelitemi}{\localtextbulletone}
-	\item has reached a goal or subgoal
-	\item is no longer capable of reaching its overall goal
-	\item realizes that it could reach its goal in a more efficient or effective manner
-\end{itemize}
- 
-
-When the team is no longer capable of reaching its overall goal, 
-we call this a goal failure. We have currently identified three role-related goal failure
-scenarios \cite{omacs1}:
-
-\begin{enumerate}
-	\item When a required role has not been assigned
-	\item When an agent relinquishes some required role
-	\item  When an agent suffers a failure that keeps it from accomplishing its role 
-\end{enumerate}
-  
-
-\subsubsection{ Purpose Reorganization }
-
-For general-purpose reorganization, the Developers have developed several reorganization algorithms that
-give us a default reorganization capability. When a reorganization trigger occurs, general-purpose
-reorganization algorithms can be used to find appropriate assignments to achieve the
-organizations goals, if possible\cite{omacs2}.
-
-To compute the best reorganization, an algorithm that simply
-optimizes the organizations oaf might seem appropriate however, this approach is short sighted.
-First, it does not deal with the cost associated with reorganizing and, second, it does not consider
-the reason reorganizing was initially undertaken. Exploiting reorganizing costs requires a
-distributed solution since the cost for robots to change roles is not globally known. 
-
-For instance, if an agent is required to perform a complex computation, any effort toward that computation
-would be lost if the agent was reassigned to another role/goal Considering the reason for
-reorganization may enable less extensive (and less costly) reorganization. If the reason for
-reorganizing is to fill a single role, then a total reorganization may be a waste of time and
-resources\cite{omacs2}.
-
- 
+%this section should you read it more and reOrgnize \section{Conclusion}
 
 \section{Conclusion}
-
 This chapter describes how to design adaptive multiagent
 systems using an organizational model, which defines the
 entities and relationships of a typical organization.
@@ -626,8 +596,5 @@ capabilities, and the relationships between them. By
 designing a system using the model, and we focus on OMACS framework
 because it handeling reorganization system more then other framework.
 
-In the following chapter will discuss other framework
-we can use it to modeling the multi-Agent System.
-\textbf{}
 
 %khmiss 18:51

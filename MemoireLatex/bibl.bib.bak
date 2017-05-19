@@ -63,6 +63,16 @@ the resultant process designs is analyzed. This is executed by varying the payou
   Timestamp                = {2017.04.24}
 }
 
+@Article{ch3catego,
+  Title                    = {Classification of Model Transformation Approaches},
+  Author                   = {Krzysztof Czarnecki and Simon Helsen},
+  Journal                  = {OOPSLA 03},
+  Year                     = {2003},
+
+  Owner                    = {sam},
+  Timestamp                = {2017.05.18}
+}
+
 @Article{pns3,
   Title                    = {Heuristic Algorithms for the Robust PNS
 Problem},
@@ -160,6 +170,18 @@ Gabriele Taentzer},
 
   Owner                    = {sam},
   Timestamp                = {2017.04.25}
+}
+
+@Article{ch3model,
+  Title                    = {Feature-based survey of model
+transformation approaches},
+  Author                   = {K. Czarnecki
+S. Helsen},
+  Journal                  = {Ibm Systems Journal},
+  Year                     = {2006},
+
+  Owner                    = {sam},
+  Timestamp                = {2017.05.14}
 }
 
 @Article{omacs3,
@@ -331,8 +353,8 @@ deling, token model, type model},
   Title                    = {Review of Model-to-Model
 Transformation Approaches and
 Technologies},
-  Author                   = {Ferhat Erata  
-Moharram Challenger  
+  Author                   = {Ferhat Erata 
+Moharram Challenger 
 Geylani Kardas},
   Journal                  = {ITEA3},
   Year                     = {2015},
