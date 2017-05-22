@@ -1,7 +1,9 @@
 
 \chapter{\label{cha: Transformation Approach } Transformation Approach}
 \section{Introduction}
-We illustrate in this chapter the most important steps of our approach. Start with the first approach of transformation from omacs to pns, then the second approach to transform PNS model into XML code, ending with import the XML code, to use it in the second tools. 
+We illustrate in this chapter the most important steps of our approach. Starting with the first
+approach of transformation from OMACS to PNS, then the second approach to transform
+PNS model into XML code, ending with import the XML code, to use it in the second tools.
 
 \section{Transformation Approach (OMACS To PNS)\label{sec:OMACS into PNS} }% Our Work
 To Transform OMACS Model into PNS Model, we start to :
@@ -22,7 +24,7 @@ The OMACS Meta-Model contain a set of classes:
 \begin{itemize}
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
 \renewcommand{\labelitemi}{\localtextbulletone}
-	\item Agent  : represent a node in the graph of MaS, and  we assign the Role for this Agent (Node) to play  
+	\item Agent : represent a node in the graph of MaS, and we assign the Role for this Agent (Node) to play 
 	\item Capabilities : its node in the MaS, this Entitie represent the skills Which owns by an agent
 	\item Role : represented by a node in the graph, this is the work we assign for the agent 
 	\item Goal : it is also a node, we assign role for an agent depending common capabilites between an agent and role in order to achieve this goal
@@ -34,16 +36,16 @@ The OMACS Meta-Model contain a set of classes:
 	\caption{\label{fig:OMACS Meta-Model}OMACS Meta-Model}
 \end{figure} 
 \vspace{0.9cm}
-figure \ref{fig:OMACS Meta-Model} illustrate OMACS Meta-Model  contain 4 classes (Agent, Capabilities, Role, Goal) 
+figure \ref{fig:OMACS Meta-Model} illustrate OMACS Meta-Model contain 4 classes (Agent, Capabilities, Role, Goal) 
 and 4 relation (Possess, Require, CapableOf, Achieve). 
 The Attribute Name in the classes represent the name of current node ,
-and the rate attribute in the relation between classes represent  the relation percentage between two node or entities.
+and the rate attribute in the relation between classes represent the relation percentage between two node or entities.
 
 For example between an Agent and Capabilities its means how mush this Agent possese this capibilites
 \pagebreak
 \subsubsection{Example of OMACS}
 
-Starting from  Meta-Model of OMACS in figure  \ref{fig:OMACS Meta-Model}, AToM3 generate a formalism of OMACS, this formalism allow us to create our OMACS Model (Multi Agent System).
+Starting from Meta-Model of OMACS in figure \ref{fig:OMACS Meta-Model}, AToM3 generate a formalism of OMACS, this formalism allow us to create our OMACS Model (Multi Agent System).
 \vspace{0.1cm}
 \begin{figure}[th]
 	\centering
@@ -66,7 +68,7 @@ To define PNS meta model, we first load the Class Diagramm Formalism, and it is 
 	\item Raw Material : its node in the graph of PNS, represent the initial material, and this node does not have any input edges 
 	\item Intermediate Material : its node in the graph, represent a material in the system
 	\item Final Product : it is also a node in the graph, represent the desire material 
-	\item Operating Unit : it is other node type in the graph  ,represent the task or operating, it is consume the input material and produce the output material 
+	\item Operating Unit : it is other node type in the graph ,represent the task or operating, it is consume the input material and produce the output material 
 \end{itemize}
 \pagebreak
 \begin{figure}[th] 
@@ -97,14 +99,14 @@ and for the Operating Unit contain 3 Attribute :
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
 \renewcommand{\labelitemi}{\localtextbulletone}
 \item Name : name of this Task 
-\item Operating Cost Fix  : cost for entire period, Example : year
-\item Operating Cost Proportional  :  cost for every Operating from this unit
+\item Operating Cost Fix : cost for entire period, Example : year
+\item Operating Cost Proportional : cost for every Operating from this unit
 
 \end{itemize}
 
 
 \subsubsection{Example of PNS}
-The AToM3 Tools  generate a formalism from the meta model we created before, load it and use it like figure \ref{fig:PNS Model} 
+The AToM3 Tools generate a formalism from the meta model we created before, load it and use it like figure \ref{fig:PNS Model} 
 
 \begin{figure}[th]
 	\centering
@@ -140,7 +142,7 @@ This grammar is defined bu using the tool AToM3 according to the following step
 
 Our grammar is composed of :
 \begin{description}
-	\item [{Rules :}]  each rule is characterized
+	\item [{Rules :}] each rule is characterized
 	by a name and execution priority. They are classified in 04 categories :
 \end{description}
 
@@ -159,12 +161,12 @@ Rules to links generated materials and operating units.
 Rules to cleaning unnecessary entities from the result .
 
 
-Our approach contain 20 rules, we quote the most important transformation rules into the following steps  : 
+Our approach contain 20 rules, we cite the most important transformation rules into the following steps : 
 
-Will notice these words in LHS(ANY \footnote{ANY:its attribue in the node and the engine will select every node with ANY attribute value} ) and RHS(COPIED\footnote{COPIED:copie the attribue value from the node with same GGLabel in LHS} , SPECIFIED \footnote{SPECIFIED:specified the attribue value manualy or by python code})
- 
 
-\paragraph{\emph{1)~Agent2RoleLink1 : Create the direct link  between the Agent and the Role (order 1) :} } The Figure \ref{fig:Create link between Agent and Role} illustrate how to create link between the agent and role depending on commun capabilities, order 1 mean it is the first rule applied in the grammar. 
+\paragraph{\emph{1)~Agent2RoleLink1 : Create the direct link between the Agent and the Role (order 1) :} } 
+The Figure \ref{fig:Create link between Agent and Role} illustrate how to create link between the agent and role
+depending on common capabilities, order 1 mean it is the first rule applied in the grammar.
 
 \vspace{1cm}
 \begin{figure}[th]
@@ -173,12 +175,15 @@ Will notice these words in LHS(ANY \footnote{ANY:its attribue in the node and th
 		\quad{}
 		\includegraphics{ch3/img/sep}
 		\quad{}
-	\subfloat[RHS]{\includegraphics[scale=0.9]{ch3/img/R1}}
+	\subfloat[RHS]{\includegraphics[scale=0.9]{ch3/img/R11}}
 \caption{\label{fig:Create link between Agent and Role}Assign Role to Agent } 
 \end{figure}
- 
 
-\paragraph{\emph{1.1)~Condition for the rule Assign Role to Agent  :  } } 
+you will notice these words in LHS(ANY \footnote{ANY:its attribue in the node and the engine will select every node with ANY attribute value} ) and RHS(COPIED\footnote{COPIED:copie the attribue value from the node with same GGLabel in LHS} , SPECIFIED \footnote{SPECIFIED:specified the attribue value manualy or by python code})
+ 
+  
+
+\paragraph{\emph{1.1)~Condition for the rule Assign Role to Agent : } } 
  
 Test if there is a node agent, role visited before 
 in order not to fall in infinity loop, figure \ref{fig:Create link between Agent and Role} represent the rule.
@@ -186,11 +191,12 @@ in order not to fall in infinity loop, figure \ref{fig:Create link between Agent
 \begin{figure}[th]
 	\centering
  	\includegraphics[scale=0.37]{ch3/img/condrule1}
-	\caption{\label{fig:Condition link agent with role}Condition link agent with role  }
+	\caption{\label{fig:Condition link agent with role}Condition link agent with role }
 \end{figure} 
 
 \paragraph{\emph{2)~ TransAgent2Raw : Transform Agent to Raw Material (order 9) :} }
-Application of this rule in (figure \ref{fig:Generate for each agent raw material}) makes it possible to transform  every Agent in Multi Agent System into raw material, it has the same name and price.
+Application of this rule in (figure \ref{fig:Generate for each agent raw material}) transform every Agent in Multi
+Agent System into raw material, it has the same name and price.
 \vspace{1cm} 
 \begin{figure}[th]
 \centering
@@ -204,7 +210,7 @@ Application of this rule in (figure \ref{fig:Generate for each agent raw materia
 \vspace{1cm}
 
 %% ------------------------------------------------------------------------------------------------ order 7 
-\paragraph{\emph{3)~ TransLinkAR2OpUnit : Transform Link between Agent and Role into Operating Unit (order 10) :} } This rule (Figure \ref{fig:Operating Unit for every link capable of playing}) allow to transform, the relation capable of playing between an agent and role  into operating unit.
+\paragraph{\emph{3)~ TransLinkAR2OpUnit : Transform Link between Agent and Role into Operating Unit (order 10) :} } This rule in (Figure \ref{fig:Operating Unit for every link capable of playing}) allow to transform, the relation capable of playing between an agent and role into operating unit.
 \vspace{1cm}
 \begin{figure}[th]
 	\centering
@@ -234,8 +240,8 @@ Application of the rule illustrated in (Figure \ref{fig:Transform Goal to interm
 \vspace{1cm}
 %% ------------------------------------------------------------------------------------------------ order 10 
 \paragraph{\emph{5)~ CreateFinalStat : Create the Product node (order 13) :} }
-Create the final material stat in the system. If you notice the LHS is empty because this rule applied for one time, and this rule represented in 
-(Figure \ref{fig:Create the final material} ).
+Create the final material stat in the system. If you notice the LHS is empty because this rule applied for one time, and this rule represented in
+(Figure \ref{fig:Create the final material}).
  
 \begin{figure}[th]
 \centering
@@ -250,7 +256,7 @@ Create the final material stat in the system. If you notice the LHS is empty bec
 \pagebreak
 \paragraph{\emph{5.1)~Condition for Create Final Stat : } } 
 This conditon test if this attribute Final stat equal zero 
-, in other word we did not visite this rule before, the rule in figure\ref{fig:Create the final material}.
+, in other word we did not visit this rule before, the rule in figure  \ref{fig:Create the final material}.
  \vspace{1cm} 
 \begin{figure}[th]
 	\centering
@@ -258,10 +264,9 @@ This conditon test if this attribute Final stat equal zero
 	\caption{\label{fig:Condition of generate final stat } Condition of generate final stat }
 \end{figure} 
 
-%% ------------------------------------------------------------------------------------------------ order  13
-\paragraph{\emph{6)~ CreateMatARG : Generate auxiliary part  (order 14) :} }
-
-The Application of this rule generate the auxiliary part which is intermediate material consumed by operating unit, and the auxiliary part represent an agent capable to play a role in order to achieve a specific goal (Figure \ref{fig:Generate auxiliary part}).
+%% ------------------------------------------------------------------------------------------------ order 13
+\paragraph{\emph{6)~ CreateMatARG : Generate auxiliary part (order 14) :} }
+The Application of this rule generate the auxiliary part which is intermediate material consumed by operating unit, and the auxiliary part represent an agent capable to play a role in order to achieve a specific goal ( Figure \ref{fig:Generate auxiliary part} ).
 \vspace{1cm}
 \begin{figure}[th]
 \centering 
@@ -275,13 +280,13 @@ The Application of this rule generate the auxiliary part which is intermediate m
 \pagebreak
 
 
-%% ------------------------------------------------------------------------------------------------ order  15
+%% ------------------------------------------------------------------------------------------------ order 15
 \paragraph{\emph{7)~ CreateLinkMatr2OAF : Create Operating unit between goal material and the product (order 15) :} }
  
  
-The rule (Figure \ref{fig:Create Operating unit between  goal and OAF}) 
-create an operating unit  between the final material and the goals material.
-  
+The rule (Figure \ref{fig:Create Operating unit between goal and OAF}) 
+create an operating unit between the final material and the goals material.
+ 
 \vspace{1cm}
 \begin{figure}[th]
 \centering 
@@ -290,18 +295,18 @@ create an operating unit  between the final material and the goals material.
 		\includegraphics{ch3/img/sep}
 	\quad{}
 	\subfloat[RHS]{\includegraphics[scale=0.9]{ch3/img/R7}}
-\caption{\label{fig:Create Operating unit between  goal and OAF}Create Operating unit between  goal and OAF}
+\caption{\label{fig:Create Operating unit between goal and OAF}Create Operating unit between goal and OAF}
  
 \end{figure}
 \vspace{1cm}
 
 
-%% ------------------------------------------------------------------------------------------------ order  19
-\paragraph{\emph{8)~ CreateLinkMat-ARG2Goal : Create link between auxiliary part and  goal material  (order 19) :} }
+%% ------------------------------------------------------------------------------------------------ order 19
+\paragraph{\emph{8)~ CreateLinkMat-ARG2Goal : Create link between auxiliary part and goal material (order 19) :} }
  
  
-The rule in (Figure \ref{fig:link between auxiliary part and goal})  describe 
-how to link the auxiliary part with right goal.  
+The rule in (Figure \ref{fig:link between auxiliary part and goal}) describe 
+how to link the auxiliary part with right goal. 
 \vspace{1cm}
 \begin{figure}[th]
 \centering
@@ -311,28 +316,28 @@ how to link the auxiliary part with right goal.
 		\includegraphics{ch3/img/sep}
 	\quad{}\quad{}
 	\subfloat[LHS]{\includegraphics[scale=2.2]{ch3/img/R8}}
-  
+ 
 \caption{\label{fig:link between auxiliary part and goal}link between auxiliary part and goal}
  
 \end{figure}
 \pagebreak
 \paragraph{\emph{8.1)~Condition for rule link between AUX part and Material Goal } : }
-Here we check if we did not visited before  and the name of Auxiliary Part end with goal name to link it with the right goal material, the rule in figure \ref{fig:link between auxiliary part and goal}.
+Here we check if we did not visited before and the name of Auxiliary Part end with goal name to link it with the right goal material, the rule in figure \ref{fig:link between auxiliary part and goal}.
  
 \vspace{1cm}
  
 \begin{figure}[th]
 	\centering
  	\includegraphics[scale=0.37]{ch3/img/condaux}
-	\caption{\label{fig:Condition of Auxiliary part}Condition of Auxiliary part  }
+	\caption{\label{fig:Condition of Auxiliary part}Condition of Auxiliary part }
 \end{figure} 
 
 
-%% ------------------------------------------------------------------------------------------------ order  20
-\paragraph{\emph{9)~ CreatLinkRaw2AR : Create link to consume the raw material by operating unit  (order 20) :} }
+%% ------------------------------------------------------------------------------------------------ order 20
+\paragraph{\emph{9)~ CreatLinkRaw2AR : Create link to consume the raw material by operating unit (order 20) :} }
  
  
-This Figure \ref{fig:consume the raw material by operating unit}  illustrate  this rule, and it about how to create an arc between 
+This Figure \ref{fig:consume the raw material by operating unit} illustrate this rule, and it about how to create an arc between 
 the raw material was generated from an agent and the operating unit.
 
 \begin{figure}[th]
@@ -345,13 +350,13 @@ the raw material was generated from an agent and the operating unit.
 \caption{\label{fig:consume the raw material by operating unit} consume the raw material by operating unit}
 \end{figure}
 
+\pagebreak
 
 
-
-\subsection{Examples }
-
+\subsection{Case study}
+we represent, in this section two examples, and examine the graph transformation process was developed in last section.
 \subsubsection{Simple multi Agent System }
-This example represents a very simple system composed of  two agent and 3 capabilities, 2 role and 2 goals.
+This example represents a very simple system composed of two agent and 3 capabilities, 2 role and 2 goals.
  Figure \ref{fig:Example 1 Multi Agent System } illustrates this example :
 \begin{figure}[th]
 	\centering
@@ -368,21 +373,25 @@ It is clear that the resulting contain a set of material and operating unit
 
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
 \renewcommand{\labelitemi}{\localtextbulletone}
-\item The raw material A1, A2 represent the agent  
+\item The raw material A1, A2 represent the agent 
 \item The operating unit A1 R1 represent the relation between an A1 and R1 
 in Mas before the transformation its the same for other entities like this one
-\item the operating unit and material named A2 R2 G2 represent agent A2 Playing R2 in order to achieve G2, it is the same for other entities  
+\item the operating unit and material named A2 R2 G2 represent agent A2 Playing R2 in order to achieve G2, it is the same for other entities 
 
 \item the operating unit and material named A2 R2 G2 represent agent A2 Playing R2 in order to achieve G2 
 \end{itemize}
-  
+ 
 \begin{figure}[th]
 	\centering
  	\includegraphics[scale=0.3]{ch3/img/ex1pns}
 	\caption{\label{fig:Multi Agent System After transformation }Multi Agent System After transformation}
-\end{figure}  
+\end{figure} 
+
+
+
+\pagebreak
 \subsubsection{ Complex multi Agent System }
-This example represents a complex system composed of  3 agent and 4 capabilities, 2 role and 4 goals. Figure \ref{fig:Example 1 Multi Agent System } illustrates this example ,
+This example represents a complex system composed of 3 agent and 4 capabilities, 2 role and 4 goals. Figure \ref{fig:Example 1 Multi Agent System } illustrates this example ,
  
 
 
@@ -403,7 +412,7 @@ This example represents a complex system composed of  3 agent and 4 capabilities
 \end{itemize}
 \vspace{0.7cm}
 after the Transformation of Multi agent system from OMACS framework into PNS framework, we obtain the model is represented in figure \ref{fig:Complex Multi Agent System After transforamtion} 
-and next table represent the value of the edges this model 
+and next table represent the value of the edges in the last model 
 
  % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
@@ -412,7 +421,8 @@ and next table represent the value of the edges this model
 \centering
 \begin{tabular}{@{}ccc@{}}
 \toprule
-\textbf{Operating Unit} & \textbf{Input Material} & \textbf{Output Material}                                                                              \\ \midrule
+\textbf{Operating Unit} & \textbf{Input Material} & \textbf{Output Material}
+\\ \midrule
 G1OAF                   & G1(1)                   & OAF (1)                                                                                               \\
 G2OAF                   & G2(1)                   & OAF(1)                                                                                                \\
 G3OAF                   & G3(1)                   & OAF(1)                                                                                                \\
@@ -481,12 +491,12 @@ before we start, i want to description the most important tags in this xml forma
 
 \begin{itemize}
 \item \textbf{Initial Action : } This portion of our grammar is used to initialize all
-Global variables used. They are used to meet various needs.  in Figure \ref{fig:Code Initial Action} 
+Global variables used. They are used to meet various needs. in Figure \ref{fig:Code Initial Action} 
 
 \end{itemize}
 
 \begin{figure}[th]
-	\centering  %[scale=1.2]
+	\centering %[scale=1.2]
  	\includegraphics[scale=0.38]{ch3/img/InitAct}
 	\caption{\label{fig:Code Initial Action}Code Initial Action}
 \end{figure} 
@@ -518,29 +528,29 @@ tags.
 
 \end{figure} 
 
-\paragraph{\emph{ a )~Condition for Raw To Xml  } } For the application of this rule, it must be verified that the partition To be transformed is not treated before
+\paragraph{\emph{ a )~Condition for Raw To Xml } } For the application of this rule, it must be verified that the partition To be transformed is not treated before
 \vspace{1cm}
 \begin{figure}[th]
-	\centering  %[scale=1.2]
+	\centering %[scale=1.2]
  	\includegraphics[scale=0.38]{ch3/img/xcond1}
 	\caption{\label{fig:condition of Raw Material for Transfromation}condition of Raw Material for Transfromation}
 \end{figure}
 \pagebreak
-\paragraph{\emph{ b )~Action for rule \ref{fig:Raw Material into Xml} } }  Once 
-The rule is applied, its Action Allows to create a XML code and mark the object from the left side to processed.  
+\paragraph{\emph{ b )~Action for rule \ref{fig:Raw Material into Xml} } } Once 
+The rule is applied, its Action Allows to create a XML code and mark the object from the left side to processed. 
  
 \begin{figure}[th]
-	\centering  %[scale=1.2]
+	\centering %[scale=1.2]
  	\includegraphics[scale=0.38]{ch3/img/xact1}
 	\caption{\label{fig:Action of Raw Material for Transfromation}Action of Raw Material for Transfromation}
-\end{figure}  
+\end{figure} 
 First line we import MyFunction is external file, Python code 
-to be easy to manipulate  and this is the function to add new material (raw ,
+to be easy to manipulate and this is the function to add new material (raw ,
 intermadiate, final ) 
 and for the operating unit is the same function
  
 \begin{lstlisting}[language=Python, caption=Python Function Material]
-def newMaterial(  parent=None, name= "None", ID="0", Type= "None", xN ='-1', yN ='-1' ,price='-1' ,reqF = 0  ,maxF =999999 ):
+def newMaterial( parent=None, name= "None", ID="0", Type= "None", xN ='-1', yN ='-1' ,price='-1' ,reqF = 0 ,maxF =999999 ):
 	#Create new Node has the Material Name...and add it into the parent node
 	node = ET.SubElement(parent, "Material",ID=str(ID),Name=name,Type=str(Type))
     print 'add Cords into node		-NewNode-'
@@ -566,7 +576,7 @@ def newMaterial(  parent=None, name= "None", ID="0", Type= "None", xN ='-1', yN 
 
 \paragraph{\emph{2)~Transform Edge between two entitie into XML code :} } in this transformation 
 we want to create link between nodes Material and Operating unit 
-and we have  4 type of Edges : 
+and we have 4 type of Edges : 
 \begin{itemize}
 
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
@@ -574,8 +584,8 @@ and we have  4 type of Edges :
 	\item Edges from raw material into Operating unit
 	\item Edges from intermediate material into Operating unit
 	
-	\item Edges from  Operating unit into final material
-	\item Edges from  Operating unit into intermadiate material 
+	\item Edges from Operating unit into final material
+	\item Edges from Operating unit into intermadiate material 
 \end{itemize}
 The figure \ref{fig:edgotoraw} represent the first Edge type 
 \vspace{1cm}
@@ -590,33 +600,33 @@ The figure \ref{fig:edgotoraw} represent the first Edge type
 \caption{\label{fig:edgotoraw}Edges from Raw Material into Operating unit to xml code} 
 
 \end{figure} 
-  
+ 
 \paragraph{\emph{ a )~Condition for rule \ref{fig:edgotoraw} } } it is the same with figure \ref{fig:condition of Raw Material for Transfromation} but here we select the edges
 
 \vspace{1cm} 
 \begin{figure}[th]
-	\centering  %[scale=1.2]
+	\centering %[scale=1.2]
  	\includegraphics[scale=0.38]{ch3/img/xcond2}
 	\caption{\label{fig:Condition2)}Condition of Edges ( RawMaterial to Operating unit)}
  \end{figure} 
 \vspace{1cm}
-\paragraph{\emph{ b )~Action for rule \ref{fig:edgotoraw} } }  we add this action to  Transform the Edges between Any Material and Any Operating unit into xml file, or to export the entitie from Graphical presentation 
-into Xml Code  
+\paragraph{\emph{ b )~Action for rule \ref{fig:edgotoraw} } } we add this action to Transform the Edges between Any Material and Any Operating unit into xml file, or to export the entitie from Graphical presentation 
+into Xml Code 
 \vspace{0.7cm}
 \begin{figure}[th]
-	\centering  %[scale=1.2]
+	\centering %[scale=1.2]
  	\includegraphics[scale=0.38]{ch3/img/xact2}
 	\caption{\label{fig:action2)}Action of Edges ( RawMaterial to Operating unit)}
-\end{figure}  
+\end{figure} 
 
 and this code represent a Function to add new Edges into the Tree code 
 to export the tree later 
  
 \vspace{0.7cm}
 \begin{lstlisting}[language=Python, caption=Python Function new Edges]
-def newEdges(  parent, name, ID, xN, yN    ,beginID, endID    ):
+def newEdges( parent, name, ID, xN, yN  ,beginID, endID  ):
 	#Create new Node and add it into parent Node	
-	node = ET.SubElement(parent, "Edge",ID=str(ID),BeginID=str(beginID),EndID=str(endID),Rate=str(name),Title=str(name), ArrowOnCenter="true", ArrowPosition="50")  
+	node = ET.SubElement(parent, "Edge",ID=str(ID),BeginID=str(beginID),EndID=str(endID),Rate=str(name),Title=str(name), ArrowOnCenter="true", ArrowPosition="50") 
 	#Create Corde for the node Edges
 	cords = ET.SubElement(node, "Coords")
 	ET.SubElement(cords, "X").text = str( xN )
@@ -634,19 +644,19 @@ def newEdges(  parent, name, ID, xN, yN    ,beginID, endID    ):
 
 \pagebreak
 \begin{itemize}
-\item \textbf{Final Action :} it is to create the xml file instead after we generate the graph variable from previous rules  \ref{fig:Code Final Action}. 
-   
+\item \textbf{Final Action :} it is to create the xml file instead after we generate the graph variable from previous rules \ref{fig:Code Final Action}. 
+  
 \end{itemize}
 
 \begin{figure}[th]
-	\centering  %[scale=1.2]
+	\centering %[scale=1.2]
  	\includegraphics[scale=0.38]{ch3/img/FinAct}
 	\caption{\label{fig:Code Final Action}Code Final Action}
 \end{figure}
 \section{Optimum structure of MaS \label{sec:optim} }
 
-To optimize the multi-agent system in  Process Process synthesis, 
-we choose a tool called  P-Graph Studio 
+To optimize the multi-agent system in Process Process synthesis, 
+we choose a tool called P-Graph Studio 
 
 figure \ref{fig:Multi Agent System in PGraph Studio} represent multi agent system, Previously mentioned in figure \ref{fig:Complex Multi Agent System After transforamtion} 
 \begin{figure}[th]
@@ -692,7 +702,5 @@ G4_OAF: G4 => OAF
 
 
 \section{Conclusion}
-We have presented in this chapter  our approach of transformations of the MaS in OMACS framework to PNS, And we also presented our the 2nd
-approach that transforms PNS Model into XML file after that we saw the tool PGraph Studio we use it to optimize multi agent system in pns frame work.
-
-% 0200 kmiss
+We have presented in this chapter our approach of transformations of the MaS in OMACS 
+framework to PNS, And we also presented our the second approach that transforms PNS Model into XML file after that we saw the tool PGraph Studio we use it to optimize multi agent system in pns frame work.

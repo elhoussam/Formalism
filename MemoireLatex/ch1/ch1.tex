@@ -4,14 +4,14 @@
 
 \section{Introduction}
 Designing and implementing large, complex, and distributed systems by resorting to autonomous 
-or semi-autonomous agents that can reorganize themselves by  cooperating with one another 
+or semi-autonomous agents that can reorganize themselves by cooperating with one another 
 represent the future of software systems\cite{omacs0}. 
 
 This chapter introduces two framework for building complex, adaptive systems. 
 It is based on the multi-agent systems paradigm and uses the Organization Model for Adaptive 
 Computational Systems (OMACS). 
 And presents a suite of Methodes including the Organization-based Multiagent Systems Engineering 
-(O-MaSE) methodology\cite{omacs4}.
+(O-MaSE) methodology \cite{omacs4}.
 
 
 \section{Motivations to MaS Organization}
@@ -23,7 +23,7 @@ the focus is given to individual agents. With this viewpoint, the designer conce
 their interactions without concerning the global structure of the system\cite{omacs3}.
 
 The global required function of the system is supposed to emerge as a result of the lower level individual
-agents interactions in a bottom-up way Picard et al.  stated that the agent-centered approach takes the agents as the engine  for the system organization\cite{omacs3}.
+agents interactions in a bottom-up way Picard et al. stated that the agent-centered approach takes the agents as the engine for the system organization\cite{omacs3}.
 
 and agent organizations implicitly exist as observable emergent phenomena, which states a unified bottom-up and
 objective global view of the pattern of cooperation between agents. Further, Picard gives the ant colony as an example, where there is no organizational behavior and constraints are explicitly and directly defined inside the ants. The main idea is that the organization is the result of the collective emergent
@@ -38,7 +38,7 @@ Since agents in an organization as well as their individual capabilities may cha
 this function cannot be predefined, but must be computed based on the current state, 
 the goal set, G, and the current policies. In our present research with purely autonomous systems, we have only considered reorganization that involves the state of the organization. 
 
-However, we have defined two distinct types of reorganization: state reorganization, which only allows the modification of the organization state, and structure reorganization, which allows modification  of the organization structure (and may require state reorganization to keep the organization consistent).
+However, we have defined two distinct types of reorganization: state reorganization, which only allows the modification of the organization state, and structure reorganization, which allows modification of the organization structure (and may require state reorganization to keep the organization consistent).
 
 We define the state of the organization as the set of agents, A, the possesses, capable, and potential functions, and the assignment set, $\varphi$. However, not all these components may actually be under the control of the organization. For our purposes, we assume that agents may enter or leave organizations or relationships, but that these actions are triggers that cause reorganizations and are not the result of reorganizations. 
 
@@ -48,7 +48,7 @@ Likewise, possesses (and thus capable and potential as well) is an automatic cal
 Reorganization is the process of changing the assignments of agents to roles to goals as specified
 in $\varphi$ \cite{omacs2}.
 
-The organizations oaf function is used to determine the best new $\varphi$  however, total
+The organizations oaf function is used to determine the best new $\varphi$ however, total
 reorganization may not be necessary or efficient.
 
 
@@ -56,9 +56,9 @@ reorganization may not be necessary or efficient.
 Any change in G may cause reorganization. There are three basic types 
 of events that can cause a change in G: 
 \begin{enumerate}
-\item   insertion of a new goal  
-\item   goal achievement 
-\item   goal failure
+\item insertion of a new goal 
+\item goal achievement 
+\item goal failure
 \end{enumerate}
 
 The first situation deals with new goals being added to G. However, \cite{omacs2}
@@ -71,8 +71,8 @@ The second case deals with goal achievement. When a goal g is achieved, G is cha
 \begin{itemize}
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
 \renewcommand{\labelitemi}{\localtextbulletone}
-\item  removing g from G
-\item  possibly adding new goals
+\item removing g from G
+\item possibly adding new goals
 \end{itemize}	
 
  which are enabled by the achievement of g, into G. Obviously, the agent assigned to achieve goal g is now free to pursue other goals. 
@@ -87,9 +87,9 @@ When agent-goal failure occurs, reorganization must occur to allow the organizat
 \begin{itemize}
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
 \renewcommand{\labelitemi}{\localtextbulletone}
-\item  choose another agent to achieve g
-\item  not pursue g at the current time
-\item  choose another goal to pursue instead of g
+\item choose another agent to achieve g
+\item not pursue g at the current time
+\item choose another goal to pursue instead of g
 \end{itemize}	
  
 In any of these situations, g is not removed from G since it has not been achieved. In the case where the organization or the environment has changed such that a goal g can never be achieved, then goal failure occurs. 
@@ -145,7 +145,7 @@ scenarios \cite{omacs1}:
 \pagebreak
 
 \section{Organization Multi-Agent System Engineering}
-This section introduce the definition of O-MASE framework, and the goal of this framework.   
+This section introduce the definition of O-MASE framework, and the goal of this framework. 
 \subsection{Overview of O-MaSE}
 The Organization-based Multiagent System Engineering (O-MaSE) is a framework that 
  allows designers to create custom agent-oriented development processes. 
@@ -168,7 +168,7 @@ and uses the OPF metamodel, as shown in Figure \ref{fig:O-MaSE Process Framework
 \item
 	Level M1 : contains the definition of O-MaSE in the form of the O-MaSE metamodel, method fragments, and guidelines. 
 \item
-	Level M0  : level for specific projects (a process instance).
+	Level M0 : level for specific projects (a process instance).
 \end{enumerate} 
 
 \begin{figure}[th]
@@ -204,7 +204,7 @@ The APE plug-in is based on the Eclipse Process Framework and provides a process
 \item 
 	extend O-MaSE with new tasks, models, or usage guidelines
 \item
-	create new process instances by composing tasks, models, and producers from the O-MaSE method fragment library  
+	create new process instances by composing tasks, models, and producers from the O-MaSE method fragment library 
 \item
 	 verifying that they meet process guidelines
 \end{enumerate} 
@@ -213,7 +213,7 @@ The APE plug-in is based on the Eclipse Process Framework and provides a process
 We represent in this section the OMACS Framwork, As an Adaptive computational System, Also we cite the main elements of this framework and the relation between these elements.
 \subsection{Overview of OMACS}
 The OMACS is Framework, this model grew from the MaSE metamodel, 
-which was based on the original AGR\footnote{Agent Group Roles}  model\cite{omacs4}.
+which was based on the original AGR\footnote{Agent Group Roles} model\cite{omacs4}.
  
 Noting that agents could be assigned to roles based on the capabilities 
 Required to play various roles and the capabilities possessed by the agents,
@@ -221,7 +221,7 @@ we figured the agents could adapt their assignments based on the current
 
 
 set of goals required to be achieved by the system.
-This basic idea led to the OMACS  model as defined in DeLoach,
+This basic idea led to the OMACS model as defined in DeLoach,
 Oyenan, and Matson (2007) and shown in Figure \ref{fig:OMACS meta-models}\cite{omacs4}.
 
 \begin{figure}[th]
@@ -236,36 +236,36 @@ where :
 \begin{itemize}
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
 \renewcommand{\labelitemi}{\localtextbulletone}
-\item[ G ]  
+\item[ G ] 
 : goals of the organization 
-\item[ R ]  
-: set of roles  defines a set of roles (i.e., positions within an organization whose behavior
+\item[ R ] 
+: set of roles defines a set of roles (i.e., positions within an organization whose behavior
  is expected to achieve a particular goal or set of goals)
-\item[ A ]  
+\item[ A ] 
 : is a set of agents, which can be either human or artificial (hardware or software)
  entities that perceive their environment
-\item[ C ]  
-: set of capabilities  which define the percepts/actions at their disposal. Capabilities can be soft 
+\item[ C ] 
+: set of capabilities which define the percepts/actions at their disposal. Capabilities can be soft 
 (i.e. algorithms or plans) or hard (i.e., hardware related actions)
-\item[  $\varPhi$ ]  
-:  relation over G - R - A defining the current set of agent/role/goal assignments
+\item[ $\varPhi$ ] 
+: relation over G - R - A defining the current set of agent/role/goal assignments
 \item[ P ] 
-:  set of constraints on  $\varPhi$  formally specifies rules that describe how O OMACS may or may not 
+: set of constraints on $\varPhi$ formally specifies rules that describe how O OMACS may or may not 
  behave in particular situations
-\item[ $\sum$ ]  
+\item[ $\sum$ ] 
 : domain model used to specify objects in the environment, their inter-relationships
 %The domain model is a critical component that defines the ontology used to define behavioral policies 
-\item[ achieves ]   
-: function G $\times$ R $\rightarrow$ {[}0..1{]} a function whose arguments are a goal in G   as well
- as a role in R   that generates an output which is a positive real number greater  than or equal to 0 
+\item[ achieves ] 
+: function G $\times$ R $\rightarrow$ {[}0..1{]} a function whose arguments are a goal in G as well
+ as a role in R that generates an output which is a positive real number greater than or equal to 0 
  and less than or equal to 1, defining how effective the behavior
  defined by the role could be in the pursuit of the specified goal(the extent of achievement of a goal by a role)
 \item[requires] 
 : function R $\rightarrow$ P(C) a function that assumes a role in R, thereby yielding a set 
-of capabilities required to play that role  defining the set of capabilities required to play a role 1
+of capabilities required to play that role defining the set of capabilities required to play a role 1
 \item[possesses] 
 : function A $\times$ C $\rightarrow$ {[}0..1{]} a function with an agent in A and a capability in C 
-  as inputs yields a positive real number in the range of [0,1] defining the quality of an agents capability
+ as inputs yields a positive real number in the range of [0,1] defining the quality of an agents capability
 
 
 
@@ -277,7 +277,7 @@ capable and potential.
 \begin{itemize}
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
 \renewcommand{\labelitemi}{\localtextbulletone}
-\item[capable]   
+\item[capable] 
 : function A $\times$ R $\rightarrow$ {[}0..1{]} function whose inputs are an agent in A OMACS
 and a role in R OMACS and generates an output, which is a positive real number greater than or equal to 0 
 and less than or equal to 1
@@ -290,7 +290,7 @@ defining how well an agent can play a role (computed based on requires and posse
 \end{equation}
 
 \item[potential]
-: function A $\times$ R $\times$ G $\rightarrow$ {[}0..1{]}  a function with an agent in A OMACS,
+: function A $\times$ R $\times$ G $\rightarrow$ {[}0..1{]} a function with an agent in A OMACS,
 a role in R, and a goal in G as inputs yields a positive real number in the range of {[}0..1{]}, 
 thus yielding	
 \begin{equation}
@@ -299,7 +299,7 @@ potential(a,r,g)=achieves(r,g)\times capable(a,r) \label{eq:potential equation}
 defining how well an agent can play a role to achieve a goal (computed based on capable and achieves)
 
 \item[ OAF ] 
-: function ( $ \textrm{G} \times \textrm{R}  \times \textrm{A} $ )  $\rightarrow$ {[}0.. $\infty${]} 
+: function ( $ \textrm{G} \times \textrm{R} \times \textrm{A} $ ) $\rightarrow$ {[}0.. $\infty${]} 
 the selection of $\varphi$ from the set of potential assignments is defined by the organizations reorganization function,
  oaf, that assumes a set of assignments in $\varphi$,
 thereby yielding a positive real number in the range of {[}0.. $\infty${]}
@@ -313,7 +313,7 @@ OAF=\sum_{(a,r,g)\in\varPhi}potential(a,r,g)\label{eq:oaf equation}
 
 \subsection{Main Element of OMACS}
 
-The first eight elements in the organization tuple defined above G, R, A, C, $\varPhi$, P, $\sum$ and oaf  constitute the main elements of the OMACS model as depicted in Figure \ref{fig:OMACS meta-models}.
+The first eight elements in the organization tuple defined above G, R, A, C, $\varPhi$, P, $\sum$ and oaf constitute the main elements of the OMACS model as depicted in Figure \ref{fig:OMACS meta-models}.
 
 \subsubsection{Goals}
 
@@ -343,7 +343,7 @@ particular goal or set of goals \cite{omacs2}.
 
 Thus, each role defines a set of responsibilities. Roles are
 analogous to roles played by actors in a play or by members of a typical corporate structure. A
-typical corporation has roles such as  president,  vice-president, and  mail clerk.  
+typical corporation has roles such as president, vice-president, and mail clerk. 
 
 Each role has specific responsibilities, rights and relationships defined in order to help the corporation
 perform various functions towards achieving its overall goal. 
@@ -352,7 +352,7 @@ Specific people (agents) are assigned to fill those roles and carry out the role
 relationships defined for that role \cite{omacs2}.
 
 OMACS roles consist of a name and a role capability function, rcf. Each role, r $\in$ R, is a tuple
-\textlangle{} name, rcf\footnote{the same capable function} \textrangle{}  where A $\times$ R $\rightarrow$ {[}0..1{]} .
+\textlangle{} name, rcf\footnote{the same capable function} \textrangle{} where A $\times$ R $\rightarrow$ {[}0..1{]} .
 
 
 The rcf is defined at design time for each role and computed in terms of 
@@ -432,11 +432,11 @@ environment, and effectors, which allow the agent to act upon a real world envir
 \end{equation}
 
 
-\subsubsection{The Tuple  $\varphi$} 
-An assignment set $\varphi$ is the set of agent-role-goal tuples  \textlangle{} a,r,g \textrangle{}, that indicate that agent a has been as-signed to play role r in order to achieve goal g \cite{omacs4}.
+\subsubsection{The Tuple $\varphi$} 
+An assignment set $\varphi$ is the set of agent-role-goal tuples \textlangle{} a,r,g \textrangle{}, that indicate that agent a has been as-signed to play role r in order to achieve goal g \cite{omacs4}.
 
 $\varphi$ is a subset of all the potential assignments of agents to play roles to achieve goals. This set of potential assignments is captured by the potential function (see Equation \ref{eq:potential equation}), which maps each agent-role-goal tuple to a real value ranging from 0 to 1 representing the ability of an agent to play a role in order to achieve a specific goal.
-	  
+	 
 If \textlangle a,r,g \textrangle $\in \varphi$, then agent a has been assigned by the organization to play role r in order to achieve goal g \cite{omacs4}.
 
 The only inherent constraints on $\varphi$ is that it must contain only assignments whose potential value is greater than zero (Equation \ref{eq:TuplePhi1}) and that only one agent may be assigned to achieve a goal at a time (Equation \ref{eq:TuplePhi2})		
@@ -455,12 +455,12 @@ The only inherent constraints on $\varphi$ is that it must contain only assignme
  
 
 \subsubsection{OAF}
-In order to select the best set of assignments to maximize an organizations ability to achieve its goals, OMACS defines an organizational assignment function, or oaf, which is a function over the current assignment set, oaf: $\varphi$ $\rightarrow$ 0..$\infty$. As with the rcf, the selection of assignments may be application specific  \cite{omacs4}.
+In order to select the best set of assignments to maximize an organizations ability to achieve its goals, OMACS defines an organizational assignment function, or oaf, which is a function over the current assignment set, oaf: $\varphi$ $\rightarrow$ 0..$\infty$. As with the rcf, the selection of assignments may be application specific \cite{omacs4}.
 	
 Thus, each organization has its own application specific organization assignment function, oaf, which computes the goodness of the organization based on $\varphi$. 
 	
-As with the rcf, we can define a default  oaf, which is simply the sum of the potential scores in the current assignment set $\varphi$.
-                     
+As with the rcf, we can define a default oaf, which is simply the sum of the potential scores in the current assignment set $\varphi$.
+ 
  
 \subsubsection{Domain Model} 
 
@@ -482,13 +482,13 @@ There are three major relations/functions and two derived functions between the 
 \subsubsection{The Achieves}
 function (although somewhat confusingly named) actually defines how effective an agent could be while playing that role in the pursuit of a specific goal. For instance, if one role requires more resources or better capabilities, it can use a different approach and thus yield better results than a second role that requires fewer resources or capabilities \cite{omacs4}.
 
-Providing two different roles to achieve the same goal  may provide the organization flexibility in deciding how to actually achieve a given goal.
+Providing two different roles to achieve the same goal may provide the organization flexibility in deciding how to actually achieve a given goal.
 
 The value of achieves can be predefined by the organization designer or learned before or during system operation (Odell, Nodine \& Levy, 2005). Thus, the OMACS achieves function formally captures the effective-ness of a role in achieving a specific goal by defining a total function from the R $\times$ G to a real value in the range of 0 to 1, achieves: G $\times$ R $\rightarrow$ {[}0..1{]}.
  
 Thus, by definition, a role that cannot be used to achieve a particular goal must have an achieves value of 0, while a role that can achieve a goal would have an achieves value greater than zero\cite{omacs4}.
 
-Figure \ref{fig:The Achivement Relation} represent the Relation between Role and Goal  
+Figure \ref{fig:The Achivement Relation} represent the Relation between Role and Goal 
 \begin{figure}[th]
 	\centering
 		\includegraphics[scale=0.5]{ch1/img/RelAchieve}
@@ -501,7 +501,7 @@ Figure \ref{fig:The Achivement Relation} represent the Relation between Role and
 In order to perform a particular role, agents must possess a sufficient set of capabilities that allow
 the agent to carry out the role and achieve its assigned goals \cite{omacs2}.
 
-For instance, to play the  president role,
+For instance, to play the president role,
  a person would be expected to have knowledge of the corporations domain, experience in
 lower-level jobs in similar types of companies, and experience in managing people and resources 
 an artificial organization is no different. 
@@ -537,7 +537,7 @@ and this Relation represented in the next Figure \ref{fig:Possesses Relation}
 \subsubsection{Capable}
 Using the capabilities required by a particular role and capabilities possessed by a given agent, we can compute the ability of an agent to play a given role, which we capture in the capable function. The capable function returns a value from 0 to 1 based on how well a given agent may play a specific role, capable: A $\times$ R $\rightarrow$ {[}0..1{]}\cite{omacs2}.
 
-Since the capability of an agent, a, to play a specific role  r, application and role specific, OMACS provides the rcf defined in the previous section that controls how this value is computed. Thus, the capable score of an agent playing a particular role is defined via the designer defined rcf of each role.
+Since the capability of an agent, a, to play a specific role r, application and role specific, OMACS provides the rcf defined in the previous section that controls how this value is computed. Thus, the capable score of an agent playing a particular role is defined via the designer defined rcf of each role.
 
 \begin{equation}
 \forall a:A\textrm{ r:R}capable(a,r)=r.rcf(a)\label{eq:Funccapable}
@@ -555,8 +555,8 @@ in such a way that agents cooperate toward achieving some top-level goal.
 Intuitively, this mechanism should provide a way to assign the best agents 
 to play the best roles in order to achieve these goals. 
 
-Thus, OMACS has defined  a potential function that captures the ability of an agent 
-to play a role in order  to achieve a specific goal\cite{omacs2}.
+Thus, OMACS has defined a potential function that captures the ability of an agent 
+to play a role in order to achieve a specific goal\cite{omacs2}.
 
 \begin{figure}[th]
 	\centering
@@ -570,7 +570,7 @@ potential: A $\times$ R $\times$ G $\rightarrow$ [0..1]\cite{omacs4}.
 
 Here, a 0 indicates that the agent-role-goal tuple cannot be
 used to achieve the goal while a non-zero value indicates how well an agent can play
-a specific role in order to achieve a goal.  
+a specific role in order to achieve a goal. 
 
 The potential of agent a to play role r 
 to achieve goal g is defined by combining the capable and achieves functions\cite{omacs4}.
@@ -582,20 +582,10 @@ to achieve goal g is defined by combining the capable and achieves functions\cit
 and we depend on the common capabilities between the Agent and the Role Entities to Create a relation in this \ref{fig:Capable Of playing Relation} 
 
 
-  
+ 
 
 %this section should you read it more and reOrgnize \section{Conclusion}
 
 \section{Conclusion}
-This chapter describes how to design adaptive multiagent
-systems using an organizational model, which defines the
-entities and relationships of a typical organization.
-
-The major elements of the model consist of goals, roles, agents,
-capabilities, and the relationships between them. By
-designing a system using the model, and we focus on OMACS framework
-because it handeling reorganization system more then other framework.
-
-
-
-% 0200 kmiss
+This chapter describes how to design adaptive multi agent systems using an organizational model, which defines the entities and relationships of a typical organization. 
+The major elements of the model consist of goals, roles, agents, capabilities, and the relationships between them. By designing a system using the model, and we focus on OMACS framework because it handling reorganization system more then other framework.

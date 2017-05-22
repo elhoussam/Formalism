@@ -1,7 +1,7 @@
 \chapter{\label{cha: Graph Transformation}Model to Model Transformation}
 
 \section{Introduction}
-In this chapter, illustrate the Level of modilisation, and we cite the model-to-model transformation, specifically the definition of graph transfomation type, and finaly how to implement the graph transformation in the AToM3 tool.
+In this chapter, illustrate the Level of modelisation, and we cite the model-to-model transformation, specifically the definition of graph transformation type, and finally how to implement the graph transformation in the AToM3 tool.
 
 \section{Levels of Modilisation}
 
@@ -20,12 +20,12 @@ current. The responses provided by the model should be the same as those propose
 
 meta-model is a model of a modeling language. The term "meta" means above.
 
-A meta-model  a language of Modeling at a higher level of abstraction than the modeling language itself\cite{ch3-applied}.
+A meta-model a language of Modeling at a higher level of abstraction than the modeling language itself\cite{ch3-applied}.
 
 
 Meta-Modelling, which is the process of modelling formalisms. 
 Formalisms are described as models described in meta-formalisms. 
-The latter are nothing  but expressive enough formalisms, such as Entity Relationship diagrams (ER) or UML class diagrams.
+The latter are nothing but expressive enough formalisms, such as Entity Relationship diagrams (ER) or UML class diagrams.
 
 A model of a meta-formalism is called a meta-meta-model, a model of a formalism is called a meta-model\cite{ch3-meta2}.
 
@@ -61,7 +61,7 @@ For Ability to interpret a meta-model requires a description of the language in 
 It is written: a meta-model for meta-models. 
 It is, of course, Meta-model by the term meta-meta-model. 
 
-To limit the  Number of levels of abstraction, the meta-meta-model 
+To limit the Number of levels of abstraction, the meta-meta-model 
 must have the ability to describe itself, even. 
  
 
@@ -80,7 +80,7 @@ the syntax and semantic of modilisation language, is devloped by OMG\cite{ch3-do
 
 \section{Model Transformation}
 Transformation is a fundamental theme in computer science and software engineering. After all, computation can be viewed as data transformation. Computing with basic data such as numeric values
-and with data structures such as lists and trees is at the heart of programming. Type systems in programming languages help ensure that operations are applied compatibly to the data. However, when the subject of a transformation approach is metadata, i.e., data representing software artifacts such as data schemas, programs, interfaces, and models, then we enter the realm of metaprogramming writing programs called metaprograms that write or manipulate other programs. One of the key challenges in this realm is that metaprograms have to respect the rich semantics of the metadata upon which they operate \cite{ch3model}. 
+and with data structures such as lists and trees is at the heart of programming. Type systems in programming languages help ensure that operations are applied compatibly to the data \cite{ch3model}. 
 
 
 \subsection{Transformation Categories}
@@ -103,7 +103,7 @@ Janus Transformation Language (JTL) is a bidirectional model transformation lang
 \subsubsection{ETL :}
 Epsilon family (Kolovos et al., 2006) is a model management platform that provides transformation languages for model-to-model, model-to-text, update-in-place, migration and model merging transformations\cite{ch3lang}.
 
-\subsubsection{Kermeta :}  
+\subsubsection{Kermeta :} 
 The Kermeta language was initiated by Franck Fleurey in 2005 , The Kermeta language borrows concepts from languages such as MOF, OCL and QVT\cite{ch3lang}.
 
 \subsubsection{QVT :} 
@@ -112,7 +112,7 @@ The OMG has defined a standard for expressing M2M transformations, called MOF/QV
 \subsubsection{MOFScript :} 
 The MOFScript includes tools and frameworks for supporting model to text transformations, e.g., to support generation of implementation code or documentation from models\cite{ch3lang}.
 
-
+\pagebreak
 
 
 \section{Concept of Graph Transformation} 
@@ -120,6 +120,7 @@ The process of graph transformation consists in the iterative application of
 Rule to a graph. Each rule application replaces a part of the graph, As defined in the rule. 
 The mechanics of the graph transformation works as follows : 
 
+\vspace{1cm}
 \begin{algorithm}
 \SetAlgoLined
 
@@ -133,28 +134,33 @@ Graph from G , i : integer represent the priority of Rule ;
  		\eIf{ not \textbf{subG}.isDoneWith(\textbf{R}) }{
 			\textbf{R}.ApplyOn(\textbf{subG}) \linebreak
 			\textbf{subG}.markAsDoneWith(\textbf{R})\linebreak
-			print "We Applied Rule R on the subGraph subG"  
+			print "We Applied Rule R on the subGraph subG" 
 		}{
 			print "This rule is applied before that on the same sub graph" 
 		}
  	}
  	\textbf{i} = \textbf{i} + 1 \;
 }
-  
+ 
  \caption{application of graph transformation}
 \end{algorithm}
 
+\vspace{0.5cm}
  
 This operation is based on a A set of rules respecting a particular 
 syntax, called the grammar model of Graph.
 Before starting apply rules we execute initial action, 
 its prepare the envirenement to apply these rules
 and ending with Final Action, it about cleaning the after these rules\cite{ch3-bid, ch3-spec}.
+
+
+\vspace{0.5cm}
 \begin{figure}[th]
 	\centering
 		\includegraphics[scale=0.52]{ch3/img/transGrammar}
 	\caption{\label{fig:Cycle of Tranformation}Cycle of Transformation\cite{ch3-img}}
 \end{figure} 
+
 \pagebreak
 \section{Graph Grammar} 
 Every Graph Grammer contain a set of rules to use in graph transformation
@@ -166,7 +172,7 @@ R = (LHS, RHS, K, glue, emb, cond).
 \item LHS graph of left part.
 \item RHS graph of right part.
 \item A subgraph K of LHS.
-\item A glue occurrence of K in RHS that connects the subgraph with the part graph  right.
+\item A glue occurrence of K in RHS that connects the subgraph with the part graph right.
 \item An embedding relation emb which connects the vertices of the graph on the left-hand side
 And those of the graph on the right-hand side.
 \item A set cond which indicates the conditions of application of the rule
@@ -182,7 +188,7 @@ Result a graph H according to the following five steps
 \end{figure} 
 
 \begin{enumerate}
-\item  Choose an instance of the left-hand LHS graph in G.
+\item Choose an instance of the left-hand LHS graph in G.
 \item Check the conditions of application according to Cond.
 \item Remove the occurrence of LHS (up to K) from G and the hanging arcs (all
 Arcs having lost their sources and / or their destinations). This provides the graph of
@@ -206,10 +212,10 @@ And the vertex v2 provided that (v1, v2 ) belongs to emb.
 
 We define a graph transformation system as a rewriting system
 Of graph that applies the rules of the graph grammar on its initial graph of
-Iteratively by the Engine, until no more rules are applicable\cite{ch3-doc2,  ch3-doc}.
+Iteratively by the Engine, until no more rules are applicable\cite{ch3-doc2, ch3-doc}.
 
 \begin{enumerate}
-\item Define the  source and target Meta-Model 
+\item Define the source and target Meta-Model 
 \item Create the the source model according to the source Meta-Model 
 \item Define transformation rules to Transform from source model into target model 
 \end{enumerate} 
@@ -228,7 +234,7 @@ Multi-paradigm model developed in the MSDL (Modeling, Simulation and
 Design Lab) of the Computer Science Institute at McGill University Montreal, Canada\cite{Siteatom, ch3-atom3}.
 
 It is Developed with the Python language in collaboration with Professor Juan de Lara de
-The Autonomous University of Madrid (UAM), Spain  
+The Autonomous University of Madrid (UAM), Spain 
 AToM3 is developed to satisfy two main features that are 
 \begin{enumerate}
 	\item Meta-modeling 
@@ -253,8 +259,8 @@ Grammar of graphs\cite{ch3-meta2}.
 \end{figure} 
 \vspace{1cm}
 \subsection{Classes in AToM3}
-In this work we use ClassDiagramm Formalism to create  our Formalism 
-or Meta-Model is built in the tool so we can load it and use  it\cite{ch3-meta2}.
+In this work we use ClassDiagramm Formalism to create our Formalism 
+or Meta-Model is built in the tool so we can load it and use it\cite{ch3-meta2}.
 In AToM3 the meta-models can be constructed from Classes and
 Relationships.
 
@@ -264,12 +270,12 @@ The description of classes and association relations consists of
 \begin{itemize}
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
 \renewcommand{\labelitemi}{\localtextbulletone}
-\item  Name
-\item  Attributes
-\item  Constraints
-\item  Action
-\item  Cardinalities
-\item  Appearance
+\item Name
+\item Attributes
+\item Constraints
+\item Action
+\item Cardinalities
+\item Appearance
 \end{itemize}
 \end{minipage} \hfill
 \begin{minipage}{0.45\textwidth}
@@ -289,8 +295,8 @@ They have the following properties:
 \begin{itemize}
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
 \renewcommand{\labelitemi}{\localtextbulletone}
-\item  constraint name
-\item  triggering event  like Drag, Move, Select ..
+\item constraint name
+\item triggering event like Drag, Move, Select ..
 and launch this event before (pre-condition) or after (post-condition)
  
 \end{itemize}
@@ -348,10 +354,11 @@ In AToM3, grammar is characterized by
 	\includegraphics[scale=0.5]{ch3/img/GraphGrammar}
 	\caption{\label{fig:Graph Grammar Window}Graph Grammar Window}
 \end{figure}
-\end{minipage}
+\end{minipage} 
+\linebreak
 
 Each rule consists of: 
-A specific name for the rule, and priority indicator the order in which the rule is applied, and LHS \footnote{LHS:Left Hand Side}:which is a graph, RHS\footnote{RHS:Right Hand Side}:that can be a graph and the condition  that must be checked before the rule is Applied, finally  An action (a Pyton code) that must be executed after the rule is
+A specific name for the rule, and priority indicator the order in which the rule is applied, and LHS \footnote{LHS:Left Hand Side}:which is a graph, RHS\footnote{RHS:Right Hand Side}:that can be a graph and the condition that must be checked before the rule is Applied, finally An action (a Pyton code) that must be executed after the rule is
 Applied
 
 \begin{figure}[th]
@@ -361,9 +368,7 @@ Applied
 \end{figure} 
 
 \section{Conclusion}
-we present in this portions of our document, the diferente type of transformation approach 
-and we focus on graph transformation approach, then we cite the tool i will use in the next chapter to implement 
-our approach of transformation.
+we present in this portion of our document, the different type of transformation approach and we focus on graph transformation approach, then we cite the tool i will use in the next chapter to implement our approach of transformation.
 
 % 0200 kmiss
  

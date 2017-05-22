@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: start/firstpage.aux
+A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: ch1/ch1.aux
+A level-1 auxiliary file: ch2/ch2.aux
+A level-1 auxiliary file: ch3/ch3.aux
+A level-1 auxiliary file: ch4/ch4.aux
+A level-1 auxiliary file: conclusion.aux
+The style file: ieeetr.bst
+Database file #1: b.bib
+Warning--can't use both volume and number fields in ch3catego
+Warning--can't use both author and editor fields in ch3-img
+Warning--empty publisher in ch3-img
+You've used 32 entries,
+            1876 wiz_defined-function locations,
+            664 strings with 8633 characters,
+and the built_in function-call counts, 8477 in all, are:
+= -- 870
+> -- 296
+< -- 0
++ -- 113
+- -- 81
+* -- 583
+:= -- 1172
+add.period$ -- 37
+call.type$ -- 32
+change.case$ -- 27
+chr.to.int$ -- 0
+cite$ -- 35
+duplicate$ -- 439
+empty$ -- 823
+format.name$ -- 81
+if$ -- 2075
+int.to.chr$ -- 0
+int.to.str$ -- 32
+missing$ -- 28
+newline$ -- 106
+num.names$ -- 30
+pop$ -- 113
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 295
+stack$ -- 0
+substring$ -- 590
+swap$ -- 177
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 3
+while$ -- 90
+width$ -- 34
+write$ -- 314
+(There were 3 warnings)
