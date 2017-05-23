@@ -1,11 +1,6 @@
 \documentclass[12pt,oneside,english]{book} 
 \usepackage[T1]{fontenc}
- 
-\usepackage[arabic,french]{babel}
-\usepackage{mathptmx}
-\usepackage[T1,LFE,LAE,LFE,LAE]{fontenc}
-\usepackage[cp1256,latin9]{inputenc}
- 
+
 % new Lib
 \usepackage{algorithm} 
 \usepackage{algorithmic}  
@@ -14,14 +9,16 @@
 \usepackage[algo2e]{algorithm2e} 
 \usepackage[Sonny]{fncychap}
 \usepackage{float}
-\usepackage{wrapfig}   
-\usepackage[colorlinks,hyperindex,bookmarks,linkcolor=black,citecolor=blue,urlcolor=black{hyperref}
+\usepackage{wrapfig}  
+\usepackage{babel}
+%%\usepackage[colorlinks,hyperindex,bookmarks,linkcolor=black,citecolor=blue,urlcolor=black{hyperref}
 \usepackage[latin9]{inputenc}
 \usepackage{amsmath} 
 \usepackage{lscape}
 \usepackage{pdflscape}
 \usepackage{wasysym}
 % end new lib
+ 
 
 \usepackage{listings}
 \usepackage[a4paper]{geometry}
@@ -110,9 +107,8 @@
 \pagenumbering{alph}
 
 
-%\include{header/dedicat}
-
-%\include{Header/Thank}
+\include{start/thanks}
+ 
 
 \frontmatter
 \pagestyle{plain}
@@ -138,7 +134,6 @@
 
 \mainmatter
 
-\include{start/abst} 
  
 \include{introduction}
 
@@ -148,11 +143,11 @@
 \renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
 
 %\include{test}
-%\include{ch1/ch1} %Fix Images Done
-%\include{ch2/ch2} % Fix Images Done 
-%\include{ch3/ch3}
-%\include{ch4/ch4}
-%\include{conclusion}
+\include{ch1/ch1} %Fix Images Done
+\include{ch2/ch2} % Fix Images Done 
+\include{ch3/ch3}
+\include{ch4/ch4}
+\include{conclusion}
 
 \backmatter
 \pagestyle{plain}
