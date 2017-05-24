@@ -22,12 +22,13 @@ system goals. There are two viewpoints of MAS engineering, the first one is the 
 the focus is given to individual agents. With this viewpoint, the designer concerns the local behaviors of agents and also
 their interactions without concerning the global structure of the system\cite{omacs3}.
 
-The global required function of the system is supposed to emerge as a result of the lower level individual
-agents interactions in a bottom-up way Picard et al. stated that the agent-centered approach takes the agents as the engine for the system organization\cite{omacs3}.
-
-and agent organizations implicitly exist as observable emergent phenomena, which states a unified bottom-up and
-objective global view of the pattern of cooperation between agents. Further, Picard gives the ant colony as an example, where there is no organizational behavior and constraints are explicitly and directly defined inside the ants. The main idea is that the organization is the result of the collective emergent
-behavior due to how agents act their individual behaviors and interact in a common shared and dynamic environment\cite{omacs3}.
+The second viewpoint of MAS engineering is what is called
+organization-centered MAS (OCMAS) in which the structure
+of the system is given a bigger attention through the explicit
+abstraction of agent organization\cite{omacs3}.the
+designer designs the entire organization and coordination
+patterns on the one hand, and the agents local behaviors on
+the other hand.
 
 \subsection{Organization}
 Each organization has an implicitly defined organization transition function 
@@ -35,8 +36,7 @@ that describes how the organization may transition from one organizational state
 to another over the lifetime of the organization\cite{omacs2}.
 	
 Since agents in an organization as well as their individual capabilities may change over time, 
-this function cannot be predefined, but must be computed based on the current state, 
-the goal set, G, and the current policies. In our present research with purely autonomous systems, we have only considered reorganization that involves the state of the organization. 
+this function cannot be predefined, but must be computed based on the current state, the goal set, G, and the current policies.
 
 However, we have defined two distinct types of reorganization: state reorganization, which only allows the modification of the organization state, and structure reorganization, which allows modification of the organization structure (and may require state reorganization to keep the organization consistent).
 
@@ -371,7 +371,7 @@ essentially taking the average of all the required possesses values (possesses(a
 \subsubsection{Agents}
 
 OMACS also includes a set of heterogeneous agents (A) in each organization. 
-As described by Russell and Norvig, an agent is an entity that perceives and can perform actions upon its
+As described, an agent is an entity that perceives and can perform actions upon its
 environment, which includes humans as well as artificial (hardware or software) entities \cite{omacs2}.
 
 For our purposes, we define agents as computational systems that inhabit some complex dynamic
@@ -484,7 +484,7 @@ function (although somewhat confusingly named) actually defines how effective an
 
 Providing two different roles to achieve the same goal may provide the organization flexibility in deciding how to actually achieve a given goal.
 
-The value of achieves can be predefined by the organization designer or learned before or during system operation (Odell, Nodine \& Levy, 2005). Thus, the OMACS achieves function formally captures the effective-ness of a role in achieving a specific goal by defining a total function from the R $\times$ G to a real value in the range of 0 to 1, achieves: G $\times$ R $\rightarrow$ {[}0..1{]}.
+The value of achieves can be predefined by the organization designer or learned before or during system operation. Thus, the OMACS achieves function formally captures the effectiveness of a role in achieving a specific goal by defining a total function from the R $\times$ G to a real value in the range of 0 to 1, achieves: G $\times$ R $\rightarrow$ {[}0..1{]}.
  
 Thus, by definition, a role that cannot be used to achieve a particular goal must have an achieves value of 0, while a role that can achieve a goal would have an achieves value greater than zero\cite{omacs4}.
 
@@ -582,10 +582,6 @@ to achieve goal g is defined by combining the capable and achieves functions\cit
 and we depend on the common capabilities between the Agent and the Role Entities to Create a relation in this \ref{fig:Capable Of playing Relation} 
 
 
- 
-
-%this section should you read it more and reOrgnize \section{Conclusion}
-
 \section{Conclusion}
-This chapter describes how to design adaptive multi agent systems using an organizational model, which defines the entities and relationships of a typical organization. 
+This chapter introduces the main concept of omacs, it defines the entities and relationships of a typical organization. 
 The major elements of the model consist of goals, roles, agents, capabilities, and the relationships between them. By designing a system using the model, and we focus on OMACS framework because it handling reorganization system more then other framework.

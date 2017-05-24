@@ -6,7 +6,7 @@ approach of transformation from OMACS to PNS, then the second approach to transf
 PNS model into XML code, ending with import the XML code, to use it in the second tools.
 
 \section{Transformation Approach (OMACS To PNS)\label{sec:OMACS into PNS} }% Our Work
-To Transform OMACS Model into PNS Model, we start to :
+To Transform OMACS Model into PNS Model :
 \begin{enumerate}
 \item Define OMACS Meta-Model 
 \item Define PNS Meta-Model
@@ -15,7 +15,7 @@ To Transform OMACS Model into PNS Model, we start to :
 
 
 \subsection{OMACS} 
-This section describe the work on the OMACS framework, you will see the Meta-Model of OMACS in the tools and example. 
+This section describe our work depending on the OMACS framework, will see the Meta-Model of OMACS in the tools and some example. 
 \subsubsection{Meta Model of OMACS}
 \vspace{0.5cm}
 To define OMACS meta model, we first load the Class Diagramm Formalism, to be able to create, manipulate our Meta-Model,
@@ -25,9 +25,9 @@ The OMACS Meta-Model contain a set of classes:
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
 \renewcommand{\labelitemi}{\localtextbulletone}
 	\item Agent : represent a node in the graph of MaS, and we assign the Role for this Agent (Node) to play 
-	\item Capabilities : its node in the MaS, this Entitie represent the skills Which owns by an agent
+	\item Capabilities : it is a node in the MaS, this Entitie represent the skills Which are owned by an agent
 	\item Role : represented by a node in the graph, this is the work we assign for the agent 
-	\item Goal : it is also a node, we assign role for an agent depending common capabilites between an agent and role in order to achieve this goal
+	\item Goal : it is also a node, we can achieve it by playing a role.
 \end{itemize}
  
 \begin{figure}[th]
@@ -36,12 +36,11 @@ The OMACS Meta-Model contain a set of classes:
 	\caption{\label{fig:OMACS Meta-Model}OMACS Meta-Model}
 \end{figure} 
 \vspace{0.9cm}
-figure \ref{fig:OMACS Meta-Model} illustrate OMACS Meta-Model contain 4 classes (Agent, Capabilities, Role, Goal) 
+figure \ref{fig:OMACS Meta-Model} illustrate OMACS Meta-Model,  it contain 4 classes (Agent, Capabilities, Role, Goal) 
 and 4 relation (Possess, Require, CapableOf, Achieve). 
 The Attribute Name in the classes represent the name of current node ,
 and the rate attribute in the relation between classes represent the relation percentage between two node or entities.
 
-For example between an Agent and Capabilities its means how mush this Agent possese this capibilites
 \pagebreak
 \subsubsection{Example of OMACS}
 
@@ -58,17 +57,17 @@ We assing 2 capabilites (C1, C2) for the Agent A1, and from other angle we se th
 
 \subsection{PNS} 
 
-In this section we ilustrate and describe the work on the PNS framework, which is the Meta-Model of PNS in the tools and example. 
+In this section we ilustrate our work on the PNS framework, which is the Meta-Model of PNS in the tools and example. 
 \subsubsection{Meta Model of PNS}
-To define PNS meta model, we first load the Class Diagramm Formalism, and it is contain 4 classes and 4 Relation : 
+To define PNS meta model, we first load the Class Diagramm Formalism, and it is contain four classes  : 
 \begin{itemize}
 
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
 \renewcommand{\labelitemi}{\localtextbulletone}
-	\item Raw Material : its node in the graph of PNS, represent the initial material, and this node does not have any input edges 
-	\item Intermediate Material : its node in the graph, represent a material in the system
+	\item Raw Material : it is a node in the graph of PNS, it  represent the initial material, and this node does not have any input edges 
+	\item Intermediate Material : it is a node in the graph, represent a material in the system
 	\item Final Product : it is also a node in the graph, represent the desire material 
-	\item Operating Unit : it is other node type in the graph ,represent the task or operating, it is consume the input material and produce the output material 
+	\item Operating Unit : it an other node type in the graph ,represent the task or operating, it is consume the input material and produce the output material 
 \end{itemize}
 \pagebreak
 \begin{figure}[th] 
@@ -114,7 +113,7 @@ The AToM3 Tools generate a formalism from the meta model we created before, load
 	\caption{\label{fig:PNS Model}Formalism of PNS}
 \end{figure} 
 
-the figure \ref{fig:PNS Model} represent system de production contain 2 raw material and one intermediate material, final product and 3 operating unit.
+the figure \ref{fig:PNS Model} represent production system contain 2 raw material and one intermediate material, final product and 3 operating unit.
 
 
 
@@ -158,10 +157,10 @@ Rules for transforming nodes or links into materials or operating units.
 Rules to links generated materials and operating units.
 
 \paragraph{\emph{4)~Cleaning Categorie:} } 
-Rules to cleaning unnecessary entities from the result .
+Rules to clean unnecessary entities from the result.
 
 
-Our approach contain 20 rules, we cite the most important transformation rules into the following steps : 
+Our approach contain 20 rules, we will cite the most important  rules  : 
 
 
 \paragraph{\emph{1)~Agent2RoleLink1 : Create the direct link between the Agent and the Role (order 1) :} } 
@@ -322,7 +321,7 @@ how to link the auxiliary part with right goal.
 \end{figure}
 \pagebreak
 \paragraph{\emph{8.1)~Condition for rule link between AUX part and Material Goal } : }
-Here we check if we did not visited before and the name of Auxiliary Part end with goal name to link it with the right goal material, the rule in figure \ref{fig:link between auxiliary part and goal}.
+This condition test if this sub graph in \ref{fig:link between auxiliary part and goal} visited before or not.
  
 \vspace{1cm}
  
@@ -337,7 +336,7 @@ Here we check if we did not visited before and the name of Auxiliary Part end wi
 \paragraph{\emph{9)~ CreatLinkRaw2AR : Create link to consume the raw material by operating unit (order 20) :} }
  
  
-This Figure \ref{fig:consume the raw material by operating unit} illustrate this rule, and it about how to create an arc between 
+The rule in figure \ref{fig:consume the raw material by operating unit} illustrate how to create an arc between 
 the raw material was generated from an agent and the operating unit.
 
 \begin{figure}[th]
@@ -354,7 +353,7 @@ the raw material was generated from an agent and the operating unit.
 
 
 \subsection{Case study}
-we represent, in this section two examples, and examine the graph transformation process was developed in last section.
+we represent, in this section two examples, and examine the graph transformation process that was proposed previously in last section.
 \subsubsection{Simple multi Agent System }
 This example represents a very simple system composed of two agent and 3 capabilities, 2 role and 2 goals.
  Figure \ref{fig:Example 1 Multi Agent System } illustrates this example :
@@ -411,8 +410,8 @@ This example represents a complex system composed of 3 agent and 4 capabilities,
 	\item Agent A1 capable of playing all roles in this system, so he can achieve all goal in the system
 \end{itemize}
 \vspace{0.7cm}
-after the Transformation of Multi agent system from OMACS framework into PNS framework, we obtain the model is represented in figure \ref{fig:Complex Multi Agent System After transforamtion} 
-and next table represent the value of the edges in the last model 
+after the Transformation of Multi agent system from OMACS framework into PNS framework, we obtain the model represented in figure \ref{fig:Complex Multi Agent System After transforamtion} 
+and the table \ref{Value of PNS Model} represent the value of the edges in the last model 
 
  % Please add the following required packages to your document preamble:
 % \usepackage{booktabs}
@@ -470,12 +469,11 @@ A3R2                    & A3                      & \begin{tabular}[c]{@{}c@{}}A
 %
 %
 \section{Transformation Approach (PNS To XML file)\label{sec:xml} }
-In Section \ref{sec:OMACS into PNS} we presented our transformation approach That allows 
-to transform the OMACS to PNS.
+In Section \ref{sec:OMACS into PNS} we presented our transformation approach That allows us to transform the OMACS to PNS.
 
-The purpose of this transformation is the Optimization and for this we
-Proposed Another processing approach That transforms PNS to XML 
-files, to find the optimum structure.
+The purpose of this transformation is the Optimization and for this we proposed another approach That transforms PNS to XML 
+files, and use other tool called PGraph Studio take the xml file was generated from our approach and find the optimum structure.
+
 \subsection{ Graph Grammar }
 this grammar is Composed of three parts: 
 before we start, i want to description the most important tags in this xml format :
@@ -483,7 +481,7 @@ before we start, i want to description the most important tags in this xml forma
 
 \newcommand{\localtextbulletone}{\textcolor{gray}{\raisebox{.45ex}{\rule{.6ex}{.6ex}}}}
 \renewcommand{\labelitemi}{\localtextbulletone}
-\item PGraph : this is the root tag contain all the next tags
+\item PGraph : this is the root tag that contain all the next tags
 \item Materials : This tag contain all the material tags from any kind (raw, intermediate, final)
 \item OperatingUnits : This tag contain all Operating units
 \item Edges : contain all edges between all nodes in the graph
@@ -506,12 +504,12 @@ Global variables used. They are used to meet various needs. in Figure \ref{fig:C
 \begin{itemize}
 \item \textbf{ Set of Rules : } 
  
-Our grammar graphs Consists of ten rules. Each
+Our graphs grammar Consists of ten rules. Each
 rule is Characterized by a name and an execution priority. 
 
 \end{itemize}
 We cite here The Most important rules: 
-\paragraph{\emph{1)~Transform RawMaterial into XML code :} }
+\paragraph{\emph{1)~ VisitRaw : Transform RawMaterial into XML code :} }
 This rule (Figure \ref{fig:Raw Material into Xml}) it is the first rule applied on the Model. To transforms the place to a XML
 tags.
 \begin{figure}[th]
@@ -544,11 +542,8 @@ The rule is applied, its Action Allows to create a XML code and mark the object 
  	\includegraphics[scale=0.38]{ch3/img/xact1}
 	\caption{\label{fig:Action of Raw Material for Transfromation}Action of Raw Material for Transfromation}
 \end{figure} 
-First line we import MyFunction is external file, Python code 
-to be easy to manipulate and this is the function to add new material (raw ,
-intermadiate, final ) 
-and for the operating unit is the same function
- 
+In the first line of the previous action we import external file 'MyFunction', this file contain the functions to add new node (material, product, operatingunit) to the graph.
+
 \begin{lstlisting}[language=Python, caption=Python Function Material]
 def newMaterial( parent=None, name= "None", ID="0", Type= "None", xN ='-1', yN ='-1' ,price='-1' ,reqF = 0 ,maxF =999999 ):
 	#Create new Node has the Material Name...and add it into the parent node
@@ -574,7 +569,7 @@ def newMaterial( parent=None, name= "None", ID="0", Type= "None", xN ='-1', yN =
 	return node
 \end{lstlisting}
 
-\paragraph{\emph{2)~Transform Edge between two entitie into XML code :} } in this transformation 
+\paragraph{\emph{2)~VisitEdge : Transform Edge between two entitie into XML code :} } in this transformation 
 we want to create link between nodes Material and Operating unit 
 and we have 4 type of Edges : 
 \begin{itemize}
@@ -702,5 +697,4 @@ G4_OAF: G4 => OAF
 
 
 \section{Conclusion}
-We have presented in this chapter our approach of transformations of the MaS in OMACS 
-framework to PNS, And we also presented our the second approach that transforms PNS Model into XML file after that we saw the tool PGraph Studio we use it to optimize multi agent system in pns frame work.
+We have presented in this chapter our approach of transformations of the MaS in OMACS framework to PNS, And we also presented our second approach that transforms PNS Model into XML file after that we saw the tool PGraph Studio we use it to optimize a multi agent system in pns frame work.
