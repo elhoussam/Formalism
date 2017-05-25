@@ -1,0 +1,160 @@
+\begin{thebibliography}{10}
+
+\bibitem{omacs4}
+V.~Dignum, {\em Handbook of Research on Multi-Agent Systems: Semantics and
+  Dynamics of Organizational Models: Semantics and Dynamics of Organizational
+  Models}.
+\newblock IGI Global, 2009.
+
+\bibitem{omacs2}
+S.~A. Deloach, W.~H. Oyenan, and E.~T. Matson, ``A capabilities-based model for
+  adaptive organizations,'' {\em Autonomous Agents and Multi-Agent Systems},
+  vol.~16, no.~1, pp.~13--56, 2008.
+
+\bibitem{omacs0}
+J.~C. Garc{\'\i}a-Ojeda, B.~Bertok, F.~Friedler, A.~Argoti, and L.~Fan, ``A
+  preliminary study of the application of the p-graph methodology for
+  organization-based multiagent system designs: Assessment,'' {\em Acta
+  Polytechnica Hungarica}, vol.~12, no.~2, 2015.
+
+\bibitem{omacs3}
+H.~A. Abbas, S.~I. Shaheen, and M.~H. Amin, ``Organization of multi-agent
+  systems: an overview,'' {\em arXiv preprint arXiv:1506.09032}, 2015.
+
+\bibitem{omacs1}
+S.~A. DeLoach and E.~Matson, ``An organizational model for designing adaptive
+  multiagent systems,'' in {\em The AAAI-04 Workshop on Agent Organizations:
+  Theory and Practice (AOTP 2004)}, pp.~66--73, 2004.
+
+\bibitem{omacs6}
+A.~Lapouchnian, S.~Liaskos, J.~Mylopoulos, and Y.~Yu, ``Towards
+  requirements-driven autonomic systems design,'' {\em SIGSOFT Softw. Eng.
+  Notes}, vol.~30, pp.~1--7, May 2005.
+
+\bibitem{omacs7}
+S.~A. DeLoach and J.~C. Garcia-Ojeda, ``O-mase: a customisable approach to
+  designing and building complex, adaptive multi-agent systems,'' {\em
+  International Journal of Agent-Oriented Software Engineering}, vol.~4, no.~3,
+  pp.~244--280, 2010.
+
+\bibitem{pns2}
+J.~Tick, ``P-graph-based workflow modelling,'' {\em Acta Polytechnica
+  Hungarica}, vol.~4, no.~1, pp.~75--88, 2007.
+
+\bibitem{pns4}
+J.~Garcia-Ojeda, B.~Bertok, and F.~Friedler, ``Planning evacuation routes with
+  the p-graph framework,'' {\em Chemical Engineering Transactions}, vol.~29,
+  pp.~1531--1536, 2012.
+
+\bibitem{pns3}
+D.~Alm{\'a}si, C.~Imreh, T.~Kov{\'a}cs, and J.~Tick, ``Heuristic algorithms for
+  the robust pns problem,'' {\em Acta Polytechnica Hungarica}, vol.~11, no.~4,
+  pp.~169--181, 2014.
+
+\bibitem{pns1}
+F.~Friedler, L.~Fan, and B.~Imreh, ``Process network synthesis: problem
+  definition,'' {\em Networks}, vol.~31, no.~2, pp.~119--124, 1998.
+
+\bibitem{pns6}
+C.~Holl{\'o}, {\em H{\'a}l{\'o}zati folyamatok szint{\'e}zise}.
+\newblock PhD thesis, szte, 2004.
+
+\bibitem{algo}
+F.~Friedler, K.~Tarjan, Y.~Huang, and L.~Fan, ``Combinatorial algorithms for
+  process synthesis,'' {\em Computers \& chemical engineering}, vol.~16,
+  pp.~S313--S320, 1992.
+
+\bibitem{ch3-pgraph2}
+L.~Vance, I.~Heckl, B.~Bertok, H.~Cabezas, and F.~Friedler, ``Designing energy
+  supply chains with the p-graph framework under cost constraints and
+  sustainability considerations,'' {\em Computer Aided Chemical Engineering},
+  vol.~33, pp.~1009--1014, 2014.
+
+\bibitem{Sitepgraph}
+``\url{http://p-graph.com/}.''
+\newblock Accessed: 2017-05.
+
+\bibitem{ch3-pgraph}
+B.~Bertok, M.~Barany, and F.~Friedler, ``Generating and analyzing mathematical
+  programming models of conceptual process design by p-graph software,'' {\em
+  Industrial \& Engineering Chemistry Research}, vol.~52, no.~1, pp.~166--171,
+  2012.
+
+\bibitem{ch3-matters}
+T.~K{\"u}hne, ``Matters of (meta-) modeling,'' {\em Software and Systems
+  Modeling}, vol.~5, no.~4, pp.~369--385, 2006.
+
+\bibitem{ch3-selic}
+B.~Selic, ``Specification and modeling: an industrial perspective,'' in {\em
+  Software Engineering, 2001. ICSE 2001. Proceedings of the 23rd International
+  Conference on}, pp.~676--677, IEEE, 2001.
+
+\bibitem{ch3-def}
+J.~B{\'e}zivin and O.~Gerb{\'e}, ``Towards a precise definition of the omg/mda
+  framework,'' in {\em Automated Software Engineering, 2001.(ASE 2001).
+  Proceedings. 16th Annual International Conference on}, pp.~273--280, IEEE,
+  2001.
+
+\bibitem{ch3-applied}
+T.~Clark, P.~Sammut, and J.~Willans, ``Applied metamodelling: a foundation for
+  language driven development.,'' 2008.
+
+\bibitem{ch3-meta2}
+J.~De~Lara, H.~Vangheluwe, and M.~Alfonseca, ``Meta-modelling and graph
+  grammars for multi-paradigm modelling in atom3,'' {\em Software \& Systems
+  Modeling}, vol.~3, no.~3, pp.~194--209, 2004.
+
+\bibitem{ch3-doc}
+M.~D.~N. TISSILIA, {\em Un Cadre Formel pour La Modelisation et L.analyse Des
+  Agents Mobiles}.
+\newblock PhD thesis, Universite Mentouri Constantine, 2013.
+
+\bibitem{ch3-mml}
+J.~{\'A}lvarez, A.~Evans, and P.~Sammut, ``Mml and the metamodel
+  architecture,'' in {\em WTUML: Workshop on Transformation in UML}, 2001.
+
+\bibitem{ch3model}
+K.~Czarnecki and S.~Helsen, ``Feature-based survey of model transformation
+  approaches,'' {\em IBM Systems Journal}, vol.~45, no.~3, pp.~621--645, 2006.
+
+\bibitem{ch3catego}
+K.~Czarnecki and S.~Helsen, ``Classification of model transformation
+  approaches,'' in {\em Proceedings of the 2nd OOPSLA Workshop on Generative
+  Techniques in the Context of the Model Driven Architecture}, vol.~45,
+  pp.~1--17, USA, 2003.
+
+\bibitem{ch3lang}
+F.~E. M. C.~G. Kardas, ``*review of model-to-model transformation approaches
+  and technologies,'' {\em ITEA3}, 2015.
+
+\bibitem{ch3-bid}
+H.~Ehrig, K.~Ehrig, C.~Ermel, F.~Hermann, and G.~Taentzer, ``Information
+  preserving bidirectional model transformations,'' in {\em International
+  Conference on Fundamental Approaches to Software Engineering}, pp.~72--86,
+  Springer, 2007.
+
+\bibitem{ch3-spec}
+M.~Andries, G.~Engels, A.~Habel, B.~Hoffmann, H.-J. Kreowski, S.~Kuske,
+  D.~Plump, A.~Sch{\"u}rr, and G.~Taentzer, ``Graph transformation for
+  specification and programming,'' {\em Science of Computer programming},
+  vol.~34, no.~1, pp.~1--54, 1999.
+
+\bibitem{ch3-img}
+I.~Ammari, {\em Transforme Diagrammes d.etat transition vers GSPN}.
+\newblock 2016.
+
+\bibitem{ch3-doc2}
+H.~HACHICHI, {\em Test formel des systemes temps reel : Approche de
+  transformation de graphes}.
+\newblock PhD thesis, Universite Mentouri de Constantine, 2013.
+
+\bibitem{Siteatom}
+``\url{http://atom3.cs.mcgill.ca/}.''
+\newblock Accessed: 2017-05.
+
+\bibitem{ch3-atom3}
+J.~De~Lara and H.~Vangheluwe, ``Atom3: A tool for multi-formalism and
+  meta-modelling,'' in {\em International Conference on Fundamental Approaches
+  to Software Engineering}, pp.~174--188, Springer, 2002.
+
+\end{thebibliography}

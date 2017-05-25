@@ -182,7 +182,7 @@ you will notice these words in LHS(ANY \footnote{ANY:its attribue in the node an
  
   
 
-\paragraph{\emph{1.1)~Condition for the rule Assign Role to Agent : } } 
+\paragraph{\emph{1.1)~Condition } } 
  
 Test if there is a node agent, role visited before 
 in order not to fall in infinity loop, figure \ref{fig:Create link between Agent and Role} represent the rule.
@@ -253,7 +253,7 @@ Create the final material stat in the system. If you notice the LHS is empty bec
  
 \end{figure} 
 \pagebreak
-\paragraph{\emph{5.1)~Condition for Create Final Stat : } } 
+\paragraph{\emph{5.1)~Condition : } } 
 This conditon test if this attribute Final stat equal zero 
 , in other word we did not visit this rule before, the rule in figure  \ref{fig:Create the final material}.
  \vspace{1cm} 
@@ -320,7 +320,7 @@ how to link the auxiliary part with right goal.
  
 \end{figure}
 \pagebreak
-\paragraph{\emph{8.1)~Condition for rule link between AUX part and Material Goal } : }
+\paragraph{\emph{8.1)~Condition } : }
 This condition test if this sub graph in \ref{fig:link between auxiliary part and goal} visited before or not.
  
 \vspace{1cm}
@@ -338,7 +338,7 @@ This condition test if this sub graph in \ref{fig:link between auxiliary part an
  
 The rule in figure \ref{fig:consume the raw material by operating unit} illustrate how to create an arc between 
 the raw material was generated from an agent and the operating unit.
-
+\vspace{1cm}
 \begin{figure}[th]
 \centering
  	\subfloat[LHS]{\includegraphics[scale=2.9]{ch3/img/L9}}
@@ -526,7 +526,7 @@ tags.
 
 \end{figure} 
 
-\paragraph{\emph{ a )~Condition for Raw To Xml } } For the application of this rule, it must be verified that the partition To be transformed is not treated before
+\paragraph{\emph{ a )~Condition : } } For the application of this rule, it must be verified that the partition To be transformed is not treated before
 \vspace{1cm}
 \begin{figure}[th]
 	\centering %[scale=1.2]
@@ -534,7 +534,7 @@ tags.
 	\caption{\label{fig:condition of Raw Material for Transfromation}condition of Raw Material for Transfromation}
 \end{figure}
 \pagebreak
-\paragraph{\emph{ b )~Action for rule \ref{fig:Raw Material into Xml} } } Once 
+\paragraph{\emph{ b )~Action } } } Once 
 The rule is applied, its Action Allows to create a XML code and mark the object from the left side to processed. 
  
 \begin{figure}[th]
@@ -542,7 +542,7 @@ The rule is applied, its Action Allows to create a XML code and mark the object 
  	\includegraphics[scale=0.38]{ch3/img/xact1}
 	\caption{\label{fig:Action of Raw Material for Transfromation}Action of Raw Material for Transfromation}
 \end{figure} 
-In the first line of the previous action we import external file 'MyFunction', this file contain the functions to add new node (material, product, operatingunit) to the graph.
+In the first line of the previous action we import external file 'MyFunction.py', this file contain the functions to add new tag (material, product, operatingunit) to the xml file.
 
 \begin{lstlisting}[language=Python, caption=Python Function Material]
 def newMaterial( parent=None, name= "None", ID="0", Type= "None", xN ='-1', yN ='-1' ,price='-1' ,reqF = 0 ,maxF =999999 ):
@@ -569,8 +569,7 @@ def newMaterial( parent=None, name= "None", ID="0", Type= "None", xN ='-1', yN =
 	return node
 \end{lstlisting}
 
-\paragraph{\emph{2)~VisitEdge : Transform Edge between two entitie into XML code :} } in this transformation 
-we want to create link between nodes Material and Operating unit 
+\paragraph{\emph{2)~VisitEdge : Transform Edge between two entitie into XML code :} } in this transformation we want to create link between nodes Material and Operating unit 
 and we have 4 type of Edges : 
 \begin{itemize}
 
@@ -596,7 +595,7 @@ The figure \ref{fig:edgotoraw} represent the first Edge type
 
 \end{figure} 
  
-\paragraph{\emph{ a )~Condition for rule \ref{fig:edgotoraw} } } it is the same with figure \ref{fig:condition of Raw Material for Transfromation} but here we select the edges
+\paragraph{\emph{ a )~Condition } } it is the same with figure \ref{fig:condition of Raw Material for Transfromation} but here we select the edges
 
 \vspace{1cm} 
 \begin{figure}[th]
@@ -605,7 +604,7 @@ The figure \ref{fig:edgotoraw} represent the first Edge type
 	\caption{\label{fig:Condition2)}Condition of Edges ( RawMaterial to Operating unit)}
  \end{figure} 
 \vspace{1cm}
-\paragraph{\emph{ b )~Action for rule \ref{fig:edgotoraw} } } we add this action to Transform the Edges between Any Material and Any Operating unit into xml file, or to export the entitie from Graphical presentation 
+\paragraph{\emph{ b )~Action } } we add this action to Transform the Edges between Any Material and Any Operating unit into xml file, or to export the entitie from Graphical presentation 
 into Xml Code 
 \vspace{0.7cm}
 \begin{figure}[th]

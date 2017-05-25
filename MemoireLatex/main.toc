@@ -1,0 +1,112 @@
+\select@language {english}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }{Contents}}{i}{section*.1}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }{List of Figures}}{iv}{section*.3}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }{List of Tables}}{vi}{section*.5}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }{General Introduction}}{1}{chapter*.7}
+\contentsline {chapter}{\numberline {1}Multi-Agent System Framework}{2}{chapter.1}
+\contentsline {section}{\numberline {1.1}Introduction}{2}{section.1.1}
+\contentsline {section}{\numberline {1.2}Motivations to MaS Organization}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Organization}{3}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Reorganization}{3}{subsection.1.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2.1}Goal Set Changes}{3}{subsubsection.1.2.2.1}
+\contentsline {subsubsection}{\numberline {1.2.2.2}Agent Changes}{4}{subsubsection.1.2.2.2}
+\contentsline {subsubsection}{\numberline {1.2.2.3}Reorganization Triggers}{5}{subsubsection.1.2.2.3}
+\contentsline {section}{\numberline {1.3}Organization Multi-Agent System Engineering}{5}{section.1.3}
+\contentsline {subsection}{\numberline {1.3.1}Overview of O-MaSE}{5}{subsection.1.3.1}
+\contentsline {subsection}{\numberline {1.3.2}The Goal of O-MaSE}{6}{subsection.1.3.2}
+\contentsline {section}{\numberline {1.4}Organization Model for Adaptive Computational System}{7}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Overview of OMACS}{7}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Main Element of OMACS}{9}{subsection.1.4.2}
+\contentsline {subsubsection}{\numberline {1.4.2.1}Goals}{9}{subsubsection.1.4.2.1}
+\contentsline {subsubsection}{\numberline {1.4.2.2}Roles}{9}{subsubsection.1.4.2.2}
+\contentsline {subsubsection}{\numberline {1.4.2.3}Agents}{10}{subsubsection.1.4.2.3}
+\contentsline {subsubsection}{\numberline {1.4.2.4}Capabilities}{10}{subsubsection.1.4.2.4}
+\contentsline {subsubsection}{\numberline {1.4.2.5}The Tuple $\varphi $}{11}{subsubsection.1.4.2.5}
+\contentsline {subsubsection}{\numberline {1.4.2.6}OAF}{11}{subsubsection.1.4.2.6}
+\contentsline {subsubsection}{\numberline {1.4.2.7}Domain Model}{11}{subsubsection.1.4.2.7}
+\contentsline {subsection}{\numberline {1.4.3}Function of OMACS}{12}{subsection.1.4.3}
+\contentsline {subsubsection}{\numberline {1.4.3.1}The Achieves}{12}{subsubsection.1.4.3.1}
+\contentsline {subsubsection}{\numberline {1.4.3.2}Requires}{13}{subsubsection.1.4.3.2}
+\contentsline {subsubsection}{\numberline {1.4.3.3}Possesses}{13}{subsubsection.1.4.3.3}
+\contentsline {subsubsection}{\numberline {1.4.3.4}Capable}{14}{subsubsection.1.4.3.4}
+\contentsline {subsubsection}{\numberline {1.4.3.5}Potential}{15}{subsubsection.1.4.3.5}
+\contentsline {section}{\numberline {1.5}Conclusion}{15}{section.1.5}
+\contentsline {chapter}{\numberline {2}PGraph and PNS}{16}{chapter.2}
+\contentsline {section}{\numberline {2.1}Introduction}{16}{section.2.1}
+\contentsline {section}{\numberline {2.2}PGraph}{16}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Definition}{16}{subsection.2.2.1}
+\contentsline {section}{\numberline {2.3}Process Network Synthesis}{17}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Basic Notation}{17}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Mathematical definition}{18}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Algorithms MSG, SSG, and ABB}{19}{subsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.3.1}Maximal-Structure Generation}{19}{subsubsection.2.3.3.1}
+\contentsline {subsubsection}{\numberline {2.3.3.2}Solution Structure Generation}{20}{subsubsection.2.3.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3.3}Accelerated Branch and Bound}{20}{subsubsection.2.3.3.3}
+\contentsline {subsection}{\numberline {2.3.4}PNS and PetriNet :}{20}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}PGraph Studio}{20}{section.2.4}
+\contentsline {section}{\numberline {2.5}Conclusion}{21}{section.2.5}
+\contentsline {chapter}{\numberline {3}Model to Model Transformation}{22}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introduction}{22}{section.3.1}
+\contentsline {section}{\numberline {3.2}Levels of Modilisation}{22}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Architercteur of Meta-Modeling}{23}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Model Transformation}{24}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Transformation Categories}{24}{subsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Model To Code}{24}{subsubsection.3.3.1.1}
+\contentsline {subsubsection}{\numberline {3.3.1.2}Model To Model}{24}{subsubsection.3.3.1.2}
+\contentsline {subsection}{\numberline {3.3.2}Transformation Languages and Tools}{25}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}ATL :}{25}{subsubsection.3.3.2.1}
+\contentsline {subsubsection}{\numberline {3.3.2.2}JTL :}{25}{subsubsection.3.3.2.2}
+\contentsline {subsubsection}{\numberline {3.3.2.3}ETL :}{25}{subsubsection.3.3.2.3}
+\contentsline {subsubsection}{\numberline {3.3.2.4}Kermeta :}{25}{subsubsection.3.3.2.4}
+\contentsline {subsubsection}{\numberline {3.3.2.5}QVT :}{25}{subsubsection.3.3.2.5}
+\contentsline {subsubsection}{\numberline {3.3.2.6}MOFScript :}{25}{subsubsection.3.3.2.6}
+\contentsline {section}{\numberline {3.4}Concept of Graph Transformation}{26}{section.3.4}
+\contentsline {section}{\numberline {3.5}Graph Grammar}{27}{section.3.5}
+\contentsline {section}{\numberline {3.6}Transformation system}{28}{section.3.6}
+\contentsline {section}{\numberline {3.7}AToM3}{28}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Classes in AToM3}{29}{subsection.3.7.1}
+\contentsline {subsubsection}{\numberline {3.7.1.1}Constraint}{30}{subsubsection.3.7.1.1}
+\contentsline {subsubsection}{\numberline {3.7.1.2}Action}{30}{subsubsection.3.7.1.2}
+\contentsline {subsection}{\numberline {3.7.2}Graph Grammer in AToM3}{30}{subsection.3.7.2}
+\contentsline {section}{\numberline {3.8}Conclusion}{31}{section.3.8}
+\contentsline {chapter}{\numberline {4} Transformation Approach}{32}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{32}{section.4.1}
+\contentsline {section}{\numberline {4.2}Transformation Approach (OMACS To PNS) }{32}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}OMACS}{32}{subsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.1.1}Meta Model of OMACS}{32}{subsubsection.4.2.1.1}
+\contentsline {subsubsection}{\numberline {4.2.1.2}Example of OMACS}{34}{subsubsection.4.2.1.2}
+\contentsline {subsection}{\numberline {4.2.2}PNS}{34}{subsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.2.1}Meta Model of PNS}{34}{subsubsection.4.2.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2.2}Example of PNS}{35}{subsubsection.4.2.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Graph Grammar}{36}{subsection.4.2.3}
+\contentsline {paragraph}{\emph {1)~Collect Categorie :} }{36}{section*.35}
+\contentsline {paragraph}{\emph {2)~Transform Categorie:} }{36}{section*.36}
+\contentsline {paragraph}{\emph {3)~Links Categorie:} }{36}{section*.37}
+\contentsline {paragraph}{\emph {4)~Cleaning Categorie:} }{37}{section*.38}
+\contentsline {paragraph}{\emph {1)~Agent2RoleLink1 : Create the direct link between the Agent and the Role (order 1) :} }{37}{section*.39}
+\contentsline {paragraph}{\emph {1.1)~Condition } }{37}{section*.41}
+\contentsline {paragraph}{\emph {2)~ TransAgent2Raw : Transform Agent to Raw Material (order 9) :} }{38}{section*.43}
+\contentsline {paragraph}{\emph {3)~ TransLinkAR2OpUnit : Transform Link between Agent and Role into Operating Unit (order 10) :} }{38}{section*.45}
+\contentsline {paragraph}{\emph {4)~ TransGoal2Mat : Transform Goal to intermediate material (order11):} }{39}{section*.47}
+\contentsline {paragraph}{\emph {5)~ CreateFinalStat : Create the Product node (order 13) :} }{39}{section*.49}
+\contentsline {paragraph}{\emph {5.1)~Condition : } }{40}{section*.51}
+\contentsline {paragraph}{\emph {6)~ CreateMatARG : Generate auxiliary part (order 14) :} }{40}{section*.53}
+\contentsline {paragraph}{\emph {7)~ CreateLinkMatr2OAF : Create Operating unit between goal material and the product (order 15) :} }{41}{section*.55}
+\contentsline {paragraph}{\emph {8)~ CreateLinkMat-ARG2Goal : Create link between auxiliary part and goal material (order 19) :} }{41}{section*.57}
+\contentsline {paragraph}{\emph {8.1)~Condition } : }{42}{section*.59}
+\contentsline {paragraph}{\emph {9)~ CreatLinkRaw2AR : Create link to consume the raw material by operating unit (order 20) :} }{42}{section*.61}
+\contentsline {subsection}{\numberline {4.2.4}Case study}{43}{subsection.4.2.4}
+\contentsline {subsubsection}{\numberline {4.2.4.1}Simple multi Agent System }{43}{subsubsection.4.2.4.1}
+\contentsline {subsubsection}{\numberline {4.2.4.2} Complex multi Agent System }{44}{subsubsection.4.2.4.2}
+\contentsline {section}{\numberline {4.3}Transformation Approach (PNS To XML file) }{47}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1} Graph Grammar }{47}{subsection.4.3.1}
+\contentsline {paragraph}{\emph {1)~ VisitRaw : Transform RawMaterial into XML code :} }{48}{section*.69}
+\contentsline {paragraph}{\emph { a )~Condition : } }{48}{section*.71}
+\contentsline {paragraph}{\emph { b )~Action } }{49}{section*.73}
+\contentsline {paragraph}{\emph {2)~VisitEdge : Transform Edge between two entitie into XML code :} }{50}{section*.75}
+\contentsline {paragraph}{\emph { a )~Condition } }{50}{section*.77}
+\contentsline {paragraph}{\emph { b )~Action } }{51}{section*.79}
+\contentsline {section}{\numberline {4.4}Optimum structure of MaS }{52}{section.4.4}
+\contentsline {section}{\numberline {4.5}Conclusion}{53}{section.4.5}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }{General Conclusion}}{54}{chapter*.84}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }{Bibliographie}}{55}{section*.85}

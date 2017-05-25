@@ -4,8 +4,7 @@
  
 \section{Introduction}
 
-In a process system, raw materials are consumed through various transformation to yield desired products. This chapter introduce one from many framework to modelize a process system.
-
+To Design a process systems, there is so many framework to use, in this chapter will introduce one framework to modeling a process system.
 \section{PGraph}
 This section about the PGraph (Process Graph) which is a framework to represent the process systems. 
 
@@ -103,25 +102,17 @@ input materials. Therefore two disjunctive sets can be assigned to each operatin
 
 Let an arbitrary operating unit ( $\alpha$, $\beta$), then $\alpha$ is the set of input materials which are processed by the 
 ($\alpha$, $\beta$ ) unit and $\beta$is the set of output materials, which are produced by the given unit.
-Considering the process-network the output materials of each operating unit are the inputs of different operating units. In general, it can be proved that 
-
-\begin{equation}
-O\subseteq \rho(M) \times \rho(M)\label{eq:second}
-\end{equation}
+Considering the process-network the output materials of each operating unit are the inputs of different operating units.
 
 where O is the set of operating units, M is the set of materials and $\rho(M)$ is the power set, 
-that is the set of subsets of M, and $\rho(M) \times \rho(M)$ represents the set of $\rho(M)$ and $\rho(M)$ pairs
+that is the set of subsets of M, and $\rho(M) \times \rho(M)$ represents the set of $\rho(M)$ and $\rho(M)$ pairs.
 
 Supposing that there is a finite set m, which is a subset of M, i.e. it is true that m $\subseteq$ M 
 and there is an o finite set, which is a subset of O, i.e. 
 it is true that o $\subseteq$ O and supposing that there is such a material
 which is an input for one or more operating units, and there is such material 
-which is the output of one or more operating units, then :
-
-\begin{equation}
-o\subseteq \rho(m) \times \rho(m)\label{eq:second}
-\end{equation}
-
+which is the output of one or more operating units.
+ 
 
 The PNS is defined as a bigraph, where the set of V vertices is made of the elements of the union of m and o that is
 
@@ -193,7 +184,7 @@ combinatorial algorithms\cite{algo}.
 it has been adopted for solving the routing and scheduling of evacuees, facing a life-threatening situation\cite{pns4}. 
 
 \subsection{PNS and PetriNet :} 
-The Table \ref{tab:Petri Net and PNS} represent the deference, and the common features, between these two mathematical tools, because the Petri is widely use more then PNS.
+The Table \ref{tab:Petri Net and PNS} represent the different, and the common features, between these two mathematical tools, because the Petri is widely use more then PNS.
 \begin {table}[H] 
 \begin{tabular}{cc}
 
